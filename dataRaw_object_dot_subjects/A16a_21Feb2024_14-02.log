@@ -1,0 +1,190 @@
+18.2100 	ERROR 	Median frames per second =85.1 BUT program assumes 110.0which is off by more than3%!!
+18.2101 	INFO 	longFrameLimit=11.545 Recording trials where one or more interframe interval exceeded this figure 
+18.2101 	INFO 	computer platform=darwin
+18.2101 	INFO 	File that generated this = sys.argv[0]= /Users/labmember/Documents/MOTcircularClean_0208/MOTcircular.py
+18.2101 	INFO 	has_retina_scrn=False
+1.0000 	INFO 	trialsPerCondition =
+18.2106 	WARNING 	Requested an unavailable screen number - using first available.
+18.6601 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fbbce0475b0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fbbce047550>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fbbce0473d0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fbbc65eceb0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=1, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='deg', useFBO=False, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=False, winType='pyglet')
+18.6603 	EXP 	window1: mouseVisible = True
+18.6604 	EXP 	window1: backgroundImage = None
+18.6604 	EXP 	window1: backgroundFit = 'cover'
+18.6605 	EXP 	window1: mouseVisible = 'true'
+18.7918 	INFO 	Successfully set darwin thread to realtime
+19.4956 	INFO 	second window opening runInfo mean ms=11.643649508472262
+19.4956 	INFO 	#[ PsychoPy3 RuntimeInfoStart ]
+  #[[ PsychoPy ]] #---------
+    psychopyVersion: 2023.2.3
+    psychopyHaveExtRush: True
+  #[[ Experiment ]] #---------
+    experimentAuthVersion: None
+    experimentAuthor: None
+    experimentRunTime: 2024_02_21 14:02 (Year_Month_Day Hour:Min)
+    experimentRunTime.epoch: 1708484541
+    experimentScript: MOTcircular.py
+    experimentScript.digestSHA1: c9346da0e14e9117a30b8888366d365e8157ec38
+    experimentScript.directory: /Users/labmember/Documents/MOTcircularClean_0208
+  #[[ System ]] #---------
+    systemFlacVersion: flac 1.3.3
+    systemHaveInternetAccess: True
+    systemHostName: Alexs-MacBook-Pro.local
+    systemLocale: None.UTF-8
+    systemMemFreeRAM: 10813.72265625
+    systemMemTotalRAM: 16384.0
+    systemPlatform: darwin 10.16 x86_64
+    systemRavailable: R version 4.0.3 (2020-10-10) -- Bunny-Wunnies Freak Out
+    systemRebooted: Feb 21 09:43
+    systemSec.OpenSSLVersion: LibreSSL 2.8.3
+    systemSec.pythonSSL: True
+    systemTimeNumpySD1000000_sec: 0.0029
+    systemUser: labmember
+    systemUserID: 503
+    systemUserProcCmdPid: appssoagent mds smd receiverhelper devicecheckd homed airplayxpchelper assetcachetether watchdogd cloudkeychainproxy viewbridgeauxiliary launchd dasd neagent tvcacheextension cloudpaird pluginlibraryser commcenter psychopy notifyd translationd safeejectgpuagent configd keybagd icdd echo_uc_upload com.apple.driver pluginlibraryservice mediaremoted vdcassistant com.apple.safari.safebrowsing.service hasplmd fud sharingd 'github desktop helper (renderer)' usbagent plugin-container systemuiserver biometrickitd thermalmonitord distnoted echo_system_stat storagekitd bluetoothd applecredentialm xprotectservice nfcd apsd suhelperd amsaccountsd thermald servicerecords corelocationagent gamecontrollerd colorsync.displa uarpupdaterservi com.apple.webkit.webcontent dmd lsd mtlcompilerservi softwareupdatenotificationmanager sharedfilelistd coreservicesuiagent periodic-wrapper submitdiaginfo assetcachelocato touchbarserver mediaremoteagent apfsd newstoday2 fseventsd textinputmenuagent echo_task_manage launchservicesd coreaudiod timed netbiosd contextstored findmymacd itunescloudd imdpersistenceagent diagnosticextensionsd passd wifianalyticsd standalonehidaud kernel_task routined com.apple.codesi remoted installcoordinat com.apple.appleu xprotectpluginse com.apple.appkit.xpc.openandsavepanelservice osduihelper gsscred calendarwidgetextension callhistorypluginhelper carboncomponentscannerxpc pbs escrowsecurityalert loginwindow systemsoundserve controlcenter com.apple.mobile dock safari aslmanager containermanager firefox imautomatichistorydeletionagent uikitsystem contextservice trustd knowledge-agent parsecd quicklookuiservice echo_nginx lockoutagent corespeechd imklaunchagent applessdstatisti cloudd opendirectoryd com.apple.dock.extra worldclockwidget zoutlookpluginagent eapolclient icloudnotificationagent com.apple.ifdrea cdpd usereventagent nehelper com.apple.colors adprivacyd installd usagetrackingagent pah_extension ampdevicediscoveryagent 'github desktop' diskarbitrationd swcd tccd mailcachedelete com.apple.siri.embeddedspeech nsurlsessiond embeddedosinstal agsservice rapportd systemstats diagnostics_agent kerneleventagent com.apple.audio. contactsaccountsservice musiccacheextension fudhelperagent cvmserver usernoted followupd com.apple.accoun biokitaggdd com.apple.cmio.r aned analyticsd echo_restapi perfpowerservice airportd findmydeviced autofsd fmfd calendaragent assetcachelocatorservice fontd ampartworkagent deleted echo_shrec spindump symseplps audiocomponentregistrar com.apple.appsto viewbridgeauxili ctkahp awdd terminal com.apple.quicklook.thumbnailsagent replayd mdnsresponderhel com.apple.characterpicker.fileservice 'github desktop helper' spindump_agent mobileactivation eoshostd mdbulkimport wifiagent emojifunctionrowim_extension auditd xprotectpluginservice symptomsd-diag searchpartyd aspcarrylog diskmanagementd spotlight com.apple.webkit.networking backgroundtaskmanagementagent lskdd endpointsecurity xartstorageremot logd dockhelper mapspushd securityd_servic transparencyd sysdiagnose syslogd com.apple.clouddocs.mobiledocumentsfileprovider safeejectgpuservice audiocomponentre sysextd colorsyncd backupd-helper assetcache podcastcontentservice nbagent com.apple.audio.sandboxhelper coreservicesd logind applespell echo_spinner locationd safaribookmarkssyncagent displaypolicyd siriinferenced callservicesd com.apple.dock.external.extra.x86_64 controlstrip deleted_helper com.apple.safari.history identityservicesd securityd pkd usbmuxd mirrordisplays 'github desktop helper (gpu)' powerd windowserver reportcrash corebrightnessd cachedeleteextension secinitd echo_session_agent com.apple.ambien useractivityd mdnsresponder cloudphotod xprotect contextstoreagent fileproviderd appstoreagent imageioxpcservice backupd coreauthd assistantd notificationcenter suggestd stockswidget datadetectorssou aksusbd addressbooksourcesync symsharedsetting system_installd echo_user_agent mdworker_shared iconservicesd screentimewidgetextension seld com.apple.sbd categoriesservice keyboardservicesd talagent amsengagementd askpermissiond online-authd authd avatarsd com.apple.stream com.cisco.anycon storedownloadd taskgated microstackshot appleeventsd runningboardd corespotlightd iconservicesagen accountsd mdworker calncservice cfprefsd syspolicyd com.apple.geod crashreportersup apfsuseragent xpcroleaccountd com.apple.bkagentservice fontworker careportingservi sysmond revisiond wifivelocityagent fairplayd secd universalaccessd colorsync.useragent echo_upload_log protectedcloudkeysyncing photolibraryd weatherwidget akd logd_helper screentimeagent bird com.apple.hiservices-xpcservice symantec coreduetd 'keychain circle notification' hidd mobileassetd media-indexer imremoteurlconnectionagent commerce airplayuiagent bootinstalld pboard containermanagerd adid amfid rtcreportingd amplibraryagent dprivacyd uninstalld idecachedeleteappextension photoanalysisd symptomsd networkserviceproxy bash safarilaunchagent coresymbolicatio cvmcompiler wirelessradioman textinputswitcher vpnagentd finder wifivelocityd sandboxd kernelmanagerd triald scopedbookmarkagent mds_stores iconservicesagent filecoordination localizationswitcherd echo_ws_api familycircled nesessionmanager poweruiagent com.symantec.mes softwareupdated captiveagent imagent com.apple.hiserv tzd usbd ctkd ndoagent echo_adhoc_contr passwordbreachagent python
+    systemUserProcCount: 469
+    systemUserProcFlagged: SafariBookmarksSyncAgent mds firefox mdworker mdworker_shared itunescloudd mds_stores Safari SafariLaunchAgent
+    systemUsersCount: 1
+  #[[ Window ]] #---------
+    windowWinType: pyglet
+    windowWaitBlanking: False
+    windowUseNativeGamma: True
+    windowUnits: deg
+    windowSize_pix: [800 600]
+    windowScreen: 1
+    windowRgb: [-1 -1 -1]
+    windowRefreshTimeSD_ms: 0.662
+    windowRefreshTimeMedian_ms: 11.753
+    windowRefreshTimeAvg_ms: 11.644
+    windowRefreshThreshold_sec: 0.0141
+    windowRecordFrameIntervals: False
+    windowPos_pix: [0.0, 0.0]
+    windowMonitor.name: testMonitor
+    windowMonitor.getWidth_cm: 38.0
+    windowMonitor.getLinearizeMethod: 1
+    windowMonitor.getGammaGrid: [[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+    windowMonitor.getDistance_cm: 50.0
+    windowMonitor.gammaInterpolator2: None
+    windowMonitor.gammaInterpolator: None
+    windowMonitor.currentCalibName: 2023_12_15 12:40
+    windowIsFullScr: 1
+    windowHaveShaders: True
+    windowAllowGUI: False
+  #[[ Python ]] #---------
+    pythonWxVersion: 4.1.1 osx-cocoa (phoenix) wxWidgets 3.1.5
+    pythonVersion: 3.8.10
+    pythonScipyVersion: 1.10.1
+    pythonPygletVersion: 1.5.27
+    pythonPygameVersion: (no pygame)
+    pythonNumpyVersion: 1.23.5
+    pythonMatplotlibVersion: 3.7.1
+    pythonFullVersion: 3.8.10 (v3.8.10:3d8993a744, May  3 2021, 08:55:58)  [Clang 6.0 (clang-600.0.57)]
+    pythonExecutable: /Applications/PsychoPy.app/Contents/MacOS/python
+  #[[ OpenGL ]] #---------
+    openGLmaxVerticesInVertexArray: 1048575
+    False: openGLext.GL_STEREO
+    True: openGLext.GL_EXT_framebuffer_object
+    True: openGLext.GL_ARB_vertex_shader
+    True: openGLext.GL_ARB_texture_non_power_of_two
+    True: openGLext.GL_ARB_texture_float
+    True: openGLext.GL_ARB_shader_objects
+    True: openGLext.GL_ARB_multitexture
+    True: openGLext.GL_ARB_fragment_program
+    openGLVersion: 2.1 ATI-4.6.20
+    openGLVendor: ATI Technologies Inc.
+    openGLRenderingEngine: AMD Radeon Pro 460 OpenGL Engine
+#[ PsychoPy3 RuntimeInfoEnd ]
+
+19.4963 	INFO 	gammaGrid=[[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+19.4963 	INFO 	linearizeMethod=1
+19.4973 	EXP 	window1: mouseVisible = True
+19.4993 	EXP 	window1: mouseVisible = True
+19.5039 	EXP 	window1: mouseVisible = True
+19.5050 	EXP 	window1: mouseVisible = True
+19.5060 	EXP 	window1: mouseVisible = True
+19.5069 	EXP 	window1: mouseVisible = True
+19.5084 	EXP 	window1: mouseVisible = True
+19.5094 	EXP 	window1: mouseVisible = True
+19.5100 	EXP 	window1: mouseVisible = True
+19.5118 	EXP 	window1: mouseVisible = True
+19.5135 	EXP 	window1: mouseVisible = True
+19.5155 	EXP 	window1: mouseVisible = True
+19.5509 	EXP 	window1: mouseVisible = True
+19.5548 	EXP 	window1: mouseVisible = True
+19.5583 	EXP 	window1: mouseVisible = True
+19.8246 	EXP 	Created sequence: random, trialTypes=40, nReps=1, seed=None
+20.0529 	INFO 	starting exp with name: "TemporalFrequencyLimit" at 21Feb2024_14-02
+20.0529 	INFO 	numtrials=40, trialDurMin= 1 trackVariableIntervMax= 0.8refreshRate=110.0
+20.0529 	INFO 	cueRampUpDur=0 cueRampDownDur= 0 secs
+20.0529 	INFO 	task=track   respType=order
+20.0531 	INFO 	ring radii=[ 2.5  7.  15. ]
+20.0532 	INFO 	drawingAsGrating=False gratingTexPix=1024 antialiasGrating=True
+trialnum=0 ERROR,84 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[12.2 13.3 16.  14.9 15.4 15.3 15.5 16.  16.  15.5 15.8 15.9 16.  15.6
+ 15.6 15.2 15.2 15.7 15.5 14.5 16.1 16.1 16.1 16.1 16.  16.2 15.5 12.
+ 12.8 14.5 15.4 16.  15.5 15.6 15.5 15.6 16.1 16.  14.2 14.1 16.1 14.2
+ 14.2 14.2 14.1 16.1 15.7 15.9 15.7 15.8 15.8 16.1 16.1 14.2 14.2 16.1
+ 14.2 16.1 14.1 16.1 14.2 16.2 14.8 14.1 14.2 14.2 14.1 14.1 16.1 14.2
+ 16.1 16.2 11.9 13.2 13.1 11.7 15.2 15.5 15.4 14.1 14.1 14.2 14.2 16.1] and was these frames: [  0   1   5   8  11  14  17  21  25  28  31  34  37  40  43  46  49  52
+  55  58  61  64  67  70  73  76  79  80  81  85  88  91  94  97 100 103
+ 106 109 111 113 116 118 120 122 124 127 132 135 138 141 145 148 151 153
+ 155 158 160 163 165 168 170 173 176 178 180 182 184 186 189 191 194 197
+ 198 199 200 201 205 208 211 213 215 217 219 222]
+20.0552 	EXP 	New trial (rep=0, index=0): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.35, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+103.5478 	INFO 	Successfully set darwin thread to realtime
+103.6492 	EXP 	window1: mouseVisible = False
+109.5626 	EXP 	window1: mouseVisible = True
+122.2081 	DATA 	Mouse: Left button down, pos=(357,296)
+trialnum=1 ERROR,126 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.2 18.2 18.2 18.4 19.8 22.5 25.2 18.8 18.2 18.2 18.  18.1 18.3 18.
+ 18.1 18.1 18.1 18.2 18.8 18.7 18.8 18.7 18.6 18.7 18.7 18.6 18.6 18.7
+ 18.6 18.9 18.7 18.7 19.  19.  18.6 18.7 18.4 18.1 18.1 18.3 18.1 18.3
+ 18.1 18.  18.3 18.1 18.2 18.1 18.1 18.1 18.1 18.  18.2 17.9 18.  18.3
+ 18.1 18.3 18.1 18.  18.  18.  18.  18.1 18.1 18.2 18.2 18.  18.  18.
+ 18.  18.  18.1 18.  18.3 18.  18.  18.  18.1 18.1 18.2 18.3 17.9 18.
+ 18.1 17.9 18.  18.1 18.1 18.  17.9 18.2 18.1 18.  18.1 18.2 18.1 18.1
+ 18.2 18.3 18.1 18.1 18.  18.1 18.2 18.  18.  18.  18.1 18.1 18.3 18.1
+ 18.2 18.2 18.2 18.  18.2 18.2 17.8 18.2 18.1 18.  18.3 18.4 18.1 18.1] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125]
+122.3288 	EXP 	Sound  started
+122.3648 	DATA 	Mouse:  Left button up, pos=(357,296)
+122.4793 	EXP 	New trial (rep=0, index=1): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.16, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+122.6799 	INFO 	Successfully set darwin thread to realtime
+122.7810 	EXP 	window1: mouseVisible = False
+126.8055 	EXP 	window1: mouseVisible = True
+128.6249 	DATA 	Mouse: Left button down, pos=(620,472)
+128.6927 	DATA 	Mouse:  Left button up, pos=(620,472)
+trialnum=2 ERROR,84 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.9 16.1 14.1 15.9 16.1 14.1 14.2 14.2 16.1 16.3 12.5 12.2 12.7 16.
+ 15.5 16.1 14.2 16.1 16.1 16.1 14.2 16.1 16.1 14.2 12.6 11.6 12.5 12.1
+ 13.  16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1
+ 16.1 16.  16.1 16.1 16.  16.1 16.1 16.1 16.1 16.  16.  16.1 16.1 16.
+ 16.1 16.1 16.1 16.1 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.  14.1 16.1 16.1 16.1 16.  16.  16.1 16.1 16.1 16.  16.  16. ] and was these frames: [  5   8  10  13  16  18  20  22  25  28  29  30  31  36  39  42  44  47
+  50  53  55  58  61  63  66  67  68  69  70  74  77  80  83  86  89  92
+  95  98 101 104 107 110 113 116 119 122 125 128 131 134 137 140 143 146
+ 149 152 155 158 161 164 167 170 173 176 179 182 185 188 191 194 197 200
+ 202 205 208 211 214 217 220 223 226 229 232 235]
+128.7608 	EXP 	Sound  started
+128.9113 	EXP 	New trial (rep=0, index=2): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.82, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+129.1123 	INFO 	Successfully set darwin thread to realtime
+129.2135 	EXP 	window1: mouseVisible = False
+133.6049 	EXP 	window1: mouseVisible = True
+135.3506 	DATA 	Mouse: Left button down, pos=(521,349)
+135.4457 	DATA 	Mouse:  Left button up, pos=(521,349)
+137.1029 	DATA 	Mouse: Left button down, pos=(617,473)
+137.1887 	DATA 	Mouse:  Left button up, pos=(617,473)
+trialnum=3 ERROR,61 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[16.  12.1 12.1 12.8 14.3 16.1 16.1 16.1 16.1 16.  16.  16.1 16.1 16.1
+ 16.1 16.  16.1 16.1 16.1 16.1 16.1 15.8 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.  16.1 16.  16.1 15.6 16.1 16.1 16.1 16.  16.1 16.1 16.  16.1 16.
+ 16.1 16.1 14.9 16.1 16.  16.1 16.1 14.6 16.1 16.  16.1 16.1 16.1 16.1
+ 16.1 16.1 16.  16.1 16. ] and was these frames: [  4   6   7   8  11  14  17  20  23  26  29  32  35  38  41  44  47  50
+  53  56  59  62  65  68  71  74  77  80  83  86  89  92  95  98 101 104
+ 107 110 113 116 119 122 125 128 132 135 138 141 144 147 150 153 156 159
+ 162 165 168 171 174 177 180]

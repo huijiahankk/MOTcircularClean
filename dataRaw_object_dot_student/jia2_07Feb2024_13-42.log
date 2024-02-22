@@ -1,0 +1,204 @@
+longFrameLimit=11.545 Recording trials where one or more interframe interval exceeded this figure 
+second window opening runInfo mean ms= 11.675742288127244
+31.2363 	ERROR 	Median frames per second =85.1 BUT program assumes 110.0which is off by more than3%!!
+31.2365 	INFO 	computer platform=darwin
+31.2365 	INFO 	File that generated this = sys.argv[0]= /Users/labmember/Documents/GitHub/MOTcircularClean/MOTcircular.py
+31.2365 	INFO 	has_retina_scrn=False
+3.0000 	INFO 	trialsPerCondition =
+31.2371 	WARNING 	Requested an unavailable screen number - using first available.
+31.7247 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fc14ff325e0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fc14ff32580>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fc14ff32400>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fc1484a6ee0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=1, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='deg', useFBO=False, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=False, winType='pyglet')
+31.7249 	EXP 	window1: mouseVisible = True
+31.7249 	EXP 	window1: backgroundImage = None
+31.7249 	EXP 	window1: backgroundFit = 'cover'
+31.7251 	EXP 	window1: mouseVisible = 'true'
+31.8520 	INFO 	Successfully set darwin thread to realtime
+32.5964 	INFO 	#[ PsychoPy3 RuntimeInfoStart ]
+  #[[ PsychoPy ]] #---------
+    psychopyVersion: 2023.2.3
+    psychopyHaveExtRush: True
+  #[[ Experiment ]] #---------
+    experimentAuthVersion: None
+    experimentAuthor: None
+    experimentRunTime: 2024_02_07 13:43 (Year_Month_Day Hour:Min)
+    experimentRunTime.epoch: 1707273800
+    experimentScript: MOTcircular.py
+    experimentScript.digestSHA1: f7917f60b84336b9581a1c6aa77180a1d0c95dc3
+    experimentScript.directory: /Users/labmember/Documents/GitHub/MOTcircularClean
+  #[[ System ]] #---------
+    systemFlacVersion: flac 1.3.3
+    systemHaveInternetAccess: False (proxies not attempted)
+    systemHostName: Alexs-MacBook-Pro.local
+    systemLocale: None.UTF-8
+    systemMemFreeRAM: 9895.73046875
+    systemMemTotalRAM: 16384.0
+    systemPlatform: darwin 10.16 x86_64
+    systemRavailable: R version 4.0.3 (2020-10-10) -- Bunny-Wunnies Freak Out
+    systemRebooted: Feb 7 09:49
+    systemSec.OpenSSLVersion: LibreSSL 2.8.3
+    systemSec.pythonSSL: True
+    systemTimeNumpySD1000000_sec: 0.0027
+    systemUser: labmember
+    systemUserID: 503
+    systemUserProcCmdPid: com.apple.coresimulator.coresimulatorservice contextstored echo_nginx spindump_agent appstoreagent reportcrash aspcarrylog swcd cachedeleteextension newstoday2 worldclockwidget distnoted safeejectgpuservice assistantd audiocomponentregistrar symseplps neagent colorsyncd mdnsresponder avatarsd commerce followupd viewbridgeauxiliary airplayxpchelper newsd cloudpaird ampartworkagent escrowsecurityalert online-authd translationd adid echo_spinner smd apsd careportingservi com.apple.safari.history networkserviceproxy submitdiaginfo keyboardservicesd mdbulkimport findmydeviced mds icloudnotificationagent amplibraryagent usbagent mobileactivation hasplmd com.apple.dock.external.extra.x86_64 quicklooksatellite ampdevicediscoveryagent photoanalysisd safeejectgpuagent systemuiserver devicecheckd adprivacyd system_installd kernelmanagerd passd com.apple.hiservices-xpcservice pkd keybagd fseventsd xartstorageremot accountsd corebrightnessd callhistorypluginhelper promotedcontentd uikitsystem echo_restapi logind poweruiagent mdnsresponderhel echo_user_agent tzd imautomatichistorydeletionagent applecredentialm sharedfilelistd sharingd imagent com.apple.audio. coreduetd bootinstalld echo_shrec wirelessradioman systemstats screentimeagent corelocationagent symsharedsetting itunescloudd echo_task_manage appssoagent seld suggestd dasd psychopy useractivityd launchd mds_stores mediaremoted zoutlookpluginagent xprotectpluginse standaloneupdate mapspushd storagekitd applessdstatisti nesessionmanager echo_uc_upload com.apple.quicklook.thumbnailsagent secinitd applespell com.apple.geod apfsd biometrickitd usagetrackingagent localizationswitcherd lsd dprivacyd ocspd routined echo_system_stat perfpowerservice nsurlsessiond triald installd findmymacd echo_adhoc_contr com.symantec.mes musiccacheextension awdd coreservicesd backupd-helper com.apple.mobile powerd com.apple.characterpicker.fileservice tvcacheextension com.apple.bkagentservice deleted 'keychain circle notification' assetcachetether usernotificationcenter contextstoreagent dock windowserver nfcd suhelperd symptomsd-diag uninstalld containermanager com.apple.hiserv ndoagent textinputmenuagent logd_helper contactsaccountsservice siriinferenced vdcassistant com.apple.sbd com.apple.clouddocs.mobiledocumentsfileprovider coreservicesuiagent wifivelocityd fairplayd xpcroleaccountd usbd talagent com.apple.siri.embeddedspeech crashreportersup analyticsd calendarwidgetextension fmfd callservicesd securityd nehelper notifyd com.apple.driver com.apple.dock.extra rpcsvchost syspolicyd com.apple.safari.safebrowsing.service mailcachedelete mobileassetd dpsubmissionserv watchdogd backupd akd gamecontrollerd periodic-wrapper aslmanager securityd_servic apfsuseragent contextservice sysdiagnose calendaragent storedownloadd familycircled xcode pluginlibraryservice gsscred vpnagentd cloudphotod colorsync.displa cloudkeychainproxy airportd biokitaggdd authd com.apple.accoun cvmserver protectedcloudkeysyncing sysmond icdd categoriesservice appleeventsd agsservice systemsoundserve touchbarserver pbs controlstrip echo_upload_log assetcachelocatorservice corespotlightd iconservicesagen bash dmd mtlcompilerservi cloudd rapportd eoshostd pboard revisiond com.apple.ambien transparencyd imklaunchagent auditd spindump thermalmonitord knowledge-agent com.apple.audio.sandboxhelper fontd locationd sandboxd lskdd taskgated remoted xprotectpluginservice rtcreportingd ctkd symantec stockswidget replayd com.apple.colors imdpersistenceagent identityservicesd emojifunctionrowim_extension diskarbitrationd coreauthd mdworker_shared quicklookuiservice fileproviderd fontworker logd viewbridgeauxili kerneleventagent usereventagent nbagent iconservicesagent dockhelper aksusbd bluetoothd coresymbolicatio cdpd com.apple.dt.xcode.sourcecontrol.sshhelper secd searchpartyd com.apple.appsto amsengagementd opendirectoryd photolibraryd textinputswitcher calncservice com.cisco.anycon com.apple.codesi finder com.apple.appkit.xpc.openandsavepanelservice askpermissiond captiveagent gputoolsagent commcenter ctkahp mediaremoteagent softwareupdatenotificationmanager wifianalyticsd com.apple.appleu imremoteurlconnectionagent assetcache python diagnostics_agent safaribookmarkssyncagent mirrordisplays trustd com.apple.dt.skagent installcoordinat media-indexer cfprefsd notificationcenter kernel_task diskunmountwatcher sysextd passwordbreachagent iconservicesd bird homed containermanagerd tccd symptomsd wifiagent xprotect com.apple.dt.xcode.sourcecontrol.workingcopyscanner scopedbookmarkagent spotlight endpointsecurity filecoordination coreaudiod lockoutagent diskmanagementd amsaccountsd servicerecords launchservicesd displaypolicyd colorsync.useragent com.apple.ifdrea airplayuiagent configd loginwindow deleted_helper pluginlibraryser usernoted parsecd hidd corespeechd wifivelocityagent podcastcontentservice thermald com.apple.cmio.r diagnosticextensionsd embeddedosinstal audiocomponentre mdworker receiverhelper echo_session_agent echo_ws_api carboncomponentscannerxpc timed simulatortrampoline aned microstackshot syslogd safarilaunchagent amfid backgroundtaskmanagementagent xprotectservice universalaccessd screentimewidgetextension usbmuxd mdwrite runningboardd autofsd weatherwidget softwareupdated controlcenter
+    systemUserProcCount: 448
+    systemUserProcFlagged: mds_stores mdworker mdworker_shared SafariLaunchAgent itunescloudd SafariBookmarksSyncAgent mds
+    systemUsersCount: 1
+  #[[ Window ]] #---------
+    windowWinType: pyglet
+    windowWaitBlanking: False
+    windowUseNativeGamma: True
+    windowUnits: deg
+    windowSize_pix: [800 600]
+    windowScreen: 1
+    windowRgb: [-1 -1 -1]
+    windowRefreshTimeSD_ms: 0.559
+    windowRefreshTimeMedian_ms: 11.778
+    windowRefreshTimeAvg_ms: 11.676
+    windowRefreshThreshold_sec: 0.0141
+    windowRecordFrameIntervals: False
+    windowPos_pix: [0.0, 0.0]
+    windowMonitor.name: testMonitor
+    windowMonitor.getWidth_cm: 38.0
+    windowMonitor.getLinearizeMethod: 1
+    windowMonitor.getGammaGrid: [[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+    windowMonitor.getDistance_cm: 50.0
+    windowMonitor.gammaInterpolator2: None
+    windowMonitor.gammaInterpolator: None
+    windowMonitor.currentCalibName: 2023_12_15 12:40
+    windowIsFullScr: 1
+    windowHaveShaders: True
+    windowAllowGUI: False
+  #[[ Python ]] #---------
+    pythonWxVersion: 4.1.1 osx-cocoa (phoenix) wxWidgets 3.1.5
+    pythonVersion: 3.8.10
+    pythonScipyVersion: 1.10.1
+    pythonPygletVersion: 1.5.27
+    pythonPygameVersion: (no pygame)
+    pythonNumpyVersion: 1.23.5
+    pythonMatplotlibVersion: 3.7.1
+    pythonFullVersion: 3.8.10 (v3.8.10:3d8993a744, May  3 2021, 08:55:58)  [Clang 6.0 (clang-600.0.57)]
+    pythonExecutable: /Applications/PsychoPy.app/Contents/MacOS/python
+  #[[ OpenGL ]] #---------
+    openGLmaxVerticesInVertexArray: 1048575
+    False: openGLext.GL_STEREO
+    True: openGLext.GL_EXT_framebuffer_object
+    True: openGLext.GL_ARB_vertex_shader
+    True: openGLext.GL_ARB_texture_non_power_of_two
+    True: openGLext.GL_ARB_texture_float
+    True: openGLext.GL_ARB_shader_objects
+    True: openGLext.GL_ARB_multitexture
+    True: openGLext.GL_ARB_fragment_program
+    openGLVersion: 2.1 ATI-4.6.20
+    openGLVendor: ATI Technologies Inc.
+    openGLRenderingEngine: AMD Radeon Pro 460 OpenGL Engine
+#[ PsychoPy3 RuntimeInfoEnd ]
+
+32.5973 	INFO 	gammaGrid=[[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+32.5973 	INFO 	linearizeMethod=1
+32.5985 	EXP 	window1: mouseVisible = True
+32.6013 	EXP 	window1: mouseVisible = True
+32.6062 	EXP 	window1: mouseVisible = True
+32.6074 	EXP 	window1: mouseVisible = True
+32.6086 	EXP 	window1: mouseVisible = True
+32.6096 	EXP 	window1: mouseVisible = True
+32.6113 	EXP 	window1: mouseVisible = True
+32.6125 	EXP 	window1: mouseVisible = True
+32.6132 	EXP 	window1: mouseVisible = True
+32.6152 	EXP 	window1: mouseVisible = True
+32.6171 	EXP 	window1: mouseVisible = True
+32.6193 	EXP 	window1: mouseVisible = True
+32.6589 	EXP 	window1: mouseVisible = True
+32.6618 	EXP 	window1: mouseVisible = True
+32.6644 	EXP 	window1: mouseVisible = True
+32.9890 	EXP 	Created sequence: random, trialTypes=32, nReps=3, seed=None
+33.2089 	INFO 	starting exp with name: "TemporalFrequencyLimit" at 07Feb2024_13-43
+33.2089 	INFO 	numtrials=96, trialDurMin= 1 trackVariableIntervMax= 0.8refreshRate=110.0
+33.2089 	INFO 	cueRampUpDur=0 cueRampDownDur= 0 secs
+
+33.2089 	INFO 	task=track   respType=order
+33.2089 	INFO 	ring radii=[2.19, 8.33, 13.16]
+33.2090 	INFO 	drawingAsGrating=False gratingTexPix=1024 antialiasGrating=True
+33.2110 	EXP 	New trial (rep=0, index=0): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.5, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+93.2234 	INFO 	Successfully set darwin thread to realtime
+93.3243 	EXP 	window1: mouseVisible = False
+98.9759 	EXP 	window1: mouseVisible = True
+98.9775 	EXP 	Sound  started
+100.4943 	DATA 	Mouse: Left button down, pos=(524,210)
+100.5902 	DATA 	Mouse:  Left button up, pos=(524,210)
+100.6244 	EXP 	Sound  started
+100.7749 	EXP 	New trial (rep=0, index=1): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.2, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+100.9755 	INFO 	Successfully set darwin thread to realtime
+101.0767 	EXP 	window1: mouseVisible = False
+105.0101 	EXP 	window1: mouseVisible = True
+105.0114 	EXP 	Sound  started
+106.7071 	DATA 	Mouse: Left button down, pos=(177,370)
+106.8222 	DATA 	Mouse:  Left button up, pos=(177,370)
+106.8429 	EXP 	Sound  started
+106.9934 	EXP 	New trial (rep=0, index=2): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.35, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+107.1936 	INFO 	Successfully set darwin thread to realtime
+107.2947 	EXP 	window1: mouseVisible = False
+111.2365 	EXP 	window1: mouseVisible = True
+111.2377 	EXP 	Sound  stopped
+111.2377 	EXP 	Sound  started
+112.2486 	DATA 	Mouse: Left button down, pos=(624,406)
+112.3582 	DATA 	Mouse:  Left button up, pos=(624,406)
+112.3837 	EXP 	Sound  started
+112.5342 	EXP 	New trial (rep=0, index=3): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.67, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+112.7352 	INFO 	Successfully set darwin thread to realtime
+112.8364 	EXP 	window1: mouseVisible = False
+116.9827 	EXP 	window1: mouseVisible = True
+116.9838 	EXP 	Sound  started
+118.1058 	DATA 	Mouse: Left button down, pos=(443,311)
+118.2142 	DATA 	Mouse:  Left button up, pos=(443,311)
+118.2242 	EXP 	Sound  started
+118.3747 	EXP 	New trial (rep=0, index=4): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.7, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+118.5751 	INFO 	Successfully set darwin thread to realtime
+118.6762 	EXP 	window1: mouseVisible = False
+122.0840 	EXP 	window1: mouseVisible = True
+122.0850 	EXP 	Sound  stopped
+122.0851 	EXP 	Sound  started
+123.1843 	DATA 	Mouse: Left button down, pos=(435,277)
+123.3196 	EXP 	Sound  started
+123.3261 	DATA 	Mouse:  Left button up, pos=(435,277)
+123.4701 	EXP 	New trial (rep=0, index=5): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.96, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+123.6704 	INFO 	Successfully set darwin thread to realtime
+123.7716 	EXP 	window1: mouseVisible = False
+127.4590 	EXP 	window1: mouseVisible = True
+127.4599 	EXP 	Sound  stopped
+127.4600 	EXP 	Sound  started
+128.5798 	DATA 	Mouse: Left button down, pos=(600,170)
+128.6981 	EXP 	Sound  started
+128.7102 	DATA 	Mouse:  Left button up, pos=(600,170)
+128.8486 	EXP 	New trial (rep=0, index=6): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.96, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999.,    0.,    2.]), 'ringToQuery': 999}
+129.0489 	INFO 	Successfully set darwin thread to realtime
+129.1500 	EXP 	window1: mouseVisible = False
+132.7958 	EXP 	window1: mouseVisible = True
+132.7968 	EXP 	Sound  stopped
+132.7968 	EXP 	Sound  started
+134.0345 	DATA 	Mouse: Left button down, pos=(453,441)
+134.1502 	DATA 	Mouse:  Left button up, pos=(453,441)
+134.1538 	EXP 	Sound  started
+134.3043 	EXP 	New trial (rep=0, index=7): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.2, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([6., 0., 3.]), 'ringToQuery': 999}
+134.5047 	INFO 	Successfully set darwin thread to realtime
+134.6058 	EXP 	window1: mouseVisible = False
+138.8678 	EXP 	window1: mouseVisible = True
+138.8688 	EXP 	Sound  stopped
+138.8689 	EXP 	Sound  started
+140.1631 	DATA 	Mouse: Left button down, pos=(173,392)
+140.2703 	DATA 	Mouse:  Left button up, pos=(173,392)
+140.2983 	EXP 	Sound  started
+140.4488 	EXP 	New trial (rep=0, index=8): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.5, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 1., 1.]), 'ringToQuery': 999}
+140.6500 	INFO 	Successfully set darwin thread to realtime
+140.7511 	EXP 	window1: mouseVisible = False
+144.2212 	EXP 	window1: mouseVisible = True
+144.2221 	EXP 	Sound  stopped
+144.2221 	EXP 	Sound  started
+153.4813 	DATA 	Keypress: escape
+153.7328 	EXP 	New trial (rep=0, index=9): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 1.25, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+153.9332 	INFO 	User aborted experiment by keypress with trialNum=9

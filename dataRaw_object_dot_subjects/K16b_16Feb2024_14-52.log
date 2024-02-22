@@ -1,0 +1,139 @@
+28.4679 	ERROR 	Median frames per second =84.9 BUT program assumes 110.0which is off by more than3%!!
+28.4679 	INFO 	longFrameLimit=11.545 Recording trials where one or more interframe interval exceeded this figure 
+28.4679 	INFO 	computer platform=darwin
+28.4680 	INFO 	File that generated this = sys.argv[0]= /Users/labmember/Documents/MOTcircularClean_0208/MOTcircular.py
+28.4680 	INFO 	has_retina_scrn=True
+1.0000 	INFO 	trialsPerCondition =
+29.0447 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fcc7a836760>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fcc7a836700>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fcc7a836580>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fcc736ece80>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=1, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='deg', useFBO=False, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=False, winType='pyglet')
+29.0449 	EXP 	window1: mouseVisible = True
+29.0450 	EXP 	window1: backgroundImage = None
+29.0450 	EXP 	window1: backgroundFit = 'cover'
+29.0451 	EXP 	window1: mouseVisible = 'true'
+29.1721 	INFO 	Successfully set darwin thread to realtime
+29.8818 	INFO 	second window opening runInfo mean ms=11.73790271186436
+29.8818 	INFO 	#[ PsychoPy3 RuntimeInfoStart ]
+  #[[ PsychoPy ]] #---------
+    psychopyVersion: 2023.2.3
+    psychopyHaveExtRush: True
+  #[[ Experiment ]] #---------
+    experimentAuthVersion: None
+    experimentAuthor: None
+    experimentRunTime: 2024_02_16 14:52 (Year_Month_Day Hour:Min)
+    experimentRunTime.epoch: 1708055574
+    experimentScript: MOTcircular.py
+    experimentScript.digestSHA1: c9346da0e14e9117a30b8888366d365e8157ec38
+    experimentScript.directory: /Users/labmember/Documents/MOTcircularClean_0208
+  #[[ System ]] #---------
+    systemFlacVersion: flac 1.3.3
+    systemHaveInternetAccess: False (proxies not attempted)
+    systemHostName: Alexs-MacBook-Pro.local
+    systemLocale: None.UTF-8
+    systemMemFreeRAM: 10561.765625
+    systemMemTotalRAM: 16384.0
+    systemPlatform: darwin 10.16 x86_64
+    systemRavailable: R version 4.0.3 (2020-10-10) -- Bunny-Wunnies Freak Out
+    systemRebooted: Feb 16 14:22
+    systemSec.OpenSSLVersion: LibreSSL 2.8.3
+    systemSec.pythonSSL: True
+    systemTimeNumpySD1000000_sec: 0.0026
+    systemUser: labmember
+    systemUserID: 503
+    systemUserProcCmdPid: vpnagentd echo_restapi syspolicyd com.symantec.mes iconservicesd audiocomponentre coreaudiod lockoutagent com.apple.geod sandboxd autofsd textinputswitcher xprotectpluginse categoriesservice pah_extension biokitaggdd echo_shrec colorsync.useragent ocspd com.apple.accoun opendirectoryd imremoteurlconnectionagent com.apple.siri.embeddedspeech notifyd coreduetd aksusbd uninstalld calendarwidgetextension python eoshostd amfid com.apple.webkit.networking com.apple.cmio.r spotlight calncservice networkserviceproxy talagent gamecontrollerd audiocomponentregistrar loginwindow com.apple.codesi lskdd finder viewbridgeauxiliary wirelessradioman kernel_task weatherwidget mds_stores systemstats backupd backgroundtaskmanagementagent com.apple.ambien echo_nginx xprotect com.apple.appkit.xpc.openandsavepanelservice tccd 'github desktop' com.apple.safari.safebrowsing.service contextservice imdpersistenceagent psychopy imklaunchagent coreservicesd cloudd softwareupdated mdnsresponder progressd colorsyncd spindump seld usernoted mds com.apple.preference.displays.airplaydevicemenuservice calendaragent cloudkeychainproxy displaypolicyd swcd logind containermanager biometrickitd imautomatichistorydeletionagent iconservicesagen mirrordisplays embeddedosinstal usbmuxd apfsd wifivelocityd usereventagent com.apple.driver echo_task_manage bluetoothd zoutlookpluginagent newstoday2 com.apple.appleu corebrightnessd nehelper com.apple.ifdrea symantec launchd stockswidget com.apple.clouddocs.mobiledocumentsfileprovider imagent endpointsecurity com.apple.hiserv amsengagementd windowserver mdwrite ctkd bash xartstorageremot fontworker powerd pluginlibraryser taskgated dockhelper distnoted com.apple.mobile com.apple.hiservices-xpcservice cfprefsd icdd siriinferenced safari suhelperd agsservice apsd diskarbitrationd familycircled sharingd sysextd photolibraryd com.apple.webkit.webcontent adprivacyd receiverhelper wifivelocityagent airplayuiagent pboard systemuiserver secinitd echo_session_agent pkd echo_spinner crashreportersup rapportd servicerecords syslogd ampdevicediscoveryagent screentimewidgetextension standaloneupdate usagetrackingagent diagnosticextensionsd remoted carboncomponentscannerxpc echo_ws_api com.apple.appsto fontd corespeechd itunescloudd appssoagent searchpartyd logd softwareupdatenotificationmanager controlcenter careportingservi wifianalyticsd routined vdcassistant lsd analyticsd com.apple.colors securityd mediaremoted com.cisco.anycon bird kernelmanagerd safeejectgpuservice hasplmd online-authd imageioxpcservice fileproviderd storagekitd keyboardservicesd watchdogd dprivacyd com.apple.audio.sandboxhelper echo_user_agent commcenter com.apple.audio. usbd kerneleventagent backupd-helper configd echo_upload_log echo_uc_upload parsecd gsscred nfcd suggestd com.apple.dictionaryservicehelper mobileactivation cloudpaird spindump_agent nesessionmanager aspcarrylog cvmserver cdpd smd xprotectpluginservice safarilaunchagent uikitsystem echo_adhoc_contr wifiagent applecredentialm textinputmenuagent installcoordinat airplayxpchelper safeejectgpuagent appstoreagent corelocationagent iconservicesagent com.apple.sbd rtcreportingd xpcroleaccountd contextstoreagent accountprofileremoteviewservice touchbarserver logd_helper notificationcenter controlstrip dasd appleeventsd symseplps com.apple.quicklook.thumbnailsagent hidd passwordbreachagent safaribookmarkssyncagent assistantd parsec-fbf neagent launchservicesd akd mdworker securityd_servic symptomsd diskmanagementd protectedcloudkeysyncing terminal worldclockwidget auditd locationd identityservicesd secd timed contactsaccountsservice 'keychain circle notification' ctkahp pbs containermanagerd adid captiveagent contextstored systemsoundserve passd amsaccountsd thermalmonitord revisiond fmfd corespotlightd echo_system_stat sysmond followupd diagnostics_agent findmymacd mdworker_shared com.apple.characterpicker.fileservice submitdiaginfo commerce coresymbolicatio com.apple.dock.external.extra.x86_64 apfsuseragent colorsync.displa applespell keybagd fseventsd dmd mdnsresponderhel dock viewbridgeauxili usbagent trustd useractivityd askpermissiond plugin-container perfpowerservice reportcrash quicklookuiservice callhistorypluginhelper emojifunctionrowim_extension com.apple.dock.extra callservicesd knowledge-agent poweruiagent usernotificationcenter filecoordination mdbulkimport mobileassetd coreservicesuiagent symsharedsetting airportd sharedfilelistd awdd nsurlsessiond thermald studentd authd pluginlibraryservice mediaremoteagent triald findmydeviced aslmanager homed universalaccessd firefox screentimeagent accountsd vtdecoderxpcservice com.apple.safari.history translationd bootinstalld cvmcompiler 'system preferences' coreauthd runningboardd
+    systemUserProcCount: 411
+    systemUserProcFlagged: mdworker Safari SafariLaunchAgent mdworker_shared mds SafariBookmarksSyncAgent mds_stores itunescloudd firefox
+    systemUsersCount: 1
+  #[[ Window ]] #---------
+    windowWinType: pyglet
+    windowWaitBlanking: False
+    windowUseNativeGamma: True
+    windowUnits: deg
+    windowSize_pix: [800 600]
+    windowScreen: 1
+    windowRgb: [-1 -1 -1]
+    windowRefreshTimeSD_ms: 0.779
+    windowRefreshTimeMedian_ms: 11.758
+    windowRefreshTimeAvg_ms: 11.738
+    windowRefreshThreshold_sec: 0.0141
+    windowRecordFrameIntervals: False
+    windowPos_pix: [0.0, 0.0]
+    windowMonitor.name: testMonitor
+    windowMonitor.getWidth_cm: 38.0
+    windowMonitor.getLinearizeMethod: 1
+    windowMonitor.getGammaGrid: [[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+    windowMonitor.getDistance_cm: 50.0
+    windowMonitor.gammaInterpolator2: None
+    windowMonitor.gammaInterpolator: None
+    windowMonitor.currentCalibName: 2023_12_15 12:40
+    windowIsFullScr: 1
+    windowHaveShaders: True
+    windowAllowGUI: False
+  #[[ Python ]] #---------
+    pythonWxVersion: 4.1.1 osx-cocoa (phoenix) wxWidgets 3.1.5
+    pythonVersion: 3.8.10
+    pythonScipyVersion: 1.10.1
+    pythonPygletVersion: 1.5.27
+    pythonPygameVersion: (no pygame)
+    pythonNumpyVersion: 1.23.5
+    pythonMatplotlibVersion: 3.7.1
+    pythonFullVersion: 3.8.10 (v3.8.10:3d8993a744, May  3 2021, 08:55:58)  [Clang 6.0 (clang-600.0.57)]
+    pythonExecutable: /Applications/PsychoPy.app/Contents/MacOS/python
+  #[[ OpenGL ]] #---------
+    openGLmaxVerticesInVertexArray: 1048575
+    False: openGLext.GL_STEREO
+    True: openGLext.GL_EXT_framebuffer_object
+    True: openGLext.GL_ARB_vertex_shader
+    True: openGLext.GL_ARB_texture_non_power_of_two
+    True: openGLext.GL_ARB_texture_float
+    True: openGLext.GL_ARB_shader_objects
+    True: openGLext.GL_ARB_multitexture
+    True: openGLext.GL_ARB_fragment_program
+    openGLVersion: 2.1 ATI-4.6.20
+    openGLVendor: ATI Technologies Inc.
+    openGLRenderingEngine: AMD Radeon Pro 460 OpenGL Engine
+#[ PsychoPy3 RuntimeInfoEnd ]
+
+29.8827 	INFO 	gammaGrid=[[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+29.8827 	INFO 	linearizeMethod=1
+29.8839 	EXP 	window1: mouseVisible = True
+29.8871 	EXP 	window1: mouseVisible = True
+29.8934 	EXP 	window1: mouseVisible = True
+29.8947 	EXP 	window1: mouseVisible = True
+29.8959 	EXP 	window1: mouseVisible = True
+29.8970 	EXP 	window1: mouseVisible = True
+29.8988 	EXP 	window1: mouseVisible = True
+29.8999 	EXP 	window1: mouseVisible = True
+29.9007 	EXP 	window1: mouseVisible = True
+29.9027 	EXP 	window1: mouseVisible = True
+29.9046 	EXP 	window1: mouseVisible = True
+29.9068 	EXP 	window1: mouseVisible = True
+29.9414 	EXP 	window1: mouseVisible = True
+29.9443 	EXP 	window1: mouseVisible = True
+29.9469 	EXP 	window1: mouseVisible = True
+30.2746 	EXP 	Created sequence: random, trialTypes=40, nReps=1, seed=None
+30.4910 	INFO 	starting exp with name: "TemporalFrequencyLimit" at 16Feb2024_14-52
+30.4911 	INFO 	numtrials=40, trialDurMin= 1 trackVariableIntervMax= 0.8refreshRate=110.0
+30.4911 	INFO 	cueRampUpDur=0 cueRampDownDur= 0 secs
+30.4911 	INFO 	task=track   respType=order
+30.4913 	INFO 	ring radii=[ 2.5  7.  15. ]
+30.4913 	INFO 	drawingAsGrating=False gratingTexPix=1024 antialiasGrating=True
+trialnum=0 ERROR,116 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[19.8 51.5 19.8 28.2 18.  18.1 18.1 17.8 18.  17.9 18.5 18.5 18.8 18.
+ 18.1 17.8 18.1 18.1 18.1 18.8 18.7 18.6 19.2 19.4 18.8 19.7 19.8 19.
+ 18.9 19.5 19.1 18.9 19.4 18.8 19.7 19.2 19.1 19.1 19.1 19.1 19.3 18.
+ 18.  17.9 18.  18.  18.6 18.  17.9 17.9 18.3 17.8 18.7 19.7 27.4 19.1
+ 20.3 19.  19.3 18.9 18.9 18.6 18.5 17.9 17.9 18.4 18.7 18.5 18.6 18.5
+ 18.8 19.2 19.9 19.1 18.7 19.1 18.7 18.6 17.8 18.  17.8 17.8 17.8 17.9
+ 17.9 17.8 17.9 17.9 18.5 18.7 18.2 18.8 19.  18.9 18.7 17.7 17.8 17.7
+ 17.9 45.5 25.6 23.1 64.2 83.  46.5 41.4 33.6 32.6 30.2 34.4 31.7 25.6
+ 29.6 39.2 31.9 39.3] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115]

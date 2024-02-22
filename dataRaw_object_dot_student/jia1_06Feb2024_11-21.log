@@ -1,0 +1,987 @@
+longFrameLimit=11.545 Recording trials where one or more interframe interval exceeded this figure 
+second window opening runInfo mean ms= 11.76036188135802
+40.5375 	INFO 	REFRESH RATE WAS NOT CHECKED
+40.5376 	INFO 	computer platform=darwin
+40.5376 	INFO 	File that generated this = sys.argv[0]= /Users/labmember/Documents/GitHub/MOTcircularClean/MOTcircular.py
+40.5377 	INFO 	has_retina_scrn=False
+3.0000 	INFO 	trialsPerCondition =
+40.5381 	WARNING 	Requested an unavailable screen number - using first available.
+41.0161 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fca447206a0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fca44720640>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fca447204c0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fca40929f70>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=1, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='deg', useFBO=False, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=False, winType='pyglet')
+41.0163 	EXP 	window1: mouseVisible = True
+41.0163 	EXP 	window1: backgroundImage = None
+41.0163 	EXP 	window1: backgroundFit = 'cover'
+41.0164 	EXP 	window1: mouseVisible = 'true'
+42.5753 	INFO 	Successfully set darwin thread to realtime
+43.2879 	INFO 	#[ PsychoPy3 RuntimeInfoStart ]
+  #[[ PsychoPy ]] #---------
+    psychopyVersion: 2023.2.3
+    psychopyHaveExtRush: True
+  #[[ Experiment ]] #---------
+    experimentAuthVersion: None
+    experimentAuthor: Alex O. Holcombe, Wei-Ying Chen
+    experimentRunTime: 2024_02_06 11:22 (Year_Month_Day Hour:Min)
+    experimentRunTime.epoch: 1707178938
+    experimentScript: MOTcircular.py
+    experimentScript.digestSHA1: 458f2dabf2d9ed1136f21244affd9ebe106a87a2
+    experimentScript.directory: /Users/labmember/Documents/GitHub/MOTcircularClean
+  #[[ System ]] #---------
+    systemFlacVersion: flac 1.3.3
+    systemHaveInternetAccess: True
+    systemHostName: alexs-mbp.staff.wireless.sydney.edu.au
+    systemLocale: en_AU.UTF-8
+    systemMemFreeRAM: 10557.421875
+    systemMemTotalRAM: 16384.0
+    systemPlatform: darwin 10.16 x86_64
+    systemRavailable: R version 4.0.3 (2020-10-10) -- Bunny-Wunnies Freak Out
+    systemRebooted: Feb 6 09:29
+    systemSec.OpenSSLVersion: LibreSSL 2.8.3
+    systemSec.pythonSSL: True
+    systemTimeNumpySD1000000_sec: 0.0062
+    systemUser: labmember
+    systemUserID: 503
+    systemUserProcCmdPid: talagent com.apple.safari.history translationd coreauthd securityd xprotectpluginse controlcenter zsh logind poweruiagent secinitd echo_restapi echo_session_agent wifiagent logd backupd submitdiaginfo mapspushd runningboardd launchd mobileactivation syslogd coreduetd cfprefsd mobileassetd servicerecords secd imautomatichistorydeletionagent bootinstalld appssoagent dprivacyd storagekitd quicklooksatellite triald pluginlibraryser amsaccountsd symantec captiveagent com.apple.driver findmydeviced suggestd media-indexer gamecontrollerd installcoordinat newstoday2 iconservicesagent dpsubmissionserv worldclockwidget watchdogd fmfd com.apple.characterpicker.fileservice backupd-helper idecachedeleteappextension periodic-wrapper dock timed spindump perfpowerservice textinputswitcher loginwindow careportingservi xprotectservice airportd com.apple.hiserv replayd locationd screentimewidgetextension imklaunchagent sysmond windowserver opendirectoryd assetcachelocatorservice com.apple.ifdrea sharingd corelocationagent eapolclient networkserviceproxy echo_spinner echo_system_stat imageioxpcservice airplayxpchelper com.apple.clouddocs.mobiledocumentsfileprovider amsengagementd powerd accountsd imagent vdcassistant textedit calncservice callhistorypluginhelper xprotect nfcd login dmd com.apple.dock.extra diskarbitrationd nesessionmanager echo_upload_log 'github desktop helper' news lskdd echo_user_agent com.apple.geod com.apple.bkagentservice wifianalyticsd seld passd fontworker softwareupdatenotificationmanager safari tvcacheextension rapportd usbagent aslmanager morphunassetsupd podcastcontentservice colorsyncd wirelessradioman symptomsd com.apple.safari.safebrowsing.service emojifunctionrowim_extension corebrightnessd bird coresymbolicatio com.apple.dock.external.extra.x86_64 audiocomponentregistrar appstoreagent mds_stores swcd mediaremoted com.apple.appleu systemsoundserve thermalmonitord nbagent useractivityd searchpartyd python lockoutagent pbs com.apple.coresimulator.coresimulatorservice viewbridgeauxiliary imremoteurlconnectionagent gputoolsagent online-authd transparencyd akd iconservicesagen endpointsecurity sharedfilelistd backgroundtaskmanagementagent 'microsoft word' passwordbreachagent mdworker com.apple.accoun netbiosd com.apple.dt.xcode.sourcecontrol.sshhelper fseventsd cdpd smd assetcachetether apsd amfid controlstrip crashreportersup commcenter com.apple.appsto com.cisco.anycon bash corespeechd photolibraryd photoanalysisd contextstoreagent vpnagentd assistantd usbd usernotificationcenter biometrickitd mirrordisplays com.apple.audio. com.apple.mobile 'keychain circle notification' ampartworkagent launchservicesd rtcreportingd safeejectgpuagent revisiond com.apple.hiservices-xpcservice promotedcontentd icloudnotificationagent safeejectgpuservice deleted containermanagerd sandboxd cvmserver contactsaccountsservice com.apple.siri.embeddedspeech syspolicyd notes pboard bluetoothd ndoagent calendaragent safaribookmarkssyncagent 'github desktop' cloudd aspcarrylog familycircled displaypolicyd itunescloudd safarilaunchagent trustd pkd wifivelocityagent dockhelper psychopy askpermissiond diagnosticextensionsd taskgated com.apple.audio.sandboxhelper commerce finder com.apple.quicklook.thumbnailsagent fileproviderd homed dasd symseplps coreservicesd universalaccessd screentimeagent wifivelocityd distnoted colorsync.displa deleted_helper echo_adhoc_contr analyticsd notifyd ctkahp audiocomponentre adid auditd powerchime kernelmanagerd symsharedsetting system_installd systemstats agsservice weatherwidget xpcroleaccountd com.apple.codesi siriinferenced apfsuseragent devicecheckd pluginlibraryservice usbmuxd echo_shrec cachedeleteextension apfsd logd_helper com.apple.dt.skagent keyboardservicesd terminal receiverhelper nsurlsessiond sysdiagnose newsd carboncomponentscannerxpc com.apple.colors kernel_task followupd routined com.apple.dt.xcode.sourcecontrol.workingcopyscanner usagetrackingagent coreservicesuiagent nbstated applecredentialm com.apple.webkit.webcontent tccd hidd diagnostics_agent authd quicklookuiservice xcode embeddedosinstal iconservicesd systemuiserver cloudkeychainproxy uikitsystem calendarwidgetextension cloudphotod touchbarserver colorsync.useragent aned stockswidget mtlcompilerservi numbers symptomsd-diag com.apple.cmio.r autofsd assetcache mtlcompilerservice xartstorageremot mdnsresponderhel knowledge-agent awdd fairplayd com.apple.sbd installd callservicesd reportcrash echo_ws_api remoted securityd_servic uninstalld applespell amplibraryagent echo_nginx kerneleventagent lsd echo_task_manage appleeventsd identityservicesd mediaremoteagent mdnsresponder cloudpaird adprivacyd xprotectpluginservice thermald gsscred suhelperd escrowsecurityalert storedownloadd zoutlookpluginagent parsecd fontd 'github desktop helper (renderer)' com.apple.webkit.networking biokitaggdd viewbridgeauxili mds mdbulkimport mdwrite findmymacd com.symantec.mes mailcachedelete 'github desktop helper (gpu)' ctkd corespotlightd mdworker_shared com.apple.appkit.xpc.openandsavepanelservice spotlight filecoordination avatarsd usernoted simulatortrampoline keybagd eoshostd coreaudiod imdpersistenceagent contextservice textinputmenuagent spindump_agent icdd sysextd usereventagent softwareupdated nehelper echo_uc_upload protectedcloudkeysyncing tzd configd diskmanagementd notificationcenter neagent musiccacheextension containermanager com.apple.ambien categoriesservice ampdevicediscoveryagent airplayuiagent contextstored scopedbookmarkagent
+    systemUserProcCount: 476
+    systemUserProcFlagged: mdworker_shared mds Safari itunescloudd mds_stores mdworker SafariLaunchAgent SafariBookmarksSyncAgent
+    systemUsersCount: 1
+  #[[ Window ]] #---------
+    windowWinType: pyglet
+    windowWaitBlanking: False
+    windowUseNativeGamma: True
+    windowUnits: deg
+    windowSize_pix: [800 600]
+    windowScreen: 1
+    windowRgb: [-1 -1 -1]
+    windowRefreshTimeSD_ms: 0.407
+    windowRefreshTimeMedian_ms: 11.764
+    windowRefreshTimeAvg_ms: 11.760
+    windowRefreshThreshold_sec: 0.0141
+    windowRecordFrameIntervals: False
+    windowPos_pix: [0.0, 0.0]
+    windowMonitor.name: testMonitor
+    windowMonitor.getWidth_cm: 38.0
+    windowMonitor.getLinearizeMethod: 1
+    windowMonitor.getGammaGrid: [[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+    windowMonitor.getDistance_cm: 50.0
+    windowMonitor.gammaInterpolator2: None
+    windowMonitor.gammaInterpolator: None
+    windowMonitor.currentCalibName: 2023_12_15 12:40
+    windowIsFullScr: 1
+    windowHaveShaders: True
+    windowAllowGUI: False
+  #[[ Python ]] #---------
+    pythonWxVersion: 4.1.1 osx-cocoa (phoenix) wxWidgets 3.1.5
+    pythonVersion: 3.8.10
+    pythonScipyVersion: 1.10.1
+    pythonPygletVersion: 1.5.27
+    pythonPygameVersion: (no pygame)
+    pythonNumpyVersion: 1.23.5
+    pythonMatplotlibVersion: 3.7.1
+    pythonFullVersion: 3.8.10 (v3.8.10:3d8993a744, May  3 2021, 08:55:58)  [Clang 6.0 (clang-600.0.57)]
+    pythonExecutable: /Applications/PsychoPy.app/Contents/MacOS/python
+  #[[ OpenGL ]] #---------
+    openGLmaxVerticesInVertexArray: 1048575
+    False: openGLext.GL_STEREO
+    True: openGLext.GL_EXT_framebuffer_object
+    True: openGLext.GL_ARB_vertex_shader
+    True: openGLext.GL_ARB_texture_non_power_of_two
+    True: openGLext.GL_ARB_texture_float
+    True: openGLext.GL_ARB_shader_objects
+    True: openGLext.GL_ARB_multitexture
+    True: openGLext.GL_ARB_fragment_program
+    openGLVersion: 2.1 ATI-4.6.20
+    openGLVendor: ATI Technologies Inc.
+    openGLRenderingEngine: AMD Radeon Pro 460 OpenGL Engine
+#[ PsychoPy3 RuntimeInfoEnd ]
+
+43.2887 	INFO 	gammaGrid=[[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+43.2887 	INFO 	linearizeMethod=1
+43.2959 	EXP 	window1: mouseVisible = True
+43.3013 	EXP 	window1: mouseVisible = True
+43.3084 	EXP 	window1: mouseVisible = True
+43.3097 	EXP 	window1: mouseVisible = True
+43.3109 	EXP 	window1: mouseVisible = True
+43.3122 	EXP 	window1: mouseVisible = True
+43.3141 	EXP 	window1: mouseVisible = True
+43.3152 	EXP 	window1: mouseVisible = True
+43.3160 	EXP 	window1: mouseVisible = True
+43.3197 	EXP 	window1: mouseVisible = True
+43.3234 	EXP 	window1: mouseVisible = True
+43.3275 	EXP 	window1: mouseVisible = True
+43.3774 	EXP 	window1: mouseVisible = True
+43.3800 	EXP 	window1: mouseVisible = True
+43.3826 	EXP 	window1: mouseVisible = True
+43.7030 	EXP 	Created sequence: random, trialTypes=32, nReps=3, seed=None
+43.9220 	INFO 	starting exp with name: "TemporalFrequencyLimit" at 06Feb2024_11-22
+43.9220 	INFO 	numtrials=96, trialDurMin= 1 trackVariableIntervMax= 0.8refreshRate=110.0
+43.9220 	INFO 	cueRampUpDur=0 cueRampDownDur= 0 secs
+
+43.9221 	INFO 	task=track   respType=order
+43.9221 	INFO 	ring radii=[2.19, 8.33, 13.16]
+43.9221 	INFO 	drawingAsGrating=False gratingTexPix=1024 antialiasGrating=True
+43.9241 	EXP 	New trial (rep=0, index=0): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+94.6111 	INFO 	Successfully set darwin thread to realtime
+94.7122 	EXP 	window1: mouseVisible = False
+99.9827 	EXP 	window1: mouseVisible = True
+99.9840 	EXP 	Sound  started
+101.5716 	DATA 	Mouse: Left button down, pos=(333,535)
+101.6923 	EXP 	Sound  started
+101.7172 	DATA 	Mouse:  Left button up, pos=(333,535)
+101.8428 	EXP 	New trial (rep=0, index=1): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+102.0430 	INFO 	Successfully set darwin thread to realtime
+102.1444 	EXP 	window1: mouseVisible = False
+106.6127 	EXP 	window1: mouseVisible = True
+106.6141 	EXP 	Sound  started
+108.0577 	DATA 	Mouse: Left button down, pos=(353,147)
+108.1651 	DATA 	Mouse:  Left button up, pos=(353,147)
+108.1749 	EXP 	Sound  started
+108.3254 	EXP 	New trial (rep=0, index=2): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.65, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+108.5265 	INFO 	Successfully set darwin thread to realtime
+108.6277 	EXP 	window1: mouseVisible = False
+112.4656 	EXP 	window1: mouseVisible = True
+112.4669 	EXP 	Sound  stopped
+112.4669 	EXP 	Sound  started
+113.5529 	DATA 	Mouse: Left button down, pos=(412,139)
+113.6623 	EXP 	Sound  started
+113.6771 	DATA 	Mouse:  Left button up, pos=(412,139)
+113.8128 	EXP 	New trial (rep=0, index=3): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.15, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+114.0132 	INFO 	Successfully set darwin thread to realtime
+114.1144 	EXP 	window1: mouseVisible = False
+117.5723 	EXP 	window1: mouseVisible = True
+117.5736 	EXP 	Sound  stopped
+117.5736 	EXP 	Sound  started
+119.5109 	DATA 	Mouse: Left button down, pos=(305,179)
+119.6132 	DATA 	Mouse:  Left button up, pos=(305,179)
+119.6201 	EXP 	Sound  started
+119.7705 	EXP 	New trial (rep=0, index=4): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.48, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+119.9710 	INFO 	Successfully set darwin thread to realtime
+120.0725 	EXP 	window1: mouseVisible = False
+123.9630 	EXP 	window1: mouseVisible = True
+123.9643 	EXP 	Sound  started
+125.0727 	DATA 	Mouse: Left button down, pos=(429,270)
+125.1820 	EXP 	Sound  started
+125.1971 	DATA 	Mouse:  Left button up, pos=(429,270)
+125.3325 	EXP 	New trial (rep=0, index=5): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.32, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+125.5329 	INFO 	Successfully set darwin thread to realtime
+125.6341 	EXP 	window1: mouseVisible = False
+129.6096 	EXP 	window1: mouseVisible = True
+129.6109 	EXP 	Sound  stopped
+129.6109 	EXP 	Sound  started
+130.8321 	DATA 	Mouse: Left button down, pos=(277,203)
+130.9491 	EXP 	Sound  started
+130.9813 	DATA 	Mouse:  Left button up, pos=(277,203)
+131.0996 	EXP 	New trial (rep=0, index=6): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.13, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+131.3000 	INFO 	Successfully set darwin thread to realtime
+131.4014 	EXP 	window1: mouseVisible = False
+134.8427 	EXP 	window1: mouseVisible = True
+134.8440 	EXP 	Sound  stopped
+134.8441 	EXP 	Sound  started
+137.6653 	DATA 	Mouse: Left button down, pos=(166,243)
+137.7837 	EXP 	Sound  started
+137.7892 	DATA 	Mouse:  Left button up, pos=(166,243)
+137.9342 	EXP 	New trial (rep=0, index=7): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.45, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+138.1354 	INFO 	Successfully set darwin thread to realtime
+138.2367 	EXP 	window1: mouseVisible = False
+142.2376 	EXP 	window1: mouseVisible = True
+142.2390 	EXP 	Sound  stopped
+142.2390 	EXP 	Sound  started
+143.5315 	DATA 	Mouse: Left button down, pos=(552,113)
+143.6371 	DATA 	Mouse:  Left button up, pos=(552,113)
+143.6409 	EXP 	Sound  started
+143.7914 	EXP 	New trial (rep=0, index=8): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+143.9926 	INFO 	Successfully set darwin thread to realtime
+144.0939 	EXP 	window1: mouseVisible = False
+147.9845 	EXP 	window1: mouseVisible = True
+147.9860 	EXP 	Sound  stopped
+147.9860 	EXP 	Sound  started
+149.2071 	DATA 	Mouse: Left button down, pos=(395,258)
+149.3163 	EXP 	Sound  started
+149.3251 	DATA 	Mouse:  Left button up, pos=(395,258)
+149.4668 	EXP 	New trial (rep=0, index=9): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+149.6671 	INFO 	Successfully set darwin thread to realtime
+149.7684 	EXP 	window1: mouseVisible = False
+153.9213 	EXP 	window1: mouseVisible = True
+153.9226 	EXP 	Sound  stopped
+153.9226 	EXP 	Sound  started
+155.0263 	DATA 	Mouse: Left button down, pos=(358,145)
+155.1438 	EXP 	Sound  started
+155.1491 	DATA 	Mouse:  Left button up, pos=(358,145)
+155.2943 	EXP 	New trial (rep=0, index=10): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([   7.,    5., -999.]), 'ringToQuery': 999}
+155.4945 	INFO 	Successfully set darwin thread to realtime
+155.5959 	EXP 	window1: mouseVisible = False
+159.2954 	EXP 	window1: mouseVisible = True
+159.2970 	EXP 	Sound  stopped
+159.2970 	EXP 	Sound  started
+160.4431 	DATA 	Mouse: Left button down, pos=(249,495)
+160.5572 	DATA 	Mouse:  Left button up, pos=(249,495)
+160.5604 	EXP 	Sound  started
+160.7109 	EXP 	New trial (rep=0, index=11): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.85, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+160.9120 	INFO 	Successfully set darwin thread to realtime
+161.0131 	EXP 	window1: mouseVisible = False
+165.2677 	EXP 	window1: mouseVisible = True
+165.2692 	EXP 	Sound  stopped
+165.2692 	EXP 	Sound  started
+166.3728 	DATA 	Mouse: Left button down, pos=(382,267)
+166.4821 	EXP 	Sound  started
+166.5011 	DATA 	Mouse:  Left button up, pos=(382,267)
+166.6326 	EXP 	New trial (rep=0, index=12): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+166.8338 	INFO 	Successfully set darwin thread to realtime
+166.9351 	EXP 	window1: mouseVisible = False
+170.9622 	EXP 	window1: mouseVisible = True
+170.9634 	EXP 	Sound  stopped
+170.9635 	EXP 	Sound  started
+172.1189 	DATA 	Mouse: Left button down, pos=(384,344)
+172.2210 	DATA 	Mouse:  Left button up, pos=(384,344)
+172.2358 	EXP 	Sound  started
+172.3862 	EXP 	New trial (rep=0, index=13): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([   2., -999.,    1.]), 'ringToQuery': 999}
+172.5865 	INFO 	Successfully set darwin thread to realtime
+172.6878 	EXP 	window1: mouseVisible = False
+176.5745 	EXP 	window1: mouseVisible = True
+176.5758 	EXP 	Sound  stopped
+176.5759 	EXP 	Sound  started
+177.4118 	DATA 	Mouse: Left button down, pos=(261,379)
+177.5211 	EXP 	Sound  started
+177.5332 	DATA 	Mouse:  Left button up, pos=(261,379)
+177.6715 	EXP 	New trial (rep=0, index=14): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([   7.,    7., -999.]), 'ringToQuery': 999}
+177.8728 	INFO 	Successfully set darwin thread to realtime
+177.9740 	EXP 	window1: mouseVisible = False
+181.6013 	EXP 	window1: mouseVisible = True
+181.6025 	EXP 	Sound  stopped
+181.6026 	EXP 	Sound  started
+182.5751 	DATA 	Mouse: Left button down, pos=(391,338)
+182.6932 	EXP 	Sound  started
+182.7011 	DATA 	Mouse:  Left button up, pos=(391,338)
+182.8437 	EXP 	New trial (rep=0, index=15): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.65, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999.,    3.,    0.]), 'ringToQuery': 999}
+183.0440 	INFO 	Successfully set darwin thread to realtime
+183.1452 	EXP 	window1: mouseVisible = False
+187.5288 	EXP 	window1: mouseVisible = True
+187.5301 	EXP 	Sound  stopped
+187.5301 	EXP 	Sound  started
+188.5442 	DATA 	Mouse: Left button down, pos=(197,158)
+188.6372 	DATA 	Mouse:  Left button up, pos=(197,158)
+188.6548 	EXP 	Sound  started
+188.8052 	EXP 	New trial (rep=0, index=16): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.15, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([1., 0., 1.]), 'ringToQuery': 999}
+189.0063 	INFO 	Successfully set darwin thread to realtime
+189.1076 	EXP 	window1: mouseVisible = False
+192.7477 	EXP 	window1: mouseVisible = True
+192.7493 	EXP 	Sound  stopped
+192.7493 	EXP 	Sound  started
+193.9545 	DATA 	Mouse: Left button down, pos=(359,336)
+194.0637 	EXP 	Sound  started
+194.0933 	DATA 	Mouse:  Left button up, pos=(359,336)
+194.2142 	EXP 	New trial (rep=0, index=17): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([   5., -999.,    0.]), 'ringToQuery': 999}
+194.4154 	INFO 	Successfully set darwin thread to realtime
+194.5167 	EXP 	window1: mouseVisible = False
+198.2738 	EXP 	window1: mouseVisible = True
+198.2751 	EXP 	Sound  stopped
+198.2751 	EXP 	Sound  started
+199.5665 	DATA 	Mouse: Left button down, pos=(527,87)
+199.6771 	DATA 	Mouse:  Left button up, pos=(527,87)
+199.6838 	EXP 	Sound  started
+199.8343 	EXP 	New trial (rep=0, index=18): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.45, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999.,    1.,    1.]), 'ringToQuery': 999}
+200.0355 	INFO 	Successfully set darwin thread to realtime
+200.1367 	EXP 	window1: mouseVisible = False
+204.5915 	EXP 	window1: mouseVisible = True
+204.5930 	EXP 	Sound  stopped
+204.5930 	EXP 	Sound  started
+205.6943 	DATA 	Mouse: Left button down, pos=(535,92)
+205.7891 	DATA 	Mouse:  Left button up, pos=(535,92)
+205.8037 	EXP 	Sound  started
+205.9542 	EXP 	New trial (rep=0, index=19): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+206.1545 	INFO 	Successfully set darwin thread to realtime
+206.2560 	EXP 	window1: mouseVisible = False
+209.6743 	EXP 	window1: mouseVisible = True
+209.6756 	EXP 	Sound  stopped
+209.6757 	EXP 	Sound  started
+210.9626 	DATA 	Mouse: Left button down, pos=(387,265)
+211.0692 	DATA 	Mouse:  Left button up, pos=(387,265)
+211.0808 	EXP 	Sound  started
+211.2313 	EXP 	New trial (rep=0, index=20): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([   2.,    6., -999.]), 'ringToQuery': 999}
+211.4323 	INFO 	Successfully set darwin thread to realtime
+211.5336 	EXP 	window1: mouseVisible = False
+215.0416 	EXP 	window1: mouseVisible = True
+215.0429 	EXP 	Sound  stopped
+215.0429 	EXP 	Sound  started
+217.0266 	DATA 	Mouse: Left button down, pos=(482,67)
+217.1411 	DATA 	Mouse:  Left button up, pos=(482,67)
+217.1437 	EXP 	Sound  started
+217.2942 	EXP 	New trial (rep=0, index=21): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.85, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([   1., -999.,    0.]), 'ringToQuery': 999}
+217.4945 	INFO 	Successfully set darwin thread to realtime
+217.5956 	EXP 	window1: mouseVisible = False
+221.1892 	EXP 	window1: mouseVisible = True
+221.1906 	EXP 	Sound  stopped
+221.1906 	EXP 	Sound  started
+222.4031 	DATA 	Mouse: Left button down, pos=(414,144)
+222.5135 	EXP 	Sound  started
+222.5252 	DATA 	Mouse:  Left button up, pos=(414,144)
+222.6641 	EXP 	New trial (rep=0, index=22): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.13, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 6., 1.]), 'ringToQuery': 999}
+222.8653 	INFO 	Successfully set darwin thread to realtime
+222.9666 	EXP 	window1: mouseVisible = False
+226.2775 	EXP 	window1: mouseVisible = True
+226.2788 	EXP 	Sound  stopped
+226.2788 	EXP 	Sound  started
+227.8198 	DATA 	Mouse: Left button down, pos=(435,319)
+227.9010 	DATA 	Mouse:  Left button up, pos=(435,319)
+227.9369 	EXP 	Sound  started
+228.0874 	EXP 	New trial (rep=0, index=23): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.22, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+228.2878 	INFO 	Successfully set darwin thread to realtime
+228.3889 	EXP 	window1: mouseVisible = False
+231.9606 	EXP 	window1: mouseVisible = True
+231.9619 	EXP 	Sound  stopped
+231.9619 	EXP 	Sound  started
+233.0612 	DATA 	Mouse: Left button down, pos=(558,285)
+233.1655 	DATA 	Mouse:  Left button up, pos=(558,285)
+233.1975 	EXP 	Sound  started
+233.4079 	EXP 	New trial (rep=0, index=24): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+233.6089 	INFO 	Successfully set darwin thread to realtime
+233.7103 	EXP 	window1: mouseVisible = False
+237.7760 	EXP 	window1: mouseVisible = True
+237.7774 	EXP 	Sound  stopped
+237.7774 	EXP 	Sound  started
+238.7093 	DATA 	Mouse: Left button down, pos=(372,276)
+238.8054 	DATA 	Mouse:  Left button up, pos=(372,276)
+238.8191 	EXP 	Sound  started
+238.9696 	EXP 	New trial (rep=0, index=25): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.48, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 3., 3.]), 'ringToQuery': 999}
+239.1706 	INFO 	Successfully set darwin thread to realtime
+239.2718 	EXP 	window1: mouseVisible = False
+242.7751 	EXP 	window1: mouseVisible = True
+242.7765 	EXP 	Sound  stopped
+242.7765 	EXP 	Sound  started
+243.7974 	DATA 	Mouse: Left button down, pos=(450,288)
+243.9067 	EXP 	Sound  started
+243.9092 	DATA 	Mouse:  Left button up, pos=(450,288)
+244.0574 	EXP 	New trial (rep=0, index=26): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.22, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([5., 6., 0.]), 'ringToQuery': 999}
+244.2586 	INFO 	Successfully set darwin thread to realtime
+244.3598 	EXP 	window1: mouseVisible = False
+248.2934 	EXP 	window1: mouseVisible = True
+248.2947 	EXP 	Sound  stopped
+248.2947 	EXP 	Sound  started
+249.2399 	DATA 	Mouse: Left button down, pos=(382,264)
+249.3172 	DATA 	Mouse:  Left button up, pos=(382,264)
+249.3571 	EXP 	Sound  started
+249.5076 	EXP 	New trial (rep=0, index=27): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 3., 1.]), 'ringToQuery': 999}
+249.7087 	INFO 	Successfully set darwin thread to realtime
+249.8103 	EXP 	window1: mouseVisible = False
+253.6271 	EXP 	window1: mouseVisible = True
+253.6285 	EXP 	Sound  stopped
+253.6285 	EXP 	Sound  started
+254.7422 	DATA 	Mouse: Left button down, pos=(383,338)
+254.8515 	EXP 	Sound  started
+254.8933 	DATA 	Mouse:  Left button up, pos=(383,338)
+255.0020 	EXP 	New trial (rep=0, index=28): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.37, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+255.2021 	INFO 	Successfully set darwin thread to realtime
+255.3033 	EXP 	window1: mouseVisible = False
+259.1522 	EXP 	window1: mouseVisible = True
+259.1535 	EXP 	Sound  stopped
+259.1535 	EXP 	Sound  started
+260.3994 	DATA 	Mouse: Left button down, pos=(536,93)
+260.5087 	EXP 	Sound  started
+260.5491 	DATA 	Mouse:  Left button up, pos=(536,93)
+260.6591 	EXP 	New trial (rep=0, index=29): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.32, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([4., 6., 0.]), 'ringToQuery': 999}
+260.8604 	INFO 	Successfully set darwin thread to realtime
+260.9621 	EXP 	window1: mouseVisible = False
+264.7488 	EXP 	window1: mouseVisible = True
+264.7501 	EXP 	Sound  stopped
+264.7502 	EXP 	Sound  started
+266.1627 	DATA 	Mouse: Left button down, pos=(376,266)
+266.2611 	DATA 	Mouse:  Left button up, pos=(376,266)
+266.2799 	EXP 	Sound  started
+266.4304 	EXP 	New trial (rep=0, index=30): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([1., 4., 0.]), 'ringToQuery': 999}
+266.6306 	INFO 	Successfully set darwin thread to realtime
+266.7318 	EXP 	window1: mouseVisible = False
+270.6554 	EXP 	window1: mouseVisible = True
+270.6567 	EXP 	Sound  stopped
+270.6567 	EXP 	Sound  started
+272.5541 	DATA 	Mouse: Left button down, pos=(479,159)
+272.6710 	EXP 	Sound  started
+272.6771 	DATA 	Mouse:  Left button up, pos=(479,159)
+272.8214 	EXP 	New trial (rep=0, index=31): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.37, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 1., 1.]), 'ringToQuery': 999}
+273.0225 	INFO 	Successfully set darwin thread to realtime
+273.1237 	EXP 	window1: mouseVisible = False
+277.0575 	EXP 	window1: mouseVisible = True
+277.0589 	EXP 	Sound  stopped
+277.0589 	EXP 	Sound  started
+278.0564 	DATA 	Mouse: Left button down, pos=(323,161)
+278.1656 	EXP 	Sound  started
+278.1892 	DATA 	Mouse:  Left button up, pos=(323,161)
+278.3162 	EXP 	New trial (rep=1, index=0): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.13, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 1., 7.]), 'ringToQuery': 0}
+278.5164 	INFO 	Successfully set darwin thread to realtime
+278.6177 	EXP 	window1: mouseVisible = False
+283.0344 	EXP 	window1: mouseVisible = True
+283.0357 	EXP 	Sound  stopped
+283.0357 	EXP 	Sound  started
+284.2600 	DATA 	Mouse: Left button down, pos=(379,151)
+284.3651 	DATA 	Mouse:  Left button up, pos=(379,151)
+284.3773 	EXP 	Sound  started
+284.5278 	EXP 	New trial (rep=1, index=1): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([   7.,    6., -999.]), 'ringToQuery': 0}
+284.7282 	INFO 	Successfully set darwin thread to realtime
+284.8294 	EXP 	window1: mouseVisible = False
+289.0322 	EXP 	window1: mouseVisible = True
+289.0336 	EXP 	Sound  stopped
+289.0336 	EXP 	Sound  started
+290.4569 	DATA 	Mouse: Left button down, pos=(193,429)
+290.5731 	DATA 	Mouse:  Left button up, pos=(193,429)
+290.5741 	EXP 	Sound  started
+290.7247 	EXP 	New trial (rep=1, index=2): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.32, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([7., 1., 3.]), 'ringToQuery': 1}
+290.9252 	INFO 	Successfully set darwin thread to realtime
+291.0266 	EXP 	window1: mouseVisible = False
+294.6306 	EXP 	window1: mouseVisible = True
+294.6320 	EXP 	Sound  stopped
+294.6320 	EXP 	Sound  started
+296.1332 	DATA 	Mouse: Left button down, pos=(425,263)
+296.2506 	EXP 	Sound  started
+296.2611 	DATA 	Mouse:  Left button up, pos=(425,263)
+296.4011 	EXP 	New trial (rep=1, index=3): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([2., 6., 4.]), 'ringToQuery': 2}
+296.6014 	INFO 	Successfully set darwin thread to realtime
+296.7027 	EXP 	window1: mouseVisible = False
+300.0780 	EXP 	window1: mouseVisible = True
+300.0793 	EXP 	Sound  stopped
+300.0793 	EXP 	Sound  started
+300.8791 	DATA 	Mouse: Left button down, pos=(427,324)
+300.9812 	DATA 	Mouse:  Left button up, pos=(427,324)
+300.9962 	EXP 	Sound  started
+301.1466 	EXP 	New trial (rep=1, index=4): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.13, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([1., 1., 1.]), 'ringToQuery': 2}
+301.3469 	INFO 	Successfully set darwin thread to realtime
+301.4481 	EXP 	window1: mouseVisible = False
+305.2885 	EXP 	window1: mouseVisible = True
+305.2899 	EXP 	Sound  stopped
+305.2899 	EXP 	Sound  started
+306.4889 	DATA 	Mouse: Left button down, pos=(615,190)
+306.5971 	DATA 	Mouse:  Left button up, pos=(615,190)
+306.6065 	EXP 	Sound  started
+306.7570 	EXP 	New trial (rep=1, index=5): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.45, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([0., 1., 1.]), 'ringToQuery': 2}
+306.9582 	INFO 	Successfully set darwin thread to realtime
+307.0594 	EXP 	window1: mouseVisible = False
+310.8918 	EXP 	window1: mouseVisible = True
+310.8931 	EXP 	Sound  stopped
+310.8931 	EXP 	Sound  started
+311.9485 	DATA 	Mouse: Left button down, pos=(441,299)
+312.0533 	DATA 	Mouse:  Left button up, pos=(441,299)
+312.0582 	EXP 	Sound  started
+312.2087 	EXP 	New trial (rep=1, index=6): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([2., 3., 2.]), 'ringToQuery': 1}
+312.4100 	INFO 	Successfully set darwin thread to realtime
+312.5113 	EXP 	window1: mouseVisible = False
+315.9935 	EXP 	window1: mouseVisible = True
+315.9948 	EXP 	Sound  stopped
+315.9948 	EXP 	Sound  started
+317.4656 	DATA 	Mouse: Left button down, pos=(261,101)
+317.5760 	EXP 	Sound  started
+317.5812 	DATA 	Mouse:  Left button up, pos=(261,101)
+317.7265 	EXP 	New trial (rep=1, index=7): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([0., 6., 0.]), 'ringToQuery': 0}
+317.9269 	INFO 	Successfully set darwin thread to realtime
+318.0281 	EXP 	window1: mouseVisible = False
+321.8847 	EXP 	window1: mouseVisible = True
+321.8861 	EXP 	Sound  stopped
+321.8862 	EXP 	Sound  started
+323.0608 	DATA 	Mouse: Left button down, pos=(357,301)
+323.1783 	EXP 	Sound  started
+323.1812 	DATA 	Mouse:  Left button up, pos=(357,301)
+323.3288 	EXP 	New trial (rep=1, index=8): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.48, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 2., 3.]), 'ringToQuery': 0}
+323.5291 	INFO 	Successfully set darwin thread to realtime
+323.6304 	EXP 	window1: mouseVisible = False
+327.1827 	EXP 	window1: mouseVisible = True
+327.1840 	EXP 	Sound  stopped
+327.1840 	EXP 	Sound  started
+328.3142 	DATA 	Mouse: Left button down, pos=(378,63)
+328.4211 	DATA 	Mouse:  Left button up, pos=(378,63)
+328.4247 	EXP 	Sound  started
+328.5751 	EXP 	New trial (rep=1, index=9): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.22, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([6., 0., 6.]), 'ringToQuery': 1}
+328.7761 	INFO 	Successfully set darwin thread to realtime
+328.8773 	EXP 	window1: mouseVisible = False
+332.9012 	EXP 	window1: mouseVisible = True
+332.9027 	EXP 	Sound  stopped
+332.9028 	EXP 	Sound  started
+334.1370 	DATA 	Mouse: Left button down, pos=(411,341)
+334.2371 	DATA 	Mouse:  Left button up, pos=(411,341)
+334.2543 	EXP 	Sound  started
+334.4047 	EXP 	New trial (rep=1, index=10): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.85, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 2., 0.]), 'ringToQuery': 0}
+334.6059 	INFO 	Successfully set darwin thread to realtime
+334.7071 	EXP 	window1: mouseVisible = False
+337.9077 	EXP 	window1: mouseVisible = True
+337.9091 	EXP 	Sound  stopped
+337.9091 	EXP 	Sound  started
+338.9406 	DATA 	Mouse: Left button down, pos=(557,281)
+339.0293 	DATA 	Mouse:  Left button up, pos=(557,281)
+339.0501 	EXP 	Sound  started
+339.2007 	EXP 	New trial (rep=1, index=11): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([5., 0., 2.]), 'ringToQuery': 2}
+339.4011 	INFO 	Successfully set darwin thread to realtime
+339.5023 	EXP 	window1: mouseVisible = False
+342.8021 	EXP 	window1: mouseVisible = True
+342.8034 	EXP 	Sound  stopped
+342.8034 	EXP 	Sound  started
+343.8600 	DATA 	Mouse: Left button down, pos=(511,377)
+343.9654 	DATA 	Mouse:  Left button up, pos=(511,377)
+343.9783 	EXP 	Sound  started
+344.1288 	EXP 	New trial (rep=1, index=12): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.15, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 1., 2.]), 'ringToQuery': 0}
+344.3291 	INFO 	Successfully set darwin thread to realtime
+344.4304 	EXP 	window1: mouseVisible = False
+347.8301 	EXP 	window1: mouseVisible = True
+347.8314 	EXP 	Sound  stopped
+347.8315 	EXP 	Sound  started
+348.8525 	DATA 	Mouse: Left button down, pos=(272,218)
+348.9572 	DATA 	Mouse:  Left button up, pos=(272,218)
+348.9618 	EXP 	Sound  started
+349.1122 	EXP 	New trial (rep=1, index=13): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 1., 2.]), 'ringToQuery': 0}
+349.3134 	INFO 	Successfully set darwin thread to realtime
+349.4147 	EXP 	window1: mouseVisible = False
+353.0939 	EXP 	window1: mouseVisible = True
+353.0953 	EXP 	Sound  stopped
+353.0954 	EXP 	Sound  started
+354.3649 	DATA 	Mouse: Left button down, pos=(456,443)
+354.4451 	DATA 	Mouse:  Left button up, pos=(456,443)
+354.4743 	EXP 	Sound  started
+354.6248 	EXP 	New trial (rep=1, index=14): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.45, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([2., 2., 1.]), 'ringToQuery': 2}
+354.8252 	INFO 	Successfully set darwin thread to realtime
+354.9266 	EXP 	window1: mouseVisible = False
+358.8810 	EXP 	window1: mouseVisible = True
+358.8825 	EXP 	Sound  stopped
+358.8825 	EXP 	Sound  started
+360.1276 	DATA 	Mouse: Left button down, pos=(324,167)
+360.2210 	DATA 	Mouse:  Left button up, pos=(324,167)
+360.2381 	EXP 	Sound  started
+360.3886 	EXP 	New trial (rep=1, index=15): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.65, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 3., 1.]), 'ringToQuery': 1}
+360.5891 	INFO 	Successfully set darwin thread to realtime
+360.6903 	EXP 	window1: mouseVisible = False
+364.8045 	EXP 	window1: mouseVisible = True
+364.8058 	EXP 	Sound  stopped
+364.8059 	EXP 	Sound  started
+366.1210 	DATA 	Mouse: Left button down, pos=(569,472)
+366.2306 	EXP 	Sound  started
+366.2690 	DATA 	Mouse:  Left button up, pos=(569,472)
+366.4307 	EXP 	New trial (rep=1, index=16): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.22, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 5., 4.]), 'ringToQuery': 0}
+366.6310 	INFO 	Successfully set darwin thread to realtime
+366.7324 	EXP 	window1: mouseVisible = False
+370.2634 	EXP 	window1: mouseVisible = True
+370.2647 	EXP 	Sound  stopped
+370.2647 	EXP 	Sound  started
+371.3757 	DATA 	Mouse: Left button down, pos=(542,240)
+371.4932 	EXP 	Sound  started
+371.5174 	DATA 	Mouse:  Left button up, pos=(542,240)
+371.6436 	EXP 	New trial (rep=1, index=17): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 3., 2.]), 'ringToQuery': 0}
+371.8449 	INFO 	Successfully set darwin thread to realtime
+371.9463 	EXP 	window1: mouseVisible = False
+375.9051 	EXP 	window1: mouseVisible = True
+375.9064 	EXP 	Sound  stopped
+375.9065 	EXP 	Sound  started
+377.0235 	DATA 	Mouse: Left button down, pos=(280,381)
+377.1334 	EXP 	Sound  started
+377.1413 	DATA 	Mouse:  Left button up, pos=(280,381)
+377.2839 	EXP 	New trial (rep=1, index=18): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.15, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 1., 1.]), 'ringToQuery': 1}
+377.4843 	INFO 	Successfully set darwin thread to realtime
+377.5856 	EXP 	window1: mouseVisible = False
+381.1898 	EXP 	window1: mouseVisible = True
+381.1911 	EXP 	Sound  stopped
+381.1911 	EXP 	Sound  started
+381.9716 	DATA 	Mouse: Left button down, pos=(365,321)
+382.0812 	EXP 	Sound  started
+382.1012 	DATA 	Mouse:  Left button up, pos=(365,321)
+382.2317 	EXP 	New trial (rep=1, index=19): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.37, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 3., 0.]), 'ringToQuery': 1}
+382.4329 	INFO 	Successfully set darwin thread to realtime
+382.5342 	EXP 	window1: mouseVisible = False
+386.7149 	EXP 	window1: mouseVisible = True
+386.7166 	EXP 	Sound  stopped
+386.7166 	EXP 	Sound  started
+388.1673 	DATA 	Mouse: Left button down, pos=(483,79)
+388.2769 	EXP 	Sound  started
+388.2851 	DATA 	Mouse:  Left button up, pos=(483,79)
+388.4274 	EXP 	New trial (rep=1, index=20): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([2., 4., 2.]), 'ringToQuery': 2}
+388.6279 	INFO 	Successfully set darwin thread to realtime
+388.7291 	EXP 	window1: mouseVisible = False
+392.5737 	EXP 	window1: mouseVisible = True
+392.5750 	EXP 	Sound  stopped
+392.5751 	EXP 	Sound  started
+393.6502 	DATA 	Mouse: Left button down, pos=(616,198)
+393.7492 	DATA 	Mouse:  Left button up, pos=(616,198)
+393.7676 	EXP 	Sound  started
+393.9181 	EXP 	New trial (rep=1, index=21): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.65, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([0., 3., 0.]), 'ringToQuery': 2}
+394.1193 	INFO 	Successfully set darwin thread to realtime
+394.2204 	EXP 	window1: mouseVisible = False
+398.5454 	EXP 	window1: mouseVisible = True
+398.5468 	EXP 	Sound  stopped
+398.5468 	EXP 	Sound  started
+400.0878 	DATA 	Mouse: Left button down, pos=(355,301)
+400.1974 	EXP 	Sound  started
+400.2052 	DATA 	Mouse:  Left button up, pos=(355,301)
+400.3480 	EXP 	New trial (rep=1, index=22): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([5., 5., 0.]), 'ringToQuery': 2}
+400.5485 	INFO 	Successfully set darwin thread to realtime
+400.6499 	EXP 	window1: mouseVisible = False
+404.0226 	EXP 	window1: mouseVisible = True
+404.0240 	EXP 	Sound  stopped
+404.0240 	EXP 	Sound  started
+405.1202 	DATA 	Mouse: Left button down, pos=(378,323)
+405.2051 	DATA 	Mouse:  Left button up, pos=(378,323)
+405.2374 	EXP 	Sound  started
+405.3879 	EXP 	New trial (rep=1, index=23): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.48, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([1., 1., 2.]), 'ringToQuery': 0}
+405.5882 	INFO 	Successfully set darwin thread to realtime
+405.6894 	EXP 	window1: mouseVisible = False
+409.5214 	EXP 	window1: mouseVisible = True
+409.5227 	EXP 	Sound  stopped
+409.5227 	EXP 	Sound  started
+411.0094 	DATA 	Mouse: Left button down, pos=(392,146)
+411.1190 	EXP 	Sound  started
+411.1333 	DATA 	Mouse:  Left button up, pos=(392,146)
+411.2694 	EXP 	New trial (rep=1, index=24): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 5., 4.]), 'ringToQuery': 0}
+411.4698 	INFO 	Successfully set darwin thread to realtime
+411.5712 	EXP 	window1: mouseVisible = False
+414.9329 	EXP 	window1: mouseVisible = True
+414.9342 	EXP 	Sound  stopped
+414.9342 	EXP 	Sound  started
+416.1619 	DATA 	Mouse: Left button down, pos=(476,163)
+416.2773 	DATA 	Mouse:  Left button up, pos=(476,163)
+416.2796 	EXP 	Sound  started
+416.4301 	EXP 	New trial (rep=1, index=25): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.85, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 2., 3.]), 'ringToQuery': 1}
+416.6313 	INFO 	Successfully set darwin thread to realtime
+416.7326 	EXP 	window1: mouseVisible = False
+420.1050 	EXP 	window1: mouseVisible = True
+420.1063 	EXP 	Sound  stopped
+420.1063 	EXP 	Sound  started
+421.6148 	DATA 	Mouse: Left button down, pos=(247,129)
+421.7255 	EXP 	Sound  started
+421.7261 	DATA 	Mouse:  Left button up, pos=(247,129)
+421.8761 	EXP 	New trial (rep=1, index=26): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 4., 0.]), 'ringToQuery': 1}
+422.0764 	INFO 	Successfully set darwin thread to realtime
+422.1778 	EXP 	window1: mouseVisible = False
+426.0380 	EXP 	window1: mouseVisible = True
+426.0395 	EXP 	Sound  stopped
+426.0395 	EXP 	Sound  started
+427.4959 	DATA 	Mouse: Left button down, pos=(304,426)
+427.5812 	DATA 	Mouse:  Left button up, pos=(304,426)
+427.6131 	EXP 	Sound  started
+427.7636 	EXP 	New trial (rep=1, index=27): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([0., 5., 4.]), 'ringToQuery': 1}
+427.9640 	INFO 	Successfully set darwin thread to realtime
+428.0653 	EXP 	window1: mouseVisible = False
+431.8630 	EXP 	window1: mouseVisible = True
+431.8643 	EXP 	Sound  stopped
+431.8643 	EXP 	Sound  started
+433.2363 	DATA 	Mouse: Left button down, pos=(433,143)
+433.3251 	DATA 	Mouse:  Left button up, pos=(433,143)
+433.3538 	EXP 	Sound  started
+433.5043 	EXP 	New trial (rep=1, index=28): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([2., 2., 1.]), 'ringToQuery': 0}
+433.7055 	INFO 	Successfully set darwin thread to realtime
+433.8068 	EXP 	window1: mouseVisible = False
+437.4335 	EXP 	window1: mouseVisible = True
+437.4349 	EXP 	Sound  stopped
+437.4349 	EXP 	Sound  started
+438.3070 	DATA 	Mouse: Left button down, pos=(430,265)
+438.4131 	DATA 	Mouse:  Left button up, pos=(430,265)
+438.4166 	EXP 	Sound  started
+438.5671 	EXP 	New trial (rep=1, index=29): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.37, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 2., 0.]), 'ringToQuery': 2}
+438.7675 	INFO 	Successfully set darwin thread to realtime
+438.8687 	EXP 	window1: mouseVisible = False
+442.4982 	EXP 	window1: mouseVisible = True
+442.4995 	EXP 	Sound  stopped
+442.4995 	EXP 	Sound  started
+443.9029 	DATA 	Mouse: Left button down, pos=(250,270)
+444.0126 	EXP 	Sound  started
+444.0292 	DATA 	Mouse:  Left button up, pos=(250,270)
+444.1631 	EXP 	New trial (rep=1, index=30): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 3., 0.]), 'ringToQuery': 1}
+444.3643 	INFO 	Successfully set darwin thread to realtime
+444.4657 	EXP 	window1: mouseVisible = False
+448.3818 	EXP 	window1: mouseVisible = True
+448.3831 	EXP 	Sound  stopped
+448.3831 	EXP 	Sound  started
+449.7818 	DATA 	Mouse: Left button down, pos=(267,506)
+449.8852 	DATA 	Mouse:  Left button up, pos=(267,506)
+449.9001 	EXP 	Sound  started
+450.0505 	EXP 	New trial (rep=1, index=31): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.32, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 5., 3.]), 'ringToQuery': 0}
+450.2510 	INFO 	Successfully set darwin thread to realtime
+450.3523 	EXP 	window1: mouseVisible = False
+454.0943 	EXP 	window1: mouseVisible = True
+454.0957 	EXP 	Sound  stopped
+454.0958 	EXP 	Sound  started
+455.3413 	DATA 	Mouse: Left button down, pos=(422,272)
+455.4588 	EXP 	Sound  started
+455.4611 	DATA 	Mouse:  Left button up, pos=(422,272)
+455.6093 	EXP 	New trial (rep=2, index=0): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 1., 3.]), 'ringToQuery': 1}
+455.8103 	INFO 	Successfully set darwin thread to realtime
+455.9116 	EXP 	window1: mouseVisible = False
+459.6315 	EXP 	window1: mouseVisible = True
+459.6328 	EXP 	Sound  stopped
+459.6328 	EXP 	Sound  started
+460.6455 	DATA 	Mouse: Left button down, pos=(353,440)
+460.7333 	DATA 	Mouse:  Left button up, pos=(353,440)
+460.7555 	EXP 	Sound  started
+460.9060 	EXP 	New trial (rep=2, index=1): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 6., 5.]), 'ringToQuery': 2}
+461.1063 	INFO 	Successfully set darwin thread to realtime
+461.2075 	EXP 	window1: mouseVisible = False
+464.8422 	EXP 	window1: mouseVisible = True
+464.8435 	EXP 	Sound  stopped
+464.8435 	EXP 	Sound  started
+465.6743 	DATA 	Mouse: Left button down, pos=(351,451)
+465.7892 	DATA 	Mouse:  Left button up, pos=(351,451)
+465.7931 	EXP 	Sound  started
+465.9436 	EXP 	New trial (rep=2, index=2): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 1., 1.]), 'ringToQuery': 0}
+466.1441 	INFO 	Successfully set darwin thread to realtime
+466.2453 	EXP 	window1: mouseVisible = False
+470.4718 	EXP 	window1: mouseVisible = True
+470.4733 	EXP 	Sound  stopped
+470.4733 	EXP 	Sound  started
+471.7794 	DATA 	Mouse: Left button down, pos=(398,143)
+471.8891 	EXP 	Sound  started
+471.9094 	DATA 	Mouse:  Left button up, pos=(398,143)
+472.0396 	EXP 	New trial (rep=2, index=3): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.48, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 3., 2.]), 'ringToQuery': 1}
+472.2399 	INFO 	Successfully set darwin thread to realtime
+472.3412 	EXP 	window1: mouseVisible = False
+476.2869 	EXP 	window1: mouseVisible = True
+476.2882 	EXP 	Sound  stopped
+476.2882 	EXP 	Sound  started
+477.7495 	DATA 	Mouse: Left button down, pos=(631,245)
+477.8589 	EXP 	Sound  started
+477.8611 	DATA 	Mouse:  Left button up, pos=(631,245)
+478.0094 	EXP 	New trial (rep=2, index=4): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 1., 2.]), 'ringToQuery': 0}
+478.2104 	INFO 	Successfully set darwin thread to realtime
+478.3116 	EXP 	window1: mouseVisible = False
+481.9739 	EXP 	window1: mouseVisible = True
+481.9752 	EXP 	Sound  stopped
+481.9752 	EXP 	Sound  started
+483.2462 	DATA 	Mouse: Left button down, pos=(551,486)
+483.3412 	DATA 	Mouse:  Left button up, pos=(551,486)
+483.3637 	EXP 	Sound  started
+483.5142 	EXP 	New trial (rep=2, index=5): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.37, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 3., 3.]), 'ringToQuery': 2}
+483.7145 	INFO 	Successfully set darwin thread to realtime
+483.8158 	EXP 	window1: mouseVisible = False
+488.2111 	EXP 	window1: mouseVisible = True
+488.2124 	EXP 	Sound  stopped
+488.2124 	EXP 	Sound  started
+489.6923 	DATA 	Mouse: Left button down, pos=(410,144)
+489.7971 	DATA 	Mouse:  Left button up, pos=(410,144)
+489.8015 	EXP 	Sound  started
+489.9520 	EXP 	New trial (rep=2, index=6): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.65, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 3., 2.]), 'ringToQuery': 2}
+490.1530 	INFO 	Successfully set darwin thread to realtime
+490.2542 	EXP 	window1: mouseVisible = False
+493.9146 	EXP 	window1: mouseVisible = True
+493.9158 	EXP 	Sound  stopped
+493.9159 	EXP 	Sound  started
+494.9918 	DATA 	Mouse: Left button down, pos=(298,416)
+495.1017 	EXP 	Sound  started
+495.1093 	DATA 	Mouse:  Left button up, pos=(298,416)
+495.2521 	EXP 	New trial (rep=2, index=7): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([2., 3., 4.]), 'ringToQuery': 1}
+495.4526 	INFO 	Successfully set darwin thread to realtime
+495.5540 	EXP 	window1: mouseVisible = False
+499.2913 	EXP 	window1: mouseVisible = True
+499.2928 	EXP 	Sound  stopped
+499.2928 	EXP 	Sound  started
+500.2550 	DATA 	Mouse: Left button down, pos=(307,528)
+500.3653 	DATA 	Mouse:  Left button up, pos=(307,528)
+500.3738 	EXP 	Sound  started
+500.5380 	EXP 	New trial (rep=2, index=8): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.48, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 3., 1.]), 'ringToQuery': 2}
+500.7392 	INFO 	Successfully set darwin thread to realtime
+500.8405 	EXP 	window1: mouseVisible = False
+504.5515 	EXP 	window1: mouseVisible = True
+504.5528 	EXP 	Sound  stopped
+504.5528 	EXP 	Sound  started
+505.7037 	DATA 	Mouse: Left button down, pos=(249,336)
+505.8187 	EXP 	Sound  started
+505.8372 	DATA 	Mouse:  Left button up, pos=(249,336)
+505.9692 	EXP 	New trial (rep=2, index=9): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 1., 1.]), 'ringToQuery': 2}
+506.1698 	INFO 	Successfully set darwin thread to realtime
+506.2710 	EXP 	window1: mouseVisible = False
+509.9491 	EXP 	window1: mouseVisible = True
+509.9504 	EXP 	Sound  stopped
+509.9504 	EXP 	Sound  started
+511.2717 	DATA 	Mouse: Left button down, pos=(180,190)
+511.3819 	EXP 	Sound  started
+511.3892 	DATA 	Mouse:  Left button up, pos=(180,190)
+511.5324 	EXP 	New trial (rep=2, index=10): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([1., 4., 6.]), 'ringToQuery': 2}
+511.7335 	INFO 	Successfully set darwin thread to realtime
+511.8348 	EXP 	window1: mouseVisible = False
+515.9970 	EXP 	window1: mouseVisible = True
+515.9983 	EXP 	Sound  stopped
+515.9983 	EXP 	Sound  started
+517.1348 	DATA 	Mouse: Left button down, pos=(433,267)
+517.2211 	DATA 	Mouse:  Left button up, pos=(433,267)
+517.2532 	EXP 	Sound  started
+517.4037 	EXP 	New trial (rep=2, index=11): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.32, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 1., 7.]), 'ringToQuery': 0}
+517.6040 	INFO 	Successfully set darwin thread to realtime
+517.7053 	EXP 	window1: mouseVisible = False
+521.1255 	EXP 	window1: mouseVisible = True
+521.1268 	EXP 	Sound  stopped
+521.1268 	EXP 	Sound  started
+522.4262 	DATA 	Mouse: Left button down, pos=(406,147)
+522.5412 	DATA 	Mouse:  Left button up, pos=(406,147)
+522.5503 	EXP 	Sound  started
+522.7007 	EXP 	New trial (rep=2, index=12): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.32, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([6., 0., 1.]), 'ringToQuery': 0}
+522.9012 	INFO 	Successfully set darwin thread to realtime
+523.0025 	EXP 	window1: mouseVisible = False
+526.5691 	EXP 	window1: mouseVisible = True
+526.5704 	EXP 	Sound  stopped
+526.5705 	EXP 	Sound  started
+527.6255 	DATA 	Mouse: Left button down, pos=(542,232)
+527.7253 	DATA 	Mouse:  Left button up, pos=(542,232)
+527.7429 	EXP 	Sound  started
+527.8935 	EXP 	New trial (rep=2, index=13): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.85, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 2., 2.]), 'ringToQuery': 1}
+528.0938 	INFO 	Successfully set darwin thread to realtime
+528.1950 	EXP 	window1: mouseVisible = False
+531.6057 	EXP 	window1: mouseVisible = True
+531.6070 	EXP 	Sound  stopped
+531.6070 	EXP 	Sound  started
+532.7093 	DATA 	Mouse: Left button down, pos=(165,280)
+532.8133 	DATA 	Mouse:  Left button up, pos=(165,280)
+532.8196 	EXP 	Sound  started
+532.9701 	EXP 	New trial (rep=2, index=14): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.45, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([2., 3., 1.]), 'ringToQuery': 1}
+533.1706 	INFO 	Successfully set darwin thread to realtime
+533.2720 	EXP 	window1: mouseVisible = False
+537.2730 	EXP 	window1: mouseVisible = True
+537.2813 	EXP 	Sound  stopped
+537.2813 	EXP 	Sound  started
+539.0554 	DATA 	Mouse: Left button down, pos=(377,269)
+539.1571 	DATA 	Mouse:  Left button up, pos=(377,269)
+539.1705 	EXP 	Sound  started
+539.3210 	EXP 	New trial (rep=2, index=15): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.15, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 1., 1.]), 'ringToQuery': 0}
+539.5215 	INFO 	Successfully set darwin thread to realtime
+539.6228 	EXP 	window1: mouseVisible = False
+543.8902 	EXP 	window1: mouseVisible = True
+543.8916 	EXP 	Sound  stopped
+543.8916 	EXP 	Sound  started
+544.7359 	DATA 	Mouse: Left button down, pos=(441,306)
+544.8292 	DATA 	Mouse:  Left button up, pos=(441,306)
+544.8453 	EXP 	Sound  started
+544.9958 	EXP 	New trial (rep=2, index=16): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.37, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 3., 3.]), 'ringToQuery': 1}
+545.1961 	INFO 	Successfully set darwin thread to realtime
+545.2973 	EXP 	window1: mouseVisible = False
+549.5320 	EXP 	window1: mouseVisible = True
+549.5397 	EXP 	Sound  stopped
+549.5398 	EXP 	Sound  started
+551.1293 	DATA 	Mouse: Left button down, pos=(330,428)
+551.2370 	DATA 	Mouse:  Left button up, pos=(330,429)
+551.2443 	EXP 	Sound  started
+551.3947 	EXP 	New trial (rep=2, index=17): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.85, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 2., 1.]), 'ringToQuery': 2}
+551.5959 	INFO 	Successfully set darwin thread to realtime
+551.6971 	EXP 	window1: mouseVisible = False
+556.1167 	EXP 	window1: mouseVisible = True
+556.1180 	EXP 	Sound  stopped
+556.1181 	EXP 	Sound  started
+557.2591 	DATA 	Mouse: Left button down, pos=(255,337)
+557.3743 	EXP 	Sound  started
+557.3750 	DATA 	Mouse:  Left button up, pos=(255,337)
+557.5247 	EXP 	New trial (rep=2, index=18): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.26, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 3., 1.]), 'ringToQuery': 1}
+557.7251 	INFO 	Successfully set darwin thread to realtime
+557.8264 	EXP 	window1: mouseVisible = False
+561.9704 	EXP 	window1: mouseVisible = True
+561.9787 	EXP 	Sound  stopped
+561.9788 	EXP 	Sound  started
+563.5091 	DATA 	Mouse: Left button down, pos=(361,536)
+563.6130 	DATA 	Mouse:  Left button up, pos=(361,536)
+563.6288 	EXP 	Sound  started
+563.7792 	EXP 	New trial (rep=2, index=19): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.65, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 0., 1.]), 'ringToQuery': 0}
+563.9796 	INFO 	Successfully set darwin thread to realtime
+564.0808 	EXP 	window1: mouseVisible = False
+567.5534 	EXP 	window1: mouseVisible = True
+567.5612 	EXP 	Sound  stopped
+567.5612 	EXP 	Sound  started
+568.7795 	DATA 	Mouse: Left button down, pos=(532,371)
+568.8945 	EXP 	Sound  started
+568.9091 	DATA 	Mouse:  Left button up, pos=(532,371)
+569.0450 	EXP 	New trial (rep=2, index=20): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([0., 3., 4.]), 'ringToQuery': 1}
+569.2454 	INFO 	Successfully set darwin thread to realtime
+569.3466 	EXP 	window1: mouseVisible = False
+573.1567 	EXP 	window1: mouseVisible = True
+573.1642 	EXP 	Sound  stopped
+573.1642 	EXP 	Sound  started
+574.3574 	DATA 	Mouse: Left button down, pos=(564,104)
+574.4761 	EXP 	Sound  started
+574.4772 	DATA 	Mouse:  Left button up, pos=(564,104)
+574.6265 	EXP 	New trial (rep=2, index=21): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.13, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([5., 7., 3.]), 'ringToQuery': 2}
+574.8269 	INFO 	Successfully set darwin thread to realtime
+574.9282 	EXP 	window1: mouseVisible = False
+579.0845 	EXP 	window1: mouseVisible = True
+579.0925 	EXP 	Sound  stopped
+579.0926 	EXP 	Sound  started
+580.2364 	DATA 	Mouse: Left button down, pos=(272,385)
+580.3252 	DATA 	Mouse:  Left button up, pos=(272,385)
+580.3595 	EXP 	Sound  started
+580.5101 	EXP 	New trial (rep=2, index=22): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.22, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 7., 5.]), 'ringToQuery': 0}
+580.7104 	INFO 	Successfully set darwin thread to realtime
+580.8117 	EXP 	window1: mouseVisible = False
+584.9302 	EXP 	window1: mouseVisible = True
+584.9324 	EXP 	Sound  stopped
+584.9324 	EXP 	Sound  started
+585.7472 	DATA 	Mouse: Left button down, pos=(426,326)
+585.8647 	EXP 	Sound  started
+585.8772 	DATA 	Mouse:  Left button up, pos=(426,326)
+586.0151 	EXP 	New trial (rep=2, index=23): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([0., 7., 7.]), 'ringToQuery': 0}
+586.2154 	INFO 	Successfully set darwin thread to realtime
+586.3167 	EXP 	window1: mouseVisible = False
+590.2540 	EXP 	window1: mouseVisible = True
+590.2617 	EXP 	Sound  stopped
+590.2618 	EXP 	Sound  started
+591.6461 	DATA 	Mouse: Left button down, pos=(474,153)
+591.7640 	EXP 	Sound  started
+591.7734 	DATA 	Mouse:  Left button up, pos=(474,153)
+591.9145 	EXP 	New trial (rep=2, index=24): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.13, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([7., 4., 0.]), 'ringToQuery': 1}
+592.1148 	INFO 	Successfully set darwin thread to realtime
+592.2160 	EXP 	window1: mouseVisible = False
+596.3079 	EXP 	window1: mouseVisible = True
+596.3155 	EXP 	Sound  stopped
+596.3155 	EXP 	Sound  started
+597.4486 	DATA 	Mouse: Left button down, pos=(601,434)
+597.5575 	DATA 	Mouse:  Left button up, pos=(601,434)
+597.5662 	EXP 	Sound  started
+597.7167 	EXP 	New trial (rep=2, index=25): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([5., 6., 2.]), 'ringToQuery': 1}
+597.9171 	INFO 	Successfully set darwin thread to realtime
+598.0183 	EXP 	window1: mouseVisible = False
+601.9973 	EXP 	window1: mouseVisible = True
+602.0051 	EXP 	Sound  stopped
+602.0051 	EXP 	Sound  started
+603.4452 	DATA 	Mouse: Left button down, pos=(406,255)
+603.5653 	DATA 	Mouse:  Left button up, pos=(406,255)
+603.5814 	EXP 	Sound  started
+603.7318 	EXP 	New trial (rep=2, index=26): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.22, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([7., 7., 4.]), 'ringToQuery': 1}
+603.9331 	INFO 	Successfully set darwin thread to realtime
+604.0344 	EXP 	window1: mouseVisible = False
+607.7510 	EXP 	window1: mouseVisible = True
+607.7586 	EXP 	Sound  stopped
+607.7587 	EXP 	Sound  started
+608.8853 	DATA 	Mouse: Left button down, pos=(359,271)
+609.0213 	DATA 	Mouse:  Left button up, pos=(359,271)
+609.0291 	EXP 	Sound  started
+609.1796 	EXP 	New trial (rep=2, index=27): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([6., 1., 5.]), 'ringToQuery': 0}
+609.3799 	INFO 	Successfully set darwin thread to realtime
+609.4812 	EXP 	window1: mouseVisible = False
+613.3187 	EXP 	window1: mouseVisible = True
+613.3260 	EXP 	Sound  stopped
+613.3260 	EXP 	Sound  started
+614.1427 	DATA 	Mouse: Left button down, pos=(422,335)
+614.2531 	DATA 	Mouse:  Left button up, pos=(422,335)
+614.2604 	EXP 	Sound  started
+614.4110 	EXP 	New trial (rep=2, index=28): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.15, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 0., 2.]), 'ringToQuery': 1}
+614.6112 	INFO 	Successfully set darwin thread to realtime
+614.7126 	EXP 	window1: mouseVisible = False
+618.3033 	EXP 	window1: mouseVisible = True
+618.3112 	EXP 	Sound  stopped
+618.3113 	EXP 	Sound  started
+619.5664 	DATA 	Mouse: Left button down, pos=(446,454)
+619.6812 	EXP 	Sound  started
+619.6852 	DATA 	Mouse:  Left button up, pos=(446,454)
+619.8317 	EXP 	New trial (rep=2, index=29): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 3., 5.]), 'ringToQuery': 1}
+620.0320 	INFO 	Successfully set darwin thread to realtime
+620.1332 	EXP 	window1: mouseVisible = False
+623.9425 	EXP 	window1: mouseVisible = True
+623.9500 	EXP 	Sound  stopped
+623.9500 	EXP 	Sound  started
+625.2012 	DATA 	Mouse: Left button down, pos=(416,256)
+625.3172 	DATA 	Mouse:  Left button up, pos=(416,256)
+625.3205 	EXP 	Sound  started
+625.4710 	EXP 	New trial (rep=2, index=30): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.45, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 3., 1.]), 'ringToQuery': 0}
+625.6720 	INFO 	Successfully set darwin thread to realtime
+625.7733 	EXP 	window1: mouseVisible = False
+629.5175 	EXP 	window1: mouseVisible = True
+629.5254 	EXP 	Sound  stopped
+629.5254 	EXP 	Sound  started
+630.9632 	DATA 	Mouse: Left button down, pos=(639,262)
+631.0782 	EXP 	Sound  started
+631.0933 	DATA 	Mouse:  Left button up, pos=(639,262)
+631.2287 	EXP 	New trial (rep=2, index=31): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([2., 1., 6.]), 'ringToQuery': 2}
+631.4300 	INFO 	Successfully set darwin thread to realtime
+631.5313 	EXP 	window1: mouseVisible = False
+635.0954 	EXP 	window1: mouseVisible = True
+635.1038 	EXP 	Sound  stopped
+635.1039 	EXP 	Sound  started
+636.3739 	DATA 	Mouse: Left button down, pos=(364,281)
+636.4773 	DATA 	Mouse:  Left button up, pos=(364,281)
+636.4935 	EXP 	Sound  started

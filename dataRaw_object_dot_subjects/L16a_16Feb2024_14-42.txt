@@ -1,0 +1,2 @@
+trialnum	subject	basicShape	numObjects	speed	initialDirRing0	orderCorrect	trialDurTotal	numTargets	whichIsTargetEachRing0	whichIsTargetEachRing1	whichIsTargetEachRing2	ringToQuery	Direction0	Direction1	Direction2	respAdj0	respAdj1	respAdj2	rev0_0	rev0_1	rev0_2	rev0_3	rev1_0	rev1_1	rev1_2	rev1_3	rev2_0	rev2_1	rev2_2	rev2_3	timingBlips
+0	L16a	circle	4	0.88	-1	0 	 2.4862150709813013 	 2 	 0.0	0.0	-999.0	1	-1	1	-1	-999	-999	-999	2.2866 	3.0496 	-999	-999	1.7147 	2.7179 	-999	-999	1.7144 	2.35 	3.4708 	-999	11

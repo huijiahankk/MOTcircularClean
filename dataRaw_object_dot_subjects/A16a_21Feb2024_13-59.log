@@ -1,0 +1,127 @@
+43.7611 	ERROR 	Median frames per second =85.1 BUT program assumes 110.0which is off by more than3%!!
+43.7611 	INFO 	longFrameLimit=11.545 Recording trials where one or more interframe interval exceeded this figure 
+43.7612 	INFO 	computer platform=darwin
+43.7612 	INFO 	File that generated this = sys.argv[0]= /Users/labmember/Documents/MOTcircularClean_0208/MOTcircular.py
+43.7612 	INFO 	has_retina_scrn=False
+1.0000 	INFO 	trialsPerCondition =
+43.7617 	WARNING 	Requested an unavailable screen number - using first available.
+44.2506 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fe721f07790>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fe721f07730>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fe721f075b0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fe71aba6eb0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=1, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='deg', useFBO=False, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=False, winType='pyglet')
+44.2508 	EXP 	window1: mouseVisible = True
+44.2508 	EXP 	window1: backgroundImage = None
+44.2508 	EXP 	window1: backgroundFit = 'cover'
+44.2509 	EXP 	window1: mouseVisible = 'true'
+44.3906 	INFO 	Successfully set darwin thread to realtime
+45.0981 	INFO 	second window opening runInfo mean ms=11.704870474574617
+45.0981 	INFO 	#[ PsychoPy3 RuntimeInfoStart ]
+  #[[ PsychoPy ]] #---------
+    psychopyVersion: 2023.2.3
+    psychopyHaveExtRush: True
+  #[[ Experiment ]] #---------
+    experimentAuthVersion: None
+    experimentAuthor: None
+    experimentRunTime: 2024_02_21 13:59 (Year_Month_Day Hour:Min)
+    experimentRunTime.epoch: 1708484387
+    experimentScript: MOTcircular.py
+    experimentScript.digestSHA1: c9346da0e14e9117a30b8888366d365e8157ec38
+    experimentScript.directory: /Users/labmember/Documents/MOTcircularClean_0208
+  #[[ System ]] #---------
+    systemFlacVersion: flac 1.3.3
+    systemHaveInternetAccess: True
+    systemHostName: Alexs-MacBook-Pro.local
+    systemLocale: None.UTF-8
+    systemMemFreeRAM: 7740.71484375
+    systemMemTotalRAM: 16384.0
+    systemPlatform: darwin 10.16 x86_64
+    systemRavailable: R version 4.0.3 (2020-10-10) -- Bunny-Wunnies Freak Out
+    systemRebooted: Feb 21 09:43
+    systemSec.OpenSSLVersion: LibreSSL 2.8.3
+    systemSec.pythonSSL: True
+    systemTimeNumpySD1000000_sec: 0.0026
+    systemUser: labmember
+    systemUserID: 503
+    systemUserProcCmdPid: mdbulkimport deleted_helper smd calendarwidgetextension networkserviceproxy installcoordinat lsd mobileassetd 'keychain circle notification' echo_spinner echo_system_stat photolibraryd searchpartyd fseventsd sysdiagnose apsd com.apple.appleu usereventagent aspcarrylog textinputswitcher xartstorageremot sysextd usbd echo_uc_upload servicerecords datadetectorssou auditd safarilaunchagent apfsuseragent xprotectservice cloudd pbs emojifunctionrowim_extension calendaragent universalaccessd hasplmd kerneleventagent familycircled com.apple.stream echo_session_agent mtlcompilerservi amsaccountsd colorsyncd fmfd pluginlibraryservice com.apple.siri.embeddedspeech agsservice backgroundtaskmanagementagent com.apple.codesi wifianalyticsd photoanalysisd viewbridgeauxiliary osduihelper com.apple.ambien com.apple.webkit.networking filecoordination symptomsd-diag spindump weatherwidget appleeventsd psychopy spotlight iconservicesagent remoted receiverhelper securityd symsharedsetting system_installd sandboxd corespotlightd airportd thermalmonitord avatarsd gsscred syspolicyd echo_task_manage tzd appstoreagent spindump_agent cvmserver corelocationagent 'github desktop helper (renderer)' deleted logd_helper com.apple.characterpicker.fileservice contextservice kernel_task kernelmanagerd zoutlookpluginagent pboard com.apple.appsto mdnsresponderhel rtcreportingd ampartworkagent apfsd devicecheckd timed diskmanagementd safeejectgpuagent coreaudiod com.apple.colors assistantd com.apple.appkit.xpc.openandsavepanelservice icdd notifyd colorsync.useragent audiocomponentre lskdd echo_nginx systemsoundserve passd callhistorypluginhelper fontworker neagent routined adid viewbridgeauxili coreservicesd parsecd 'github desktop' safeejectgpuservice diagnosticextensionsd mapspushd suhelperd diskarbitrationd aslmanager com.apple.geod talagent idecachedeleteappextension mobileactivation sharedfilelistd itunescloudd com.apple.audio.sandboxhelper mdworker mdnsresponder dasd hidd containermanagerd vdcassistant cfprefsd finder assetcache media-indexer autofsd online-authd imageioxpcservice passwordbreachagent keyboardservicesd cloudpaird xprotect fontd fud analyticsd perfpowerservice iconservicesagen netbiosd echo_upload_log callservicesd commcenter contextstored screentimewidgetextension mediaremoted escrowsecurityalert akd cachedeleteextension backupd accountsd coresymbolicatio nehelper bluetoothd usernoted carboncomponentscannerxpc fudhelperagent displaypolicyd findmymacd nesessionmanager thermald amfid sharingd corespeechd coreservicesuiagent com.apple.safari.history cdpd mediaremoteagent diagnostics_agent pkd terminal mailcachedelete mdworker_shared safari eoshostd textinputmenuagent bird swcd safaribookmarkssyncagent usbmuxd airplayuiagent lockoutagent appssoagent com.apple.dock.extra loginwindow audiocomponentregistrar echo_ws_api containermanager contactsaccountsservice siriinferenced corebrightnessd amsengagementd applecredentialm com.cisco.anycon logd touchbarserver mds suggestd systemstats watchdogd categoriesservice com.apple.sbd airplayxpchelper echo_restapi rapportd trustd installd ctkahp symseplps imautomatichistorydeletionagent 'github desktop helper' ampdevicediscoveryagent poweruiagent scopedbookmarkagent configd assetcachetether wirelessradioman launchd mirrordisplays amplibraryagent com.apple.safari.safebrowsing.service imklaunchagent gamecontrollerd com.apple.hiservices-xpcservice contextstoreagent 'github desktop helper (gpu)' taskgated securityd_servic fileproviderd plugin-container calncservice periodic-wrapper controlstrip submitdiaginfo cloudphotod systemuiserver echo_user_agent tvcacheextension authd echo_shrec com.apple.clouddocs.mobiledocumentsfileprovider localizationswitcherd wifivelocityagent vpnagentd crashreportersup backupd-helper protectedcloudkeysyncing newstoday2 iconservicesd triald xprotectpluginservice wifiagent uarpupdaterservi com.apple.audio. applessdstatisti com.apple.driver ctkd com.apple.bkagentservice assetcachelocatorservice fairplayd com.apple.hiserv aksusbd secd windowserver dmd tccd quicklookuiservice symptomsd storedownloadd coreduetd python softwareupdatenotificationmanager coreauthd com.symantec.mes commerce com.apple.mobile seld biometrickitd xprotectpluginse com.apple.accoun imremoteurlconnectionagent worldclockwidget translationd xpcroleaccountd softwareupdated bootinstalld followupd knowledge-agent identityservicesd biokitaggdd pah_extension wifivelocityd standalonehidaud powerd syslogd eapolclient secinitd imagent opendirectoryd cloudkeychainproxy imdpersistenceagent keybagd transparencyd notificationcenter firefox captiveagent nfcd stockswidget colorsync.displa replayd locationd distnoted assetcachelocato revisiond microstackshot dock endpointsecurity mds_stores com.apple.quicklook.thumbnailsagent dockhelper askpermissiond dprivacyd awdd sysmond echo_adhoc_contr pluginlibraryser aned ndoagent usagetrackingagent nbagent uikitsystem controlcenter nsurlsessiond screentimeagent icloudnotificationagent logind podcastcontentservice runningboardd bash findmydeviced symantec com.apple.ifdrea usbagent launchservicesd applespell com.apple.cmio.r storagekitd com.apple.dock.external.extra.x86_64 com.apple.webkit.webcontent reportcrash embeddedosinstal uninstalld homed musiccacheextension useractivityd adprivacyd
+    systemUserProcCount: 465
+    systemUserProcFlagged: SafariLaunchAgent itunescloudd Safari mds firefox mds_stores mdworker mdworker_shared SafariBookmarksSyncAgent
+    systemUsersCount: 1
+  #[[ Window ]] #---------
+    windowWinType: pyglet
+    windowWaitBlanking: False
+    windowUseNativeGamma: True
+    windowUnits: deg
+    windowSize_pix: [800 600]
+    windowScreen: 1
+    windowRgb: [-1 -1 -1]
+    windowRefreshTimeSD_ms: 0.668
+    windowRefreshTimeMedian_ms: 11.756
+    windowRefreshTimeAvg_ms: 11.705
+    windowRefreshThreshold_sec: 0.0141
+    windowRecordFrameIntervals: False
+    windowPos_pix: [0.0, 0.0]
+    windowMonitor.name: testMonitor
+    windowMonitor.getWidth_cm: 38.0
+    windowMonitor.getLinearizeMethod: 1
+    windowMonitor.getGammaGrid: [[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+    windowMonitor.getDistance_cm: 50.0
+    windowMonitor.gammaInterpolator2: None
+    windowMonitor.gammaInterpolator: None
+    windowMonitor.currentCalibName: 2023_12_15 12:40
+    windowIsFullScr: 1
+    windowHaveShaders: True
+    windowAllowGUI: False
+  #[[ Python ]] #---------
+    pythonWxVersion: 4.1.1 osx-cocoa (phoenix) wxWidgets 3.1.5
+    pythonVersion: 3.8.10
+    pythonScipyVersion: 1.10.1
+    pythonPygletVersion: 1.5.27
+    pythonPygameVersion: (no pygame)
+    pythonNumpyVersion: 1.23.5
+    pythonMatplotlibVersion: 3.7.1
+    pythonFullVersion: 3.8.10 (v3.8.10:3d8993a744, May  3 2021, 08:55:58)  [Clang 6.0 (clang-600.0.57)]
+    pythonExecutable: /Applications/PsychoPy.app/Contents/MacOS/python
+  #[[ OpenGL ]] #---------
+    openGLmaxVerticesInVertexArray: 1048575
+    False: openGLext.GL_STEREO
+    True: openGLext.GL_EXT_framebuffer_object
+    True: openGLext.GL_ARB_vertex_shader
+    True: openGLext.GL_ARB_texture_non_power_of_two
+    True: openGLext.GL_ARB_texture_float
+    True: openGLext.GL_ARB_shader_objects
+    True: openGLext.GL_ARB_multitexture
+    True: openGLext.GL_ARB_fragment_program
+    openGLVersion: 2.1 ATI-4.6.20
+    openGLVendor: ATI Technologies Inc.
+    openGLRenderingEngine: AMD Radeon Pro 460 OpenGL Engine
+#[ PsychoPy3 RuntimeInfoEnd ]
+
+45.0989 	INFO 	gammaGrid=[[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+45.0989 	INFO 	linearizeMethod=1
+45.1008 	EXP 	window1: mouseVisible = True
+45.1028 	EXP 	window1: mouseVisible = True
+45.1077 	EXP 	window1: mouseVisible = True
+45.1088 	EXP 	window1: mouseVisible = True
+45.1097 	EXP 	window1: mouseVisible = True
+45.1106 	EXP 	window1: mouseVisible = True
+45.1121 	EXP 	window1: mouseVisible = True
+45.1130 	EXP 	window1: mouseVisible = True
+45.1138 	EXP 	window1: mouseVisible = True
+45.1156 	EXP 	window1: mouseVisible = True
+45.1173 	EXP 	window1: mouseVisible = True
+45.1192 	EXP 	window1: mouseVisible = True
+45.1619 	EXP 	window1: mouseVisible = True
+45.1648 	EXP 	window1: mouseVisible = True
+45.1673 	EXP 	window1: mouseVisible = True
+45.4993 	EXP 	Created sequence: random, trialTypes=40, nReps=1, seed=None
+45.7592 	INFO 	starting exp with name: "TemporalFrequencyLimit" at 21Feb2024_13-59
+45.7592 	INFO 	numtrials=40, trialDurMin= 1 trackVariableIntervMax= 0.8refreshRate=110.0
+45.7593 	INFO 	cueRampUpDur=0 cueRampDownDur= 0 secs
+45.7593 	INFO 	task=track   respType=order
+45.7595 	INFO 	ring radii=[ 2.5  7.  15. ]
+45.7596 	INFO 	drawingAsGrating=False gratingTexPix=1024 antialiasGrating=True
+45.7619 	EXP 	New trial (rep=0, index=0): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 1.01, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+93.3821 	EXP 	window1: mouseVisible = True

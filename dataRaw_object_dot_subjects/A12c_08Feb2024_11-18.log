@@ -1,0 +1,1980 @@
+23.7288 	ERROR 	Median frames per second =85.1 BUT program assumes 110.0which is off by more than3%!!
+23.7288 	INFO 	longFrameLimit=11.545 Recording trials where one or more interframe interval exceeded this figure 
+23.7289 	INFO 	computer platform=darwin
+23.7289 	INFO 	File that generated this = sys.argv[0]= /Users/labmember/Documents/MOTcircularClean-0208/MOTcircular.py
+23.7289 	INFO 	has_retina_scrn=False
+3.0000 	INFO 	trialsPerCondition =
+23.7294 	WARNING 	Requested an unavailable screen number - using first available.
+24.2033 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fdac97f4850>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fdac97f47f0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fdac97f4670>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fdac1c9deb0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=1, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='deg', useFBO=False, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=False, winType='pyglet')
+24.2035 	EXP 	window1: mouseVisible = True
+24.2035 	EXP 	window1: backgroundImage = None
+24.2035 	EXP 	window1: backgroundFit = 'cover'
+24.2037 	EXP 	window1: mouseVisible = 'true'
+24.3262 	INFO 	Successfully set darwin thread to realtime
+25.0266 	INFO 	second window opening runInfo mean ms=11.576143457621244
+25.0266 	INFO 	#[ PsychoPy3 RuntimeInfoStart ]
+  #[[ PsychoPy ]] #---------
+    psychopyVersion: 2023.2.3
+    psychopyHaveExtRush: True
+  #[[ Experiment ]] #---------
+    experimentAuthVersion: None
+    experimentAuthor: None
+    experimentRunTime: 2024_02_08 11:19 (Year_Month_Day Hour:Min)
+    experimentRunTime.epoch: 1707351560
+    experimentScript: MOTcircular.py
+    experimentScript.digestSHA1: 492d5f7b1a3fe4200c37f8f12e180eb181716e90
+    experimentScript.directory: /Users/labmember/Documents/MOTcircularClean-0208
+  #[[ System ]] #---------
+    systemFlacVersion: flac 1.3.3
+    systemHaveInternetAccess: True
+    systemHostName: alexs-mbp.staff.wireless.sydney.edu.au
+    systemLocale: None.UTF-8
+    systemMemFreeRAM: 10353.32421875
+    systemMemTotalRAM: 16384.0
+    systemPlatform: darwin 10.16 x86_64
+    systemRavailable: R version 4.0.3 (2020-10-10) -- Bunny-Wunnies Freak Out
+    systemRebooted: Feb 8 09:03
+    systemSec.OpenSSLVersion: LibreSSL 2.8.3
+    systemSec.pythonSSL: True
+    systemTimeNumpySD1000000_sec: 0.0027
+    systemUser: labmember
+    systemUserID: 503
+    systemUserProcCmdPid: loginwindow transparencyd controlstrip filecoordination netbiosd iconservicesagen taskgated wirelessradioman coreduetd echo_system_stat symptomsd-diag sharedfilelistd gsscred contextservice servicerecords ctkahp imremoteurlconnectionagent containermanagerd controlcenter com.cisco.anycon fontworker callhistorypluginhelper com.apple.siri.embeddedspeech dprivacyd tvcacheextension powerd mdworker psychopy worldclockwidget finder syspolicyd applecredentialm iconservicesd localizationswitcherd launchservicesd com.apple.webkit.networking passwordbreachagent quicklooksatellite pluginlibraryser notificationcenter windowserver aksusbd weatherwidget fseventsd nsurlsessiond mobileassetd online-authd usagetrackingagent assetcachelocatorservice xprotectpluginse terminal usereventagent hidd diskmanagementd akd safaribookmarkssyncagent audiocomponentre itunescloudd safari parsecd colorsync.useragent mdnsresponderhel mds_stores ampartworkagent smd usbmuxd adprivacyd revisiond opendirectoryd protectedcloudkeysyncing 'keychain circle notification' contextstoreagent diagnosticextensionsd poweruiagent emojifunctionrowim_extension displaypolicyd logd_helper carboncomponentscannerxpc echo_task_manage imautomatichistorydeletionagent fileproviderd kernel_task coreservicesuiagent systemuiserver airplayuiagent autofsd seld echo_uc_upload echo_nginx cloudkeychainproxy askpermissiond spindump_agent musiccacheextension usbd scopedbookmarkagent findmydeviced wifianalyticsd simulatortrampoline mediaremoted deleted_helper authd com.apple.safari.history sandboxd reportcrash softwareupdated touchbarserver echo_user_agent usernotificationcenter backupd-helper storagekitd python replayd aslmanager imagent escrowsecurityalert keybagd locationd com.apple.hiservices-xpcservice logind watchdogd media-indexer logd corespotlightd softwareupdatenotificationmanager com.apple.ambien cloudpaird com.apple.colors amfid contactsaccountsservice networkserviceproxy coreauthd findmymacd eoshostd translationd corelocationagent coreaudiod notifyd mobileactivation backupd assistantd com.apple.characterpicker.fileservice biometrickitd com.apple.accoun colorsync.displa cvmserver mdbulkimport com.apple.clouddocs.mobiledocumentsfileprovider com.apple.quicklook.thumbnailsagent com.apple.audio.sandboxhelper sysmond familycircled mediaremoteagent xartstorageremot spotlight careportingservi followupd newstoday2 categoriesservice trustd echo_adhoc_contr routined spindump coreservicesd uikitsystem dmd fmfd apsd amsengagementd screentimeagent viewbridgeauxili safeejectgpuagent embeddedosinstal knowledge-agent echo_restapi nfcd bash mds useractivityd calendaragent kernelmanagerd aspcarrylog perfpowerservice safeejectgpuservice com.apple.dock.external.extra.x86_64 cloudd timed hasplmd airdrop analyticsd symsharedsetting securityd_servic echo_ws_api installcoordinat com.apple.dock.extra calncservice echo_shrec sharingd symantec fairplayd suggestd com.apple.ifdrea pboard searchpartyd sysextd wifiagent podcastcontentservice mirrordisplays lsd xprotectservice iconservicesagent xprotectpluginservice syslogd talagent accountsd devicecheckd secd bootinstalld photoanalysisd corespeechd apfsd commcenter sysdiagnose lskdd mdwrite universalaccessd audiocomponentregistrar vdcassistant usernoted morphunassetsupd biokitaggdd submitdiaginfo pbs swcd dpsubmissionserv launchd passd com.apple.appsto wifivelocityd appssoagent viewbridgeauxiliary eapolclient containermanager com.apple.appkit.xpc.openandsavepanelservice installd kerneleventagent awdd pkd apfsuseragent dock receiverhelper diskarbitrationd com.apple.coresimulator.coresimulatorservice contextstored cdpd com.apple.hiserv tzd fontd captiveagent imklaunchagent rapportd imageioxpcservice photolibraryd triald plugin-container com.apple.mobile callservicesd storedownloadd appstoreagent amplibraryagent commerce cachedeleteextension icdd lockoutagent com.apple.bkagentservice thermalmonitord symptomsd safarilaunchagent zoutlookpluginagent mailcachedelete endpointsecurity nehelper assetcachetether com.apple.webkit.webcontent systemstats vpnagentd xprotect com.apple.geod deleted icloudnotificationagent textinputmenuagent appleeventsd imdpersistenceagent com.apple.driver com.apple.audio. symseplps distnoted adid ndoagent rtcreportingd screentimewidgetextension standaloneupdate firefox amsaccountsd thermald homed echo_spinner powerchime aned keyboardservicesd siriinferenced nesessionmanager idecachedeleteappextension echo_upload_log applespell quicklookuiservice secinitd bird remoted pluginlibraryservice diagnostics_agent runningboardd systemsoundserve system_installd assetcache echo_session_agent airplayxpchelper dockhelper helpd stockswidget coresymbolicatio suhelperd colorsyncd configd neagent tccd identityservicesd agsservice textinputswitcher backgroundtaskmanagementagent dasd crashreportersup mdnsresponder avatarsd usbagent calendarwidgetextension com.apple.sbd auditd xpcroleaccountd mapspushd com.apple.cmio.r corebrightnessd ampdevicediscoveryagent com.symantec.mes bluetoothd com.apple.appleu cfprefsd mdworker_shared wifivelocityagent periodic-wrapper ctkd uninstalld airportd com.apple.codesi securityd
+    systemUserProcCount: 454
+    systemUserProcFlagged: mdworker Safari mds SafariLaunchAgent mds_stores SafariBookmarksSyncAgent firefox mdworker_shared itunescloudd
+    systemUsersCount: 1
+  #[[ Window ]] #---------
+    windowWinType: pyglet
+    windowWaitBlanking: False
+    windowUseNativeGamma: True
+    windowUnits: deg
+    windowSize_pix: [800 600]
+    windowScreen: 1
+    windowRgb: [-1 -1 -1]
+    windowRefreshTimeSD_ms: 1.492
+    windowRefreshTimeMedian_ms: 11.753
+    windowRefreshTimeAvg_ms: 11.576
+    windowRefreshThreshold_sec: 0.0141
+    windowRecordFrameIntervals: False
+    windowPos_pix: [0.0, 0.0]
+    windowMonitor.name: testMonitor
+    windowMonitor.getWidth_cm: 38.0
+    windowMonitor.getLinearizeMethod: 1
+    windowMonitor.getGammaGrid: [[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+    windowMonitor.getDistance_cm: 50.0
+    windowMonitor.gammaInterpolator2: None
+    windowMonitor.gammaInterpolator: None
+    windowMonitor.currentCalibName: 2023_12_15 12:40
+    windowIsFullScr: 1
+    windowHaveShaders: True
+    windowAllowGUI: False
+  #[[ Python ]] #---------
+    pythonWxVersion: 4.1.1 osx-cocoa (phoenix) wxWidgets 3.1.5
+    pythonVersion: 3.8.10
+    pythonScipyVersion: 1.10.1
+    pythonPygletVersion: 1.5.27
+    pythonPygameVersion: (no pygame)
+    pythonNumpyVersion: 1.23.5
+    pythonMatplotlibVersion: 3.7.1
+    pythonFullVersion: 3.8.10 (v3.8.10:3d8993a744, May  3 2021, 08:55:58)  [Clang 6.0 (clang-600.0.57)]
+    pythonExecutable: /Applications/PsychoPy.app/Contents/MacOS/python
+  #[[ OpenGL ]] #---------
+    openGLmaxVerticesInVertexArray: 1048575
+    False: openGLext.GL_STEREO
+    True: openGLext.GL_EXT_framebuffer_object
+    True: openGLext.GL_ARB_vertex_shader
+    True: openGLext.GL_ARB_texture_non_power_of_two
+    True: openGLext.GL_ARB_texture_float
+    True: openGLext.GL_ARB_shader_objects
+    True: openGLext.GL_ARB_multitexture
+    True: openGLext.GL_ARB_fragment_program
+    openGLVersion: 2.1 ATI-4.6.20
+    openGLVendor: ATI Technologies Inc.
+    openGLRenderingEngine: AMD Radeon Pro 460 OpenGL Engine
+#[ PsychoPy3 RuntimeInfoEnd ]
+
+25.0274 	INFO 	gammaGrid=[[ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]
+ [ 0.  1.  1. nan nan nan]]
+25.0274 	INFO 	linearizeMethod=1
+25.0286 	EXP 	window1: mouseVisible = True
+25.0309 	EXP 	window1: mouseVisible = True
+25.0357 	EXP 	window1: mouseVisible = True
+25.0370 	EXP 	window1: mouseVisible = True
+25.0381 	EXP 	window1: mouseVisible = True
+25.0390 	EXP 	window1: mouseVisible = True
+25.0406 	EXP 	window1: mouseVisible = True
+25.0416 	EXP 	window1: mouseVisible = True
+25.0423 	EXP 	window1: mouseVisible = True
+25.0442 	EXP 	window1: mouseVisible = True
+25.0461 	EXP 	window1: mouseVisible = True
+25.0482 	EXP 	window1: mouseVisible = True
+25.0936 	EXP 	window1: mouseVisible = True
+25.0967 	EXP 	window1: mouseVisible = True
+25.0994 	EXP 	window1: mouseVisible = True
+25.4202 	EXP 	Created sequence: random, trialTypes=32, nReps=3, seed=None
+25.6384 	INFO 	starting exp with name: "TemporalFrequencyLimit" at 08Feb2024_11-19
+25.6384 	INFO 	numtrials=96, trialDurMin= 1 trackVariableIntervMax= 0.8refreshRate=110.0
+25.6384 	INFO 	cueRampUpDur=0 cueRampDownDur= 0 secs
+25.6384 	INFO 	task=track   respType=order
+25.6386 	INFO 	ring radii=[ 2.5  7.  15. ]
+25.6387 	INFO 	drawingAsGrating=False gratingTexPix=1024 antialiasGrating=True
+trialnum=0 ERROR,56 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.7 15.6 15.5 15.9 16.  15.8 16.1 16.1 16.1 16.1 16.2 15.9 16.  16.1
+ 15.1 16.1 16.1 16.1 16.  16.1 16.  16.  16.1 16.1 16.1 16.1 16.1 16.1
+ 16.  16.  16.1 14.2 14.1 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.  15.1
+ 16.1 16.  16.1 16.1 14.1 14.1 16.1 16.1 16.1 16.  16.1 16.1 16.1 16.1] and was these frames: [  5   8  11  14  17  20  23  26  29  32  35  38  41  44  47  50  53  56
+  59  62  65  68  71  74  78  81  84  87  90  93  96  98 100 103 106 109
+ 112 115 118 121 124 127 130 133 136 139 141 143 146 149 152 155 158 161
+ 164 167]
+25.6406 	EXP 	New trial (rep=0, index=0): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.51, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+64.5506 	INFO 	Successfully set darwin thread to realtime
+64.6516 	EXP 	window1: mouseVisible = False
+70.2269 	EXP 	window1: mouseVisible = True
+71.3743 	DATA 	Mouse: Left button down, pos=(645,175)
+71.4694 	DATA 	Mouse:  Left button up, pos=(645,175)
+trialnum=1 ERROR,67 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.  16.1 16.1 16.1 16.2 14.4 16.1 16.1 16.1 16.  16.1 16.1 16.1 16.
+ 16.1 16.1 16.  16.1 16.  16.  16.  16.1 16.1 16.  16.  16.1 16.  16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 15.5 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 14.2 16.1 16.1 14.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1] and was these frames: [  3   6   9  12  15  19  22  25  28  31  34  37  40  43  46  49  52  55
+  58  61  64  67  70  73  76  79  82  85  88  91  94  97 100 103 106 109
+ 112 115 118 121 124 127 130 133 136 139 142 145 148 151 153 156 159 161
+ 164 167 170 173 176 179 182 185 188 191 194 197 200]
+71.4945 	EXP 	Sound  started
+71.6450 	EXP 	New trial (rep=0, index=1): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.51, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([   0., -999.,    1.]), 'ringToQuery': 999}
+71.8463 	INFO 	Successfully set darwin thread to realtime
+71.9475 	EXP 	window1: mouseVisible = False
+75.8728 	EXP 	window1: mouseVisible = True
+76.6292 	DATA 	Mouse: Left button down, pos=(399,343)
+76.7173 	DATA 	Mouse:  Left button up, pos=(399,343)
+trialnum=2 ERROR,136 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.6 17.7 18.9 18.9 18.6 17.7 17.8 17.7 17.7 17.6 17.7 17.6 17.7 17.6
+ 17.6 17.8 17.6 17.6 17.6 17.6 17.6 17.7 17.7 17.6 17.6 17.7 17.7 17.6
+ 17.6 17.8 17.7 17.9 17.8 17.7 17.8 17.7 17.6 17.7 17.9 17.7 17.6 17.9
+ 17.7 18.2 17.7 17.9 17.7 17.6 17.7 17.6 17.8 17.6 17.7 17.8 17.7 17.5
+ 17.6 17.8 17.6 17.5 17.6 17.8 17.6 18.9 17.7 17.6 17.6 17.6 17.6 17.7
+ 17.6 18.  17.5 17.6 17.7 18.1 17.6 17.6 17.6 17.7 17.6 17.5 17.8 17.7
+ 17.6 17.7 17.7 17.9 17.9 17.4 17.7 18.1 17.7 17.7 17.6 17.6 17.5 17.6
+ 17.9 17.7 17.6 17.7 17.7 17.8 17.5 17.6 17.7 17.6 17.6 17.7 17.7 17.9
+ 17.7 17.7 17.7 17.7 17.6 17.7 17.6 17.5 17.7 17.7 17.5 17.7 17.6 17.6
+ 17.5 17.5 17.7 17.7 17.7 17.7 18.  17.6 17.6 17.6] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135]
+76.7478 	EXP 	Sound  started
+76.8984 	EXP 	New trial (rep=0, index=2): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+77.0990 	INFO 	Successfully set darwin thread to realtime
+77.2002 	EXP 	window1: mouseVisible = False
+81.0497 	EXP 	window1: mouseVisible = True
+81.9237 	DATA 	Mouse: Left button down, pos=(175,147)
+82.0134 	DATA 	Mouse:  Left button up, pos=(175,147)
+trialnum=3 ERROR,69 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.9 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 14.2 16.1
+ 16.2 11.7 15.8 16.  16.1 16.  16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1
+ 16.  16.1 15.9 16.1 16.  16.1 16.1 16.1 16.1 14.2 14.2 16.1 16.1 14.1
+ 16.1 16.1 16.1 16.1 15.5 14.2 14.2 16.1 16.1 16.1 16.1 11.9 12.5 12.1
+ 14.7 15.9 15.9 16.  15.8 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1] and was these frames: [  3   6   9  12  15  18  21  24  27  30  33  36  38  41  44  45  50  53
+  56  59  62  65  68  71  74  77  80  83  86  89  92  95  98 101 104 107
+ 110 112 114 117 120 122 125 128 131 134 137 139 141 144 147 150 153 154
+ 155 156 161 164 167 170 173 176 179 182 185 188 191 194 197]
+82.0599 	EXP 	Sound  started
+82.2104 	EXP 	New trial (rep=0, index=3): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.75, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+82.4107 	INFO 	Successfully set darwin thread to realtime
+82.5119 	EXP 	window1: mouseVisible = False
+86.5032 	EXP 	window1: mouseVisible = True
+87.4087 	DATA 	Mouse: Left button down, pos=(385,186)
+87.5092 	DATA 	Mouse:  Left button up, pos=(385,186)
+trialnum=4 ERROR,139 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.  17.8 18.7 18.8 19.  18.5 18.  17.7 18.2 18.5 19.2 19.  18.5 18.4
+ 18.7 18.3 18.3 18.7 18.2 18.2 18.4 18.8 18.7 18.3 18.3 18.1 18.5 18.2
+ 18.1 18.9 19.1 18.2 18.4 18.5 18.  18.  18.4 18.6 18.7 18.4 18.1 17.7
+ 17.6 17.8 17.7 18.3 18.8 19.3 19.2 18.5 18.5 18.2 18.4 18.4 18.3 18.4
+ 18.  18.1 18.2 18.5 19.1 18.7 18.  17.6 17.6 17.5 18.  18.7 19.3 18.6
+ 18.7 18.5 18.9 18.5 18.2 18.8 18.2 17.8 18.1 18.8 18.8 18.5 17.8 17.7
+ 17.6 18.2 18.3 18.3 18.3 18.2 18.4 18.3 18.4 18.4 18.4 18.2 17.9 18.4
+ 19.  19.1 18.4 17.6 17.8 17.6 19.3 18.5 18.3 18.5 18.2 18.4 18.4 18.2
+ 18.2 18.6 17.9 18.4 18.7 18.6 18.7 18.  17.7 17.7 17.6 17.6 17.6 18.
+ 18.2 20.1 23.2 22.8 22.9 20.6 18.6 18.4 18.4 18.  17.7 18.5 19.1] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138]
+87.5275 	EXP 	Sound  started
+87.6780 	EXP 	New trial (rep=0, index=4): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.4, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+87.8793 	INFO 	Successfully set darwin thread to realtime
+87.9806 	EXP 	window1: mouseVisible = False
+92.4350 	EXP 	window1: mouseVisible = True
+94.0869 	DATA 	Mouse: Left button down, pos=(404,258)
+94.1975 	DATA 	Mouse:  Left button up, pos=(404,258)
+trialnum=5 ERROR,72 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[16.1 16.  15.1 16.1 16.1 14.2 15.  11.6 14.9 15.7 15.3 15.5 15.9 15.7
+ 16.2 15.7 15.5 15.5 15.5 15.7 15.9 15.1 15.1 16.1 14.2 15.7 15.5 15.5
+ 15.7 15.5 15.8 15.7 15.2 15.8 16.1 15.8 15.5 15.4 15.7 15.8 15.9 15.9
+ 15.9 15.3 15.7 15.7 15.9 15.9 15.9 15.3 15.1 16.  16.2 15.7 15.5 15.7
+ 15.8 15.3 15.9 15.3 15.1 16.1 14.1 15.9 15.7 15.7 15.4 15.7 15.8 15.9
+ 15.  16. ] and was these frames: [  4   8  11  14  17  19  22  26  28  31  34  37  41  46  49  52  55  58
+  61  64  67  70  73  76  78  81  84  87  90  93  96  99 102 105 108 111
+ 114 117 120 123 126 129 134 137 140 143 146 149 152 155 158 161 164 167
+ 170 173 176 179 182 185 188 191 193 196 199 202 205 208 211 214 217 220]
+94.2244 	EXP 	Sound  started
+94.3749 	EXP 	New trial (rep=0, index=5): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.73, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+94.5752 	INFO 	Successfully set darwin thread to realtime
+94.6767 	EXP 	window1: mouseVisible = False
+98.8562 	EXP 	window1: mouseVisible = True
+100.6014 	DATA 	Mouse: Left button down, pos=(672,384)
+100.6774 	DATA 	Mouse:  Left button up, pos=(672,384)
+trialnum=6 ERROR,126 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.5 18.4 18.9 18.3 18.5 18.4 18.3 18.3 18.9 19.1 18.2 18.1 17.8 17.6
+ 17.8 17.9 17.7 17.6 17.8 17.7 17.9 17.5 18.  17.8 17.7 17.6 17.8 17.7
+ 17.8 17.7 17.8 17.7 17.6 17.5 17.6 17.7 17.8 17.6 17.6 19.6 21.7 19.9
+ 22.6 19.5 17.7 17.8 17.7 17.8 17.7 17.7 17.7 17.6 17.6 17.8 17.7 17.7
+ 17.8 17.7 17.7 17.6 17.7 17.6 17.7 18.2 17.7 17.7 17.7 17.7 17.6 17.7
+ 17.7 17.8 17.6 17.7 17.8 18.  17.6 17.8 17.6 17.6 17.7 17.6 17.6 17.6
+ 17.6 17.6 17.7 17.6 18.  17.7 17.6 17.7 17.9 17.9 17.6 17.6 17.7 17.8
+ 17.7 17.6 17.6 18.8 17.6 17.6 17.6 17.6 17.9 17.9 17.6 17.6 17.7 17.8
+ 17.6 17.7 17.6 17.5 17.6 17.6 17.8 17.6 17.7 17.6 17.6 17.6 17.7 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125]
+100.7279 	EXP 	Sound  started
+100.8784 	EXP 	New trial (rep=0, index=6): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+101.0787 	INFO 	Successfully set darwin thread to realtime
+101.1798 	EXP 	window1: mouseVisible = False
+105.2537 	EXP 	window1: mouseVisible = True
+106.0466 	DATA 	Mouse: Left button down, pos=(687,299)
+106.1413 	DATA 	Mouse:  Left button up, pos=(687,300)
+trialnum=7 ERROR,75 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.7 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 11.6 11.8 16.1 15.7 16.1 16.1 16.1 16.1 16.  16.  14.1 16.1
+ 16.  16.  16.  16.1 16.1 15.9 16.  16.1 16.  16.1 14.1 16.  14.1 14.1
+ 16.1 16.1 16.1 16.1 16.  16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 14.2 16.1 16.1 14.2 16.1 14.1 16.1 14.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1] and was these frames: [  3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48  53  54
+  55  58  61  64  67  70  73  76  78  81  84  87  90  93  96  99 102 105
+ 108 111 113 116 118 120 123 126 129 132 135 138 141 145 148 151 154 157
+ 160 163 166 168 171 174 176 179 181 184 186 189 192 195 198 201 204 207
+ 210 213 216]
+106.1830 	EXP 	Sound  started
+106.3336 	EXP 	New trial (rep=0, index=7): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.23, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+106.5345 	INFO 	Successfully set darwin thread to realtime
+106.6357 	EXP 	window1: mouseVisible = False
+110.7045 	EXP 	window1: mouseVisible = True
+111.6267 	DATA 	Mouse: Left button down, pos=(347,12)
+111.7334 	DATA 	Mouse:  Left button up, pos=(347,12)
+trialnum=8 ERROR,56 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.1 16.1 11.8 15.9 12.3 15.8 15.3 15.9 16.1 16.1 16.  16.1 16.1 16.1
+ 15.9 15.8 15.5 15.9 16.1 16.  16.  16.  16.  16.1 16.  16.1 16.  14.1
+ 16.  16.1 16.1 16.  16.1 14.2 16.1 15.2 16.1 16.1 16.1 14.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 14.2 16.1 16.1 16.1 16.1 16.1] and was these frames: [  3   6  10  11  12  16  19  22  25  28  31  34  37  40  43  46  49  52
+  55  58  61  64  67  70  73  76  79  81  84  87  90  93  96  98 101 104
+ 107 110 113 115 118 121 124 127 130 133 136 139 142 145 147 150 153 156
+ 159 162]
+111.7453 	EXP 	Sound  started
+111.8957 	EXP 	New trial (rep=0, index=8): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.95, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+112.0961 	INFO 	Successfully set darwin thread to realtime
+112.1974 	EXP 	window1: mouseVisible = False
+115.5410 	EXP 	window1: mouseVisible = True
+116.5671 	DATA 	Mouse: Left button down, pos=(408,347)
+116.6375 	DATA 	Mouse:  Left button up, pos=(408,347)
+trialnum=9 ERROR,82 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.8 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.  11.6 12.3 12.7 12.6 12.9
+ 12.6 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 14.1 16.1 16.
+ 16.1 16.  16.1 14.1 14.1 16.1 16.1 16.1 16.  16.  14.1 16.1 16.1 16.1
+ 14.2 16.1 16.1 15.5 16.1 16.1 16.1 16.1 14.2 16.1 14.2 14.1 16.1 16.1
+ 16.2 16.1 16.1 14.1 15.8 15.4 16.1 16.1 16.2 15.7 15.5 15.3 15.5 15.4
+ 15.7 15.6 15.8 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1] and was these frames: [  4   7  10  13  16  19  22  25  28  29  30  31  32  33  34  40  43  46
+  49  52  55  58  61  64  67  69  72  75  78  81  84  86  88  91  94  97
+ 100 103 105 108 111 114 116 119 122 125 128 131 134 137 139 142 144 146
+ 149 152 155 158 161 163 166 169 172 175 178 181 184 187 190 193 196 199
+ 202 205 208 211 214 217 220 223 226 229]
+116.6862 	EXP 	Sound  started
+116.8367 	EXP 	New trial (rep=0, index=9): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.29, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+117.0380 	INFO 	Successfully set darwin thread to realtime
+117.1393 	EXP 	window1: mouseVisible = False
+121.1048 	EXP 	window1: mouseVisible = True
+122.0220 	DATA 	Mouse: Left button down, pos=(680,325)
+122.1173 	DATA 	Mouse:  Left button up, pos=(680,325)
+trialnum=10 ERROR,68 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.9 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 11.9 12.  12.3
+ 12.7 12.9 12.  12.7 11.9 16.1 16.1 16.  16.  16.  16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.  16.  16.1 14.1 16.1 16.1 16.  16.1 16.
+ 16.1 14.2 14.2 16.1 16.1 14.1 14.1 15.5 16.1 16.1 16.1 14.2 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.3 16.1 14.2 16.1 14.1 16.1 16.1] and was these frames: [  3   6   9  12  15  18  21  24  27  30  33  37  38  39  40  41  42  43
+  44  47  50  53  56  59  62  65  68  71  74  77  80  83  86  89  92  95
+  97 100 103 106 109 112 115 117 119 122 125 127 129 132 135 138 141 143
+ 146 149 152 155 158 161 164 167 170 172 175 177 180 183]
+122.1410 	EXP 	Sound  started
+122.2915 	EXP 	New trial (rep=0, index=10): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.58, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+122.4920 	INFO 	Successfully set darwin thread to realtime
+122.5932 	EXP 	window1: mouseVisible = False
+126.4872 	EXP 	window1: mouseVisible = True
+127.7363 	DATA 	Mouse: Left button down, pos=(391,263)
+trialnum=11 ERROR,78 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.4 16.1 14.1 14.1 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.  15.8 11.7 11.6 15.  15.  15.2 15.9 16.1 16.1 16.1 16.1
+ 14.2 16.1 15.9 16.1 16.  16.  16.1 16.1 16.  15.9 16.  16.1 16.1 14.1
+ 16.1 16.1 14.1 16.  16.1 16.1 16.1 16.1 16.1 14.2 16.1 15.2 16.1 16.1
+ 16.2 15.6 16.1 14.2 16.1 16.1 16.1 16.1 16.1 14.1 14.2 16.1 15.2 16.1
+ 15.9 16.1 16.1 16.1 16.1 14.2 16.1 16.1] and was these frames: [  3   6   8  10  13  16  19  22  25  28  31  34  37  40  43  46  49  52
+  55  56  58  61  64  67  70  73  76  79  81  84  87  90  93  96  99 102
+ 105 108 111 114 117 119 122 125 127 130 133 136 139 142 145 147 150 153
+ 156 159 162 165 168 170 173 176 179 182 185 187 189 192 195 198 201 204
+ 207 210 213 215 218 221]
+127.8550 	EXP 	Sound  started
+127.8613 	DATA 	Mouse:  Left button up, pos=(391,263)
+128.0054 	EXP 	New trial (rep=0, index=11): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.41, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+128.2057 	INFO 	Successfully set darwin thread to realtime
+128.3072 	EXP 	window1: mouseVisible = False
+132.7161 	EXP 	window1: mouseVisible = True
+134.5060 	DATA 	Mouse: Left button down, pos=(488,403)
+134.6053 	DATA 	Mouse:  Left button up, pos=(488,403)
+trialnum=12 ERROR,77 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.6 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 11.9 16.  15.1 15.3
+ 16.1 14.2 16.1 16.1 16.1 16.1 16.2 12.3 15.6 12.  14.4 15.9 16.1 16.1
+ 16.  15.9 16.1 14.2 16.  16.1 16.1 14.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.2 16.1 16.1 16.1 16.  16.1
+ 16.1 16.1 14.2 16.1 16.1 16.1 16.1] and was these frames: [  3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48  51  54
+  57  60  63  66  69  72  76  78  81  84  87  89  92  95  98 101 104 105
+ 108 109 112 115 118 121 124 127 130 132 135 138 141 143 146 149 152 155
+ 158 161 164 167 170 173 176 179 182 185 188 191 194 197 200 203 206 209
+ 211 214 217 220 223]
+134.6253 	EXP 	Sound  started
+134.7758 	EXP 	New trial (rep=0, index=12): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.41, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 1., 0.]), 'ringToQuery': 999}
+134.9771 	INFO 	Successfully set darwin thread to realtime
+135.0783 	EXP 	window1: mouseVisible = False
+139.5233 	EXP 	window1: mouseVisible = True
+140.7943 	DATA 	Mouse: Left button down, pos=(164,119)
+140.9093 	DATA 	Mouse:  Left button up, pos=(164,119)
+trialnum=13 ERROR,121 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.6 17.7 17.6 17.8 17.5 17.5 17.7 17.6 17.7 17.8 17.6 17.8 17.7 17.6
+ 17.6 17.7 17.8 17.5 18.1 17.6 17.8 17.8 17.7 17.6 17.7 17.8 17.7 17.8
+ 17.6 17.7 17.7 17.7 17.8 17.6 17.7 18.2 20.5 22.1 23.8 20.  19.4 18.8
+ 18.6 17.9 17.7 17.7 17.6 17.8 17.7 17.7 17.8 17.7 17.6 17.6 17.8 18.
+ 17.6 17.9 17.8 17.6 17.8 17.7 17.8 17.5 18.2 17.6 17.6 17.6 17.7 17.6
+ 17.8 17.8 17.8 17.8 17.5 17.7 17.6 17.6 17.6 17.7 18.  17.6 17.6 17.6
+ 17.6 17.7 17.8 17.6 17.6 17.7 17.7 17.8 17.6 17.9 17.9 17.8 17.8 17.6
+ 17.7 17.7 18.8 17.7 17.7 17.9 17.8 17.7 17.6 17.9 17.9 17.6 17.8 17.9
+ 17.9 17.8 17.6 17.8 17.6 17.6 17.6 17.6 17.9] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120]
+140.9132 	EXP 	Sound  started
+141.0637 	EXP 	New trial (rep=0, index=13): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([   2., -999.,    0.]), 'ringToQuery': 999}
+141.2641 	INFO 	Successfully set darwin thread to realtime
+141.3655 	EXP 	window1: mouseVisible = False
+145.2788 	EXP 	window1: mouseVisible = True
+146.2728 	DATA 	Mouse: Left button down, pos=(469,423)
+146.3812 	DATA 	Mouse:  Left button up, pos=(469,424)
+trialnum=14 ERROR,114 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.7 17.6 17.8 17.8 17.9 17.8 17.7 17.8 17.8 18.2 22.4 21.8 22.1 23.
+ 20.  18.6 18.4 17.9 17.6 17.7 17.7 17.8 17.6 17.7 18.  17.8 17.8 17.8
+ 17.6 17.7 17.8 17.7 17.8 17.8 17.9 17.8 17.9 18.  17.7 17.7 17.8 17.7
+ 17.7 17.7 17.8 17.5 17.8 17.8 17.8 17.9 17.7 17.6 17.6 17.7 17.7 17.7
+ 17.7 17.6 17.9 17.7 17.8 17.7 17.7 17.6 17.9 17.7 17.7 17.7 17.8 17.6
+ 17.6 17.6 17.6 17.6 18.9 17.8 17.7 17.8 17.7 17.7 17.8 17.6 17.9 17.9
+ 17.8 17.7 17.8 17.7 17.9 17.7 17.7 17.7 17.7 17.7 17.6 17.8 17.7 17.7
+ 17.8 17.7 17.7 17.8 17.6 17.8 17.8 17.6 17.6 17.6 17.7 17.8 18.  17.6
+ 17.8 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113]
+146.4085 	EXP 	Sound  started
+146.5590 	EXP 	New trial (rep=0, index=14): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.16, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+146.7593 	INFO 	Successfully set darwin thread to realtime
+146.8605 	EXP 	window1: mouseVisible = False
+150.6250 	EXP 	window1: mouseVisible = True
+151.7164 	DATA 	Mouse: Left button down, pos=(440,275)
+151.8133 	DATA 	Mouse:  Left button up, pos=(440,275)
+trialnum=15 ERROR,59 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.8 16.1 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 15.8 16.2 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 12.2 11.9 12.4 12.  12.  12.2 12.6
+ 13.1 15.4 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1 14.1 16.  16.1 16.1
+ 16.1 16.1 16.  16.1 16.  16.1 16.1 16.1 16.  16.1 16.1 16.  16.1 16.1
+ 16.1 16.1 16.1] and was these frames: [  4   7  10  13  16  19  22  25  28  31  34  37  40  43  46  49  52  55
+  58  61  64  65  66  67  68  69  70  71  72  78  81  84  87  90  93  96
+  99 102 104 107 110 113 116 119 122 125 128 131 134 137 140 143 146 149
+ 152 155 158 161 164]
+151.8520 	EXP 	Sound  started
+152.0026 	EXP 	New trial (rep=0, index=15): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.95, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([   1., -999.,    3.]), 'ringToQuery': 999}
+152.2031 	INFO 	Successfully set darwin thread to realtime
+152.3045 	EXP 	window1: mouseVisible = False
+155.9683 	EXP 	window1: mouseVisible = True
+156.7658 	DATA 	Mouse: Left button down, pos=(575,86)
+156.8852 	DATA 	Mouse:  Left button up, pos=(577,86)
+trialnum=16 ERROR,65 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.8 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.2 16.1 16.1 16.1 16.1 16.
+ 16.  16.1 15.5 12.2 15.6 16.  15.5 15.2 16.  15.8 16.1 16.  16.1 16.1
+ 16.1 16.1 16.1 16.1 15.4 15.8 16.  15.9 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 12.1 16.1 16.1 16.1 16.1 16.1 15.5 16.1 16.1 16.1 16.  16.1
+ 16.1 16.1 16.  16.1 16.1 16.  16.1 16.1 16.1] and was these frames: [  3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48  51  54
+  57  61  64  67  70  73  76  79  82  85  88  91  94  97 100 103 106 109
+ 112 115 118 121 124 127 130 133 134 138 141 144 147 150 153 156 159 162
+ 165 168 171 174 177 180 183 186 189 192 195]
+156.8864 	EXP 	Sound  started
+157.0370 	EXP 	New trial (rep=0, index=16): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.75, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 3., 2.]), 'ringToQuery': 999}
+157.2373 	INFO 	Successfully set darwin thread to realtime
+157.3384 	EXP 	window1: mouseVisible = False
+161.4816 	EXP 	window1: mouseVisible = True
+162.4025 	DATA 	Mouse: Left button down, pos=(365,282)
+trialnum=17 ERROR,68 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[16.1 14.2 16.1 16.1 14.1 16.1 16.1 16.1 16.  16.2 12.  12.  15.4 15.3
+ 15.4 16.  16.1 16.  16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.  16.1 14.2 16.  16.1 14.2 16.  16.1 16.1 14.1 14.1 16.  16.1
+ 16.1 14.2 16.1 15.5 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 15.9 16.1
+ 14.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 14.2 14.1 16.1 16.1] and was these frames: [  4   6   9  12  14  17  20  23  26  29  34  35  37  40  43  46  49  52
+  55  58  61  64  67  70  73  76  79  82  85  88  91  93  96  99 101 104
+ 107 110 112 114 117 120 123 125 128 131 134 137 140 143 146 149 152 155
+ 158 161 163 166 169 172 175 178 181 184 186 188 191 194]
+162.5209 	EXP 	Sound  started
+162.5253 	DATA 	Mouse:  Left button up, pos=(365,282)
+162.6714 	EXP 	New trial (rep=0, index=17): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.73, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999.,    0.,    2.]), 'ringToQuery': 999}
+162.8717 	INFO 	Successfully set darwin thread to realtime
+162.9730 	EXP 	window1: mouseVisible = False
+166.7467 	EXP 	window1: mouseVisible = True
+167.4943 	DATA 	Mouse: Left button down, pos=(416,344)
+167.5814 	DATA 	Mouse:  Left button up, pos=(416,344)
+trialnum=18 ERROR,108 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[22.3 19.7 18.5 19.  17.9 17.8 17.8 17.8 17.9 17.7 17.8 17.7 17.9 17.8
+ 17.7 17.7 17.9 17.6 17.8 17.8 17.7 17.6 17.9 17.7 17.8 17.7 17.8 17.6
+ 17.8 18.  17.8 17.6 18.1 17.8 17.8 17.8 17.7 17.8 17.7 17.8 17.9 17.7
+ 17.7 17.7 17.8 17.8 17.8 17.7 17.8 17.7 17.8 17.6 17.8 17.6 17.7 17.8
+ 17.5 17.6 17.9 17.6 17.6 17.8 19.1 17.7 17.6 17.6 17.7 17.7 17.6 17.6
+ 17.7 17.8 17.7 17.9 17.6 17.8 17.7 17.6 18.  17.7 17.7 17.8 17.8 17.8
+ 17.7 17.7 17.7 17.9 17.9 17.7 17.8 17.6 17.9 17.7 17.9 17.7 17.8 17.9
+ 17.7 17.7 17.7 17.7 18.  18.1 17.7 17.8 17.7 17.8] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107]
+167.6131 	EXP 	Sound  started
+167.7636 	EXP 	New trial (rep=0, index=18): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.52, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+167.9641 	INFO 	Successfully set darwin thread to realtime
+168.0655 	EXP 	window1: mouseVisible = False
+171.8021 	EXP 	window1: mouseVisible = True
+172.3277 	DATA 	Mouse: Left button down, pos=(420,345)
+172.4213 	DATA 	Mouse:  Left button up, pos=(420,345)
+trialnum=19 ERROR,120 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.7 17.9 18.3 19.8 22.5 22.9 20.9 22.7 22.2 18.9 18.7 17.9 17.7 17.8
+ 17.8 17.6 17.7 17.6 17.6 17.9 17.7 17.7 17.8 17.6 18.  17.8 17.9 17.7
+ 17.7 17.8 17.7 18.1 17.6 17.7 17.7 17.7 17.6 17.7 17.8 17.9 17.8 17.8
+ 17.8 17.7 18.2 17.8 17.7 18.  17.9 17.7 17.6 17.6 17.7 17.7 17.7 17.7
+ 17.6 17.8 17.6 17.7 17.8 17.7 17.7 17.8 17.6 17.7 17.7 18.  17.7 19.
+ 17.6 17.7 17.8 17.7 17.7 17.7 18.  17.8 17.7 17.7 17.9 17.7 17.5 17.7
+ 17.8 17.7 17.7 17.7 17.8 17.7 17.6 17.7 17.8 17.8 17.9 17.7 18.  17.7
+ 18.  19.1 23.  19.  18.2 18.1 17.8 17.7 17.7 18.  17.9 17.8 17.9 18.2
+ 18.1 17.8 17.7 18.3 17.8 17.7 17.6 18.1] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119]
+172.4648 	EXP 	Sound  started
+172.6152 	EXP 	New trial (rep=0, index=19): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.16, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 4., 4.]), 'ringToQuery': 999}
+172.8161 	INFO 	Successfully set darwin thread to realtime
+172.9173 	EXP 	window1: mouseVisible = False
+176.9296 	EXP 	window1: mouseVisible = True
+177.6370 	DATA 	Mouse: Left button down, pos=(491,192)
+177.7015 	DATA 	Mouse:  Left button up, pos=(491,192)
+trialnum=20 ERROR,138 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.8 17.8 17.8 18.  18.4 18.4 20.5 22.  19.2 19.3 18.5 18.3 18.7 18.9
+ 18.3 18.3 18.2 18.2 17.7 17.8 17.7 17.9 17.7 17.8 17.8 18.2 17.8 17.8
+ 17.7 17.6 17.7 17.7 17.8 18.2 18.3 17.8 17.9 17.8 17.7 18.  17.8 17.8
+ 17.8 17.9 17.9 17.7 17.7 17.8 17.9 18.  17.7 17.7 17.7 18.1 17.7 17.9
+ 17.8 17.8 17.8 17.9 17.8 17.8 17.9 17.9 18.  17.7 17.9 17.7 17.8 17.8
+ 17.6 18.8 17.8 17.6 17.9 17.7 17.8 17.6 17.9 17.7 17.6 17.7 17.9 17.7
+ 17.7 17.6 17.7 17.7 17.7 17.7 17.7 17.8 17.6 17.7 17.6 17.8 18.1 18.1
+ 18.2 18.  18.1 17.9 17.7 17.7 17.8 17.9 17.7 17.8 17.8 18.1 18.  18.1
+ 18.2 18.2 18.5 18.3 18.2 18.  18.2 18.  17.8 17.7 17.7 17.8 17.7 17.7
+ 17.6 17.8 17.7 17.9 17.7 17.9 17.7 17.7 17.7 17.7 17.7 17.6] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137]
+177.7729 	EXP 	Sound  started
+177.9234 	EXP 	New trial (rep=0, index=20): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+178.1237 	INFO 	Successfully set darwin thread to realtime
+178.2249 	EXP 	window1: mouseVisible = False
+182.2085 	EXP 	window1: mouseVisible = True
+182.9705 	DATA 	Mouse: Left button down, pos=(683,269)
+183.0693 	DATA 	Mouse:  Left button up, pos=(683,269)
+trialnum=21 ERROR,123 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.9 18.2 21.3 23.8 21.4 18.4 18.6 19.1 19.1 18.9 19.2 18.4 17.9 17.8
+ 17.6 17.8 17.6 17.8 17.8 17.8 17.9 17.8 18.2 18.2 18.2 18.3 18.3 18.3
+ 18.4 18.2 18.1 17.9 17.8 17.8 17.7 18.1 17.7 17.8 17.8 17.9 18.  17.9
+ 17.6 18.  17.6 18.  17.8 17.9 17.7 17.6 17.8 17.7 17.6 17.8 17.6 17.9
+ 17.9 18.  17.7 17.8 17.7 17.8 17.6 17.9 17.9 17.7 17.7 17.9 18.2 19.4
+ 18.3 18.1 17.8 18.1 18.4 18.2 18.4 17.7 18.3 18.3 17.7 17.7 17.6 17.7
+ 17.7 18.1 17.8 18.2 18.2 18.3 18.1 18.2 18.3 18.5 18.2 18.3 18.3 18.3
+ 18.1 18.1 18.1 18.2 18.4 17.7 18.2 17.7 17.9 17.8 17.8 17.9 17.7 17.7
+ 17.7 17.6 18.  17.7 17.6 17.7 17.7 17.8 17.6 17.7 17.8] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122]
+183.1062 	EXP 	Sound  started
+183.2567 	EXP 	New trial (rep=0, index=21): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.52, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 0., 2.]), 'ringToQuery': 999}
+183.4576 	INFO 	Successfully set darwin thread to realtime
+183.5588 	EXP 	window1: mouseVisible = False
+187.1548 	EXP 	window1: mouseVisible = True
+188.3978 	DATA 	Mouse: Left button down, pos=(467,573)
+188.4908 	DATA 	Mouse:  Left button up, pos=(454,569)
+188.8786 	DATA 	Mouse: Left button down, pos=(451,573)
+188.9573 	DATA 	Mouse:  Left button up, pos=(451,573)
+trialnum=22 ERROR,137 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[19.  18.8 18.5 19.3 18.9 18.8 18.6 18.8 17.9 17.8 17.7 17.8 17.7 17.7
+ 17.7 17.7 17.7 17.7 17.8 17.7 17.7 17.5 17.8 17.8 17.8 17.7 18.  17.8
+ 17.8 17.8 18.1 18.  17.9 17.8 17.7 17.9 17.8 17.8 17.8 17.7 17.9 17.8
+ 17.7 17.6 17.7 17.8 17.8 17.8 17.8 17.7 17.8 17.7 17.6 17.8 17.8 18.
+ 17.7 17.8 17.6 18.1 17.7 18.  18.2 18.1 18.2 18.1 19.2 18.3 18.4 18.4
+ 18.1 18.1 18.2 18.3 18.2 18.1 17.8 17.7 17.7 18.2 18.2 18.3 18.3 18.3
+ 18.3 18.2 18.  18.5 18.3 18.2 18.2 18.3 18.2 18.2 18.4 18.3 18.2 18.4
+ 18.3 18.1 17.8 17.7 17.8 17.8 17.6 17.7 17.7 17.6 17.7 17.8 17.7 17.7
+ 17.6 17.8 17.6 17.7 18.1 18.1 18.2 18.5 18.3 18.2 18.2 18.3 18.3 18.2
+ 18.1 18.6 17.6 17.7 17.9 17.6 17.7 17.8 17.6 17.8 17.6] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136]
+189.0142 	EXP 	Sound  started
+189.1647 	EXP 	New trial (rep=0, index=22): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+189.3650 	INFO 	Successfully set darwin thread to realtime
+189.4662 	EXP 	window1: mouseVisible = False
+193.1931 	EXP 	window1: mouseVisible = True
+194.4865 	DATA 	Mouse: Left button down, pos=(437,276)
+194.5894 	DATA 	Mouse:  Left button up, pos=(437,276)
+trialnum=23 ERROR,59 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.7 16.1 16.1 16.  15.5 16.1 16.1 16.1 16.1 16.1 15.9 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.2 15.5 15.7 15.5 15.5 15.8 16.1
+ 16.1 16.1 14.2 16.  16.1 16.1 14.1 16.1 14.1 16.1 16.  14.1 14.1 16.1
+ 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 14.1 16.1
+ 16.1 14.2 15.5] and was these frames: [  3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48  51  54
+  57  60  63  66  72  75  78  81  84  87  90  93  95  98 101 104 106 109
+ 111 114 117 119 121 124 127 130 133 136 139 142 145 148 151 154 157 160
+ 162 165 168 170 173]
+194.6220 	EXP 	Sound  started
+194.7725 	EXP 	New trial (rep=0, index=23): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.23, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 0., 2.]), 'ringToQuery': 999}
+194.9730 	INFO 	Successfully set darwin thread to realtime
+195.0742 	EXP 	window1: mouseVisible = False
+198.4084 	EXP 	window1: mouseVisible = True
+199.4475 	DATA 	Mouse: Left button down, pos=(481,51)
+199.5415 	DATA 	Mouse:  Left button up, pos=(481,51)
+trialnum=24 ERROR,108 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.9 17.8 17.6 17.8 17.7 18.4 18.3 18.3 17.7 18.3 18.2 17.9 17.9 17.9
+ 17.8 17.6 17.8 17.8 17.9 17.8 17.9 18.3 18.2 18.2 20.  20.2 19.9 21.4
+ 18.8 18.5 18.6 18.2 18.4 18.8 18.8 17.8 17.7 17.7 17.7 17.7 17.7 18.
+ 17.7 17.8 18.6 18.2 18.3 17.7 18.1 17.7 17.6 17.9 17.7 17.7 17.6 17.7
+ 17.7 17.7 17.8 17.5 17.8 17.6 18.2 18.5 18.2 18.1 18.1 18.1 18.1 17.7
+ 17.6 17.6 18.1 18.2 18.3 18.1 18.1 18.1 17.7 17.6 18.  17.8 17.7 17.7
+ 17.8 17.8 18.3 18.3 18.1 17.8 17.6 17.5 18.7 17.6 17.7 17.7 17.7 17.8
+ 17.7 18.1 18.3 18.1 18.  18.1 18.4 18.2 18.2 18.3] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107]
+199.5662 	EXP 	Sound  started
+199.7775 	EXP 	New trial (rep=0, index=24): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([-999.,    2.,    4.]), 'ringToQuery': 999}
+199.9789 	INFO 	Successfully set darwin thread to realtime
+200.0802 	EXP 	window1: mouseVisible = False
+203.6676 	EXP 	window1: mouseVisible = True
+204.4001 	DATA 	Mouse: Left button down, pos=(467,409)
+204.4773 	DATA 	Mouse:  Left button up, pos=(467,409)
+trialnum=25 ERROR,66 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.5 15.2 15.4 15.1 15.3 15.2 15.5 15.5 15.3 15.6 16.  16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.2 12.  12.4 12.2 12.1
+ 11.8 15.6 15.4 15.4 15.6 15.7 16.1 16.1 16.1 16.  16.  16.1 16.1 16.1
+ 16.1 16.  16.1 14.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1
+ 16.  16.1 16.1 15.7 16.  16.  16.  15.5 15.5 15.5] and was these frames: [  4   7  10  13  16  19  22  25  28  31  34  37  40  43  46  49  52  55
+  58  61  64  67  70  73  74  75  76  77  78  82  85  88  91  94  97 100
+ 103 106 109 112 115 118 121 124 127 129 132 135 138 141 144 147 150 153
+ 156 159 162 165 168 171 174 177 181 184 187 190]
+204.5357 	EXP 	Sound  started
+204.6862 	EXP 	New trial (rep=0, index=25): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.58, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 1., 3.]), 'ringToQuery': 999}
+204.8869 	INFO 	Successfully set darwin thread to realtime
+204.9881 	EXP 	window1: mouseVisible = False
+208.8171 	EXP 	window1: mouseVisible = True
+209.5681 	DATA 	Mouse: Left button down, pos=(320,201)
+209.6696 	DATA 	Mouse:  Left button up, pos=(320,202)
+trialnum=26 ERROR,146 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.5 18.6 18.3 18.5 18.4 18.8 18.5 18.7 18.6 18.8 18.7 17.7 17.7 17.7
+ 17.7 17.8 17.7 17.8 17.6 17.8 17.9 17.6 17.6 18.1 17.7 17.8 17.7 17.8
+ 17.6 17.8 17.8 17.7 17.8 17.8 17.7 17.9 17.7 17.7 18.2 17.8 17.9 17.8
+ 17.7 17.7 18.  17.7 17.7 17.8 17.7 17.7 17.8 17.8 17.8 17.7 17.8 17.8
+ 17.6 17.7 17.7 17.7 17.6 17.6 17.7 17.7 17.7 17.7 17.7 17.9 19.  17.8
+ 17.8 17.8 17.7 18.  17.9 17.7 17.7 17.8 17.7 17.6 17.8 17.8 17.9 17.7
+ 18.2 17.9 17.7 17.9 17.9 17.9 17.8 17.8 17.8 17.6 17.7 18.  17.9 17.7
+ 17.9 17.6 17.9 17.7 17.8 17.8 17.7 17.6 17.8 18.  17.7 17.6 17.7 17.8
+ 18.  17.6 17.7 17.9 17.7 17.7 17.8 17.7 17.6 17.8 17.7 17.7 18.  17.8
+ 17.9 17.8 18.2 18.1 18.2 18.2 18.1 18.4 18.2 18.4 18.4 18.3 18.2 18.4
+ 18.6 18.6 18.2 18.2 18.4 18.1] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145]
+209.6872 	EXP 	Sound  started
+209.8378 	EXP 	New trial (rep=0, index=26): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.4, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 5., 1.]), 'ringToQuery': 999}
+210.0381 	INFO 	Successfully set darwin thread to realtime
+210.1394 	EXP 	window1: mouseVisible = False
+214.0793 	EXP 	window1: mouseVisible = True
+215.4604 	DATA 	Mouse: Left button down, pos=(386,581)
+215.5579 	DATA 	Mouse:  Left button up, pos=(386,581)
+trialnum=27 ERROR,68 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.6 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1 16.1 16.1 16.1
+ 15.8 16.1 16.2 16.1 11.8 12.1 11.7 12.2 11.7 15.4 15.4 15.2 15.8 15.8
+ 15.5 15.7 15.5 15.4 15.3 15.5 15.5 15.9 16.  16.1 16.  15.6 15.5 15.3
+ 16.1 15.4 15.2 16.1 15.5 16.  16.1 16.1 16.  16.1 15.6 16.  16.1 16.
+ 15.1 16.1 15.4 15.6 15.5 15.4 16.1 16.1 16.1 16.  15.3 15.8] and was these frames: [  4   7  10  13  16  19  22  25  28  31  34  37  40  43  46  49  52  55
+  57  58  59  60  61  64  67  70  74  78  81  84  87  90  93  96  99 102
+ 105 108 111 114 117 120 123 126 129 132 135 138 141 144 147 150 153 156
+ 159 162 165 168 171 174 177 180 183 186 189 192 195 198]
+215.5961 	EXP 	Sound  started
+215.7465 	EXP 	New trial (rep=0, index=27): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.29, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([   1., -999.,    2.]), 'ringToQuery': 999}
+215.9478 	INFO 	Successfully set darwin thread to realtime
+216.0491 	EXP 	window1: mouseVisible = False
+220.3000 	EXP 	window1: mouseVisible = True
+221.2775 	DATA 	Mouse: Left button down, pos=(376,267)
+221.3734 	DATA 	Mouse:  Left button up, pos=(376,267)
+trialnum=28 ERROR,120 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[19.  20.  22.7 22.6 23.9 22.6 18.9 18.7 18.7 18.9 18.8 18.8 18.4 18.9
+ 17.8 17.8 17.8 17.8 17.8 17.6 17.7 17.8 17.8 17.7 17.7 17.8 17.9 17.8
+ 17.8 17.7 17.9 17.9 17.7 17.7 17.8 17.6 17.7 17.8 17.8 17.9 17.8 17.9
+ 17.8 17.7 17.9 17.9 17.8 17.7 17.7 17.8 17.8 17.6 17.8 17.8 17.7 17.7
+ 17.7 18.1 17.8 17.9 17.8 18.1 18.1 17.8 17.9 17.6 17.7 17.8 17.8 17.9
+ 17.6 19.  17.8 17.6 17.9 17.7 17.8 17.8 17.8 17.8 17.7 17.8 17.7 17.8
+ 17.8 17.8 17.9 17.6 17.8 17.8 17.7 17.7 17.7 17.7 17.7 17.8 17.8 17.7
+ 17.6 17.7 17.9 17.8 17.8 17.8 17.7 17.9 17.8 17.7 17.6 17.7 17.8 17.7
+ 17.9 17.7 17.8 17.9 17.7 17.7 17.9 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119]
+221.3964 	EXP 	Sound  started
+221.5470 	EXP 	New trial (rep=0, index=28): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.28, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([-999., -999., -999.]), 'ringToQuery': 999}
+221.7482 	INFO 	Successfully set darwin thread to realtime
+221.8495 	EXP 	window1: mouseVisible = False
+225.7624 	EXP 	window1: mouseVisible = True
+226.6567 	DATA 	Mouse: Left button down, pos=(442,272)
+226.7574 	DATA 	Mouse:  Left button up, pos=(442,272)
+trialnum=29 ERROR,128 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.2 17.8 17.9 17.8 17.9 17.7 17.9 17.8 17.8 17.7 18.1 19.3 23.5 21.5
+ 19.6 18.7 18.8 18.5 18.9 18.4 18.6 18.5 18.3 18.6 18.3 17.8 17.8 17.6
+ 17.8 17.8 17.7 17.7 17.8 17.6 18.1 17.7 17.7 18.3 17.9 17.7 17.7 17.6
+ 17.8 18.1 18.2 18.1 17.9 18.1 17.9 18.1 17.9 17.7 17.9 17.9 17.6 17.9
+ 17.8 17.8 17.8 17.8 17.6 17.7 17.7 17.7 17.7 17.7 17.6 17.6 17.8 18.2
+ 17.7 17.7 17.9 17.8 17.6 17.6 17.8 17.8 17.8 17.7 18.3 17.6 18.9 17.7
+ 17.7 17.9 17.8 17.7 17.6 17.7 17.7 17.8 17.7 17.5 17.7 17.8 17.9 17.7
+ 17.6 17.6 17.8 17.7 17.8 17.6 17.7 17.9 17.8 17.7 17.6 17.6 17.8 17.7
+ 17.6 17.8 17.8 17.7 17.8 17.7 17.7 17.7 18.  17.7 17.9 17.8 17.8 17.9
+ 17.8 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127]
+226.7928 	EXP 	Sound  started
+226.9432 	EXP 	New trial (rep=0, index=29): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([   0., -999.,    3.]), 'ringToQuery': 999}
+227.1434 	INFO 	Successfully set darwin thread to realtime
+227.2447 	EXP 	window1: mouseVisible = False
+230.9023 	EXP 	window1: mouseVisible = True
+231.9387 	DATA 	Mouse: Left button down, pos=(524,336)
+232.0696 	DATA 	Mouse:  Left button up, pos=(524,336)
+trialnum=30 ERROR,142 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.6 17.9 18.8 18.4 18.2 17.7 17.8 17.9 17.8 17.7 17.7 17.8 17.8 17.6
+ 17.8 17.8 18.  17.9 17.8 17.6 17.6 17.6 17.8 17.9 17.7 17.8 17.8 17.9
+ 17.7 18.5 17.8 17.9 18.  17.7 18.3 20.4 21.3 22.7 22.4 19.2 18.4 18.5
+ 18.4 18.6 18.7 18.5 18.2 18.5 18.2 17.8 18.  17.8 17.6 17.8 17.8 17.6
+ 17.7 17.8 17.6 18.  17.6 17.7 18.  17.7 17.8 17.7 17.7 17.8 18.  17.6
+ 17.7 17.7 17.8 17.7 17.7 17.7 17.8 17.8 17.7 17.6 17.7 17.7 17.6 17.8
+ 17.9 17.6 17.8 17.6 17.7 17.8 17.6 17.7 17.7 17.8 17.5 17.8 17.7 17.7
+ 17.6 17.7 17.6 17.7 17.8 17.6 17.7 17.7 18.8 18.2 17.7 17.8 17.8 17.7
+ 17.8 17.7 17.8 17.7 17.7 17.8 17.7 17.6 18.  17.8 17.8 17.8 17.7 17.8
+ 18.4 17.8 17.7 17.8 17.6 18.  19.3 17.8 17.6 17.6 17.7 17.8 17.9 17.7
+ 18.  17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141]
+232.0745 	EXP 	Sound  started
+232.2250 	EXP 	New trial (rep=0, index=30): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.28, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 6., 7.]), 'ringToQuery': 999}
+232.4263 	INFO 	Successfully set darwin thread to realtime
+232.5277 	EXP 	window1: mouseVisible = False
+236.7412 	EXP 	window1: mouseVisible = True
+237.7534 	DATA 	Mouse: Left button down, pos=(505,384)
+237.8693 	DATA 	Mouse:  Left button up, pos=(505,384)
+trialnum=31 ERROR,116 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.8 17.6 17.7 17.6 17.8 17.8 17.5 17.7 19.  17.8 17.7 17.9 17.6 17.6
+ 18.  17.9 17.5 17.7 17.7 17.7 17.7 17.6 17.6 17.6 17.8 17.8 17.6 17.7
+ 17.7 17.7 17.6 17.7 17.7 17.7 17.7 17.7 17.8 17.6 17.9 17.7 17.8 17.6
+ 17.6 17.8 17.8 17.6 17.6 17.9 19.8 20.9 21.4 21.5 21.8 19.6 18.3 18.3
+ 18.9 18.5 18.4 18.6 18.4 18.6 19.2 17.7 17.6 17.7 17.7 17.8 17.8 17.7
+ 17.7 17.7 17.6 17.7 17.6 17.8 17.9 17.8 17.7 17.7 17.6 17.7 17.5 17.7
+ 17.7 17.7 17.8 18.1 17.8 17.7 17.6 18.  17.7 17.9 17.8 17.7 17.8 17.7
+ 17.6 17.7 17.6 17.5 17.6 17.6 17.7 17.8 17.5 17.7 17.6 17.8 17.7 17.8
+ 17.7 17.6 17.6 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115]
+237.8891 	EXP 	Sound  started
+238.0396 	EXP 	New trial (rep=0, index=31): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([   4., -999.,    1.]), 'ringToQuery': 999}
+238.2400 	INFO 	Successfully set darwin thread to realtime
+238.3412 	EXP 	window1: mouseVisible = False
+242.0415 	EXP 	window1: mouseVisible = True
+243.0072 	DATA 	Mouse: Left button down, pos=(314,383)
+243.1333 	DATA 	Mouse:  Left button up, pos=(314,383)
+trialnum=32 ERROR,70 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.3 16.  16.1 15.9 16.1 16.1 16.1 16.1 16.1 16.1 16.  11.9 12.9 12.6
+ 12.4 12.6 11.6 16.  15.1 15.4 15.4 15.4 16.1 16.1 16.1 16.4 15.9 16.
+ 16.1 16.1 14.1 16.1 16.  16.1 16.1 14.2 16.  16.  16.1 16.1 16.1 16.
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1 15.5 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1] and was these frames: [  3   6   9  12  15  18  21  24  27  30  33  34  38  39  40  41  42  46
+  49  52  55  58  61  64  67  70  73  76  79  82  84  87  90  93  96  98
+ 101 104 107 110 113 116 119 122 125 128 131 134 137 140 143 146 149 152
+ 155 158 161 164 167 170 173 176 179 182 185 188 191 194 197 200]
+243.1427 	EXP 	Sound  started
+243.2931 	EXP 	New trial (rep=1, index=0): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.58, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 1., 3.]), 'ringToQuery': 0}
+243.4936 	INFO 	Successfully set darwin thread to realtime
+243.5948 	EXP 	window1: mouseVisible = False
+247.8448 	EXP 	window1: mouseVisible = True
+248.6825 	DATA 	Mouse: Left button down, pos=(283,254)
+248.7653 	DATA 	Mouse:  Left button up, pos=(283,254)
+trialnum=33 ERROR,113 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.8 18.2 18.2 18.7 19.5 20.2 19.1 19.1 19.  19.2 18.9 18.6 19.1 18.7
+ 18.6 19.  18.6 18.7 19.  18.9 18.1 18.2 18.1 17.9 17.8 17.7 17.7 17.8
+ 17.8 17.7 17.8 17.6 17.7 17.8 17.8 17.7 17.6 18.  17.8 17.8 18.1 18.1
+ 18.4 18.2 18.1 18.3 18.3 18.2 17.9 17.7 17.7 17.6 17.6 17.8 17.8 17.7
+ 17.7 17.8 17.8 17.7 17.6 17.6 17.6 17.8 17.7 17.5 17.6 17.7 17.8 17.8
+ 17.7 18.1 17.7 17.9 17.7 17.6 17.7 18.8 17.9 17.8 17.7 17.7 17.7 17.9
+ 18.  17.8 17.7 17.7 18.  17.9 17.6 17.7 17.9 17.7 17.7 17.6 17.8 17.9
+ 18.  17.7 17.7 17.9 17.8 17.6 17.8 17.8 17.7 17.5 17.7 17.7 18.  18.5
+ 17.8] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112]
+248.8010 	EXP 	Sound  started
+248.9515 	EXP 	New trial (rep=1, index=1): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.28, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([6., 0., 6.]), 'ringToQuery': 0}
+249.1520 	INFO 	Successfully set darwin thread to realtime
+249.2531 	EXP 	window1: mouseVisible = False
+252.8484 	EXP 	window1: mouseVisible = True
+254.4397 	DATA 	Mouse: Left button down, pos=(277,265)
+254.5174 	DATA 	Mouse:  Left button up, pos=(277,265)
+trialnum=34 ERROR,135 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.8 18.4 18.5 18.6 18.6 18.4 18.8 18.6 18.5 18.8 18.5 18.8 18.6 18.3
+ 18.9 18.4 18.6 18.7 18.6 17.8 17.7 17.9 17.7 17.7 18.2 17.7 17.7 17.8
+ 17.7 17.7 17.8 17.9 17.8 17.7 18.1 17.8 17.6 17.8 17.7 17.7 17.7 17.7
+ 17.8 17.7 17.8 17.6 17.8 17.8 17.9 18.1 18.  17.7 18.  17.6 17.9 17.7
+ 17.6 18.2 17.7 17.7 17.6 17.7 17.9 17.6 17.8 17.7 17.7 17.8 17.7 17.8
+ 17.6 17.7 17.6 17.9 17.7 17.7 19.3 17.7 17.6 17.6 17.9 17.7 17.7 17.8
+ 17.8 17.8 17.9 17.7 17.6 17.8 17.8 17.6 17.8 17.7 18.3 17.7 17.7 17.8
+ 17.8 17.7 17.8 17.8 17.6 17.7 17.6 17.7 17.6 17.7 17.8 17.6 17.6 17.7
+ 17.7 17.7 17.9 17.6 17.8 17.8 17.7 17.7 17.8 17.8 17.8 17.7 17.8 17.7
+ 17.6 17.8 17.6 17.6 17.8 17.8 17.7 17.6 18. ] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134]
+254.5764 	EXP 	Sound  started
+254.7270 	EXP 	New trial (rep=1, index=2): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.16, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 2., 6.]), 'ringToQuery': 1}
+254.9273 	INFO 	Successfully set darwin thread to realtime
+255.0284 	EXP 	window1: mouseVisible = False
+259.2558 	EXP 	window1: mouseVisible = True
+261.4043 	DATA 	Mouse: Left button down, pos=(370,323)
+261.5013 	DATA 	Mouse:  Left button up, pos=(370,323)
+trialnum=35 ERROR,70 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.8 15.1 15.5 15.4 15.6 16.1 15.3 15.3 11.9 12.6 12.5 12.4 15.1 15.4
+ 15.6 15.8 16.  15.1 15.6 16.  15.9 15.7 15.6 15.9 15.7 15.7 15.8 15.5
+ 15.5 15.6 16.  15.5 16.  15.7 16.  14.2 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.  14.2 15.5 16.1 16.1 16.1 16.1 16.1 16.1 14.2
+ 16.1 16.1 16.1 16.1 16.1 15.6 16.1 15.9 16.1 16.1 16.1 16.1 16.1 16.1] and was these frames: [  5   8  11  14  17  21  24  27  31  32  33  34  36  39  42  45  49  52
+  56  60  63  66  69  72  75  78  81  84  87  90  93  96  99 102 105 107
+ 110 113 116 119 122 125 128 131 134 137 140 142 145 148 151 154 157 160
+ 163 165 168 171 174 177 180 183 186 189 192 195 198 201 204 207]
+261.5402 	EXP 	Sound  started
+261.6907 	EXP 	New trial (rep=1, index=3): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.75, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 1., 1.]), 'ringToQuery': 0}
+261.8911 	INFO 	Successfully set darwin thread to realtime
+261.9923 	EXP 	window1: mouseVisible = False
+266.0062 	EXP 	window1: mouseVisible = True
+267.0055 	DATA 	Mouse: Left button down, pos=(337,419)
+267.1095 	DATA 	Mouse:  Left button up, pos=(337,419)
+trialnum=36 ERROR,60 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.9 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 12.6 11.9 12.5 13.1 12.6 15.7 15.6 15.6 15.1
+ 15.5 15.9 15.5 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.  16.1 16.1 16.  16.  16.1
+ 16.  16.1 14.1 16.1] and was these frames: [  4   7  10  13  16  19  22  25  28  31  34  37  40  43  46  49  52  55
+  58  61  62  63  64  65  70  73  76  79  82  85  88  91  94  97 100 103
+ 106 109 112 115 118 121 124 127 130 133 136 139 142 145 148 151 154 157
+ 160 163 166 169 171 174]
+267.1252 	EXP 	Sound  started
+267.2758 	EXP 	New trial (rep=1, index=4): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.41, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([1., 3., 1.]), 'ringToQuery': 2}
+267.4762 	INFO 	Successfully set darwin thread to realtime
+267.5773 	EXP 	window1: mouseVisible = False
+271.2537 	EXP 	window1: mouseVisible = True
+272.3241 	DATA 	Mouse: Left button down, pos=(447,319)
+272.4213 	DATA 	Mouse:  Left button up, pos=(447,319)
+trialnum=37 ERROR,74 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.8 16.1 15.5 15.8 12.  15.5 15.4 15.1 15.4 15.5 15.3 15.2 15.9 14.9
+ 16.  16.1 16.  16.1 16.  16.1 16.1 16.1 16.1 16.1 16.  16.1 16.1 16.1
+ 16.1 16.1 16.  16.1 16.1 16.  16.1 16.  16.  16.1 16.  16.1 16.1 16.
+ 16.1 16.1 16.1 14.1 16.1 16.1 14.1 16.1 16.1 16.1 16.  16.1 15.9 16.1
+ 14.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1 16.1 16.1 16.1 16.1
+ 16.1 16.2 16.1 16.1] and was these frames: [  3   6   9  12  15  17  20  23  26  29  32  35  39  42  45  48  51  54
+  57  60  63  66  69  72  75  78  81  84  87  90  93  96  99 102 105 108
+ 111 114 117 120 123 126 129 132 135 137 140 143 145 148 151 154 157 160
+ 163 166 168 171 174 177 180 183 186 189 192 195 198 201 204 207 210 213
+ 216 219]
+272.4427 	EXP 	Sound  started
+272.5932 	EXP 	New trial (rep=1, index=5): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.58, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 3., 0.]), 'ringToQuery': 1}
+272.7936 	INFO 	Successfully set darwin thread to realtime
+272.8948 	EXP 	window1: mouseVisible = False
+276.9896 	EXP 	window1: mouseVisible = True
+277.8583 	DATA 	Mouse: Left button down, pos=(450,293)
+trialnum=38 ERROR,149 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.8 17.6 17.8 17.6 17.6 17.7 17.6 17.9 19.  17.8 17.8 17.8 17.9 17.8
+ 17.7 20.7 22.8 20.1 18.8 18.5 18.4 18.4 18.5 18.5 18.4 18.8 18.6 18.4
+ 18.5 18.4 18.4 18.5 18.6 17.9 17.7 17.8 17.7 17.7 17.8 17.9 17.9 18.4
+ 19.7 17.8 17.7 17.7 17.8 18.  17.7 17.8 17.6 18.2 17.8 17.7 17.9 17.8
+ 17.6 17.7 17.8 17.8 17.8 17.7 18.  17.7 17.7 17.7 17.7 17.9 17.7 17.6
+ 17.5 17.8 17.8 17.6 17.8 17.7 17.6 17.7 17.9 17.7 17.9 17.7 17.6 17.9
+ 17.8 17.7 17.7 17.8 17.8 18.  17.7 18.9 17.7 17.6 17.6 17.6 17.7 17.8
+ 17.8 17.7 17.8 17.8 18.1 17.7 17.8 17.7 17.8 17.7 18.  17.7 17.5 17.9
+ 17.8 17.6 17.7 17.7 17.7 17.7 17.6 17.7 17.6 17.7 17.6 17.7 17.6 17.7
+ 17.6 17.5 17.6 17.8 17.8 17.6 17.7 17.5 17.6 17.7 17.6 17.8 17.7 17.6
+ 17.6 17.8 17.7 17.8 17.7 17.8 18.  17.8 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148]
+277.9780 	EXP 	Sound  started
+277.9815 	DATA 	Mouse:  Left button up, pos=(450,293)
+278.1285 	EXP 	New trial (rep=1, index=6): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.28, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 2., 6.]), 'ringToQuery': 1}
+278.3289 	INFO 	Successfully set darwin thread to realtime
+278.4303 	EXP 	window1: mouseVisible = False
+282.6365 	EXP 	window1: mouseVisible = True
+283.6014 	DATA 	Mouse: Left button down, pos=(681,427)
+283.6941 	DATA 	Mouse:  Left button up, pos=(681,427)
+284.0081 	DATA 	Mouse: Left button down, pos=(672,424)
+284.1011 	DATA 	Mouse:  Left button up, pos=(660,421)
+trialnum=39 ERROR,122 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.  17.8 18.2 17.8 18.8 17.7 18.  17.9 18.  17.7 17.9 17.7 17.9 18.2
+ 17.8 18.2 18.6 17.9 17.8 17.6 17.8 17.7 18.8 22.3 24.7 20.2 18.4 18.4
+ 18.6 18.5 18.2 18.4 18.5 18.8 18.7 18.7 18.6 18.7 18.6 18.3 18.3 18.2
+ 17.7 17.7 17.8 18.  17.9 17.8 17.6 17.8 17.8 17.7 18.  17.7 17.9 17.8
+ 17.7 17.5 17.6 17.6 17.7 17.7 18.  17.6 17.9 17.6 17.8 17.7 17.7 17.7
+ 18.  17.6 17.6 17.6 17.7 17.6 17.7 17.8 17.6 18.3 17.7 17.6 17.8 17.8
+ 17.7 17.9 17.7 17.8 17.8 17.5 17.7 17.8 17.9 17.8 17.6 17.7 17.9 17.6
+ 17.6 18.8 17.7 17.8 17.8 17.6 17.9 17.7 17.8 17.7 17.7 17.6 17.7 17.8
+ 17.8 17.6 17.6 17.6 17.6 17.8 17.7 17.7 17.7 17.9] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121]
+284.1446 	EXP 	Sound  started
+284.2951 	EXP 	New trial (rep=1, index=7): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.52, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([1., 2., 3.]), 'ringToQuery': 2}
+284.4962 	INFO 	Successfully set darwin thread to realtime
+284.5975 	EXP 	window1: mouseVisible = False
+288.3720 	EXP 	window1: mouseVisible = True
+289.4279 	DATA 	Mouse: Left button down, pos=(374,260)
+289.5415 	DATA 	Mouse:  Left button up, pos=(374,260)
+trialnum=40 ERROR,67 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[16.1 16.1 16.  16.1 16.2 12.4 11.8 11.7 11.9 12.4 12.2 16.1 15.  15.4
+ 15.3 15.7 15.6 15.4 15.6 16.1 16.1 16.1 16.  16.1 16.1 16.  16.1 16.1
+ 16.1 16.1 16.  16.1 15.7 16.1 16.  16.1 16.1 16.1 16.  16.1 16.1 16.1
+ 16.1 16.2 15.1 15.9 15.3 11.6 12.4 12.2 13.1 12.5 14.9 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 15.8 16.  16.1 16.1 16.1 16.1 16.1] and was these frames: [  4   7  10  13  16  18  20  21  22  23  24  28  31  34  37  40  43  46
+  49  52  55  58  61  64  67  70  73  76  79  82  85  88  91  94  97 100
+ 103 106 109 112 115 118 121 124 128 131 134 138 139 140 141 142 145 148
+ 151 154 157 160 163 166 169 172 175 178 181 184 187]
+289.5634 	EXP 	Sound  started
+289.7139 	EXP 	New trial (rep=1, index=8): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.95, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([   3., -999.,    0.]), 'ringToQuery': 2}
+289.9143 	INFO 	Successfully set darwin thread to realtime
+290.0155 	EXP 	window1: mouseVisible = False
+293.7074 	EXP 	window1: mouseVisible = True
+294.5548 	DATA 	Mouse: Left button down, pos=(373,271)
+294.6453 	DATA 	Mouse:  Left button up, pos=(374,271)
+trialnum=41 ERROR,70 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.8 16.2 15.5 15.4 16.1 15.9 15.8 16.1 16.1 16.1 12.  13.6 12.3 12.3
+ 12.7 12.4 12.7 15.9 15.5 15.6 15.3 15.6 15.6 15.5 16.  16.1 16.1 16.
+ 16.1 16.  16.1 16.1 16.1 16.  14.2 16.1 16.1 16.1 16.  16.  16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1 16.  16.1 14.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1] and was these frames: [  3   6   9  12  15  18  21  24  27  30  31  32  33  34  35  36  37  44
+  47  50  53  56  59  62  65  68  71  74  77  80  83  86  89  92  94  97
+ 100 103 106 109 112 115 118 121 124 127 130 133 136 139 142 145 147 150
+ 153 156 159 162 165 168 171 174 177 180 183 186 189 192 195 198]
+294.6748 	EXP 	Sound  started
+294.8253 	EXP 	New trial (rep=1, index=9): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.23, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([1., 3., 0.]), 'ringToQuery': 2}
+295.0266 	INFO 	Successfully set darwin thread to realtime
+295.1278 	EXP 	window1: mouseVisible = False
+298.8435 	EXP 	window1: mouseVisible = True
+299.6468 	DATA 	Mouse: Left button down, pos=(284,281)
+299.7251 	DATA 	Mouse:  Left button up, pos=(286,279)
+trialnum=42 ERROR,74 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.9 15.1 15.4 14.9 15.5 15.5 15.6 16.  16.1 16.1 16.1 16.1 15.9 16.1
+ 16.1 16.  16.1 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1 16.
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1 14.9 16.1 16.1 16.1 16.1 16.1
+ 16.2 16.1 16.1 16.  16.1 16.  16.1 15.4 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 15.7 15.7 15.3 15.7 15.9 16.  15.4 15.2 15.5 16.1
+ 16.1 14.2 16.1 16. ] and was these frames: [  5   8  11  14  17  20  23  26  29  32  35  38  41  44  47  50  53  56
+  59  62  65  68  71  74  77  80  83  86  89  92  95  98 101 104 107 110
+ 113 116 119 122 125 128 131 134 137 140 143 146 149 152 155 158 161 164
+ 167 170 173 176 179 182 185 188 191 194 197 200 203 206 209 212 215 217
+ 220 223]
+299.7665 	EXP 	Sound  started
+299.9171 	EXP 	New trial (rep=1, index=10): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.73, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([0., 3., 2.]), 'ringToQuery': 0}
+300.1183 	INFO 	Successfully set darwin thread to realtime
+300.2195 	EXP 	window1: mouseVisible = False
+304.1926 	EXP 	window1: mouseVisible = True
+305.2065 	DATA 	Mouse: Left button down, pos=(198,102)
+305.3173 	DATA 	Mouse:  Left button up, pos=(198,102)
+trialnum=43 ERROR,112 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.7 17.7 17.8 17.9 18.2 18.6 19.6 18.5 18.8 18.4 18.6 18.5 18.4 18.4
+ 18.5 18.8 18.7 18.4 18.5 18.6 18.3 18.5 18.7 18.5 18.4 17.9 17.7 17.7
+ 17.8 17.7 17.7 17.8 17.7 17.9 17.8 17.7 17.9 17.7 17.8 17.8 17.7 17.6
+ 17.7 17.9 18.  17.7 17.9 17.8 17.7 17.6 17.6 17.5 17.8 17.7 17.8 17.8
+ 17.7 17.8 17.7 17.7 17.6 17.7 17.7 17.7 17.6 17.9 17.6 17.9 17.8 17.7
+ 17.8 17.7 17.7 18.2 17.8 17.6 17.8 17.8 17.7 17.8 17.7 17.6 18.7 17.7
+ 17.6 18.  17.8 17.6 17.7 17.6 17.7 17.7 17.7 17.5 17.7 17.7 17.8 17.7
+ 17.7 17.8 17.7 17.7 17.7 17.7 17.8 17.6 17.9 17.7 17.7 18.1 17.7 17.6] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111]
+305.3251 	EXP 	Sound  started
+305.4755 	EXP 	New trial (rep=1, index=11): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.16, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([5., 1., 4.]), 'ringToQuery': 0}
+305.6758 	INFO 	Successfully set darwin thread to realtime
+305.7770 	EXP 	window1: mouseVisible = False
+309.4116 	EXP 	window1: mouseVisible = True
+310.2468 	DATA 	Mouse: Left button down, pos=(283,340)
+310.3734 	DATA 	Mouse:  Left button up, pos=(283,340)
+trialnum=44 ERROR,107 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.3 19.6 18.1 18.2 18.1 17.7 18.2 19.7 21.  21.  20.9 19.5 19.5 18.9
+ 18.5 18.6 18.6 18.4 19.1 18.8 18.5 18.6 18.4 18.6 18.5 18.4 18.5 18.6
+ 17.9 17.7 17.7 17.7 17.6 17.7 17.8 18.3 17.8 18.  17.8 17.7 17.9 18.2
+ 18.  17.8 17.7 17.7 17.8 17.7 17.7 17.7 17.6 18.2 17.8 18.1 18.2 17.9
+ 17.9 17.7 17.7 18.  17.7 17.7 17.7 17.7 17.7 17.7 17.6 17.9 17.6 17.6
+ 17.5 17.6 17.7 17.7 17.7 17.8 17.6 17.8 17.7 17.7 17.9 17.6 17.5 17.7
+ 18.1 19.  17.9 17.7 17.7 17.6 17.6 17.7 17.6 17.6 17.6 17.8 17.8 17.6
+ 17.6 17.8 17.6 17.8 17.6 17.6 18.1 18.3 18.2] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106]
+310.3823 	EXP 	Sound  started
+310.5328 	EXP 	New trial (rep=1, index=12): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([0., 5., 6.]), 'ringToQuery': 0}
+310.7330 	INFO 	Successfully set darwin thread to realtime
+310.8341 	EXP 	window1: mouseVisible = False
+314.2992 	EXP 	window1: mouseVisible = True
+315.0528 	DATA 	Mouse: Left button down, pos=(444,31)
+315.1334 	DATA 	Mouse:  Left button up, pos=(443,31)
+trialnum=45 ERROR,70 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[12.3 22.2 15.7 16.  15.5 15.9 15.2 15.9 15.8 14.8 16.  16.1 15.7 15.4
+ 15.4 15.5 15.2 15.3 15.6 15.2 16.  15.8 16.1 16.1 15.4 15.5 16.  14.1
+ 16.1 15.8 16.1 16.1 16.  16.  16.  16.1 16.1 16.1 16.1 16.  14.1 16.1
+ 14.2 16.1 14.2 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1 16.1
+ 16.1 16.1 16.1 16.1 15.9 15.5 15.6 15.4 14.9 15.4 15.7 15.6 15.6 15.5] and was these frames: [  0   1   7  11  14  18  21  24  27  30  33  36  39  42  45  48  51  54
+  57  60  63  66  69  72  75  78  81  83  86  89  92  95  98 101 104 107
+ 110 113 116 119 121 124 126 129 131 134 137 140 143 146 149 152 155 158
+ 161 164 167 170 173 176 179 182 185 188 191 194 197 200 203 206]
+315.1891 	EXP 	Sound  started
+315.3396 	EXP 	New trial (rep=1, index=13): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.41, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 1., 1.]), 'ringToQuery': 1}
+315.5400 	INFO 	Successfully set darwin thread to realtime
+315.6412 	EXP 	window1: mouseVisible = False
+319.4198 	EXP 	window1: mouseVisible = True
+320.1935 	DATA 	Mouse: Left button down, pos=(343,184)
+320.2934 	DATA 	Mouse:  Left button up, pos=(343,184)
+trialnum=46 ERROR,132 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[23.2 21.5 18.6 18.7 19.1 19.2 19.2 19.5 19.3 18.6 18.8 19.  18.8 18.6
+ 18.3 18.6 18.1 17.8 17.7 17.7 18.2 18.1 17.7 17.8 17.8 17.7 17.7 17.8
+ 17.8 18.  17.7 17.8 17.8 17.8 17.7 17.8 17.8 17.7 17.7 17.8 17.7 17.6
+ 17.7 18.  18.3 17.6 17.6 17.7 17.6 17.5 17.6 17.8 17.6 17.9 17.8 17.6
+ 17.7 17.6 17.7 17.7 17.8 17.6 17.8 17.7 17.6 17.8 17.7 17.9 17.7 17.8
+ 17.7 17.5 17.9 18.  19.  18.  17.8 17.7 17.7 17.6 17.9 17.7 17.8 17.9
+ 17.6 17.8 17.8 17.7 18.2 18.  17.6 17.8 17.8 17.6 17.7 17.7 17.6 17.9
+ 18.  17.7 17.8 17.7 17.7 17.7 17.7 17.8 17.7 17.8 17.8 17.7 17.7 17.9
+ 17.9 17.6 17.8 17.7 17.6 17.9 17.7 18.5 18.1 18.1 18.1 18.2 18.2 18.3
+ 18.3 18.2 17.9 17.7 17.6 17.6] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131]
+320.3122 	EXP 	Sound  started
+320.4627 	EXP 	New trial (rep=1, index=14): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 7., 4.]), 'ringToQuery': 1}
+320.6633 	INFO 	Successfully set darwin thread to realtime
+320.7648 	EXP 	window1: mouseVisible = False
+325.0467 	EXP 	window1: mouseVisible = True
+325.7666 	DATA 	Mouse: Left button down, pos=(469,167)
+325.8534 	DATA 	Mouse:  Left button up, pos=(468,167)
+trialnum=47 ERROR,130 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.7 17.7 17.9 17.6 18.9 17.8 17.6 17.6 17.7 17.6 17.7 17.7 17.7 17.7
+ 17.7 17.7 17.9 17.7 17.6 17.7 17.7 18.2 17.7 18.  17.7 17.7 17.7 17.9
+ 17.8 17.8 17.9 17.8 17.7 17.8 17.7 17.7 17.8 19.7 21.1 20.8 18.7 18.5
+ 18.4 18.6 18.5 19.1 18.6 18.4 18.4 18.5 18.8 18.2 18.6 18.6 18.7 18.4
+ 18.5 19.  18.9 19.1 18.2 18.  18.1 17.6 17.6 18.1 17.7 17.7 18.  17.6
+ 18.2 17.7 18.1 18.  18.2 17.7 17.7 17.9 17.9 17.7 18.  17.7 18.2 17.6
+ 17.6 17.7 17.7 18.  17.8 17.7 17.7 17.8 17.9 17.6 17.6 17.7 18.  17.6
+ 17.6 17.9 17.7 18.  17.6 17.6 17.7 17.7 17.6 17.8 17.6 17.7 17.8 17.7
+ 17.7 17.5 17.8 17.7 17.6 18.9 17.8 17.7 17.6 17.7 17.7 17.7 17.8 17.8
+ 17.8 17.7 17.6 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129]
+325.9038 	EXP 	Sound  started
+326.0543 	EXP 	New trial (rep=1, index=15): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([4., 5., 0.]), 'ringToQuery': 1}
+326.2546 	INFO 	Successfully set darwin thread to realtime
+326.3557 	EXP 	window1: mouseVisible = False
+330.4709 	EXP 	window1: mouseVisible = True
+331.2681 	DATA 	Mouse: Left button down, pos=(363,4)
+331.3813 	DATA 	Mouse:  Left button up, pos=(363,4)
+trialnum=48 ERROR,73 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[12.  11.8 11.7 11.9 22.4 15.  15.4 15.3 15.1 15.5 15.3 15.4 16.  15.8
+ 16.1 16.1 16.  16.1 16.1 16.  16.1 16.1 16.  16.  16.1 16.  16.1 15.8
+ 16.  16.  16.1 16.1 16.  16.1 16.  14.2 16.1 16.  16.1 14.1 16.  16.
+ 16.1 16.1 16.1 16.1 16.1 14.1 16.1 16.1 16.1 16.1 14.1 14.2 14.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 14.1 16.  16.1 16.1 14.1 16.1 16.1
+ 16.1 16.1 14.1] and was these frames: [  0   1   2   3   4  10  13  16  19  22  25  28  32  35  38  41  44  47
+  50  53  56  59  62  65  68  71  74  77  80  83  86  89  92  95  98 100
+ 103 106 109 111 114 117 120 123 126 129 132 134 137 140 143 146 148 150
+ 152 155 158 161 164 167 170 173 176 178 181 184 187 189 192 195 198 201
+ 203]
+331.4037 	EXP 	Sound  started
+331.5674 	EXP 	New trial (rep=1, index=16): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.95, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 0., 0.]), 'ringToQuery': 0}
+331.7679 	INFO 	Successfully set darwin thread to realtime
+331.8693 	EXP 	window1: mouseVisible = False
+335.5777 	EXP 	window1: mouseVisible = True
+336.7257 	DATA 	Mouse: Left button down, pos=(530,281)
+336.8374 	DATA 	Mouse:  Left button up, pos=(530,281)
+trialnum=49 ERROR,142 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.7 17.8 17.8 17.5 17.6 17.8 18.1 17.7 17.8 17.9 18.1 17.8 18.9 17.9
+ 17.8 17.7 17.8 17.8 17.8 17.6 17.6 17.9 17.7 17.8 17.8 17.9 17.8 17.8
+ 17.7 17.7 17.8 17.6 18.2 17.8 17.8 17.7 17.7 17.9 17.7 17.7 17.7 17.9
+ 17.7 17.9 17.6 18.9 21.3 20.5 20.9 20.4 21.4 20.4 18.4 18.3 18.5 18.4
+ 18.5 18.5 18.6 18.6 18.5 18.3 18.2 18.4 18.5 18.5 18.4 18.5 18.5 17.7
+ 17.7 17.7 17.6 17.7 17.6 17.6 17.7 17.7 17.8 17.7 17.6 17.6 17.5 18.
+ 17.7 17.5 17.8 17.8 17.7 17.8 17.7 17.6 17.7 17.6 17.7 17.8 18.  19.1
+ 18.9 17.9 17.5 17.6 17.8 17.7 17.5 17.7 17.6 17.6 17.9 17.8 17.7 17.7
+ 17.7 17.6 17.7 17.6 17.8 17.8 17.6 17.6 17.7 17.9 17.9 17.9 17.5 17.7
+ 19.  18.4 18.2 20.5 23.  21.3 20.1 19.5 19.3 19.3 18.3 18.9 19.2 18.5
+ 18.1 18.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141]
+336.8450 	EXP 	Sound  started
+336.9955 	EXP 	New trial (rep=1, index=17): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.52, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([4., 7., 3.]), 'ringToQuery': 0}
+337.1959 	INFO 	Successfully set darwin thread to realtime
+337.2971 	EXP 	window1: mouseVisible = False
+341.5539 	EXP 	window1: mouseVisible = True
+342.0413 	DATA 	Mouse: Left button down, pos=(357,180)
+342.1016 	DATA 	Mouse:  Left button up, pos=(357,180)
+trialnum=50 ERROR,118 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.7 17.6 17.8 17.6 17.8 17.7 18.8 17.8 17.7 17.6 17.7 17.5 17.8 17.6
+ 18.4 17.8 17.7 17.7 17.8 17.7 17.5 17.7 17.8 17.8 17.6 17.8 17.7 17.6
+ 17.8 18.  17.7 17.6 17.8 17.6 17.6 17.5 17.7 17.7 20.2 24.4 23.9 23.
+ 21.8 19.3 19.1 19.2 18.8 18.3 18.2 18.4 18.5 18.2 18.5 18.7 18.8 18.5
+ 18.3 18.4 18.7 18.2 18.2 18.2 18.7 17.9 17.7 17.6 18.  17.5 17.6 17.6
+ 17.7 17.5 17.6 17.6 17.8 17.5 17.7 17.7 17.6 17.7 18.  17.6 17.6 17.8
+ 17.8 17.6 17.7 18.4 18.  18.  18.6 18.5 17.9 17.6 18.1 17.6 17.5 17.7
+ 17.8 17.9 17.7 17.7 17.5 17.8 18.  18.  17.9 17.6 17.7 17.8 17.7 18.3
+ 17.7 17.9 18.3 17.9 18.4 18. ] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117]
+342.1795 	EXP 	Sound  started
+342.3300 	EXP 	New trial (rep=1, index=18): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([4., 0., 7.]), 'ringToQuery': 1}
+342.5305 	INFO 	Successfully set darwin thread to realtime
+342.6316 	EXP 	window1: mouseVisible = False
+346.5307 	EXP 	window1: mouseVisible = True
+347.4413 	DATA 	Mouse: Left button down, pos=(139,320)
+347.5254 	DATA 	Mouse:  Left button up, pos=(139,320)
+trialnum=51 ERROR,148 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[19.7 18.5 18.5 18.6 18.3 18.6 18.6 18.6 18.3 19.6 19.3 19.3 19.2 19.1
+ 19.2 18.8 18.6 18.5 19.6 18.5 17.8 17.7 17.6 17.7 17.7 17.9 17.9 17.7
+ 17.7 17.6 17.8 17.7 18.2 17.8 17.7 17.7 17.7 17.6 17.7 17.8 17.7 17.7
+ 17.7 17.7 17.7 17.6 17.9 17.6 17.9 17.6 17.7 17.7 17.5 17.5 17.6 17.8
+ 17.8 17.7 17.8 17.6 17.7 17.7 17.8 17.7 17.6 17.7 17.6 17.9 17.6 17.8
+ 17.7 17.7 17.6 18.1 17.7 17.9 17.7 18.7 17.6 17.9 17.6 17.7 17.8 17.5
+ 17.8 17.7 17.6 17.5 17.7 17.7 17.6 17.8 17.9 17.6 17.7 17.8 17.8 17.6
+ 17.6 17.6 17.7 17.7 17.8 17.8 17.7 17.6 17.7 17.7 17.6 17.9 17.7 17.6
+ 17.6 17.6 17.7 17.7 18.  17.5 17.8 17.7 17.8 17.7 17.6 17.6 17.6 17.6
+ 17.6 17.6 17.6 18.1 17.7 17.6 17.6 17.5 18.  17.9 17.5 17.9 17.7 17.7
+ 17.5 17.5 17.8 17.7 17.6 17.7 17.7 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147]
+347.5770 	EXP 	Sound  started
+347.7275 	EXP 	New trial (rep=1, index=19): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.4, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 0., 6.]), 'ringToQuery': 0}
+347.9279 	INFO 	Successfully set darwin thread to realtime
+348.0291 	EXP 	window1: mouseVisible = False
+352.1883 	EXP 	window1: mouseVisible = True
+352.9078 	DATA 	Mouse: Left button down, pos=(362,313)
+353.0052 	DATA 	Mouse:  Left button up, pos=(362,313)
+trialnum=52 ERROR,62 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.4 16.1 16.1 16.  16.  15.9 12.9 11.7 11.8 11.9 11.7 12.2 16.  15.5
+ 15.5 15.5 15.2 16.  15.4 15.5 14.8 15.8 16.  16.1 16.1 16.1 16.1 16.
+ 16.1 16.  16.1 16.  16.1 16.1 16.1 14.1 16.1 14.1 16.3 16.  16.  16.
+ 16.1 16.1 14.1 16.  15.8 12.4 12.3 12.1 12.2 14.7 11.6 16.1 16.  15.5
+ 16.1 16.1 16.1 16.1 16.1 16.1] and was these frames: [  3   6   9  12  15  18  19  21  22  23  24  25  30  33  36  39  42  46
+  49  52  55  58  61  64  67  70  73  76  79  82  85  88  91  94  97  99
+ 102 104 107 110 113 116 119 122 124 127 130 131 132 133 134 137 138 141
+ 144 147 150 153 156 159 162 165]
+353.0437 	EXP 	Sound  started
+353.1942 	EXP 	New trial (rep=1, index=20): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.73, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 3., 2.]), 'ringToQuery': 2}
+353.3954 	INFO 	Successfully set darwin thread to realtime
+353.4965 	EXP 	window1: mouseVisible = False
+356.9936 	EXP 	window1: mouseVisible = True
+357.6734 	DATA 	Mouse: Left button down, pos=(511,371)
+357.7573 	DATA 	Mouse:  Left button up, pos=(511,371)
+trialnum=53 ERROR,74 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.1 16.  16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1 16.1
+ 16.1 16.1 16.1 16.2 11.8 12.5 15.5 15.2 15.7 15.7 15.6 15.2 14.8 15.4
+ 15.5 15.5 15.3 15.6 15.7 16.1 16.  16.1 16.1 16.  16.1 14.2 16.1 16.1
+ 16.1 16.  16.  16.1 16.1 16.1 16.1 16.1 15.9 16.1 16.  16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 15.5 16.1 16.1 16.1 16.1 16.1 16.  16.1 16.1
+ 14.2 16.1 16.1 16.1] and was these frames: [  3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48  51  54
+  56  57  61  64  67  70  73  76  79  82  85  88  91  94  97 100 103 106
+ 109 112 115 117 120 123 126 129 132 135 138 141 144 147 150 153 156 159
+ 162 165 168 171 174 177 180 183 186 189 192 195 198 201 204 207 209 212
+ 215 218]
+357.7924 	EXP 	Sound  started
+357.9429 	EXP 	New trial (rep=1, index=21): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.29, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([   1., -999.,    3.]), 'ringToQuery': 2}
+358.1431 	INFO 	Successfully set darwin thread to realtime
+358.2443 	EXP 	window1: mouseVisible = False
+362.2087 	EXP 	window1: mouseVisible = True
+362.8747 	DATA 	Mouse: Left button down, pos=(456,307)
+362.9654 	DATA 	Mouse:  Left button up, pos=(456,306)
+trialnum=54 ERROR,60 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.5 16.1 16.1 16.1 16.1 13.  15.3 15.5 15.4 15.6 15.5 15.3 15.4 15.1
+ 15.5 15.5 15.6 15.5 15.2 16.  16.1 16.1 16.1 16.  16.1 16.  16.  16.1
+ 16.1 16.  16.  16.1 16.1 16.  16.1 16.  16.1 16.  16.1 16.  16.1 16.
+ 16.  16.1 16.1 14.1 16.1 16.1 15.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1] and was these frames: [  3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48  51  54
+  57  60  63  66  69  72  75  78  81  84  87  90  93  96  99 102 105 108
+ 111 114 117 120 123 126 129 132 135 137 140 143 146 149 152 155 158 161
+ 164 167 170 173 176 179]
+362.9936 	EXP 	Sound  started
+363.1440 	EXP 	New trial (rep=1, index=22): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.51, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 0., 1.]), 'ringToQuery': 0}
+363.3444 	INFO 	Successfully set darwin thread to realtime
+363.4480 	EXP 	window1: mouseVisible = False
+367.3459 	EXP 	window1: mouseVisible = True
+368.1255 	DATA 	Mouse: Left button down, pos=(510,431)
+368.2232 	DATA 	Mouse:  Left button up, pos=(510,431)
+368.5027 	DATA 	Mouse: Left button down, pos=(500,395)
+368.6053 	DATA 	Mouse:  Left button up, pos=(500,395)
+trialnum=55 ERROR,141 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.6 17.7 18.2 18.2 19.9 20.9 22.2 23.5 22.  21.2 18.5 19.1 18.7 18.6
+ 18.4 18.4 18.6 18.5 19.3 18.6 18.5 18.5 18.6 18.4 18.4 18.8 18.6 18.4
+ 18.5 18.5 18.1 17.7 17.8 17.7 17.7 17.7 17.7 17.7 17.9 17.7 17.6 17.6
+ 17.7 17.8 17.8 17.6 17.7 17.7 17.6 17.7 17.7 17.6 17.6 17.6 17.8 17.7
+ 17.9 18.1 17.8 17.6 17.9 17.5 17.8 17.8 17.6 17.8 17.7 17.7 17.6 17.8
+ 17.6 17.6 17.7 17.6 17.6 17.8 17.6 17.8 17.7 17.5 17.6 17.9 17.8 17.8
+ 17.7 17.6 17.5 17.7 18.9 17.7 17.7 17.6 17.6 18.2 17.6 17.9 17.6 17.6
+ 17.7 17.7 18.  17.6 17.7 18.  18.4 18.3 18.  17.7 17.6 17.8 17.7 17.7
+ 17.8 17.7 17.7 17.9 17.7 17.6 17.8 17.7 17.7 17.6 17.6 17.6 17.8 17.6
+ 17.8 17.7 17.8 17.7 17.7 17.5 17.8 17.7 17.9 17.7 18.  18.  18.1 18.
+ 18.1] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140]
+368.6213 	EXP 	Sound  started
+368.7718 	EXP 	New trial (rep=1, index=23): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.4, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 3., 1.]), 'ringToQuery': 2}
+368.9730 	INFO 	Successfully set darwin thread to realtime
+369.0742 	EXP 	window1: mouseVisible = False
+373.1768 	EXP 	window1: mouseVisible = True
+374.2920 	DATA 	Mouse: Left button down, pos=(388,348)
+374.4134 	DATA 	Mouse:  Left button up, pos=(388,348)
+trialnum=56 ERROR,147 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.  17.9 18.  17.7 17.8 17.6 18.  17.8 18.  17.8 17.9 17.6 17.7 17.9
+ 18.  17.7 17.6 17.9 20.8 21.8 19.  18.5 18.8 18.6 18.5 18.7 18.6 18.5
+ 18.5 18.7 18.4 18.6 18.5 18.8 19.2 18.3 18.7 18.5 18.3 18.5 18.5 18.6
+ 18.7 18.4 18.6 17.8 17.7 17.6 17.7 17.7 17.6 17.7 17.7 17.7 17.6 17.7
+ 17.6 17.8 17.7 17.6 17.7 17.8 17.7 17.7 17.8 17.7 17.7 17.6 17.8 17.8
+ 17.8 17.6 17.7 17.8 17.9 17.7 17.8 17.6 17.7 18.  17.6 17.7 18.  17.9
+ 17.6 17.9 17.7 17.6 17.8 17.9 17.8 17.6 17.7 17.7 17.9 17.7 17.6 17.8
+ 17.7 17.6 17.8 17.7 17.7 19.1 17.7 17.7 17.8 17.7 17.8 17.7 17.8 17.8
+ 18.  17.8 18.3 17.7 17.7 17.8 17.7 17.8 17.6 17.8 17.8 17.6 17.9 17.7
+ 17.6 17.6 17.8 17.9 17.7 17.7 17.6 17.7 18.  17.8 17.7 17.8 17.7 17.6
+ 17.9 17.7 17.8 17.7 17.8 17.6 17.8] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146]
+374.4283 	EXP 	Sound  started
+374.5788 	EXP 	New trial (rep=1, index=24): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([4., 1., 5.]), 'ringToQuery': 2}
+374.7793 	INFO 	Successfully set darwin thread to realtime
+374.8805 	EXP 	window1: mouseVisible = False
+378.6898 	EXP 	window1: mouseVisible = True
+379.8399 	DATA 	Mouse: Left button down, pos=(349,551)
+379.9494 	DATA 	Mouse:  Left button up, pos=(349,551)
+trialnum=57 ERROR,148 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.7 17.8 17.7 17.8 17.8 17.7 17.8 17.8 17.8 17.7 17.9 17.8 17.7 17.7
+ 17.6 17.9 18.8 17.6 17.7 17.9 17.7 17.8 17.6 17.9 17.7 17.8 17.7 17.9
+ 17.8 17.8 17.9 17.9 18.1 18.  17.6 18.3 17.7 17.8 17.9 18.1 17.7 17.9
+ 20.6 23.3 20.9 21.7 22.6 18.9 18.5 18.4 18.5 18.4 18.4 18.6 18.4 18.5
+ 18.5 18.5 19.  18.5 18.5 18.4 18.4 18.4 18.5 18.6 18.5 18.3 18.6 18.5
+ 18.4 17.8 17.7 17.7 17.7 17.7 17.6 17.6 17.7 18.  17.8 17.7 18.  17.9
+ 17.8 17.7 17.6 17.6 18.2 17.8 17.7 17.7 17.8 17.8 17.6 17.6 17.7 17.7
+ 18.2 17.7 17.7 17.8 17.7 17.7 17.6 17.7 17.7 17.8 17.6 17.8 17.6 17.8
+ 18.  17.7 17.7 17.7 17.7 17.7 17.5 17.9 17.6 18.  17.6 17.8 17.9 17.8
+ 17.6 17.7 17.5 19.1 17.6 17.7 17.7 17.6 17.8 17.7 17.8 17.7 17.6 17.7
+ 17.7 17.7 17.9 17.6 17.6 17.5 17.7 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147]
+379.9762 	EXP 	Sound  started
+380.1268 	EXP 	New trial (rep=1, index=25): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 5., 7.]), 'ringToQuery': 2}
+380.3281 	INFO 	Successfully set darwin thread to realtime
+380.4294 	EXP 	window1: mouseVisible = False
+384.7968 	EXP 	window1: mouseVisible = True
+386.5255 	DATA 	Mouse: Left button down, pos=(363,291)
+386.6533 	DATA 	Mouse:  Left button up, pos=(363,291)
+trialnum=58 ERROR,69 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[11.8 12.3 13.1 11.8 11.7 16.  15.5 15.7 15.6 15.5 15.4 14.9 15.5 15.7
+ 15.8 15.7 15.4 16.  16.1 16.1 16.  16.1 16.  16.1 16.  16.1 16.1 16.1
+ 16.1 16.1 16.1 15.7 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 14.1 16.1
+ 16.1 16.1 16.1 16.  15.5 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 14.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1] and was these frames: [  0   1   2   3   6   7  10  13  16  19  22  25  28  31  34  37  40  43
+  46  49  52  55  58  61  64  67  70  73  76  79  82  85  88  91  94  97
+ 100 103 106 109 111 114 117 120 123 126 129 132 135 138 141 144 147 150
+ 153 156 159 162 165 168 170 173 176 179 182 185 188 191 194]
+386.6615 	EXP 	Sound  started
+386.8120 	EXP 	New trial (rep=1, index=26): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.29, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([   1., -999.,    2.]), 'ringToQuery': 0}
+387.0132 	INFO 	Successfully set darwin thread to realtime
+387.1144 	EXP 	window1: mouseVisible = False
+391.2380 	EXP 	window1: mouseVisible = True
+392.3676 	DATA 	Mouse: Left button down, pos=(597,90)
+392.4851 	DATA 	Mouse:  Left button up, pos=(597,90)
+392.8271 	DATA 	Mouse: Left button down, pos=(544,62)
+392.9334 	DATA 	Mouse:  Left button up, pos=(544,62)
+trialnum=59 ERROR,69 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.9 15.5 15.9 16.  15.6 15.9 15.2 15.7 15.5 15.5 15.5 16.  16.1 16.1
+ 16.  16.1 16.1 16.  16.1 16.  16.  16.  16.1 16.1 16.1 16.1 16.1 16.1
+ 16.  16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 14.1 16.  15.2 16.1
+ 16.1 16.1 16.1 14.4 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.2 16.1] and was these frames: [  5   8  12  16  19  23  26  29  32  35  38  41  44  47  50  53  56  59
+  62  65  68  71  74  77  80  83  86  89  92  95  98 101 104 107 110 113
+ 116 119 121 124 127 130 133 136 139 141 144 147 150 153 156 159 162 165
+ 168 171 174 177 180 183 186 189 192 195 198 201 204 207 210]
+392.9456 	EXP 	Sound  started
+393.0961 	EXP 	New trial (rep=1, index=27): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.23, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 0., 3.]), 'ringToQuery': 2}
+393.2971 	INFO 	Successfully set darwin thread to realtime
+393.3983 	EXP 	window1: mouseVisible = False
+397.1361 	EXP 	window1: mouseVisible = True
+398.2355 	DATA 	Mouse: Left button down, pos=(633,512)
+398.3647 	DATA 	Mouse:  Left button up, pos=(634,512)
+398.7879 	DATA 	Mouse: Left button down, pos=(544,510)
+trialnum=60 ERROR,127 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.5 17.7 17.7 17.6 17.7 17.6 17.7 17.8 17.7 17.6 17.7 17.8 17.6 19.1
+ 20.9 20.7 20.8 20.  18.5 18.5 18.3 18.6 18.5 18.6 18.6 18.5 18.3 19.
+ 18.6 18.7 19.6 18.8 18.5 18.3 18.4 18.8 18.6 18.4 18.3 18.5 18.6 18.6
+ 18.7 17.7 17.8 17.7 17.8 17.6 17.6 17.6 17.6 17.7 17.7 17.6 17.7 17.9
+ 17.8 17.7 17.7 17.8 17.7 18.1 17.7 17.6 17.7 17.7 17.8 17.7 17.6 17.7
+ 18.  18.3 17.7 18.1 18.1 17.9 17.7 17.6 17.6 17.6 17.7 18.  17.5 17.6
+ 17.6 17.8 17.7 17.8 17.7 17.8 17.5 17.8 17.6 17.7 17.6 17.9 18.  17.7
+ 17.8 18.2 17.8 18.9 17.7 17.7 17.9 17.7 18.1 17.6 17.8 17.7 17.8 17.8
+ 17.7 17.7 17.6 17.7 17.8 17.6 17.8 17.9 17.7 17.6 17.7 17.6 17.6 17.7
+ 17.8] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126]
+398.9068 	EXP 	Sound  started
+398.9173 	DATA 	Mouse:  Left button up, pos=(544,510)
+399.0573 	EXP 	New trial (rep=1, index=28): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([0., 4., 3.]), 'ringToQuery': 1}
+399.2575 	INFO 	Successfully set darwin thread to realtime
+399.3588 	EXP 	window1: mouseVisible = False
+403.1448 	EXP 	window1: mouseVisible = True
+404.1362 	DATA 	Mouse: Left button down, pos=(393,246)
+404.2534 	DATA 	Mouse:  Left button up, pos=(393,246)
+trialnum=61 ERROR,58 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[16.  16.1 16.1 16.2 11.6 12.9 13.1 13.  12.6 12.4 12.7 22.2 15.3 15.4
+ 15.5 15.2 15.3 16.  15.3 15.6 15.5 15.5 15.4 15.1 15.7 16.1 16.1 16.1
+ 16.  16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 15.7 16.  16.1 16.1
+ 16.1 16.  16.1 16.1 16.1 16.1 16.  15.9 16.1 16.  16.1 14.9 16.1 16.2
+ 16.1 16.1] and was these frames: [  4   7  10  13  14  15  16  17  18  19  20  21  27  30  33  36  39  43
+  46  49  52  55  58  61  64  67  70  73  76  79  82  85  88  91  94  97
+ 100 103 106 109 112 115 118 121 124 127 130 133 136 139 142 145 148 151
+ 154 157 160 163]
+404.2724 	EXP 	Sound  started
+404.4230 	EXP 	New trial (rep=1, index=29): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.51, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 3., 3.]), 'ringToQuery': 2}
+404.6242 	INFO 	Successfully set darwin thread to realtime
+404.7253 	EXP 	window1: mouseVisible = False
+408.3548 	EXP 	window1: mouseVisible = True
+409.6147 	DATA 	Mouse: Left button down, pos=(211,81)
+409.7334 	DATA 	Mouse:  Left button up, pos=(211,81)
+trialnum=62 ERROR,71 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[16.  15.5 15.1 15.4 15.1 14.9 15.2 15.5 15.7 15.7 15.6 15.5 15.8 16.1
+ 16.1 16.1 16.  16.1 16.1 16.  16.  16.  16.1 16.1 16.2 15.3 15.7 16.1
+ 16.1 16.1 16.1 16.1 14.1 16.1 16.1 16.1 16.1 16.1 16.  16.  16.1 15.5
+ 16.  14.2 16.  16.1 16.1 16.1 16.1 16.1 16.1 14.8 11.8 16.1 16.1 15.5
+ 15.  16.  16.2 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1] and was these frames: [  5   8  11  14  17  20  23  26  29  32  35  38  41  44  47  50  53  56
+  59  62  65  68  71  74  77  80  83  86  89  92  95  98 100 103 106 109
+ 112 115 118 121 124 127 130 132 135 138 141 144 147 150 153 156 159 161
+ 165 168 171 174 177 180 183 186 189 192 195 198 201 204 207 210 213]
+409.7340 	EXP 	Sound  started
+409.8845 	EXP 	New trial (rep=1, index=30): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.75, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 1., 3.]), 'ringToQuery': 1}
+410.0848 	INFO 	Successfully set darwin thread to realtime
+410.1859 	EXP 	window1: mouseVisible = False
+414.2454 	EXP 	window1: mouseVisible = True
+415.2373 	DATA 	Mouse: Left button down, pos=(475,405)
+415.3495 	DATA 	Mouse:  Left button up, pos=(475,405)
+trialnum=63 ERROR,107 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.6 17.8 17.8 17.6 17.9 17.7 17.7 17.7 18.2 18.5 17.8 17.8 17.7 17.7
+ 17.6 17.7 17.9 17.7 19.4 20.6 20.4 18.5 18.1 18.3 18.5 18.6 18.4 18.4
+ 18.7 18.4 18.9 18.5 18.4 18.4 18.5 18.8 19.  18.8 18.5 18.5 18.4 18.3
+ 18.5 18.5 18.4 18.5 18.4 18.2 18.7 18.3 17.8 17.8 17.6 17.6 17.8 17.7
+ 17.7 17.7 17.7 17.7 17.8 17.7 17.7 17.8 17.7 17.7 17.6 17.7 17.9 18.3
+ 17.6 18.  17.6 17.8 17.7 17.6 17.7 18.  18.2 18.  17.8 17.9 17.7 17.9
+ 17.8 17.7 17.8 18.1 17.8 17.9 17.9 17.7 17.7 17.8 17.7 17.8 17.6 18.
+ 17.6 17.7 17.8 17.7 18.  17.6 17.5 17.9 17.6] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106]
+415.3565 	EXP 	Sound  started
+415.5069 	EXP 	New trial (rep=1, index=31): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 0., 3.]), 'ringToQuery': 2}
+415.7073 	INFO 	Successfully set darwin thread to realtime
+415.8084 	EXP 	window1: mouseVisible = False
+419.2116 	EXP 	window1: mouseVisible = True
+420.3714 	DATA 	Mouse: Left button down, pos=(298,244)
+420.4774 	DATA 	Mouse:  Left button up, pos=(298,244)
+trialnum=64 ERROR,119 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.6 17.6 17.5 17.8 17.6 17.6 17.7 17.7 17.7 17.7 17.9 23.1 23.6 21.2
+ 20.9 20.4 19.3 18.3 18.5 18.3 18.4 18.5 18.8 18.8 19.1 19.6 19.3 19.4
+ 19.5 19.2 19.  18.5 18.4 19.  18.6 18.4 18.4 18.5 18.4 18.6 18.3 18.6
+ 19.  17.7 18.  17.7 18.7 17.6 17.7 17.7 17.7 17.7 17.6 17.4 17.6 17.6
+ 17.5 17.6 17.7 17.8 17.7 17.6 17.8 17.9 17.7 17.9 18.4 18.2 17.8 17.6
+ 17.7 18.  17.8 17.9 17.8 19.3 20.4 19.9 20.  19.5 19.1 19.9 18.9 18.2
+ 17.7 17.7 17.7 17.6 17.9 17.6 17.8 18.  17.7 17.8 17.7 17.9 18.  17.7
+ 17.7 17.9 19.  17.5 17.8 17.6 17.6 17.9 17.7 17.5 17.6 17.7 17.8 17.7
+ 17.7 17.6 17.7 17.7 17.8 17.8 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118]
+420.5067 	EXP 	Sound  started
+420.6572 	EXP 	New trial (rep=2, index=0): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.16, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 4., 2.]), 'ringToQuery': 0}
+420.8575 	INFO 	Successfully set darwin thread to realtime
+420.9589 	EXP 	window1: mouseVisible = False
+424.6407 	EXP 	window1: mouseVisible = True
+425.9668 	DATA 	Mouse: Left button down, pos=(450,276)
+426.0377 	DATA 	Mouse:  Left button up, pos=(450,276)
+trialnum=65 ERROR,101 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.6 19.1 18.7 18.6 18.6 18.1 18.3 19.8 19.1 19.3 19.1 18.3 18.7 19.1
+ 19.4 19.3 20.6 19.  19.3 18.9 19.3 19.  19.2 19.  20.1 19.8 20.1 19.3
+ 19.  19.5 19.  19.3 19.2 19.6 19.6 19.4 19.4 19.3 19.  19.2 19.3 18.6
+ 18.8 19.5 19.8 19.8 19.2 18.9 18.8 18.5 18.4 18.6 18.6 18.8 18.5 18.4
+ 18.5 18.5 18.2 18.4 18.  18.  18.7 18.8 18.9 18.2 17.9 18.2 18.6 18.8
+ 18.8 18.5 18.5 18.6 18.5 18.4 18.7 18.4 18.3 18.2 18.8 18.7 19.1 18.2
+ 17.6 17.7 17.7 17.7 17.8 18.7 18.5 18.6 18.3 18.2 18.6 18.5 18.6 18.7
+ 18.6 18.4 18.4] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100]
+426.1026 	EXP 	Sound  started
+426.2531 	EXP 	New trial (rep=2, index=1): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([0., 5., 7.]), 'ringToQuery': 1}
+426.4536 	INFO 	Successfully set darwin thread to realtime
+426.5548 	EXP 	window1: mouseVisible = False
+430.0527 	EXP 	window1: mouseVisible = True
+431.4942 	DATA 	Mouse: Left button down, pos=(505,562)
+431.5895 	DATA 	Mouse:  Left button up, pos=(505,562)
+trialnum=66 ERROR,51 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.9 15.7 15.7 15.5 15.2 15.6 15.9 15.5 15.6 15.7 16.  15.2 15.9 15.9
+ 16.  15.9 16.1 15.5 15.9 15.3 15.4 14.9 15.4 15.8 15.4 15.3 15.5 15.9
+ 15.9 15.8 15.4 16.  16.1 15.3 15.1 15.5 15.5 15.5 15.7 15.7 15.4 15.5
+ 15.4 15.3 15.5 15.4 15.9 15.9 15.2 15.  16. ] and was these frames: [  4   7  10  13  16  19  22  25  28  33  37  40  45  49  53  57  61  65
+  69  73  77  80  83  87  90  93  96  99 102 106 109 112 115 118 121 124
+ 127 130 133 136 139 142 145 148 151 154 157 160 163 166 169]
+431.6305 	EXP 	Sound  started
+431.7811 	EXP 	New trial (rep=2, index=2): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.29, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([   1., -999.,    3.]), 'ringToQuery': 2}
+431.9816 	INFO 	Successfully set darwin thread to realtime
+432.0828 	EXP 	window1: mouseVisible = False
+435.4602 	EXP 	window1: mouseVisible = True
+436.2092 	DATA 	Mouse: Left button down, pos=(348,170)
+trialnum=67 ERROR,63 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.7 16.  15.6 16.  15.3 15.9 15.1 16.  15.7 14.9 15.5 15.1 15.5 15.4
+ 15.5 15.5 15.6 15.2 16.  15.3 15.5 15.4 15.5 15.7 14.6 16.1 16.1 16.1
+ 16.  16.1 16.1 15.2 16.  16.1 16.  15.4 15.6 15.8 16.1 15.9 16.  16.
+ 15.8 16.  16.1 16.  16.1 16.1 16.1 14.2 16.1 16.1 16.1 16.  16.  16.
+ 16.1 14.1 16.1 16.1 14.1 16.1 16.1] and was these frames: [  6   9  12  16  19  23  26  29  35  38  41  44  47  50  53  56  59  62
+  66  69  72  75  78  81  84  87  90  93  96  99 102 105 108 111 114 117
+ 120 123 126 129 132 135 138 141 144 147 150 153 156 158 161 164 167 170
+ 173 176 179 181 184 187 189 192 195]
+436.3286 	EXP 	Sound  started
+436.3337 	DATA 	Mouse:  Left button up, pos=(348,170)
+436.4791 	EXP 	New trial (rep=2, index=3): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.95, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([2., 1., 0.]), 'ringToQuery': 0}
+436.6803 	INFO 	Successfully set darwin thread to realtime
+436.7814 	EXP 	window1: mouseVisible = False
+440.4511 	EXP 	window1: mouseVisible = True
+441.5232 	DATA 	Mouse: Left button down, pos=(350,427)
+441.6294 	DATA 	Mouse:  Left button up, pos=(350,426)
+trialnum=68 ERROR,59 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.7 16.1 16.  16.1 16.  16.1 16.  16.  16.1 16.1 12.2 12.1 12.7 15.1
+ 15.5 15.4 15.2 15.4 15.6 15.3 15.4 15.6 16.  15.7 15.5 15.4 14.9 15.5
+ 15.4 16.  16.  16.  16.1 16.1 16.1 16.  16.  16.  16.1 16.1 16.1 16.1
+ 16.1 16.  15.8 16.1 16.  16.1 16.1 16.1 16.1 16.  16.  16.1 16.1 16.
+ 16.1 16.1 16.1] and was these frames: [  3   6   9  12  15  18  21  24  27  30  31  32  33  37  40  43  46  49
+  52  55  58  61  65  68  71  74  77  80  83  86  89  92  95  98 101 104
+ 107 110 113 116 119 122 125 128 131 134 137 140 143 146 149 152 155 158
+ 161 164 167 170 173]
+441.6433 	EXP 	Sound  started
+441.7938 	EXP 	New trial (rep=2, index=4): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.75, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 0., 1.]), 'ringToQuery': 1}
+441.9949 	INFO 	Successfully set darwin thread to realtime
+442.0962 	EXP 	window1: mouseVisible = False
+445.4691 	EXP 	window1: mouseVisible = True
+446.3902 	DATA 	Mouse: Left button down, pos=(374,574)
+446.4934 	DATA 	Mouse:  Left button up, pos=(374,574)
+trialnum=69 ERROR,71 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[12.  13.2 22.5 11.8 16.  15.7 15.4 15.5 15.5 15.5 15.3 15.1 15.3 15.7
+ 15.5 15.4 15.7 15.7 15.3 16.1 16.  16.1 16.1 16.  16.  16.  16.1 16.1
+ 16.1 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.  16.1 16.1 16.1 16.  16.
+ 16.1 16.1 16.1 16.1 16.1 15.6 16.1 16.1 16.  16.1 16.1 16.  16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1] and was these frames: [  2   3   4   5  11  14  17  20  23  26  29  32  35  38  41  44  47  50
+  53  56  59  62  65  68  71  74  77  80  83  86  89  92  95  98 101 104
+ 107 110 113 116 119 122 125 128 131 134 137 140 143 146 149 152 155 158
+ 161 164 167 170 173 176 179 182 185 188 191 194 197 200 203 206 209]
+446.5103 	EXP 	Sound  started
+446.6610 	EXP 	New trial (rep=2, index=5): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.58, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 2., 1.]), 'ringToQuery': 1}
+446.8624 	INFO 	Successfully set darwin thread to realtime
+446.9635 	EXP 	window1: mouseVisible = False
+450.7336 	EXP 	window1: mouseVisible = True
+451.5128 	DATA 	Mouse: Left button down, pos=(142,398)
+451.5975 	DATA 	Mouse:  Left button up, pos=(142,398)
+trialnum=70 ERROR,59 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.5 15.8 16.  16.1 16.  12.  12.3 11.8 13.4 11.9 12.6 13.  11.8 15.
+ 15.5 15.3 15.6 15.5 15.5 15.8 14.8 15.1 16.  15.  15.8 15.5 16.  15.
+ 16.1 16.1 14.2 16.1 16.1 15.8 16.1 16.1 16.1 16.  16.1 16.  16.2 15.9
+ 16.  16.1 16.1 16.  16.1 16.  16.1 16.1 16.1 16.1 16.  14.1 16.1 16.1
+ 16.1 15.  16.1] and was these frames: [  3   6   9  12  15  18  19  20  21  22  23  24  25  29  32  35  38  41
+  44  47  50  53  57  60  63  66  70  73  76  79  81  84  87  90  93  96
+  99 102 105 108 111 114 117 120 123 126 129 132 135 138 141 144 147 149
+ 152 155 158 161 164]
+451.6318 	EXP 	Sound  started
+451.7822 	EXP 	New trial (rep=2, index=6): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.75, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 1., 1.]), 'ringToQuery': 1}
+451.9825 	INFO 	Successfully set darwin thread to realtime
+452.0836 	EXP 	window1: mouseVisible = False
+455.5630 	EXP 	window1: mouseVisible = True
+456.1953 	DATA 	Mouse: Left button down, pos=(356,337)
+456.2935 	DATA 	Mouse:  Left button up, pos=(356,337)
+trialnum=71 ERROR,53 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[16.  16.  16.1 16.1 15.7 11.8 15.9 15.4 15.5 15.4 15.3 15.5 15.4 15.3
+ 15.9 15.1 15.1 15.2 15.1 15.5 15.5 15.1 16.1 16.1 16.1 16.1 16.1 16.
+ 14.1 16.1 16.1 16.1 15.9 16.  16.1 16.1 15.7 16.  16.1 16.1 16.1 16.1
+ 16.1 16.  16.1 16.1 16.1 16.1 16.  16.1 16.1 14.9 16.1] and was these frames: [  4   7  10  13  18  19  24  27  30  33  36  39  42  45  49  52  55  58
+  61  64  67  70  73  76  79  82  85  88  90  93  96  99 102 105 108 111
+ 114 117 120 123 126 129 132 135 138 141 144 147 150 153 156 159 162]
+456.3148 	EXP 	Sound  started
+456.4652 	EXP 	New trial (rep=2, index=7): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.58, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 3., 0.]), 'ringToQuery': 0}
+456.6665 	INFO 	Successfully set darwin thread to realtime
+456.7677 	EXP 	window1: mouseVisible = False
+460.2797 	EXP 	window1: mouseVisible = True
+461.3548 	DATA 	Mouse: Left button down, pos=(229,81)
+461.4695 	DATA 	Mouse:  Left button up, pos=(229,81)
+trialnum=72 ERROR,58 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.6 16.1 15.8 15.8 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 12.6 12.3 11.8 12.2 15.9 15.5 15.4 15.7 15.6 15.4
+ 15.5 15.7 15.8 16.  15.2 15.4 15.6 15.8 15.5 15.7 15.4 16.  16.1 16.1
+ 16.1 16.1 16.  16.  16.1 16.1 14.1 16.1 16.1 16.1 16.1 16.  16.1 16.
+ 16.  16.1] and was these frames: [  4   7  10  13  16  19  22  25  28  31  34  37  40  43  46  49  52  55
+  58  59  60  61  65  68  71  74  77  80  83  86  89  93  96  99 102 105
+ 108 111 114 117 120 123 126 129 132 135 138 141 143 146 149 152 155 158
+ 161 164 167 170]
+461.4736 	EXP 	Sound  started
+461.6378 	EXP 	New trial (rep=2, index=8): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.51, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([3., 2., 2.]), 'ringToQuery': 2}
+461.8381 	INFO 	Successfully set darwin thread to realtime
+461.9393 	EXP 	window1: mouseVisible = False
+465.8162 	EXP 	window1: mouseVisible = True
+466.3963 	DATA 	Mouse: Left button down, pos=(387,335)
+466.4774 	DATA 	Mouse:  Left button up, pos=(387,335)
+trialnum=73 ERROR,127 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.8 18.5 18.5 18.8 18.5 18.4 18.3 18.6 18.5 18.7 18.4 18.2 18.6 18.4
+ 18.7 18.4 19.3 18.9 19.3 18.8 18.7 18.4 18.4 18.4 19.4 20.  18.6 18.4
+ 18.5 18.6 18.6 18.7 18.1 17.8 17.8 17.8 17.8 17.8 17.7 17.8 18.  17.8
+ 17.7 17.7 17.9 17.8 17.8 17.9 18.2 18.  18.1 17.8 17.9 17.7 17.9 17.7
+ 17.8 18.4 17.7 17.7 17.9 17.7 17.8 17.6 17.9 17.9 17.8 17.7 17.8 17.7
+ 18.  18.3 17.7 17.8 17.8 18.  17.7 17.8 17.7 17.6 17.6 18.  17.8 17.7
+ 17.7 17.9 17.6 17.7 17.7 17.8 19.  17.8 18.  17.7 17.9 17.7 17.9 17.7
+ 17.7 17.6 18.2 17.7 17.6 18.2 17.8 17.7 18.1 17.6 17.7 17.7 17.8 17.6
+ 17.8 17.7 17.8 17.9 17.8 17.7 17.7 17.7 17.8 17.8 17.7 17.7 17.7 17.6
+ 17.8] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126]
+466.5153 	EXP 	Sound  started
+466.6657 	EXP 	New trial (rep=2, index=9): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([4., 0., 0.]), 'ringToQuery': 2}
+466.8663 	INFO 	Successfully set darwin thread to realtime
+466.9675 	EXP 	window1: mouseVisible = False
+470.7331 	EXP 	window1: mouseVisible = True
+471.5574 	DATA 	Mouse: Left button down, pos=(282,358)
+471.6614 	DATA 	Mouse:  Left button up, pos=(282,358)
+trialnum=74 ERROR,53 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[11.6 11.9 11.7 15.5 15.6 15.7 15.2 15.4 15.3 15.4 15.9 15.8 15.3 15.9
+ 15.6 15.3 15.2 15.4 16.1 16.1 16.  16.  16.  16.  16.1 16.  16.  16.1
+ 16.  16.  16.1 15.7 16.1 16.1 16.1 16.  16.1 16.1 16.1 16.1 16.  16.1
+ 16.1 16.1 16.1 16.1 15.6 16.1 16.1 16.1 16.1 16.1 16.1] and was these frames: [  3   4   5  10  13  16  19  22  25  28  32  36  40  45  49  53  56  59
+  62  65  68  71  74  77  80  83  86  89  92  95  98 101 104 107 110 113
+ 116 119 122 125 128 131 134 137 140 143 146 149 152 155 158 161 164]
+471.7116 	EXP 	Sound  started
+471.8621 	EXP 	New trial (rep=2, index=10): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.95, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([2., 1., 0.]), 'ringToQuery': 1}
+472.0633 	INFO 	Successfully set darwin thread to realtime
+472.1645 	EXP 	window1: mouseVisible = False
+475.4213 	EXP 	window1: mouseVisible = True
+476.2738 	DATA 	Mouse: Left button down, pos=(442,320)
+476.3894 	DATA 	Mouse:  Left button up, pos=(442,320)
+trialnum=75 ERROR,57 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.8 15.  14.9 15.6 15.7 15.7 15.1 15.3 15.4 15.7 15.2 15.8 15.  14.8
+ 15.8 15.7 15.5 15.1 15.5 15.8 15.5 16.  16.  16.  16.  16.1 16.1 16.
+ 16.1 16.1 15.5 16.  16.1 16.1 15.7 16.  16.  16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.  14.1 16.1 16.1 16.1 16.1 16.1 16.2 11.8 16.1 16.1 16.1
+ 16.1] and was these frames: [  3   6   9  12  15  18  21  24  27  30  33  36  39  42  45  48  51  54
+  57  60  63  66  69  72  75  78  81  84  87  90  93  96  99 102 105 108
+ 111 114 117 120 123 126 129 132 135 137 140 143 146 149 152 155 156 159
+ 162 165 168]
+476.3929 	EXP 	Sound  started
+476.5435 	EXP 	New trial (rep=2, index=11): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.23, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 3., 2.]), 'ringToQuery': 2}
+476.7441 	INFO 	Successfully set darwin thread to realtime
+476.8453 	EXP 	window1: mouseVisible = False
+480.2804 	EXP 	window1: mouseVisible = True
+481.0086 	DATA 	Mouse: Left button down, pos=(434,334)
+481.0852 	DATA 	Mouse:  Left button up, pos=(434,334)
+trialnum=76 ERROR,69 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.8 15.9 11.9 12.4 15.8 15.4 15.6 15.3 15.6 15.3 15.7 15.7 15.5 15.6
+ 15.4 14.8 15.2 15.5 15.2 15.2 15.4 15.5 15.4 16.  16.  16.1 16.  16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 15.6 16.1 16.1 16.1 16.  16.
+ 16.1 16.  16.1 16.1 16.  16.1 16.1 16.1 16.1 15.4 16.1 16.1 16.1 16.1
+ 16.1 14.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 15.8 16.1 16.1 16.1] and was these frames: [  3   6  10  11  14  17  20  23  26  29  32  35  38  41  44  47  50  53
+  56  59  62  65  68  71  74  77  80  83  86  89  92  95  98 101 104 107
+ 110 113 116 119 122 125 128 131 134 137 140 143 146 149 152 155 158 161
+ 164 167 170 172 175 178 181 184 187 190 193 196 199 202 205]
+481.1278 	EXP 	Sound  started
+481.2782 	EXP 	New trial (rep=2, index=12): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.41, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 2., 1.]), 'ringToQuery': 0}
+481.4787 	INFO 	Successfully set darwin thread to realtime
+481.5798 	EXP 	window1: mouseVisible = False
+485.6856 	EXP 	window1: mouseVisible = True
+486.6978 	DATA 	Mouse: Left button down, pos=(497,59)
+486.7813 	DATA 	Mouse:  Left button up, pos=(497,59)
+trialnum=77 ERROR,115 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.6 17.7 17.8 17.6 17.8 17.8 17.8 17.7 18.  18.1 18.3 18.6 18.3 18.2
+ 18.5 18.3 22.  23.9 18.9 18.6 18.6 18.6 18.4 18.3 18.6 18.5 18.5 18.3
+ 18.6 18.8 19.1 19.1 18.8 19.1 18.9 18.9 18.7 19.3 18.5 19.2 18.8 19.1
+ 18.6 18.4 18.5 18.7 18.4 18.3 18.3 18.4 18.6 18.4 18.4 18.5 17.8 17.7
+ 17.5 17.7 17.7 17.6 17.6 17.8 17.7 17.7 17.8 17.8 17.7 17.5 17.7 17.7
+ 17.8 17.7 17.9 17.7 17.6 17.6 17.7 17.7 17.8 17.8 17.7 17.9 18.2 17.8
+ 17.6 17.7 17.7 17.7 17.8 17.8 17.6 17.9 17.8 17.9 18.  18.6 18.3 18.3
+ 17.7 17.7 17.8 17.6 17.6 18.4 18.  17.8 17.7 17.7 17.8 17.7 17.6 18.8
+ 17.6 17.9 17.5] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114]
+486.8168 	EXP 	Sound  started
+486.9674 	EXP 	New trial (rep=2, index=13): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.55, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([4., 3., 2.]), 'ringToQuery': 2}
+487.1679 	INFO 	Successfully set darwin thread to realtime
+487.2690 	EXP 	window1: mouseVisible = False
+491.0850 	EXP 	window1: mouseVisible = True
+492.5606 	DATA 	Mouse: Left button down, pos=(227,484)
+492.6455 	DATA 	Mouse:  Left button up, pos=(227,484)
+trialnum=78 ERROR,148 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.8 17.7 17.7 17.8 17.8 17.7 17.7 17.8 17.8 17.7 17.6 17.8 17.8 17.8
+ 17.7 17.8 18.1 20.3 21.  21.2 20.4 20.8 19.6 18.6 18.7 18.7 18.3 18.3
+ 18.5 18.3 18.4 18.4 18.9 19.4 18.8 18.6 18.4 18.4 19.3 18.4 18.9 18.7
+ 18.4 18.3 18.4 18.3 18.3 18.6 18.9 18.3 18.4 18.4 18.3 18.4 18.6 18.2
+ 17.8 17.6 17.7 17.8 17.8 17.6 17.7 17.7 17.6 17.9 17.6 17.7 17.9 17.8
+ 17.7 17.7 17.7 17.8 17.7 17.8 17.8 17.8 17.9 17.9 17.8 17.8 17.8 17.8
+ 17.6 17.8 17.8 18.1 17.8 17.7 17.7 17.9 17.9 17.7 17.8 17.8 17.5 17.8
+ 17.7 17.7 18.  17.6 17.8 17.8 17.7 17.7 17.8 17.8 17.6 17.9 17.7 17.8
+ 17.7 19.  17.7 17.7 17.7 17.7 18.  17.8 17.6 17.6 17.9 17.8 17.6 17.7
+ 17.5 17.8 17.7 18.1 17.8 17.6 17.7 18.1 18.4 18.3 18.6 18.1 18.3 18.7
+ 18.3 18.4 18.8 18.3 18.2 18.2 17.7 18.3] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147]
+492.6967 	EXP 	Sound  started
+492.8472 	EXP 	New trial (rep=2, index=14): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.28, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([1., 2., 5.]), 'ringToQuery': 2}
+493.0476 	INFO 	Successfully set darwin thread to realtime
+493.1490 	EXP 	window1: mouseVisible = False
+497.3871 	EXP 	window1: mouseVisible = True
+498.5252 	DATA 	Mouse: Left button down, pos=(447,312)
+498.6453 	DATA 	Mouse:  Left button up, pos=(447,312)
+trialnum=79 ERROR,58 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.3 16.1 15.9 15.9 15.8 15.3 15.4 15.6 15.5 15.6 15.5 15.6 15.6 15.1
+ 15.  15.4 15.5 15.5 15.2 15.4 15.5 15.5 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.  14.1 16.1 16.  16.  11.6 16.1 16.1 15.6 16.1 16.1 14.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 15.5 16.1 16.1 16.1 16.1
+ 16.1 16.1] and was these frames: [  3   6  10  14  17  20  23  26  29  32  35  38  41  44  47  50  53  56
+  59  62  65  68  71  74  77  80  83  86  89  91  94  97 101 102 105 108
+ 111 114 117 119 122 125 128 131 134 137 140 143 146 149 152 155 158 161
+ 164 167 170 173]
+498.6609 	EXP 	Sound  started
+498.8113 	EXP 	New trial (rep=2, index=15): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.51, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([2., 1., 2.]), 'ringToQuery': 1}
+499.0117 	INFO 	Successfully set darwin thread to realtime
+499.1129 	EXP 	window1: mouseVisible = False
+502.6363 	EXP 	window1: mouseVisible = True
+503.5018 	DATA 	Mouse: Left button down, pos=(446,318)
+503.5975 	DATA 	Mouse:  Left button up, pos=(446,318)
+trialnum=80 ERROR,64 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.1 15.5 15.6 15.8 15.4 15.6 14.9 15.4 15.5 15.9 15.2 15.3 15.5 15.5
+ 15.5 15.5 15.6 15.2 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.
+ 16.  16.  16.1 16.1 16.1 16.1 16.  16.  16.1 16.  16.  16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 14.1 16.1 16.1 14.2 16.1 16.1
+ 16.1 16.1 16.1 15.6 15.1 15.4 15.3 15.5] and was these frames: [  4   7  10  13  16  19  22  25  28  32  35  38  41  44  47  50  53  56
+  59  62  65  68  71  74  77  80  83  86  89  92  95  98 101 104 107 110
+ 113 116 119 122 125 128 131 134 137 140 143 146 149 152 154 157 160 162
+ 165 168 171 174 177 180 183 186 189 192]
+503.6209 	EXP 	Sound  started
+503.7714 	EXP 	New trial (rep=2, index=16): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.23, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 1., 3.]), 'ringToQuery': 1}
+503.9717 	INFO 	Successfully set darwin thread to realtime
+504.0729 	EXP 	window1: mouseVisible = False
+508.1529 	EXP 	window1: mouseVisible = True
+508.8711 	DATA 	Mouse: Left button down, pos=(463,306)
+508.9734 	DATA 	Mouse:  Left button up, pos=(463,306)
+trialnum=81 ERROR,147 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.5 18.8 19.  18.5 18.8 19.3 18.6 18.6 18.5 19.  18.6 18.7 19.2 19.2
+ 18.8 18.5 18.4 18.7 18.6 19.6 19.  19.  19.4 18.7 18.9 19.2 19.1 19.
+ 18.5 18.7 18.4 18.8 18.4 18.7 18.7 18.7 18.5 17.7 17.7 17.7 17.7 17.7
+ 17.8 17.8 17.7 17.7 17.7 17.7 17.9 17.8 17.8 17.8 17.7 17.7 17.7 17.8
+ 17.7 17.8 17.8 18.  17.9 17.7 17.8 17.6 17.8 17.8 17.9 18.  17.8 17.6
+ 17.7 18.  18.  17.8 17.8 17.7 17.8 17.7 17.7 17.8 17.7 17.5 17.9 18.2
+ 18.2 18.2 17.6 17.7 17.8 17.7 17.9 17.9 17.7 17.6 18.7 17.7 17.6 17.8
+ 17.6 17.7 17.8 17.8 17.8 17.8 17.7 17.8 17.5 17.7 17.8 17.6 17.9 17.6
+ 17.6 18.  17.7 17.7 18.  18.1 18.3 18.1 18.  18.1 18.2 18.3 18.4 18.2
+ 18.4 18.1 18.2 18.1 18.3 18.2 18.5 18.1 18.2 18.1 18.2 18.2 18.2 18.2
+ 18.5 18.3 18.1 18.4 18.4 18.4 18.4] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146]
+508.9905 	EXP 	Sound  started
+509.1409 	EXP 	New trial (rep=2, index=17): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.4, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 6., 5.]), 'ringToQuery': 0}
+509.3412 	INFO 	Successfully set darwin thread to realtime
+509.4425 	EXP 	window1: mouseVisible = False
+513.2570 	EXP 	window1: mouseVisible = True
+514.1261 	DATA 	Mouse: Left button down, pos=(287,356)
+514.1974 	DATA 	Mouse:  Left button up, pos=(287,356)
+trialnum=82 ERROR,68 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.1 15.8 14.8 15.1 15.5 15.5 15.3 15.1 15.  15.7 15.3 15.5 15.3 16.
+ 15.8 15.7 15.6 15.7 15.6 14.9 15.4 15.5 15.2 16.1 16.1 16.  16.1 16.
+ 16.1 16.1 16.1 16.  16.1 16.  16.1 16.1 15.6 16.1 16.1 14.1 16.1 16.
+ 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.  16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1] and was these frames: [  4   8  11  14  17  20  23  26  29  32  35  38  41  45  49  52  55  58
+  61  64  67  70  73  76  79  82  85  88  91  94  97 100 103 106 109 112
+ 115 118 121 123 126 129 132 135 138 141 144 147 150 153 156 159 162 165
+ 168 171 174 177 180 183 186 189 192 195 198 201 204 207]
+514.2621 	EXP 	Sound  started
+514.4129 	EXP 	New trial (rep=2, index=18): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.73, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 2., 3.]), 'ringToQuery': 2}
+514.6133 	INFO 	Successfully set darwin thread to realtime
+514.7145 	EXP 	window1: mouseVisible = False
+518.3727 	EXP 	window1: mouseVisible = True
+519.4210 	DATA 	Mouse: Left button down, pos=(338,16)
+519.5175 	DATA 	Mouse:  Left button up, pos=(338,16)
+trialnum=83 ERROR,80 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.8 16.1 16.1 11.8 12.4 11.7 13.1 13.1 12.7 12.7 12.8 13.3 16.  15.5
+ 15.7 15.5 15.6 15.6 15.7 15.4 15.5 15.6 15.  15.9 15.4 15.5 15.6 15.5
+ 15.5 15.5 15.4 16.  16.1 16.1 16.1 16.  16.1 16.1 16.1 16.1 15.9 16.1
+ 16.  16.1 16.1 16.  16.1 16.  16.1 16.  16.1 16.1 16.1 16.  16.1 16.1
+ 16.1 16.1 16.  16.1 15.2 16.1 16.1 16.1 14.2 16.1 16.1 16.1 16.1 16.2
+ 16.1 16.1 16.  16.1 14.1 16.1 16.1 16.1 16.1 14.2] and was these frames: [  3   6   9  10  11  12  13  14  15  16  17  18  20  23  26  29  32  35
+  38  41  44  47  50  54  57  60  63  66  69  72  75  78  81  84  87  90
+  93  96  99 102 105 108 111 114 117 120 123 126 129 132 135 138 141 144
+ 147 150 153 156 159 162 165 168 171 174 176 179 182 185 188 191 194 197
+ 200 203 205 208 211 214 217 219]
+519.5413 	EXP 	Sound  started
+519.6917 	EXP 	New trial (rep=2, index=19): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.29, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 1., 2.]), 'ringToQuery': 0}
+519.8925 	INFO 	Successfully set darwin thread to realtime
+519.9936 	EXP 	window1: mouseVisible = False
+524.5648 	EXP 	window1: mouseVisible = True
+525.3434 	DATA 	Mouse: Left button down, pos=(508,393)
+525.4323 	DATA 	Mouse:  Left button up, pos=(508,393)
+525.6707 	DATA 	Mouse: Left button down, pos=(502,336)
+525.7572 	DATA 	Mouse:  Left button up, pos=(502,336)
+trialnum=84 ERROR,60 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[15.9 15.6 15.5 15.4 15.4 15.4 15.2 15.4 15.5 15.7 16.  14.9 15.5 15.5
+ 15.6 15.8 15.7 16.  15.5 16.1 16.2 16.  16.1 16.  16.1 16.  16.  16.1
+ 15.9 16.1 16.1 15.9 16.1 16.  16.1 16.1 16.1 15.9 16.  16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1 16.1 16.1 16.  16.  16.1 16.1 16.1 16.1 16.1 16.1
+ 16.1 16.1 16.1 16.1] and was these frames: [  7  10  13  16  19  22  25  28  31  34  38  41  44  47  50  53  56  60
+  63  66  69  72  75  78  81  84  87  90  93  96  99 102 105 108 111 114
+ 117 120 123 126 129 132 135 138 141 144 147 150 153 156 159 162 165 168
+ 171 174 177 180 183 186]
+525.7904 	EXP 	Sound  started
+525.9409 	EXP 	New trial (rep=2, index=20): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.73, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([1., 1., 1.]), 'ringToQuery': 1}
+526.1419 	INFO 	Successfully set darwin thread to realtime
+526.2436 	EXP 	window1: mouseVisible = False
+529.8546 	EXP 	window1: mouseVisible = True
+530.4221 	DATA 	Mouse: Left button down, pos=(527,366)
+530.5334 	DATA 	Mouse:  Left button up, pos=(528,355)
+trialnum=85 ERROR,146 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.8 17.7 17.7 17.7 17.8 17.8 17.9 17.8 17.7 17.8 17.7 17.7 17.7 17.9
+ 17.7 17.7 20.  20.7 20.1 19.1 18.5 18.5 18.6 18.6 18.6 18.6 18.5 18.6
+ 18.7 18.5 18.5 18.5 18.6 18.6 18.8 18.3 18.4 18.3 18.6 19.5 18.7 18.8
+ 18.7 19.  18.7 18.6 18.5 18.3 18.6 18.7 18.5 18.4 18.3 18.5 18.5 18.6
+ 18.5 18.5 18.  17.7 17.6 17.6 17.6 17.7 17.6 17.8 17.8 18.3 17.6 17.9
+ 17.7 17.9 17.7 17.6 17.7 17.9 17.7 19.1 19.4 17.7 18.5 19.  18.7 18.7
+ 18.5 18.5 18.6 18.7 18.7 18.  18.4 18.  17.8 17.9 17.6 17.6 17.8 17.8
+ 17.7 17.6 18.  17.7 17.6 17.7 18.  17.9 17.8 17.7 17.8 17.8 17.5 17.8
+ 17.6 17.6 17.7 19.1 17.7 17.9 17.7 18.2 18.3 18.7 18.2 18.1 18.  18.3
+ 18.5 18.  18.1 18.2 18.1 18.2 18.3 18.4 18.1 18.1 17.7 17.6 17.6 17.6
+ 17.9 17.7 17.7 17.6 17.6 17.8] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145]
+530.5411 	EXP 	Sound  started
+530.6916 	EXP 	New trial (rep=2, index=21): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([6., 4., 4.]), 'ringToQuery': 2}
+530.8920 	INFO 	Successfully set darwin thread to realtime
+530.9932 	EXP 	window1: mouseVisible = False
+535.3933 	EXP 	window1: mouseVisible = True
+536.1611 	DATA 	Mouse: Left button down, pos=(391,334)
+536.2216 	DATA 	Mouse:  Left button up, pos=(391,334)
+trialnum=86 ERROR,55 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[14.9 13.1 13.2 12.7 12.8 12.3 15.4 15.3 15.3 15.4 15.2 15.5 15.8 15.4
+ 15.5 15.5 15.9 15.9 15.2 15.5 15.5 15.7 15.3 15.5 15.4 15.6 16.1 16.1
+ 16.1 16.1 15.9 16.1 16.  16.1 16.1 16.1 16.1 16.1 14.2 16.1 16.  16.
+ 16.  16.  16.1 16.1 16.1 16.1 16.1 16.1 16.  16.1 16.1 16.1 16.1] and was these frames: [  3   7   8   9  10  11  15  18  21  24  27  30  33  36  39  42  46  51
+  54  57  60  63  66  69  72  75  78  81  84  87  90  93  96  99 102 105
+ 108 111 113 116 119 122 125 128 131 134 137 140 143 146 149 152 155 158
+ 161]
+536.2981 	EXP 	Sound  started
+536.4486 	EXP 	New trial (rep=2, index=22): {'basicShape': 'circle', 'numObjectsInRing': 4, 'speed': 0.41, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 0., 2.]), 'ringToQuery': 1}
+536.6498 	INFO 	Successfully set darwin thread to realtime
+536.7509 	EXP 	window1: mouseVisible = False
+540.5206 	EXP 	window1: mouseVisible = True
+541.2137 	DATA 	Mouse: Left button down, pos=(440,301)
+541.3012 	DATA 	Mouse:  Left button up, pos=(442,301)
+trialnum=87 ERROR,134 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.8 17.7 18.3 17.7 18.1 17.9 18.4 17.9 18.2 17.7 17.8 17.9 17.9 17.8
+ 17.7 18.  17.8 17.6 17.8 20.4 23.4 25.7 22.4 19.  18.7 18.7 18.4 18.5
+ 18.8 18.7 18.4 18.5 18.5 18.5 18.8 18.4 18.6 19.  18.9 19.  18.4 18.5
+ 18.5 18.7 19.2 18.7 18.9 19.1 18.8 18.5 18.5 18.6 18.6 18.5 18.5 18.3
+ 18.4 18.5 18.5 18.4 18.6 18.2 18.8 17.8 17.7 17.8 17.7 17.7 17.7 17.7
+ 17.7 18.  17.7 17.6 17.8 17.8 17.8 17.7 17.8 17.7 17.8 18.  17.7 17.8
+ 17.6 17.7 18.  17.7 18.1 18.  17.9 17.9 17.7 17.7 17.7 17.7 17.7 17.7
+ 17.7 17.9 17.7 17.8 17.7 18.1 17.9 17.6 17.9 17.6 17.9 17.9 17.8 17.9
+ 17.9 17.7 17.6 17.7 17.7 17.7 17.7 17.6 17.9 19.  17.9 17.5 17.7 17.8
+ 17.7 17.8 17.6 17.8 17.8 18.3 17.7 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133]
+541.3328 	EXP 	Sound  started
+541.4832 	EXP 	New trial (rep=2, index=23): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.52, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([5., 3., 6.]), 'ringToQuery': 1}
+541.6844 	INFO 	Successfully set darwin thread to realtime
+541.7856 	EXP 	window1: mouseVisible = False
+546.0298 	EXP 	window1: mouseVisible = True
+546.6573 	DATA 	Mouse: Left button down, pos=(409,336)
+546.7333 	DATA 	Mouse:  Left button up, pos=(409,336)
+trialnum=88 ERROR,119 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.2 17.9 17.8 17.9 18.1 17.8 17.7 18.1 17.8 17.8 18.2 17.8 17.8 18.1
+ 18.1 17.8 17.7 21.4 22.3 21.4 20.5 18.5 18.4 19.  18.9 19.  19.2 18.9
+ 18.3 18.4 18.3 18.4 18.2 18.4 18.4 18.4 18.5 18.3 18.6 18.5 18.4 19.
+ 18.5 18.6 18.6 19.  18.5 18.2 18.2 18.4 18.6 18.3 18.4 18.6 18.6 18.5
+ 18.4 18.4 18.4 18.5 18.6 17.7 17.7 17.5 17.7 17.5 17.6 17.5 17.6 17.8
+ 17.9 17.8 17.6 17.8 17.6 17.6 17.9 17.6 17.6 17.6 17.8 17.8 17.5 18.3
+ 17.8 17.7 17.7 18.  19.  17.8 17.7 17.5 17.7 17.8 17.9 17.6 17.9 17.7
+ 17.7 17.6 17.6 17.6 17.9 17.6 17.7 17.7 17.7 17.8 17.6 17.6 17.5 17.6
+ 17.6 17.6 17.8 17.6 17.7 17.6 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118]
+546.7937 	EXP 	Sound  started
+546.9442 	EXP 	New trial (rep=2, index=24): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([4., 2., 3.]), 'ringToQuery': 2}
+547.1447 	INFO 	Successfully set darwin thread to realtime
+547.2459 	EXP 	window1: mouseVisible = False
+551.2747 	EXP 	window1: mouseVisible = True
+552.1884 	DATA 	Mouse: Left button down, pos=(136,213)
+552.2852 	DATA 	Mouse:  Left button up, pos=(137,213)
+trialnum=89 ERROR,131 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.7 17.7 17.8 17.8 17.9 17.7 18.4 19.3 20.9 22.2 22.4 19.  18.7 18.9
+ 18.8 18.4 18.5 18.5 18.5 18.9 18.5 18.6 18.6 18.7 18.5 18.8 18.6 18.9
+ 18.5 18.5 18.4 18.4 19.6 18.9 19.9 19.  18.8 18.4 18.7 18.8 18.7 18.5
+ 18.7 18.7 18.8 18.6 18.6 18.4 18.5 18.3 18.5 18.9 17.9 17.8 17.8 17.8
+ 17.7 17.7 17.7 18.  18.3 17.7 17.8 17.6 17.7 17.7 17.6 17.7 17.7 17.8
+ 17.5 17.7 17.8 17.8 17.9 17.6 17.7 17.7 17.7 17.7 18.4 18.2 18.2 18.3
+ 17.9 17.6 17.7 17.8 17.7 18.  17.7 17.5 17.8 18.  17.9 17.8 17.8 17.7
+ 17.7 17.9 18.  17.8 17.7 17.7 17.7 17.7 17.9 17.8 17.9 17.8 19.3 18.
+ 17.7 18.  17.6 17.7 17.8 18.2 17.8 17.8 17.6 17.6 17.8 17.6 17.9 17.6
+ 17.7 17.8 17.8 17.7 17.8] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130]
+552.3244 	EXP 	Sound  started
+552.4749 	EXP 	New trial (rep=2, index=25): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.17, 'initialDirRing0': -1, 'numTargets': 2, 'whichIsTargetEachRing': array([4., 1., 5.]), 'ringToQuery': 1}
+552.6752 	INFO 	Successfully set darwin thread to realtime
+552.7764 	EXP 	window1: mouseVisible = False
+556.7187 	EXP 	window1: mouseVisible = True
+557.6226 	DATA 	Mouse: Left button down, pos=(271,531)
+557.7333 	DATA 	Mouse:  Left button up, pos=(271,531)
+trialnum=90 ERROR,139 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.9 19.3 18.7 18.6 18.5 18.4 18.4 18.6 18.5 18.4 18.6 18.7 18.8 18.5
+ 18.6 18.6 18.4 18.1 18.4 18.4 18.7 18.6 18.7 19.4 18.6 18.8 18.8 18.9
+ 18.6 18.3 18.5 18.7 19.1 18.7 18.4 18.3 18.5 18.6 18.4 18.6 18.3 18.4
+ 18.7 18.5 17.8 17.7 17.7 18.2 17.6 17.7 17.8 17.7 17.8 18.  17.7 18.
+ 17.6 17.6 17.7 17.6 17.8 17.8 17.7 17.9 17.9 17.7 17.6 17.8 17.6 17.7
+ 17.6 17.8 17.6 18.3 18.1 17.9 18.  17.9 17.6 17.7 17.7 17.9 18.  17.6
+ 17.9 17.7 17.7 18.1 17.6 17.7 17.8 17.7 17.7 17.8 17.6 17.7 17.8 17.7
+ 17.7 17.6 18.1 18.9 17.9 17.8 17.7 17.7 18.  17.6 18.2 17.7 17.9 17.8
+ 17.7 17.8 17.6 17.6 17.8 17.6 17.8 17.8 17.9 17.7 17.7 17.7 17.6 17.6
+ 17.6 17.8 17.7 17.7 17.9 17.7 17.6 17.7 17.7 17.7 17.7 17.7 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138]
+557.7593 	EXP 	Sound  started
+557.9098 	EXP 	New trial (rep=2, index=26): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.52, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([6., 1., 7.]), 'ringToQuery': 0}
+558.1101 	INFO 	Successfully set darwin thread to realtime
+558.2113 	EXP 	window1: mouseVisible = False
+562.1451 	EXP 	window1: mouseVisible = True
+563.0643 	DATA 	Mouse: Left button down, pos=(435,168)
+563.1654 	DATA 	Mouse:  Left button up, pos=(436,169)
+trialnum=91 ERROR,112 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[17.6 17.8 17.8 17.7 17.8 18.3 19.7 22.5 21.7 22.6 20.4 18.6 19.1 18.8
+ 18.8 18.4 18.4 18.3 18.5 18.4 18.4 18.5 19.2 19.  18.5 18.7 18.5 18.6
+ 18.8 18.5 18.4 18.6 19.2 18.5 19.6 19.  18.9 18.8 18.4 18.3 18.5 19.3
+ 18.6 18.6 19.  18.7 18.9 18.9 18.7 18.9 18.9 18.9 19.2 18.8 17.8 17.7
+ 17.7 17.7 17.5 17.6 17.8 17.9 17.6 17.6 17.7 17.9 17.7 17.7 17.7 17.7
+ 17.7 17.7 17.7 17.7 17.7 17.7 17.6 17.7 17.7 17.8 18.  17.9 17.9 17.7
+ 17.6 17.8 17.8 18.3 17.8 17.6 17.9 17.7 17.6 17.6 17.7 17.8 17.9 17.7
+ 17.7 17.8 17.6 17.8 17.6 17.8 17.7 17.8 17.6 17.7 17.8 17.8 17.7 19. ] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111]
+563.2027 	EXP 	Sound  started
+563.3531 	EXP 	New trial (rep=2, index=27): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.4, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([0., 2., 2.]), 'ringToQuery': 0}
+563.5536 	INFO 	Successfully set darwin thread to realtime
+563.6548 	EXP 	window1: mouseVisible = False
+567.2337 	EXP 	window1: mouseVisible = True
+568.1979 	DATA 	Mouse: Left button down, pos=(482,33)
+568.2757 	DATA 	Mouse:  Left button up, pos=(482,33)
+568.5814 	DATA 	Mouse: Left button down, pos=(452,25)
+568.6694 	DATA 	Mouse:  Left button up, pos=(451,24)
+trialnum=92 ERROR,118 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.8 18.7 18.6 18.5 18.7 19.1 19.2 19.  18.6 18.9 18.7 18.5 18.4 18.2
+ 18.5 18.8 18.7 18.6 18.4 18.6 18.5 18.6 18.4 18.5 18.5 18.1 18.3 18.2
+ 18.4 18.5 18.3 18.5 19.4 19.2 19.2 18.9 19.2 19.1 19.  18.4 18.5 18.4
+ 18.3 18.5 19.5 18.6 18.5 18.3 18.3 18.4 18.3 18.6 18.8 18.  17.7 17.8
+ 17.6 17.6 17.7 17.6 17.7 17.7 17.7 17.7 17.8 17.7 17.8 17.7 17.7 17.7
+ 17.9 17.9 17.8 17.6 17.7 17.7 18.  17.8 17.7 18.1 18.  17.9 17.6 18.2
+ 17.7 17.7 17.5 17.8 17.7 17.7 17.6 17.9 18.2 18.  17.7 18.3 17.6 17.5
+ 17.6 17.6 17.7 17.9 17.9 17.6 17.6 17.8 17.9 17.6 17.7 17.7 17.7 19.5
+ 18.2 18.3 18.2 18.1 18.2 18.1] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117]
+568.7177 	EXP 	Sound  started
+568.8682 	EXP 	New trial (rep=2, index=28): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.29, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([0., 6., 3.]), 'ringToQuery': 0}
+569.0685 	INFO 	Successfully set darwin thread to realtime
+569.1697 	EXP 	window1: mouseVisible = False
+572.5867 	EXP 	window1: mouseVisible = True
+574.2702 	DATA 	Mouse: Left button down, pos=(362,558)
+574.3414 	DATA 	Mouse:  Left button up, pos=(362,558)
+trialnum=93 ERROR,105 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.1 17.8 17.7 17.7 17.9 17.7 17.8 18.  18.  17.8 17.6 18.1 17.9 17.7
+ 17.8 17.7 18.2 18.2 18.2 18.6 20.  21.3 19.  18.6 19.4 19.  18.8 19.
+ 19.  19.1 19.3 19.1 19.2 18.7 19.3 18.7 18.5 18.3 18.8 18.7 18.5 18.8
+ 19.3 18.8 18.7 19.1 19.2 19.7 20.4 19.3 18.8 19.1 18.5 18.7 18.4 18.6
+ 18.3 18.3 18.6 18.5 18.3 18.7 18.5 18.4 18.4 18.6 18.3 18.9 18.3 17.8
+ 17.7 17.7 17.5 17.7 17.6 17.7 17.9 17.8 17.7 17.8 17.7 18.1 17.8 17.8
+ 17.8 17.8 17.7 17.6 17.7 17.7 17.6 17.5 17.7 18.2 17.9 17.7 18.  17.8
+ 18.  17.7 17.8 17.7 17.7 17.7 17.8] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104]
+574.4059 	EXP 	Sound  started
+574.5564 	EXP 	New trial (rep=2, index=29): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.42, 'initialDirRing0': 1, 'numTargets': 2, 'whichIsTargetEachRing': array([6., 0., 4.]), 'ringToQuery': 0}
+574.7568 	INFO 	Successfully set darwin thread to realtime
+574.8579 	EXP 	window1: mouseVisible = False
+578.1002 	EXP 	window1: mouseVisible = True
+579.4955 	DATA 	Mouse: Left button down, pos=(350,424)
+579.6052 	DATA 	Mouse:  Left button up, pos=(350,424)
+trialnum=94 ERROR,111 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.5 18.9 19.1 19.4 18.6 18.5 18.7 18.7 18.6 18.4 18.4 18.4 18.6 18.5
+ 18.7 18.3 18.4 18.3 18.5 18.9 18.6 18.5 18.5 18.7 18.4 18.3 19.  18.8
+ 18.7 18.8 19.1 19.4 18.5 18.6 18.6 18.5 18.6 18.4 18.6 18.5 18.6 18.6
+ 18.6 18.6 18.5 18.6 18.6 18.8 17.8 17.9 17.7 17.7 17.6 17.7 17.6 17.7
+ 17.7 17.7 17.7 17.8 17.9 17.8 17.8 17.9 17.9 17.9 17.7 17.9 17.7 17.7
+ 17.7 17.8 17.8 18.  17.6 17.7 18.6 17.7 17.8 17.8 17.7 17.8 18.1 17.9
+ 17.8 17.7 17.7 17.6 17.8 17.7 17.8 17.6 18.  17.7 17.7 17.8 17.7 17.7
+ 17.6 17.7 17.8 17.6 17.8 17.7 17.8 17.7 18.6 17.8 17.7 17.7 17.9] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110]
+579.6313 	EXP 	Sound  started
+579.7818 	EXP 	New trial (rep=2, index=30): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.16, 'initialDirRing0': 1, 'numTargets': 3, 'whichIsTargetEachRing': array([2., 1., 1.]), 'ringToQuery': 1}
+579.9822 	INFO 	Successfully set darwin thread to realtime
+580.0832 	EXP 	window1: mouseVisible = False
+583.4145 	EXP 	window1: mouseVisible = True
+584.3391 	DATA 	Mouse: Left button down, pos=(441,325)
+584.4694 	DATA 	Mouse:  Left button up, pos=(441,325)
+trialnum=95 ERROR,121 frames were longer than 11.545 ms apparently screen refreshes skipped, interframe durs were:[18.7 18.6 18.5 18.4 18.5 18.2 18.4 18.5 18.6 18.5 18.8 18.7 18.3 18.4
+ 18.5 18.6 18.4 18.5 18.3 18.4 18.4 19.5 18.6 19.2 18.7 19.  18.8 18.2
+ 18.5 18.4 18.5 18.7 18.3 18.2 18.1 18.5 18.4 18.5 18.5 18.7 18.6 18.5
+ 18.4 17.9 17.6 17.5 17.7 17.7 17.7 17.6 17.7 17.5 17.7 17.5 17.6 17.7
+ 17.6 17.6 17.6 17.6 17.7 17.5 17.6 17.6 17.7 17.6 17.9 17.6 17.6 17.6
+ 17.6 17.7 18.1 17.7 17.6 17.7 17.5 17.9 17.6 17.8 17.6 17.6 17.6 17.7
+ 17.6 17.9 18.1 17.7 17.6 17.7 17.6 17.7 17.6 17.8 18.  17.8 17.6 17.7
+ 17.7 18.4 17.6 19.  17.7 18.3 17.9 18.2 18.1 17.8 18.1 17.9 18.  17.7
+ 17.8 18.2 17.9 17.7 17.7 17.6 17.7 17.8 17.7] and was these frames: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120]
+584.4800 	EXP 	Sound  started
+584.6304 	EXP 	New trial (rep=2, index=31): {'basicShape': 'circle', 'numObjectsInRing': 8, 'speed': 0.28, 'initialDirRing0': -1, 'numTargets': 3, 'whichIsTargetEachRing': array([3., 6., 5.]), 'ringToQuery': 1}
+584.8308 	INFO 	Successfully set darwin thread to realtime
+584.9320 	EXP 	window1: mouseVisible = False
+588.3081 	EXP 	window1: mouseVisible = True
+588.9922 	DATA 	Mouse: Left button down, pos=(351,189)
+589.0853 	DATA 	Mouse:  Left button up, pos=(351,189)
+finishing at  08Feb2024_11-19
+589.1282 	EXP 	Sound  started
