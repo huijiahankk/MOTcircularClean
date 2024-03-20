@@ -5,30 +5,48 @@
 ### For setup of new experiment variant, variables to consider: 
 ### trialDurMin, trackVariableIntervMax
 ##############
-import psychopy.info
 from psychopy import sound, monitors, logging, visual, data, core
-useSound=True
-import psychopy.gui, psychopy.event
-import numpy as np
+import psychopy.gui, psychopy.event, psychopy.info
+import numpy as np, pandas as pd 
 import itertools #to calculate all subsets
 from copy import deepcopy
 from math import atan, atan2, pi, cos, sin, sqrt, ceil, floor
-import time, random, sys, platform, os, gc, io #io is successor to StringIO
-import pylink #to turn off eyetracker graphics environment after eyetracker calibration
-
+import time, random, sys, platform, os, gc, io, warnings
+import matplotlib.pyplot as plt
+import helpersAOH
+from helpersAOH import openMyStimWindow
+try:
+    import pylink #to turn off eyetracker graphics environment after eyetracker calibration. pylink comes from Eyelink Developers Kit download
+except Exception as e:
+    print("An exception occurred:",str(e))
+    print('Could not import pylink. pylink does not come with standard PsychoPy download, you have to download and install the Eyelink Developers Kit.')
+try: 
+    from analysisPython import logisticRegression as logisticR
+except Exception as e:
+    print("An exception occurred:",str(e))
+    print('Could not import logisticRegression.py (you need that file in the analysisPython directory, which needs an __init__.py file in its directory too)')
+try:
+    from staircasing import staircaseAndNoiseHelpers
+except Exception as e:
+    print("An exception occurred in staircase_tester_.py:",str(e))
+    print('Could not import staircaseAndNoiseHelpers.py (you need that file to be in the staircasing subdirectory, which needs an __init__.py file in it too)')
 try:
     from eyetrackingCode import EyelinkHolcombeLabHelpers #imports from eyetrackingCode subfolder.
     #EyeLinkTrack_Holcombe class originally created by Chris Fajou to combine lots of eyelink commands to create simpler functions
 except Exception as e:
     print("An exception occurred:",str(e))
     print('Could not import EyelinkHolcombeLabHelpers.py (you need that file to be in the eyetrackingCode subdirectory, which needs an __init__.py file in it too)')
+try:
+    from theory import publishedEmpiricalThreshes #imports from theory subfolder.
+except Exception as e:
+    print("An exception occurred:",str(e))
+    print('Could not import publishedEmpiricalThreshes.py (you need that file to be in the theory subdirectory, which needs an __init__.py file in it too)')
 
-from helpersAOH import accelerateComputer, openMyStimWindow, calcCondsPerNumTargets, LCM, gcd
-eyetracking = False; eyetrackFileGetFromEyelinkMachine = True #very timeconsuming to get the file from the eyetracking machine over the ethernet cable, 
+eyetracking = False; eyetrackFileGetFromEyelinkMachine = False #very timeconsuming to get the file from the eyetracking machine over the ethernet cable, 
 #sometimes better to get the EDF file from the Eyelink machine by hand by rebooting into Windows and going to 
-
-quitFinder = False #This doesn't work anymore
-if quitFinder:
+useSound=True
+quitFinder = True 
+if quitFinder and ('Darwin' in platform.system()): #turn Finder off. Only know the command for MacOS (Darwin)
     applescript="\'tell application \"Finder\" to quit\'" #quit Finder.
     shellCmd = 'osascript -e '+applescript
     os.system(shellCmd)
@@ -39,7 +57,7 @@ subject='temp'#'test'
 autoLogging = False
 quickMeasurement = False #If true, use method of gradually speeding up and participant says when it is too fast to track
 demo = False
-autopilot= False
+autopilot= False; simulateObserver=True; showOnlyOneFrameOfStimuli = True
 if autopilot:  subject='auto'
 feedback=True
 exportImages= False #quits after one trial / output image
@@ -48,7 +66,8 @@ trackAllIdenticalColors = True#with tracking, can either use same colors as othe
 
 timeAndDateStr = time.strftime("%d%b%Y_%H-%M", time.localtime()) 
 respTypes=['order']; respType=respTypes[0]
-bindRadiallyRingToIdentify=1 #0 is inner, 1 is outer
+rng_seed = int(time.time())
+np.random.seed(seed=rng_seed); random.seed(rng_seed)
 
 drawingAsGrating = True;  debugDrawBothAsGratingAndAsBlobs = False
 antialiasGrating = False; #True makes the mask not work perfectly at the center, so have to draw fixation over the center
@@ -58,7 +77,7 @@ numRings=3
 radii=np.array([2.5,7,15]) #[2.5,9.5,15]   #Need to encode as array for those experiments where more than one ring presented 
 
 respRadius=radii[0] #deg
-refreshRate= 110.0   #160 #set to the framerate of the monitor
+refreshRate= 100.0   #160 #set to the framerate of the monitor
 useClock = True #as opposed to using frame count, which assumes no frames are ever missed
 fullscr=1; scrn=0
 #Find out if screen may be Retina because of bug in psychopy for mouse coordinates (https://discourse.psychopy.org/t/mouse-coordinates-doubled-when-using-deg-units/11188/5)
@@ -71,7 +90,7 @@ if 'Darwin' in platform.system(): #Because want to run Unix commands, which won'
         has_retina_scrn = True #https://stackoverflow.com/questions/58349657/how-to-check-is-it-a-retina-display-in-python-or-terminal
 dlgBoxTitle = 'MOT, and no Mac Retina screen detected'
 if has_retina_scrn:
-    dlgBoxTitle = 'MOT. At least one screen is detected as Retina screen)'
+    dlgBoxTitle = 'MOT. At least one screen is apparently a Retina screen'
 # create a dialog box from dictionary 
 infoFirst = { 'Autopilot':autopilot, 'Screen to use':scrn, 'Fullscreen (timing errors if not)': fullscr, 'Screen refresh rate': refreshRate }
 OK = psychopy.gui.DlgFromDict(dictionary=infoFirst, 
@@ -92,7 +111,7 @@ refreshRate = infoFirst['Screen refresh rate']
 #trialDurMin does not include trackVariableIntervMax or trackingExtraTime, during which the cue is on.
 trialDurMin = 2 #1
 trackingExtraTime= 1.2 #giving the person time to attend to the cue (secs). This gets added to trialDurMin
-trackVariableIntervMax = 0.8 #Random interval that gets added to trackingExtraTime and trialDurMin
+trackVariableIntervMax = 2.5 #Random interval that gets added to trackingExtraTime and trialDurMin
 if demo: 
     trialDurMin = 5; refreshRate = 60.; 
 tokenChosenEachRing= [-999]*numRings
@@ -101,7 +120,7 @@ cueRampDownDur=0 #duration of contrast ramp down to the end of the trial
 
 def maxTrialDur():
     return( trialDurMin+trackingExtraTime+trackVariableIntervMax )
-badTimingCushion = 0.1 #Creating 100ms more of reversals than should need. Because if miss frames and using clock time instead of frames, might go longer
+badTimingCushion = 0.3 #Creating more of reversals than should need. Because if miss frames and using clock time instead of frames, might go longer
 def maxPossibleReversals():  #need answer to know how many blank fields to print to file
     return int( ceil(      (maxTrialDur() - trackingExtraTime)  / timeTillReversalMin          ) )
 def getReversalTimes():
@@ -122,7 +141,7 @@ ballStdDev = 1.8
 mouseChoiceArea = ballStdDev*0.8 # origin =1.3
 units='deg' #'cm'
 timeTillReversalMin = 0.5 #0.5; 
-timeTillReversalMax = 1.5# 1.3 #2.9
+timeTillReversalMax = 2.0# 1.3 #2.9
 colors_all = np.array([[1,-1,-1]] * 20)  #colors of the blobs (typically all identical) in a ring. Need as many as max num objects in a ring
 cueColor =  np.array([1,1,1])
 #monitor parameters
@@ -145,10 +164,10 @@ if demo:
 
 mon = monitors.Monitor(monitorname,width=monitorwidth, distance=viewdist)#fetch the most recent calib for this monitor
 mon.setSizePix( (widthPixRequested,heightPixRequested) )
-myWin = openMyStimWindow(mon,widthPixRequested,heightPixRequested,bgColor,allowGUI,units,fullscr,scrn,waitBlank)
+myWin = openMyStimWindow(mon,widthPixRequested,heightPixRequested,bgColor,allowGUI,units,fullscr,scrn,waitBlank,autoLogging)
 myWin.setRecordFrameIntervals(False)
 
-trialsPerCondition = 1 #default value
+trialsPerCondition = 1
 
 refreshMsg2 = ''
 if not checkRefreshEtc:
@@ -159,7 +178,7 @@ else: #checkRefreshEtc
             # if you specify author and version here, it overrides the automatic detection of __author__ and __version__ in your script
             #author='<your name goes here, plus whatever you like, e.g., your lab or contact info>',
             #version="<your experiment version info>",
-            win=myWin,    ## a psychopy.visual.Window() instance; None = default temp window used; False = no win, no win.flips()
+            win=myWin,    ## a psychopy window instance; None = default temp window used; False = no win, no win.flips()
             refreshTest='grating', ## None, True, or 'grating' (eye-candy to avoid a blank screen)
             verbose=True, ## True means report on everything 
             userProcsDetailed=True  ## if verbose and userProcsDetailed, return (command, process-ID) of the user's processes
@@ -186,7 +205,7 @@ if not autopilot:
     dlgLabelsOrdered.append('subject')
 myDlg.addField('Trials per condition (default=' + str(trialsPerCondition) + '):', trialsPerCondition, tip=str(trialsPerCondition))
 dlgLabelsOrdered.append('trialsPerCondition')
-pctCompletedBreak = 50
+pctCompletedBreaks = np.array([20,50])
 myDlg.addText(refreshMsg1, color='Black')
 if refreshRateWrong:
     myDlg.addText(refreshMsg2, color='Red')
@@ -216,14 +235,14 @@ else:
     print('"dataRaw" directory does not exist, so saving data in present working directory')
     dataDir='.'
 expname = ''
-fileName = dataDir+'/'+subject+ '_' + expname+timeAndDateStr
+datafileName = dataDir+'/'+subject+ '_' + expname+timeAndDateStr
 if not demo and not exportImages:
-    dataFile = open(fileName+'.txt', 'w')  # sys.stdout
+    dataFile = open(datafileName+'.tsv', 'w')  # sys.stdout
     import shutil
     #Create a copy of this actual code so we know what exact version of the code was used for each participant
-    ok = shutil.copy2(sys.argv[0], fileName+'.py') # complete target filename given
+    ok = shutil.copy2(sys.argv[0], datafileName+'.py') # complete target filename given
     #print("Result of attempt to copy = ", ok)    
-    logF = logging.LogFile(fileName+'.log', 
+    logF = logging.LogFile(datafileName+'.log', 
         filemode='w',#if you set this to 'a' it will append instead of overwriting
         level=logging.INFO)#errors, data and warnings will be sent to this logfile
 if demo or exportImages: 
@@ -246,9 +265,9 @@ logging.info("computer platform="+sys.platform)
 logging.info('File that generated this = sys.argv[0]= '+sys.argv[0])
 logging.info("has_retina_scrn="+str(has_retina_scrn))
 logging.info('trialsPerCondition =' + str(trialsPerCondition))
-
+logging.info('random number seed =' + str(rng_seed))
 #Not a test - the final window opening
-myWin = openMyStimWindow(mon,widthPixRequested,heightPixRequested,bgColor,allowGUI,units,fullscr,scrn,waitBlank)
+myWin = openMyStimWindow(mon,widthPixRequested,heightPixRequested,bgColor,allowGUI,units,fullscr,scrn,waitBlank,autoLogging)
 
 #Just roll with whatever wrong resolution the screen is set to
 if (not demo) and (myWinRes != [widthPixRequested,heightPixRequested]).any():
@@ -263,7 +282,7 @@ pixelperdegree = widthPix / (atan(monitorwidth/viewdist) /np.pi*180)
 
 myMouse = psychopy.event.Mouse(visible = 'true',win=myWin)
 runInfo = psychopy.info.RunTimeInfo(
-        win=myWin,    ## a psychopy.visual.Window() instance; None = default temp window used; False = no win, no win.flips()
+        win=myWin,    ## a psychopy window instance; None = default temp window used; False = no win, no win.flips()
         refreshTest='grating', ## None, True, or 'grating' (eye-candy to avoid a blank screen)
         verbose=True, ## True means report on everything 
         userProcsDetailed=True  ## if verbose and userProcsDetailed, return (command, process-ID) of the user's processes
@@ -289,7 +308,7 @@ optionChosenCircle = visual.Circle(myWin, radius=mouseChoiceArea, edges=32, colo
 clickableRegion = visual.Circle(myWin, edges=32, colorSpace='rgb',fillColor=(-1,-.7,-1),autoLog=autoLogging) #to show clickable zones
 #Optionally show location of most recent click
 clickedRegion = visual.Circle(myWin, edges=32, colorSpace='rgb',lineColor=None,fillColor=(-.5,-.1,-1),autoLog=autoLogging) #to show clickable zones
-clickedRegion.setColor((0,1,-1)) #show in yellow
+clickedRegion.setColor((-.1,.8,-1)) #show in yellow
 
 circlePostCue = visual.Circle(myWin, radius=2*radii[0], edges=96, colorSpace='rgb',lineColor=(.5,.5,-.6),lineWidth=6,fillColor=None,autoLog=autoLogging) #visual postcue
 #referenceCircle allows optional visualisation of trajectory
@@ -300,13 +319,13 @@ if blindspotFill:
     blindspotStim = visual.PatchStim(myWin, tex='none',mask='circle',size=4.8,colorSpace='rgb',color = (-1,1,-1),autoLog=autoLogging) #to outline chosen options
     blindspotStim.setPos([13.1,-2.7]) #AOH, size=4.8; pos=[13.1,-2.7] #DL: [13.3,-0.8]
 fixatnNoise = True
-fixSizePix = 6 #20 make fixation big so flicker more conspicuous
+fixSizePix = 60#6 #20 make fixation big so flicker more conspicuous
 if fixatnNoise:
     checkSizeOfFixatnTexture = fixSizePix/4
     nearestPowerOfTwo = round( sqrt(checkSizeOfFixatnTexture) )**2 #Because textures (created on next line) must be a power of 2
     fixatnNoiseTexture = np.round( np.random.rand(nearestPowerOfTwo,nearestPowerOfTwo) ,0 )   *2.0-1 #Can counterphase flicker  noise texture to create salient flicker if you break fixation
-    fixation= visual.PatchStim(myWin, tex=fixatnNoiseTexture, size=(fixSizePix,fixSizePix), units='pix', mask='circle', interpolate=False, autoLog=autoLogging)
-    fixationBlank= visual.PatchStim(myWin, tex=-1*fixatnNoiseTexture, colorSpace='rgb',mask='circle',size=fixSizePix,units='pix',autoLog=autoLogging)
+    fixation= visual.PatchStim(myWin,pos=(0,0), tex=fixatnNoiseTexture, size=(fixSizePix,fixSizePix), units='pix', mask='circle', interpolate=False, autoLog=autoLogging)
+    fixationBlank= visual.PatchStim(myWin,pos=(0,0), tex=-1*fixatnNoiseTexture, colorSpace='rgb',mask='circle',size=fixSizePix,units='pix',autoLog=autoLogging)
 else:
     fixation = visual.PatchStim(myWin,tex='none',colorSpace='rgb',color=(.9,.9,.9),mask='circle',units='pix',size=fixSizePix,autoLog=autoLogging)
     fixationBlank= visual.PatchStim(myWin,tex='none',colorSpace='rgb',color=(-1,-1,-1),mask='circle',units='pix',size=fixSizePix,autoLog=autoLogging)
@@ -330,33 +349,97 @@ if useSound:
     corrSound = sound.Sound(corrSoundPathAndFile, autoLog=autoLogging)
 
 stimList = []
+doStaircase = True
 # temporalfrequency limit test
+numTargets =        [2,                 3] #[2]
+numObjsInRing =     [4,                 8] #[4]      #Limitation: gratings don't align with blobs with odd number of objects
 
-numTargets =                              [3,                 3] #AHtemp  #3
-numObjsInRing =                         [  4,                 8]  #AHtemp #4,8   #Limitation: gratings don't align with blobs with odd number of objects
+# Get all combinations of those two main factors
+#mainCondsInfo = {
+#    'numTargets':    [2, 2, 3, 3],
+#    'numObjects':    [4, 8, 4, 8],
+#}
+combinations = list(itertools.product(numTargets, numObjsInRing))
+# Create the DataFrame with all combinations
+mainCondsDf = pd.DataFrame(combinations, columns=['numTargets', 'numObjects'])
+mainCondsInfo = mainCondsDf.to_dict('list') #change into a dictionary, in list format
 
+publishedThreshes = publishedEmpiricalThreshes.getAvgMidpointThreshes()
+publishedThreshes = publishedThreshes[['numTargets', 'HzAvgPreviousLit']] #only want average of previous literature
+
+mainCondsDf = pd.DataFrame( mainCondsInfo )
+mainCondsDf = pd.merge(mainCondsDf, publishedThreshes, on='numTargets', how='left')
+mainCondsDf['midpointThreshPrevLit'] = mainCondsDf['HzAvgPreviousLit'] / mainCondsDf['numObjects']
+mainCondsDf = mainCondsDf.drop('HzAvgPreviousLit', axis=1)
+print('mainCondsDf')
+print(mainCondsDf) #Use this Dataframe to choose the starting speed for the staircase and the behavior of the autopilot observer
+                        
 #From preliminary test, record estimated thresholds below. Then use those to decide the speeds testsed
-speedsPrelimiExp = np.array([0.02,0.02,0.02,0.02]) # np.array([0.96, 0.7, 0.72, 0.5])   #  Preliminary list of thresholds
-factors = np.array([0.4, 0.7, 1, 1.3,1.6]) #Need to test speeds slower and fast than each threshold, 
-#these are the factors to multiply by each preliminarily-tested threshold
-speedsEachNumTargetsNumObjects = []
-for i in range(0, len(speedsPrelimiExp), 2):
-    sub_matrix1 = np.round(speedsPrelimiExp[i] * factors, 2).tolist()
-    sub_matrix2 = np.round(speedsPrelimiExp[i+1] * factors, 2).tolist()
-    speedsEachNumTargetsNumObjects.append([sub_matrix1, sub_matrix2])
+speedsPrelimiExp = np.array([0.02,0.02,0.02,0.02]) # np.array([0.96, 0.7, 0.72, 0.5])   # Preliminary list of thresholds for each condition.
+if not doStaircase: #If not staircase, seeds will try to bracket threshold estimated from preliminary trials
+    factors = np.array([0.4, 0.7, 1, 1.3,1.6]) #Need to test speeds slower and fast than each threshold, 
+    #these are the factors to multiply by each preliminarily-tested threshold
+    speedsEachNumTargetsNumObjects = []
+    for i in range(0, len(speedsPrelimiExp), 2):
+        sub_matrix1 = np.round(speedsPrelimiExp[i] * factors, 2).tolist()
+        sub_matrix2 = np.round(speedsPrelimiExp[i+1] * factors, 2).tolist()
+        speedsEachNumTargetsNumObjects.append([sub_matrix1, sub_matrix2])
+    #Old way of setting all speeds manually:
+    #speedsEachNumTargetsNumObjects =   [ [ [0.5,1.0,1.4,1.7], [0.5,1.0,1.4,1.7] ],     #For the first numTargets condition
+    #                                     [ [0.2,0.5,0.7,1.0], [0.5,1.0,1.4,1.7] ]  ]  #For the second numTargets condition
 
-#Old way of setting all speeds manually
-#
-#speedsEachNumTargetsNumObjects =   [ [ [0.5,1.0,1.4,1.7], [0.5,1.0,1.4,1.7] ],     #For the first numTargets condition
-#                                     [ [0.2,0.5,0.7,1.0], [0.5,1.0,1.4,1.7] ]  ]  #For the second numTargets condition
+#don't go faster than 2 rps at 120 Hz because of temporal blur/aliasing
 
-#dont go faster than 2 rps because of temporal blur/aliasing
+maxTrialsPerStaircase = 500 #Just an unreasonably large number so that the experiment won't stop before the number of trials set by the trialHandler is finished
+staircases = []
+#Need to create a different staircase for each condition because chanceRate will be different and want to estimate midpoint threshold to match previous work
+if doStaircase: #create the staircases
+    for stairI in range(len(mainCondsDf)): #one staircase for each main condition
+        descendingPsychometricCurve = True
+        #give them all the same starting value of 50% of the average threshold speed across conditions found by previous literature
+        startVal = 0.5* mainCondsDf['midpointThreshPrevLit'].mean()
+        startValInternal = staircaseAndNoiseHelpers.toStaircase(startVal, descendingPsychometricCurve)
+        print('staircase startVal=',startVal,' startValInternal=',startValInternal)
 
+        this_row = mainCondsDf.iloc[stairI]
+        condition = this_row.to_dict() # {'numTargets': 2, 'numObjects': 4}
+        
+        nUp = 1; nDown=3 #1-up 3-down homes in on the 79.4% threshold. Make it easier if get one wrong. Make it harder when get 3 right in a row
+        if nUp==1 and nDown==3:
+            staircaseConvergePct = 0.794
+        else:
+            print('WARNING: dont know what staircaseConvergePct is')    
+        minSpeed = .03# -999 #0.05
+        maxSpeed= 1.8 #1.8    #1.8
+        minSpeedForStaircase = staircaseAndNoiseHelpers.toStaircase(minSpeed, descendingPsychometricCurve)
+        maxSpeedForStaircase = staircaseAndNoiseHelpers.toStaircase(maxSpeed, descendingPsychometricCurve)
+        #if descendingPsychometricCurve
+        if minSpeedForStaircase > maxSpeedForStaircase:
+            #Swap values of the two variables
+            minSpeedForStaircase, maxSpeedForStaircase = maxSpeedForStaircase, minSpeedForStaircase
+        #print('for internals, minSpeedForStaircase=',minSpeedForStaircase, 'maxSpeedForStaircase=',maxSpeedForStaircase)
+        staircase = data.StairHandler(
+            extraInfo = condition,
+            startVal=startValInternal,
+            stepType='lin',
+            stepSizes= [.3,.3,.2,.1,.1,.05],
+            minVal = minSpeedForStaircase, 
+            maxVal= maxSpeedForStaircase,
+            nUp=nUp, nDown=nDown,  
+            nTrials = maxTrialsPerStaircase)
+    
+        numPreStaircaseTrials = 0
+        #staircaseAndNoiseHelpers.printStaircase(staircase, descendingPsycho, briefTrialUpdate=True, printInternalVal=True, alsoLog=False)
+        print('Adding this staircase to list')
+        staircases.append(staircase)
+
+#phasesMsg = ('Doing '+str(numPreStaircaseTrials)+'trials with speeds= TO BE DETERMINED'+' then doing a max '+ \
+#              str(maxTrialsPerStaircase)+'-trial staircase for each condition:')
 queryEachRingEquallyOften = False
 #To query each ring equally often, the combinatorics are complicated because have different numbers of target conditions.
 if queryEachRingEquallyOften:
-    leastCommonMultipleSubsets = int( calcCondsPerNumTargets(numRings,numTargets) )
-    leastCommonMultipleTargetNums = int( LCM( numTargets ) )  #have to use this to choose ringToQuery.
+    leastCommonMultipleSubsets = int( helpersAOH.calcCondsPerNumTargets(numRings,numTargets) )
+    leastCommonMultipleTargetNums = int( helpersAOH.LCM( numTargets ) )  #have to use this to choose ringToQuery.
     #for each subset, need to counterbalance which target is queried. Because each element occurs equally often, which one queried can be an independent factor. But need as many repetitions as largest number of target numbers.
     # 3 targets . 3 subsets maximum. Least common multiple is 3. 3 rings that could be post-cued. That means counterbalancing requires 3 x 3 x 3 = 27 trials. NO! doesn't work
     # But what do you do when 2 targets, which one do you pick in the 3 different situations? Can't counterbalance it evenly, because when draw 3rd situation, half of time should pick one and half the time the other. Therefore have to use least common multiple of all the possible set sizes. Unless you just want to throw away that possibility. But then have different number of trials in 2 targets than in 3 targets.
@@ -368,7 +451,11 @@ for numObjs in numObjsInRing: #set up experiment design
     for nt in numTargets: #for each num targets condition,
       numObjectsIdx = numObjsInRing.index(numObjs)
       numTargetsIdx = numTargets.index(nt)
-      speeds= speedsEachNumTargetsNumObjects[  numTargetsIdx ][ numObjectsIdx ]
+      if doStaircase: #Speeds will be determined trial-by-trial by the staircases. However, to estimate lapse rate,
+        #we need occasional trials with a slow speed.
+        speeds = [[.02,.1],'staircase','staircase','staircase']  #speeds = [0.02, 0.1, -99, -99, -99]
+      else: 
+        speeds= speedsEachNumTargetsNumObjects[  numTargetsIdx ][ numObjectsIdx ]
       for speed in speeds:
         ringNums = np.arange(numRings)
         if queryEachRingEquallyOften:
@@ -392,28 +479,17 @@ for numObjs in numObjsInRing: #set up experiment design
                                 stimList.append( {'basicShape':basicShape, 'numObjectsInRing':numObjs,'speed':speed,'initialDirRing0':initialDirRing0,
                                         'numTargets':nt,'whichIsTargetEachRing':whichIsTargetEachRing,'ringToQuery':ringToQuery} )
         else: # not queryEachRingEquallyOften, because that requires too many trials for a quick session. Instead
-            #, will randomly at time of trial choose which rings have targets and which one querying.
+            #will randomly at time of trial choose which rings have targets and which one querying.
             whichIsTargetEachRing = np.ones(numRings)*-999 #initialize to -999, meaning not a target in that ring. '1' will indicate which is the target
-            #for t in range( int(nt) ):
-            #    whichIsTargetEachRing[t] = 0 #dummy value for now. Will set to random value when run trial.
             ringToQuery = 999 #this is the signal to choose the ring randomly
             for basicShape in ['circle']: #'diamond'
                 for initialDirRing0 in [-1,1]:
                     stimList.append( {'basicShape':basicShape, 'numObjectsInRing':numObjs,'speed':speed,'initialDirRing0':initialDirRing0,
                                 'numTargets':nt,'whichIsTargetEachRing':whichIsTargetEachRing,'ringToQuery':ringToQuery} )            
 
-#set up record of proportion correct in various conditions
-trialSpeeds = list() #purely to allow report at end of how many trials got right at each speed
-for s in stimList: trialSpeeds.append( s['speed'] )
-uniqSpeeds = set(trialSpeeds) #reduce speedsUsed list to unique members, unordered set
-uniqSpeeds = sorted( list(uniqSpeeds)  )
-uniqSpeeds = np.array( uniqSpeeds ) 
-numRightWrongEachSpeedOrder = np.zeros([ len(uniqSpeeds), 2 ]); #summary results to print out at end
-numRightWrongEachSpeedIdent = deepcopy(numRightWrongEachSpeedOrder)
-#end setup of record of proportion correct in various conditions
-
 trials = data.TrialHandler(stimList,trialsPerCondition) #constant stimuli method
-
+print('len(stimList), which lis the list of conditions, is =',len(stimList))
+#print('stimList = ',stimList)
 timeAndDateStr = time.strftime("%d%b%Y_%H-%M", time.localtime()) 
 logging.info(  str('starting exp with name: "'+'TemporalFrequencyLimit'+'" at '+timeAndDateStr)   )
 msg = 'numtrials='+ str(trials.nTotal)+', trialDurMin= '+str(trialDurMin)+ ' trackVariableIntervMax= '+ str(trackVariableIntervMax) + 'refreshRate=' +str(refreshRate)     
@@ -423,14 +499,13 @@ msg = 'cueRampUpDur=' + str(cueRampUpDur) + ' cueRampDownDur= ' + str(cueRampDow
 logging.info(msg);
 logging.info('task='+'track'+'   respType='+respType)
 logging.info('ring radii=' + str(radii))
-
-def decimalPart(x):
-    return ( abs(x-floor(x)) )
-
 logging.info('drawingAsGrating=' + str(drawingAsGrating) +  ' gratingTexPix='+ str(gratingTexPix) + ' antialiasGrating=' + str(antialiasGrating))
 logging.flush()
 
 stimColorIdxsOrder=[[0,0],[0,0],[0,0]]#this was used for drawing blobs during LinaresVaziriPashkam stimulus, now just vestigial for grating
+
+def decimalPart(x):
+    return ( abs(x-floor(x)) )
 
 def constructRingAsGratingSimplified(radii,numObjects,patchAngle,colors,stimColorIdxsOrder,gratingTexPix,blobToCue):
     #Will create the ring of objects (ringRadial) grating and also a ring grating for the cue, for each ring
@@ -783,7 +858,7 @@ def oneFrameOfStim(thisTrial,speed,currFrame,clock,useClock,offsetXYeachRing,ini
 
 showclickableRegions = True
 showClickedRegion = True
-def collectResponses(thisTrial,n,responses,responsesAutopilot, respPromptSoundFileNum, offsetXYeachRing,respRadius,currAngle,expStop ):
+def collectResponses(thisTrial,speed,n,responses,responsesAutopilot, respPromptSoundFileNum, offsetXYeachRing,respRadius,currAngle,expStop):
     optionSets=numRings
     #Draw/play response cues
     timesRespPromptSoundPlayed=0
@@ -819,7 +894,7 @@ def collectResponses(thisTrial,n,responses,responsesAutopilot, respPromptSoundFi
           for ncheck in range( numOptionsEachSet[optionSet] ):  #draw each available to click on in this ring
                 angle =  (angleIniEachRing[optionSet]+currAngle[optionSet]) + ncheck*1.0/numOptionsEachSet[optionSet] *2.*pi
                 stretchOutwardRingsFactor = 1
-                x,y = xyThisFrameThisAngle(thisTrial['basicShape'],radii,optionSet,angle,n,thisTrial['speed'])
+                x,y = xyThisFrameThisAngle(thisTrial['basicShape'],radii,optionSet,angle,n,speed)
                 x = x+ offsetXYeachRing[optionSet][0]
                 y = y+ offsetXYeachRing[optionSet][1]            
                 if not drawingAsGrating and not debugDrawBothAsGratingAndAsBlobs:
@@ -858,7 +933,7 @@ def collectResponses(thisTrial,n,responses,responsesAutopilot, respPromptSoundFi
             for optionSet in range(optionSets):
               for ncheck in range( numOptionsEachSet[optionSet] ): 
                     angle =  (angleIniEachRing[optionSet]+currAngle[optionSet]) + ncheck*1.0/numOptionsEachSet[optionSet] *2.*pi #radians
-                    x,y = xyThisFrameThisAngle(thisTrial['basicShape'],radii,optionSet,angle,n,thisTrial['speed'])
+                    x,y = xyThisFrameThisAngle(thisTrial['basicShape'],radii,optionSet,angle,n,speed)
                     x = x+ offsetXYeachRing[optionSet][0]
                     y = y+ offsetXYeachRing[optionSet][1]
                     #check whether mouse click was close to any of the colors
@@ -919,20 +994,21 @@ def collectResponses(thisTrial,n,responses,responsesAutopilot, respPromptSoundFi
     return responses,responsesAutopilot,respondedEachToken, expStop
     ####### #End of function definition that collects responses!!!! #################################################
     
-print('Starting experiment of',trials.nTotal,'trials. Current trial is trial 0.')
+print('Starting experiment of',trials.nTotal,'trials, starting with trial 0.')
 #print header for data file
 print('trialnum\tsubject\tbasicShape\tnumObjects\tspeed\tinitialDirRing0', end='\t', file=dataFile)
 print('orderCorrect\ttrialDurTotal\tnumTargets', end= '\t', file=dataFile) 
 for i in range(numRings):
     print('whichIsTargetEachRing',i,  sep='', end='\t', file=dataFile)
 print('ringToQuery',end='\t',file=dataFile)
-for i in range(numRings):dataFile.write('Direction'+str(i)+'\t')
-for i in range(numRings):dataFile.write('respAdj'+str(i)+'\t')
+for i in range(numRings):   dataFile.write('direction'+str(i)+'\t')
+for i in range(numRings):   dataFile.write('respAdj'+str(i)+'\t')
 for r in range(numRings):
     for j in range(maxPossibleReversals()):
         dataFile.write('rev'+str(r)+'_'+str(j)+'\t')  #reversal times for each ring
 print('timingBlips', file=dataFile)
 #end of header
+
 trialClock = core.Clock()
 stimClock = core.Clock()
 trialNum=0; numTrialsOrderCorrect=0; numAllCorrectlyIdentified=0; blueMistakes=0; expStop=False; framesSaved=0;
@@ -949,7 +1025,7 @@ randomInitialDirExceptRing0 = True
 oppositeInitialDirFirstTwoRings = True
 
 while trialNum < trials.nTotal and expStop==False:
-    accelerateComputer(1,process_priority, disable_gc) #I don't know if this does anything
+    helpersAOH.accelerateComputer(1,process_priority, disable_gc) #I don't know if this does anything
     if quickMeasurement:
         maxSpeed = 1.0; numObjects = 10; numTargets = 3
         # create a dialog box from dictionary 
@@ -996,7 +1072,7 @@ while trialNum < trials.nTotal and expStop==False:
     trackVariableIntervDur=np.random.uniform(0,trackVariableIntervMax) #random interval tacked onto tracking to make total duration variable so cant predict final position
     trialDurTotal = maxTrialDur() - trackVariableIntervDur
     trialDurFrames= int( trialDurTotal*refreshRate )
-    print('trialDurTotal=',np.around(trialDurTotal,2),' trialDurFrames=',np.around(trialDurFrames,2), 'refreshRate=',np.around(refreshRate) ) 
+    #print('trialDurTotal=',np.around(trialDurTotal,2),' trialDurFrames=',np.around(trialDurFrames,2), 'refreshRate=',np.around(refreshRate) ) 
     xyTargets = np.zeros( [thisTrial['numTargets'], 2] ) #need this for eventual case where targets can change what ring they are in
     numDistracters = numRings*thisTrial['numObjectsInRing'] - thisTrial['numTargets']
     xyDistracters = np.zeros( [numDistracters, 2] )
@@ -1009,7 +1085,7 @@ while trialNum < trials.nTotal and expStop==False:
     myMouse.setVisible(False)      
     if eyetracking: 
         my_tracker.startEyeTracking(trialNum,calibTrial=True,widthPix=widthPix,heightPix=heightPix) # tell eyetracker to start recording
-            #and calibrate. Does this allow it to draw on the screen for the calibration?
+            #and calibrate. It tries to draw on the screen to do the calibration.
         pylink.closeGraphics()  #Don't allow eyelink to still be able to draw because as of Jan2024, we can't get it working to have both Psychopy and Eyelink routines to draw to the same graphics environment
         
     fixatnPeriodFrames = int(   (np.random.rand(1)/2.+0.8)   *refreshRate)  #random interval between x and x+800ms
@@ -1019,39 +1095,59 @@ while trialNum < trials.nTotal and expStop==False:
         else: fixationBlank.draw()
         myWin.flip() #clearBuffer=True)  
     trialClock.reset()
-    t0=trialClock.getTime(); t=trialClock.getTime()-t0     
     for L in range(len(ts)):
-        ts.remove(ts[0]) # clear ts array, to try to avoid memory problems?
+        ts.remove(ts[0]) #clear ts array, in case that helps avoid memory leak
     stimClock.reset()
-    print('About to start trial and trialDurFrames =',round(trialDurFrames,1))
 
     if drawingAsGrating or debugDrawBothAsGratingAndAsBlobs: #construct the gratings
         gratingObjAngle = 20; #the angle an individual object subtends, of the circle
         increaseRadiusFactorToEquateWithBlobs = 2.1 #Have no idea why, because units seem to be deg for both. Expect it to only be a bit smaller due to mask
         radiiGratings = radii*increaseRadiusFactorToEquateWithBlobs
         ringRadial,cueRing,currentlyCuedBlob = \
-                constructRingAsGratingSimplified(radiiGratings,numObjects,gratingObjAngle,colors_all,stimColorIdxsOrder,gratingTexPix,blobsToPreCue)
+                constructRingAsGratingSimplified(radiiGratings,thisTrial['numObjectsInRing'],gratingObjAngle,colors_all,
+                                                 stimColorIdxsOrder,gratingTexPix,blobsToPreCue)
         preDrawStimToGreasePipeline.extend([ringRadial[0],ringRadial[1],ringRadial[2]])
     core.wait(.1)
 
-    speed = thisTrial['speed']
-    currentSpeed = speed #In normal experiment, no speed ramp
-    
-    if quickMeasurement: #in quick measurement mode, which uses a speed ramp
-        speed = maxSpeed
+    if not doStaircase and not quickMeasurement:
+        currentSpeed = thisTrial['speed'] #In normal experiment, no speed ramp
+    elif quickMeasurement: #in quick measurement mode, which uses a speed ramp
+        speedThisTrial = maxSpeed
         currentSpeed = 0.01
         speedRampStep = 0.01
-        print('currentSpeed =',round(currentSpeed,2))
-    
+        print('ramp currentSpeed =',round(currentSpeed,2))
+    elif doStaircase: #speed will be set by staircase corresponding to this condition, or occasional ultra-slow speed as specified by speeds,
+          #to estimate lapseRate
+        if thisTrial['speed'] == 'staircase':
+            #Work out which staircase this is, by finding out which row of mainCondsDf this condition is
+            rownum = mainCondsDf[ (mainCondsDf['numTargets'] == thisTrial['numTargets']) &
+                                  (mainCondsDf['numObjects'] == thisTrial['numObjectsInRing'] )       ].index
+            condnum = rownum[0] #Have to take[0] because it was a pandas Index object, I guess to allow for possibility of multiple indices
+            staircaseThis = staircases[condnum]
+            speedThisInternal = staircaseThis.next()
+            speedThisTrial = staircaseAndNoiseHelpers.outOfStaircase(speedThisInternal, staircaseThis, descendingPsychometricCurve) 
+            #print('speedThisInternal from staircase=',round(speedThisInternal,2),'speedThisTrial=',round(speedThisTrial,2))
+        else: #manual occasional speed, probably ultra-slow to estimate lapseRate
+            #print('Non-staircase slow speed!, speedThisTrial=',thisTrial['speed'], ' will pick a random one')
+            if len(thisTrial['speed']) >1: #randomly pick from speeds specified, not deterministic to avoid having too many trials 
+                # while also trying to have overwhelming majority be staircase
+                speedThisTrial = random.choice(thisTrial['speed'])
+            else:
+                speedThisTrial = thisTrial['speed']
+        currentSpeed = speedThisTrial #no speed ramp
+        #print('currentSpeed=',round(currentSpeed,2))
+        
+    t0=trialClock.getTime(); #t=trialClock.getTime()-t0         
     #the loop for this trial's stimulus!
     for n in range(trialDurFrames): 
         offsetXYeachRing=[ [0,0],[0,0],[0,0] ]
-        if (currentSpeed < speed):
+        if currentSpeed < speedThisTrial:
             currentSpeed = currentSpeed + speedRampStep
         if basicShape == 'diamond':  #scale up speed so that it achieves that speed in rps even though it has farther to travel
             perimeter = radii[numRing]*4.0
             circum = 2*pi*radii[numRing]
-            finalspeed = thisTrial['speed'] * perimeter/circum #Have to go this much faster to get all the way around in same amount of time as for circle
+            finalspeed = speedThisTrial * perimeter/circum #Have to go this much faster to get all the way around in same amount of time as for circle
+        #print('currentSpeed=',currentSpeed) #debugAH
         (angleIni,currAngle,isReversed,reversalNumEachRing) = \
             oneFrameOfStim(thisTrial,currentSpeed,n,stimClock,useClock,offsetXYeachRing,initialDirectionEachRing,currAngle,blobsToPreCue,isReversed,reversalNumEachRing,cueFrames) #da big function
 
@@ -1069,15 +1165,17 @@ while trialNum < trials.nTotal and expStop==False:
             if t > trialDurTotal:
                 msg="Must not have kept up with some frames, breaking out of loop"; print(msg)
                 break
+        if showOnlyOneFrameOfStimuli: #abort after just one frame
+            break
     #End of trial stimulus loop!
     
     if eyetracking:
-        my_tracker.stopEyeTracking() #This seems to work immediately and cause the eyetracking PC to save the EDF file to its drive
+        my_tracker.stopEyeTracking() 
     #clear mouse buffer in preparation for response, which may involve clicks
     psychopy.event.clearEvents(eventType='mouse')
 
     #end of big stimulus loop
-    accelerateComputer(0,process_priority, disable_gc) #turn off stuff that sped everything up
+    helpersAOH.accelerateComputer(0,process_priority, disable_gc) #turn off stuff that sped everything up. But I don't know if this works.
     #check for timing problems
     interframeIntervs = np.diff(ts)*1000 #difference in time between successive frames, in ms
     idxsInterframeLong = np.where( interframeIntervs > longFrameLimit ) [0] #frames that exceeded longerThanRefreshTolerance of expected duration
@@ -1105,15 +1203,6 @@ while trialNum < trials.nTotal and expStop==False:
             #end timing check
     myMouse.setVisible(True)
     
-    #ansIter=(answer).reshape(1,-1)[0]; ln=len(ansIter) #in case it's two dimensions like in bindRadially
-    #print 'answer=',answer,' or ', [colorNames[ int(ansIter[i]) ] for i in range( ln )], ' it is type ',type(answer), ' and shape ', np.shape(answer)  
-    #shuffledAns = deepcopy(answer);  #just to use for options, to ensure they are in a different order
-    #if numObjects == 2:
-    #     shuffledAns = shuffledAns[0:2]  #kludge. Really this should be controlled by nb_colors but that would require fancy array indexing where I currently have 0,2,1 etc above
-   # np.random.shuffle(shuffledAns)  
-    #if len(np.shape(answer)) >1: #more than one dimension, because bindRadiallyTask
-    #     np.random.shuffle(shuffledAns[:,0]) #unfortunately for bindRadially task, previous shuffling shuffled pairs, not individuals
-    #print 'answer after shuffling=',shuffledAns 
     passThisTrial=False
     
     #Create response prompt / postcue
@@ -1135,8 +1224,8 @@ while trialNum < trials.nTotal and expStop==False:
 
     responses = list();  responsesAutopilot = list()
     responses,responsesAutopilot,respondedEachToken,expStop = \
-            collectResponses(thisTrial,n,responses,responsesAutopilot,respPromptSoundFileNum,offsetXYeachRing,respRadius,currAngle,expStop)  #collect responses!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#####
-    print("responses=",responses,";respondedEachToken=",respondedEachToken,"expStop=",expStop) #debug
+            collectResponses(thisTrial,currentSpeed,n,responses,responsesAutopilot,respPromptSoundFileNum,offsetXYeachRing,respRadius,currAngle,expStop)  #collect responses!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#####
+    #print("responses=",responses,";respondedEachToken=",respondedEachToken,"expStop=",expStop)
     core.wait(.1)
     if exportImages:  #maybe catch one frame of response
         myWin.saveMovieFrames('exported/frame.png')    
@@ -1146,39 +1235,29 @@ while trialNum < trials.nTotal and expStop==False:
     if True: #not expStop: #if short on responses, too hard to write code to handle it so don't even try
         orderCorrect=0; numColorsCorrectlyIdentified=0; blueMistake=0;respAdj=list();sCorrect=list();targetCorrect=0;
         for l in range(numRings):
-                    if responses[l] !=[]: 
-                       tokenChosenEachRing[l]=np.where(respondedEachToken[l])  [0][0] 
-                       respAdjs= initialDirectionEachRing[l]*isReversed[l]*(tokenChosenEachRing[l]-thisTrial['whichIsTargetEachRing'][l])
-                       if respAdjs> numObjects/2. : respAdjs-= numObjects  #code in terms of closest way around. So if 9 objects and 8 ahead, code as -1
-                       if respAdjs < -numObjects/2. : respAdjs += numObjects
-                       respAdj.append(respAdjs)
-                       if tokenChosenEachRing[l]==thisTrial['whichIsTargetEachRing'][l]: 
-                          sCorrects=1
-                          sCorrect.append(sCorrects);
-                          targetCorrect+=sCorrects
-                    else:
-                       respAdj.append(-999)
-                       sCorrect.append(0)
+            if responses[l] !=[]: 
+               tokenChosenEachRing[l]=np.where(respondedEachToken[l])  [0][0] 
+               respAdjs= initialDirectionEachRing[l]*isReversed[l]*(tokenChosenEachRing[l]-thisTrial['whichIsTargetEachRing'][l])
+               if respAdjs> numObjects/2. : respAdjs-= numObjects  #code in terms of closest way around. So if 9 objects and 8 ahead, code as -1
+               if respAdjs < -numObjects/2. : respAdjs += numObjects
+               respAdj.append(respAdjs)
+               if tokenChosenEachRing[l]==thisTrial['whichIsTargetEachRing'][l]: 
+                  sCorrects=1
+                  sCorrect.append(sCorrects);
+                  targetCorrect+=sCorrects
+            else:
+               respAdj.append(-999)
+               sCorrect.append(0)
         if targetCorrect==1: orderCorrect = 3
         else: orderCorrect = 0
-                 
-        if respType=='order':  #: this used to work without last conditional
-            numColorsCorrectlyIdentified=-1
-        else: 
-            numColorsCorrectlyIdentified = len(   intersect1d(response,answer)   )
-            if numColorsCorrectlyIdentified < 3:
-                if 4 in answer and not (3 in answer): #dark blue present
-                    if 3 in response: #light blue in answer
-                        blueMistake =1
-                elif 3 in answer and not (4 in answer): #light blue present
-                    if 4 in response: #dark blue in answer
-                        blueMistake =1                
-        #end if statement for if not expStop
-    if passThisTrial:orderCorrect = -1    #indicate for data analysis that observer opted out of this trial, because think they moved their eyes
+
+    if passThisTrial:   orderCorrect = -1    #indicate for data analysis that observer opted out of this trial, because think they moved their eyes
 
     #header print('trialnum\tsubject\tbasicShape\tnumObjects\tspeed\tinitialDirRing0\tangleIni
-    print(trialNum,subject,thisTrial['basicShape'],thisTrial['numObjectsInRing'],thisTrial['speed'],thisTrial['initialDirRing0'],sep='\t', end='\t', file=dataFile)
-    print(orderCorrect,'\t',trialDurTotal,'\t',thisTrial['numTargets'],'\t', end=' ', file=dataFile) #override newline end
+    print(trialNum,subject,thisTrial['basicShape'],thisTrial['numObjectsInRing'],
+            speedThisTrial, #could be different than thisTrial['speed'] because staircase
+            thisTrial['initialDirRing0'],sep='\t', end='\t', file=dataFile) #override newline end
+    print(orderCorrect,'\t',trialDurTotal,'\t',thisTrial['numTargets'],'\t', end=' ', file=dataFile) 
     for i in range(numRings):  print( thisTrial['whichIsTargetEachRing'][i], end='\t', file=dataFile  )
     print( thisTrial['ringToQuery'],end='\t',file=dataFile )
     for i in range(numRings):dataFile.write(str(round(initialDirectionEachRing[i],4))+'\t') 
@@ -1189,45 +1268,71 @@ while trialNum < trials.nTotal and expStop==False:
         for j in range(i+1,maxPossibleReversals()):
             print('-999\t', end='', file=dataFile)
     print(numCasesInterframeLong, file=dataFile)
+
+    if autopilot and doStaircase and simulateObserver:
+        chanceRate = 1.0 / thisTrial['numObjectsInRing']
+        rownum = mainCondsDf[ (mainCondsDf['numTargets'] == thisTrial['numTargets']) &
+                                  (mainCondsDf['numObjects'] == thisTrial['numObjectsInRing'] )       ].index
+        condnum = rownum[0] #Have to take[0] because it was a pandas Index object, I guess to allow for possibility of multiple indices
+        staircaseThis = staircases[condnum] #needed to look this up because on some trials, staircase is possibly not used (slow speed to estimate lapserate)
+        threshold = staircaseThis.extraInfo['midpointThreshPrevLit']
+        lapseRate = .05
+        #print('simulating response with speedThisTrial=',round(speedThisTrial,2),'chanceRate=',chanceRate,'lapseRate=',lapseRate,'threshold=',threshold)
+        correct_sim = staircaseAndNoiseHelpers.simulate_response(speedThisTrial,chanceRate,lapseRate,threshold,descendingPsychometricCurve)
+        orderCorrect = correct_sim*3 #3 is fully correct
+        #print('speedThisTrial=',speedThisTrial,'threshold=',round(threshold,2),'correct_sim=',correct_sim,'orderCorrect=',orderCorrect)
+        
     numTrialsOrderCorrect += (orderCorrect >0)  #so count -1 as 0
     numAllCorrectlyIdentified += (numColorsCorrectlyIdentified==3)
-    speedIdx = np.where(uniqSpeeds==thisTrial['speed'])[0][0]  #extract index, where returns a list with first element array of the indexes
-    numRightWrongEachSpeedOrder[ speedIdx, (orderCorrect >0) ] +=1  #if right, add to 1th column, otherwise add to 0th column count
-    numRightWrongEachSpeedIdent[ speedIdx, (numColorsCorrectlyIdentified==3) ] +=1
-    blueMistakes+=blueMistake
     dataFile.flush(); logging.flush(); 
-    
+
+    if orderCorrect==3:
+        correctForFeedback=1
+    else:
+        correctForFeedback=0
     if feedback and not expStop:
-        if orderCorrect==3  :correct=1
-        else:correct=0
-        if correct:
-            if useSound:
-                corrSound.play()
-            #hiA = sound.Sound('A',octave=4, volume=0.9,  secs=.8); hiA.play()
+        if correctForFeedback and useSound:
+            corrSound.play()
         else: #incorrect
             if useSound:
                 lowSound = sound.Sound('E',octave=3, secs=.8, volume=0.9)
                 lowSound.play()
+    trials.addData('speedThisTrial',speedThisTrial)  #when doStaircase is true, this will often be different than thisTrial['speed]
+    trials.addData('orderCorrect',orderCorrect)
+    trials.addData('correctForFeedback',correctForFeedback)
+    if doStaircase and (thisTrial['speed']=='staircase'):
+        staircaseThis.addResponse(correctForFeedback) #add correct/incorrect to the staircase so it can calculate the next speed
+
+    if trials.nTotal <= 10:
+        breakTrialNums = [] #Only have breaks if more than 10 trials
+    else: 
+        breakTrialNums = np.round( pctCompletedBreaks/100. * trials.nTotal )
+        breakTrialNums = breakTrialNums[breakTrialNums >= 3] #No point having a break before trial 3.
+        #print('breakTrialNums=',breakTrialNums)
     trialNum+=1
     waitForKeyPressBetweenTrials = False
     if trialNum< trials.nTotal:
-        if trialNum%( max(trials.nTotal/4,1) ) ==0:  #have to enforce at least 1, otherwise will modulus by 0 when #trials is less than 4
-            pctDone = round(    (1.0*trialNum) / (1.0*trials.nTotal)*100,  0  )
-            NextRemindPctDoneText.setText( str(pctDone) + '% complete' )
-            NextRemindCountText.setText( str(trialNum) + ' of ' + str(trials.nTotal)     )
+        pctDone =  (1.0*trialNum) / (1.0*trials.nTotal)*100
+        NextRemindPctDoneText.setText( str(round(pctDone)) + '% complete' )
+        NextRemindCountText.setText( str(trialNum) + ' of ' + str(trials.nTotal) )
+        if np.isin(trialNum, breakTrialNums): 
+            breakTrial = True
+        else: breakTrial = False
+        if breakTrial:
             for i in range(5):
                 myWin.flip(clearBuffer=True)
                 NextRemindPctDoneText.draw()
                 NextRemindCountText.draw()
         waitingForKeypress = False
-        if waitForKeyPressBetweenTrials:
+        if waitForKeyPressBetweenTrials or breakTrial:
             waitingForKeypress=True
             NextText.setText('Press "SPACE" to continue')
             NextText.draw()
             NextRemindCountText.draw()
-            NextRemindText.draw()
+            #NextRemindText.draw()
             myWin.flip(clearBuffer=True) 
-        else: core.wait(0.15)
+        else:
+            core.wait(0.15)
         while waitingForKeypress:
            if autopilot:
                 waitingForKeypress=False
@@ -1251,25 +1356,15 @@ if expStop == True:
 msg = 'Finishing now, at ' + timeAndDateStr
 logging.info(msg); print(msg)
 #print('%correct order = ', round( numTrialsOrderCorrect*1.0/trialNum*100., 2)  , '% of ',trialNum,' trials', end=' ')
-numTrialsEachSpeed = numRightWrongEachSpeedOrder[:,0] + numRightWrongEachSpeedOrder[:,1]
-allNonZeros = np.all( numTrialsEachSpeed )
-if allNonZeros: #Has to be all nonzeros otherwise will get divide by zero error
-    msg = '%correct each speed: '
-    msg = msg + str(  np.around( numRightWrongEachSpeedOrder[:,1] / numTrialsEachSpeed, 2)  )    
-else:
-    msg = 'Num correct each speed: '
-    msg = msg + str(  np.around( numRightWrongEachSpeedOrder[:,1] , 2) )
-
-msg = msg + '\t\tNum trials each speed =' + str( numTrialsEachSpeed )
-
-logging.info(msg); print(msg)
-logging.flush(); dataFile.close(); 
+logging.flush(); dataFile.close();
+myWin.close()
 
 if eyetracking:
+  logging.info('eyetracking = ' + str(eyetracking))
   if eyetrackFileGetFromEyelinkMachine:
     eyetrackerFileWaitingText = visual.TextStim(myWin,pos=(-.1,0),colorSpace='rgb',color = (1,1,1),anchorHoriz='center', anchorVert='center', units='norm',autoLog=autoLogging)
     msg = 'Waiting for eyetracking file from Eyelink computer. Do not abort eyetracking machine or file will not be saved on this machine.'
-    logging.info(msg)
+    logging.info(msg); logging.flush();
     eyetrackerFileWaitingText.setText(msg)
     eyetrackerFileWaitingText.draw()
     myWin.flip()
@@ -1280,10 +1375,186 @@ if eyetracking:
   else:
     msg = 'You will have to get the Eyelink EDF file off the eyetracking machine by hand'
     print(msg); logging.info(msg)
+else:
+  logging.info('Didnt try to eyetrack because "eyetracking" was set to ' + str(eyetracking))
+logging.flush();
+
+if doStaircase: #report staircase results
+    meanReversalsEachStaircase = np.zeros( len(staircases) )
+    # Create a new column and initialize with NaN or some default value
+    mainCondsDf['meanReversal'] = np.nan
+
+    for staircase in staircases: #Calculate staircase results
+        print('condition of this staircase = ', staircase.extraInfo)
+        #actualThreshold = mainCondsDf[ ] #query for this condition. filtered_value = df.query('numTargets == 2 and numObjects == 4')['midpointThreshPrevLit'].item()
+        actualThreshold = staircase.extraInfo['midpointThreshPrevLit']
+        print('Staircase should converge on the', str(100*staircaseConvergePct), '% threshold, whose actual value for this condition is', actualThreshold)
+        #Average all the reversals after the first few.
+        numReversals = len(staircase.reversalIntensities)
+        numRevsToUse = max( 1, numReversals-2 ) #To avoid asking for less than 1 reversal
+        finalReversals = staircaseAndNoiseHelpers.outOfStaircase(staircase.reversalIntensities[-numRevsToUse:],staircase,descendingPsychometricCurve)   
+        meanOfFinalReversals = np.average( finalReversals )
+        print('Mean of final', numRevsToUse,'reversals = %.2f' % meanOfFinalReversals)
+        stairI = staircases.index(staircase)
+        meanReversalsEachStaircase[ stairI ] = meanOfFinalReversals
+        # Set the stairI row's 'meanReversal' value
+        mainCondsDf.at[stairI, 'meanReversal'] = meanOfFinalReversals  # Indexing is 0-based in Python, so the 4th row is at index 3
     
-if quitFinder: #turn Finder back on
+    print('About to plot staircases')
+    plt.rcParams["figure.figsize"] = (16, 7) #Note this will determine the size of all subsequently created plots.
+    plt.subplot(121) #1 row, 1 column, which panel
+    title = 'circle = mean of final reversals'
+    if autopilot and simulateObserver:
+        title += '\ntriangle = true threshold'
+    plt.title(title)
+    plt.xlabel("staircase trial")
+    plt.ylabel("speed (rps)")
+
+    colors = 'grby'
+    for staircase in staircases:
+        stairI = staircases.index(staircase)
+        colorThis = colors[stairI]
+        #print('About to get intensities this staircase')
+        intensities = staircaseAndNoiseHelpers.outOfStaircase(staircase.intensities,staircase,descendingPsychometricCurve)
+        if len(intensities)>0:
+            plt.plot(intensities, colorThis+'-')
+        #Calculate correct answer, to help visualize if staircase is converging on the right place
+        actualThresh = staircase.extraInfo['midpointThreshPrevLit']
+        if len(staircase.reversalIntensities)>0: #plot mean of last reversals
+            #print('About to plot mean this staircase')
+            lastTrial = len(staircase.intensities)
+            plt.plot( lastTrial, meanReversalsEachStaircase[ stairI ], colorThis+'o' )
+            #plot correct answer
+            plt.plot( lastTrial+1, actualThresh, colors[stairI]+'<' )
+    # save a vector-graphics format for future
+    figDir = 'analysisPython'
+    outputFile = os.path.join(figDir, 'lastStaircases.pdf') #Don't know why it saves as empty
+    plt.savefig(outputFile)
+
+#Plot percent correct by condition and speed for all trials, and then try to fit logistic regression.
+trialHandlerDatafilename = datafileName + 'trialHandler.tsv'
+df = trials.saveAsWideText(trialHandlerDatafilename,delim='\t')  #Only calling this to get the dataframe df
+#If session was incomplete, then trials that didn't get to have value "--" in columns set dynamically, like speedThisTrial
+# Create a boolean mask for where 'speedThisTrial' is '--'
+dashes_mask = (df['speedThisTrial'] == '--')
+all_false = (~dashes_mask).all()
+if all_false:
+    numLegitTrials = len(df)
+    print('Session appears to have completed all (',len(df),'trials), because no double-dashes ("--") appear in the file')
+    print('\ndtype=',df['speedThisTrial'].dtypes) #'object' means it probably includes strings, which probably happened because didn't complete all trials
+    #But if I run autopilot with 10 trials even though it finishes ,I sometimes get object type, whereas with 1 autopilot trial I don't.
+    #And when I open the file afterward with analyseTrialHandlerOutput.py, it works fine and has type float64
+    #Need to convert from string to number
+else:
+    # Find the first True in the mask, which is the first trial that didn't complete
+    first_row_with_dashes_num = dashes_mask.idxmax()
+    numLegitTrials = first_row_with_dashes_num
+    print('Num trials in dataframe (num rows)=',len(df), '. Num trials that experiment got through=', numLegitTrials)
+    #Throw away all the non-legitimate trials
+    df = df[:numLegitTrials]
+    #print('Completed portion of session=',df)
+    if numLegitTrials < 2:
+        print('Forget it, I cannot analyze a one-trial experiment')
+        quit()
+# Convert to numeric. Shouldn't need this if session completes but because of psychopy bug (see above), do.
+df['speedThisTrial'] = pd.to_numeric(df['speedThisTrial'])
+df['numTargets'] = pd.to_numeric(df['numTargets'])
+df['numObjectsInRing'] = pd.to_numeric(df['numObjectsInRing'])
+df['correctForFeedback'] = pd.to_numeric(df['correctForFeedback'])
+#Finished clean-up of dataframe that results from incomplete session
+
+# set up plot
+if doStaircase:
+    plt.subplot(122) #Because already plotted staircases above
+else:
+    plt.subplot(111)
+plt.ylabel("Proportion correct")
+plt.xlabel('speed (rps)')
+threshVal = 0.794
+speedEachTrial = df['speedThisTrial']
+
+print('trialNum=',trialNum)
+#maxX = speedEachTrial.nlargest(1).iloc[0]
+#print('maxX with nlargest=',maxX)
+maxX = speedEachTrial.max()
+plt.plot([0, maxX], [threshVal, threshVal], 'k--')  # horizontal dashed line
+paramsEachCond = list()
+
+#Fit logistic regressions
+for condi, cond in mainCondsDf.iterrows():
+    #actualThreshold = mainCondsDf[ ] #query for this condition. filtered_value = df.query('numTargets == 2 and numObjects == 4')['midpointThreshPrevLit'].item()
+    # Create a mask to reference this specific condition in my df
+    maskForThisCond = (df['numTargets'] == cond['numTargets']) & (df['numObjectsInRing'] == cond['numObjects'])
+    condLabelForPlot= str( round(cond['numTargets']) ) + 'targets,' + str( round(cond['numObjects']) ) + 'objs'
+    all_false = (~maskForThisCond).all()
+    if all_false:
+        print('No trials available for condition ',cond, 'so stopping plotting.')
+        break
+
+    dataThisCond =  df[ maskForThisCond  ]
+
+    #Aggregate data into percent correct for plotting actual data
+    grouped_df = dataThisCond.groupby(['speedThisTrial']).agg(
+        pctCorrect=('correctForFeedback', 'mean'),
+        n=('correctForFeedback', 'count')
+    )
+    aggregatedDf = grouped_df.reset_index()
+
+    # plot points
+    pointSizes = np.array(aggregatedDf['n']) * 5  # 5 pixels per trial at each point
+    points = plt.scatter(aggregatedDf['speedThisTrial'], aggregatedDf['pctCorrect'], s=pointSizes,
+        c= colors[condi], label = condLabelForPlot,
+        zorder=10,  # make sure the points plot on top of the line
+        )    
+
+    #Get variables for logistic regression fit
+    x = dataThisCond[['speedThisTrial' ]] #data[['numObjectsInRing','numTargets','speedThisTrial' ]]
+    y = dataThisCond['correctForFeedback']
+    y = y.values #because otherwise y is a Series for some reason
+    #print('y=',y, 'type(y)=',type(y))
+
+    parametersGuess = [1,-2]
+
+    #fit data with logistic regression
+    fitSucceeded = False
+    if len(x) > 20: #don't even try unless have a bunch of trials for this conditino
+        with warnings.catch_warnings(): #https://stackoverflow.com/a/36489085/302378
+            warnings.filterwarnings('error')
+            try:
+                parameters = logisticR.fit(x, y, parametersGuess)
+                fitSucceeded = True
+            except Warning as e:
+                print('error when doing logistic fit:', e)
+                fitSucceeded = False
+                
+    #predict psychometric curve from logistic regression
+    if fitSucceeded:
+        paramsEachCond.append(parameters)
+        mypredicted = logisticR.predict(x,parameters)
+        #print('logistic regression-predicted values=', mypredicted)
+        # Create a new column 'predicted' and assign the values from mypredicted
+        # to the rows matching the condition
+        df.loc[maskForThisCond, 'logisticPredicted'] = mypredicted
+
+        xForCurve = np.arange(0,1.6,.02)
+        xForCurve = pd.DataFrame(xForCurve)
+        predicted = logisticR.predict(xForCurve, parameters)
+        predicted = predicted.flatten()
+        plt.plot( xForCurve, predicted, colors[condi]+'-' )
+
+plt.legend()
+#print('paramsEachCond=',paramsEachCond)
+title = 'Data and logistic regression fit'
+#if autopilot and simulateObserver:
+#    title += 'triangle = true threshold'
+plt.title(title)
+outputFile = datafileName + '.pdf' #os.path.join(fileName, 'last.pdf')
+plt.savefig(outputFile)
+plt.show()
+
+if quitFinder and ('Darwin' in platform.system()): #If turned Finder (MacOS) off, now turn Finder back on.
         applescript="\'tell application \"Finder\" to launch\'" #turn Finder back on
         shellCmd = 'osascript -e '+applescript
         os.system(shellCmd)
-logging.flush();
+print('Got to the end of the program and now quitting normally.')
 core.quit()
