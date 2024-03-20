@@ -7,7 +7,7 @@ import warnings, os
 
 #df = trials.saveAsWideText("tempData",delim='\t')  #In experiment I only calling this to get the dataframe df
 
-fname = 'auto_14Mar2024_15-38trialHandler10trialsPerCond.tsv' #'exampleTrialHandlerExportData4trialsPerCond.tsv' #'exampleTrialHandlerAbortedSession13trials.tsv'  #'exampleTrialHandlerExportData1trialPerCond.tsv'
+fname = 'temp_20Mar2024_12-50trialHandler.tsv' #'auto_14Mar2024_15-38trialHandler10trialsPerCond.tsv' #'exampleTrialHandlerExportData4trialsPerCond.tsv' #'exampleTrialHandlerAbortedSession13trials.tsv'  #'exampleTrialHandlerExportData1trialPerCond.tsv'
 directory = 'dataExamples'
 df = pd.read_table( os.path.join(directory,fname) )
 #exampleTrialHandlerExportData1trialPerCond.tsv for data where fit fails
@@ -133,14 +133,12 @@ for index, cond in mainCondsDf.iterrows():
 
         #Make and plot an entire smooth curve for this condition
         xForCurve = np.arange(0,1.7,.02)
-        xForCurve = pd.DataFrame(xForCurve)
+        xForCurve = pd.DataFrame(xForCurve).to_numpy() #otherwise plot gives error on Windows
         predicted = logisticR.predict(xForCurve, chanceRate, parameters) # np.array(paramsDoubleA) )
-        predicted = predicted.flatten()
+        predicted = (pd.DataFrame(predicted)).to_numpy() #otherwise plot gives error on Windows
         plt.plot( xForCurve, predicted, colors[index]+'-' )
     plt.plot([0, 2.1], [chanceRate, chanceRate], 'k:')  # horizontal dashed line
     plt.text(-.2, chanceRate-.01, 'chanceRate', fontsize = 10)
-
-
 
  
 plt.legend()
