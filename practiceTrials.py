@@ -1,6 +1,6 @@
 ############################################################
 ### Hm, haven't tried waitBlank = True for a while
-###For set-up on a new machine, some variables to consider
+###For setup on a new machine, some variables to consider:
 ###
 ### useClock
 ### For setup of new experiment variant, variables to consider: 
@@ -46,7 +46,7 @@ except Exception as e:
 eyetracking = False; eyetrackFileGetFromEyelinkMachine = False #very timeconsuming to get the file from the eyetracking machine over the ethernet cable, 
 #sometimes better to get the EDF file from the Eyelink machine by hand by rebooting into Windows and going to 
 useSound=True
-quitFinder = True 
+quitFinder = False 
 if quitFinder and ('Darwin' in platform.system()): #turn Finder off. Only know the command for MacOS (Darwin)
     applescript="\'tell application \"Finder\" to quit\'" #quit Finder.
     shellCmd = 'osascript -e '+applescript
@@ -58,7 +58,7 @@ subject='temp'#'test'
 autoLogging = False
 quickMeasurement = False #If true, use method of gradually speeding up and participant says when it is too fast to track
 demo = False
-autopilot= True; simulateObserver=True; showOnlyOneFrameOfStimuli = False
+autopilot= False; simulateObserver=False; showOnlyOneFrameOfStimuli = False
 if autopilot:  subject='auto'
 feedback=True
 exportImages= False #quits after one trial / output image
@@ -80,7 +80,8 @@ radii=np.array([2.5,7,15]) #[2.5,9.5,15]   #Need to encode as array for those ex
 respRadius=radii[0] #deg
 refreshRate= 100.0   #160 #set to the framerate of the monitor
 useClock = True #as opposed to using frame count, which assumes no frames are ever missed
-fullscr=1; scrn=0
+fullscr=0 #Seedms like on the "Chris" computer, Window opening crashes if fullscr==1
+scrn=0
 #Find out if screen may be Retina because of bug in psychopy for mouse coordinates (https://discourse.psychopy.org/t/mouse-coordinates-doubled-when-using-deg-units/11188/5)
 has_retina_scrn = False
 import subprocess
@@ -105,7 +106,6 @@ if not OK.OK:
 autopilot = infoFirst['Autopilot']
 checkRefreshEtc = True
 scrn = infoFirst['Screen to use']
-#print('scrn = ',scrn, ' from dialog box')
 fullscr = infoFirst['Fullscreen (timing errors if not)']
 refreshRate = infoFirst['Screen refresh rate']
 
@@ -138,7 +138,7 @@ trialDurFrames=int(trialDurMin*refreshRate)+int( trackingExtraTime*refreshRate )
 rampUpFrames = refreshRate*cueRampUpDur;   rampDownFrames = refreshRate*cueRampDownDur;
 cueFrames = int( refreshRate*cueDur )
 rampDownStart = trialDurFrames-rampDownFrames
-ballStdDev = 1.8 * 3 
+ballStdDev = 1.8
 mouseChoiceArea = ballStdDev*0.8 # origin =1.3
 units='deg' #'cm'
 timeTillReversalMin = 0.5 #0.5; 
@@ -168,7 +168,7 @@ mon.setSizePix( (widthPixRequested,heightPixRequested) )
 myWin = openMyStimWindow(mon,widthPixRequested,heightPixRequested,bgColor,allowGUI,units,fullscr,scrn,waitBlank,autoLogging)
 myWin.setRecordFrameIntervals(False)
 
-trialsPerCondition = 3
+trialsPerCondition = 1
 
 refreshMsg2 = ''
 if not checkRefreshEtc:
@@ -200,15 +200,10 @@ else: #checkRefreshEtc
 
 myWin.close() #have to close window to show dialog box
 dlgLabelsOrdered = list() #new dialog box
-session=0
-myDlg = psychopy.gui.Dlg(title="object tracking experiment", pos=(200,400))
+myDlg = psychopy.gui.Dlg(title="")
 if not autopilot:
-    myDlg.addField('Subject name or ID:', subject, tip='')
+    myDlg.addField('Subject name or ID:', subject, tip='or subject code')
     dlgLabelsOrdered.append('subject')
-    myDlg.addField('session number:',session, tip='1,2,3,')
-    dlgLabelsOrdered.append('session')
-myDlg.addField('Trials per condition (default=' + str(trialsPerCondition) + '):', trialsPerCondition, tip=str(trialsPerCondition))
-dlgLabelsOrdered.append('trialsPerCondition')
 pctCompletedBreaks = np.array([])
 myDlg.addText(refreshMsg1, color='Black')
 if refreshRateWrong:
@@ -223,14 +218,15 @@ myDlg.show()
 if myDlg.OK: #unpack information from dialogue box
    thisInfo = myDlg.data #this will be a list of data returned from each field added in order
    if not autopilot:
-       name=thisInfo[dlgLabelsOrdered.index('subject')]
-       if len(name) > 0: #if entered something
-         subject = name #change subject default name to what user entered
-       sessionEntered =thisInfo[dlgLabelsOrdered.index('session')] #it comes from dlg as an integer rather than a string, which is good
-       if not isinstance(session, int):
-         print('Error! session must be integer'); core.quit()
-       session = sessionEntered       
-   trialsPerCondition = int( thisInfo[ dlgLabelsOrdered.index('trialsPerCondition') ] ) #convert string to integer
+    failedToCaptureSubjectName = False
+    try:
+        name=thisInfo[dlgLabelsOrdered.index('subject')]
+    except Exception as e:
+        print("Warning: failed to capture subject name")   #This seemed to happen on Adam Reeves' Windows 10 machine
+        failedToCaptureSubjectName = True
+    if failedToCaptureSubjectName == False:
+        if len(name) > 0: #if entered something
+            subject = name #change subject default name to what user entered
 else: 
    print('User cancelled from dialog box.')
    logging.flush()
@@ -242,7 +238,7 @@ else:
     print('"dataRaw" directory does not exist, so saving data in present working directory')
     dataDir='.'
 expname = ''
-datafileName = dataDir+'/'+subject+ '_' + str(session) + '_' + expname+timeAndDateStr
+datafileName = dataDir+'/'+subject+ 'PRACTICE' + '_' + expname+timeAndDateStr
 if not demo and not exportImages:
     dataFile = open(datafileName+'.tsv', 'w')  # sys.stdout
     import shutil
@@ -271,8 +267,7 @@ logging.info("computer platform="+sys.platform)
 #save a copy of the code as it was when that subject was run
 logging.info('File that generated this = sys.argv[0]= '+sys.argv[0])
 logging.info("has_retina_scrn="+str(has_retina_scrn))
-logging.info('trialsPerCondition =' + str(trialsPerCondition))
-logging.info('random number seed =' + str(rng_seed))
+
 #Not a test - the final window opening
 myWin = openMyStimWindow(mon,widthPixRequested,heightPixRequested,bgColor,allowGUI,units,fullscr,scrn,waitBlank,autoLogging)
 myWin.setRecordFrameIntervals(False)
@@ -354,146 +349,52 @@ if useSound:
         soundFileNameAndPath = os.path.join(soundDir, ringQuerySoundFileNames[ i ])
         respPromptSounds[i] = sound.Sound(soundFileNameAndPath, secs=.2, autoLog=autoLogging)
     corrSoundPathAndFile= os.path.join(soundDir, 'Ding44100Mono.wav')
-    corrSound = sound.Sound(corrSoundPathAndFile, autoLog=autoLogging)
+    corrSound = sound.Sound(corrSoundPathAndFile, volume=.8, autoLog=autoLogging)
 
+######################################
+# Set up default practice trials. These can be overruled by experimenter in dialog box that appears before each trial.
+practice_speed =          [.1, .1, .2, .2, .2, .2, .1, .1, .05, .05, .05, .05, .03, .03, .03, .03, .02, .02, .02, .01, .02, .02, .02, .01, .01, .02, .02, .01, .02, .02, .02, .01, .01, .02, .02, .01]
+practice_numObjsInRing =  [4,   4,  8,  8,  4,  4,  8,  8,   4,   4,   8,   8,   4,   4,   8,   8,   4,   4,   8,   8,   4,   4,   8,   8,   4,   4,   8,   8,   4,   4,   8,   8,   4,   4,   8,   8]       
+practice_numTargets =     [2,   3,  2,  3,  2,  3,  2,  3,   2,   3,   2,   3,   2,   3,   2,   3,   2,   3,   2,   3,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1,   1] 
+#################################################################
+
+numPresetPracticeTrials = len(practice_numTargets)
+practiceList = []
+for i in range(numPresetPracticeTrials):
+    thisPracticeTrial ={'numTargets':practice_numTargets[i], 
+                        'numObjectsInRing':practice_numObjsInRing[i], 
+                        'speed':practice_speed[i]      }
+    practiceList.append( thisPracticeTrial )
+
+print('practiceList=', practiceList)
+
+ringNums = np.arange(numRings)
+basicShape = 'circle'
 stimList = []
-doStaircase = True
-# temporalfrequency limit test
-numTargets =        [2,                 3] #[2]
-numObjsInRing =     [4,                 8] #[4]      #Limitation: gratings don't align with blobs with odd number of objects
+for cond in practiceList:
+    numObjs = cond['numObjectsInRing']
+    numTargets = cond['numTargets']
+    speed = cond['speed']                
 
-# Get all combinations of those two main factors
-#mainCondsInfo = {
-#    'numTargets':    [2, 2, 3, 3],
-#    'numObjects':    [4, 8, 4, 8],
-#}
-combinations = list(itertools.product(numTargets, numObjsInRing))
-# Create the DataFrame with all combinations
-mainCondsDf = pd.DataFrame(combinations, columns=['numTargets', 'numObjects'])
-mainCondsInfo = mainCondsDf.to_dict('list') #change into a dictionary, in list format
+    initialDirRing0 = random.choice([-1,1])
+    #will randomly at time of trial choose which rings have targets and which one querying.
+    whichIsTargetEachRing = np.ones(numRings)*-999 #initialize to -999, meaning not a target in that ring. '1' will indicate which is the target
+    ringToQuery = 999 #this is the signal to choose the ring randomly
+    stimList.append( {'basicShape':basicShape, 'numObjectsInRing':numObjs,'speed':speed,'initialDirRing0':initialDirRing0,
+                                'numTargets':numTargets,'whichIsTargetEachRing':whichIsTargetEachRing,'ringToQuery':ringToQuery} )            
 
-publishedThreshes = publishedEmpiricalThreshes.getAvgMidpointThreshes()
-publishedThreshes = publishedThreshes[['numTargets', 'HzAvgPreviousLit']] #only want average of previous literature
-
-mainCondsDf = pd.DataFrame( mainCondsInfo )
-mainCondsDf = pd.merge(mainCondsDf, publishedThreshes, on='numTargets', how='left')
-mainCondsDf['midpointThreshPrevLit'] = mainCondsDf['HzAvgPreviousLit'] / mainCondsDf['numObjects']
-mainCondsDf = mainCondsDf.drop('HzAvgPreviousLit', axis=1)  #Use this Dataframe to choose the starting speed for the staircase and the behavior of the autopilot observer
-                        
-
-#Old way of setting all speeds manually:
-#speedsEachNumTargetsNumObjects =   [ [ [0.5,1.0,1.4,1.7], [0.5,1.0,1.4,1.7] ],     #For the first numTargets condition
-#                                     [ [0.2,0.5,0.7,1.0], [0.5,1.0,1.4,1.7] ]  ]  #For the second numTargets condition
-
-#don't go faster than 2 rps at 120 Hz because of temporal blur/aliasing
-
-maxTrialsPerStaircase = 500 #Just an unreasonably large number so that the experiment won't stop before the number of trials set by the trialHandler is finished
-staircases = []
-#Need to create a different staircase for each condition because chanceRate will be different and want to estimate midpoint threshold to match previous work
-if doStaircase: #create the staircases
-    for stairI in range(len(mainCondsDf)): #one staircase for each main condition
-        descendingPsychometricCurve = True
-        #the average threshold speed across conditions found by previous literature for young people
-        avgAcrossCondsFromPrevLit = mainCondsDf['midpointThreshPrevLit'].mean()
-        if session <= 1:  #give all the staircases the same starting value 
-            startVal = 0.6 * avgAcrossCondsFromPrevLit #Don't go higher because this was the average for the young people only
-        elif session == 2:
-            startVal = avgAcrossCondsFromPrevLit
-        elif session >= 3:
-            startVal = 0.75 * avgAcrossCondsFromPrevLit
-
-        startValInternal = staircaseAndNoiseHelpers.toStaircase(startVal, descendingPsychometricCurve)
-        print('staircase startVal=',startVal,' startValInternal=',startValInternal)
-
-        this_row = mainCondsDf.iloc[stairI]
-        condition = this_row.to_dict() # {'numTargets': 2, 'numObjects': 4}
-        
-        nUp = 1; nDown=3 #1-up 3-down homes in on the 79.4% threshold. Make it easier if get one wrong. Make it harder when get 3 right in a row
-        if nUp==1 and nDown==3:
-            staircaseConvergePct = 0.794
-        else:
-            print('WARNING: dont know what staircaseConvergePct is')    
-        minSpeed = .03# -999 #0.05
-        maxSpeed= 1.8 #1.8    #1.8
-        minSpeedForStaircase = staircaseAndNoiseHelpers.toStaircase(minSpeed, descendingPsychometricCurve)
-        maxSpeedForStaircase = staircaseAndNoiseHelpers.toStaircase(maxSpeed, descendingPsychometricCurve)
-        #if descendingPsychometricCurve
-        if minSpeedForStaircase > maxSpeedForStaircase:
-            #Swap values of the two variables
-            minSpeedForStaircase, maxSpeedForStaircase = maxSpeedForStaircase, minSpeedForStaircase
-        #print('for internals, minSpeedForStaircase=',minSpeedForStaircase, 'maxSpeedForStaircase=',maxSpeedForStaircase)
-        staircase = data.StairHandler(
-            extraInfo = condition,
-            startVal=startValInternal,
-            stepType='lin',
-            stepSizes= [.3,.3,.2,.1,.1,.05],
-            minVal = minSpeedForStaircase, 
-            maxVal= maxSpeedForStaircase,
-            nUp=nUp, nDown=nDown,  
-            nTrials = maxTrialsPerStaircase)
-    
-        numPreStaircaseTrials = 0
-        #staircaseAndNoiseHelpers.printStaircase(staircase, descendingPsycho, briefTrialUpdate=True, printInternalVal=True, alsoLog=False)
-        print('Adding this staircase to list')
-        staircases.append(staircase)
-
-#phasesMsg = ('Doing '+str(numPreStaircaseTrials)+'trials with speeds= TO BE DETERMINED'+' then doing a max '+ \
-#              str(maxTrialsPerStaircase)+'-trial staircase for each condition:')
-queryEachRingEquallyOften = False
-#To query each ring equally often, the combinatorics are complicated because have different numbers of target conditions.
-if queryEachRingEquallyOften:
-    leastCommonMultipleSubsets = int( helpersAOH.calcCondsPerNumTargets(numRings,numTargets) )
-    leastCommonMultipleTargetNums = int( helpersAOH.LCM( numTargets ) )  #have to use this to choose ringToQuery.
-    #for each subset, need to counterbalance which target is queried. Because each element occurs equally often, which one queried can be an independent factor. But need as many repetitions as largest number of target numbers.
-    # 3 targets . 3 subsets maximum. Least common multiple is 3. 3 rings that could be post-cued. That means counterbalancing requires 3 x 3 x 3 = 27 trials. NO! doesn't work
-    # But what do you do when 2 targets, which one do you pick in the 3 different situations? Can't counterbalance it evenly, because when draw 3rd situation, half of time should pick one and half the time the other. Therefore have to use least common multiple of all the possible set sizes. Unless you just want to throw away that possibility. But then have different number of trials in 2 targets than in 3 targets.
-    #		-  Is that last sentence true? Because always seem to be running leastCommonMultipleSubsets/numSubsetsThis for each numTargets
-    #	 Check counterbalancing of numObjectsInRing*speed*numTargets*ringToQuery.  Leaving out whichIsTargetEachRing which is a list of which of those numTargets is the target.
-    print('leastCommonMultipleSubsets=',leastCommonMultipleSubsets, ' leastCommonMultipleTargetNums= ', leastCommonMultipleTargetNums)
-                    
-for numObjs in numObjsInRing: #set up experiment design
-    for nt in numTargets: #for each num targets condition,
-      numObjectsIdx = numObjsInRing.index(numObjs)
-      numTargetsIdx = numTargets.index(nt)
-      if doStaircase: #Speeds will be determined trial-by-trial by the staircases. However, to estimate lapse rate,
-        #we need occasional trials with a slow speed.
-        speeds = [[.02,.1],'staircase','staircase','staircase','staircase']  #speeds = [0.02, 0.1, -99, -99, -99]
-      else: 
-        speeds= speedsEachNumTargetsNumObjects[  numTargetsIdx ][ numObjectsIdx ]
-      for speed in speeds:
-        ringNums = np.arange(numRings)
-        if queryEachRingEquallyOften:
-            #In case of 3 rings and 2 targets, 3 choose 2 = 3 possible ring combinations
-            #If 3 concentric rings involved, have to consider 3 choose 2 targets, 3 choose 1 targets, have to have as many conditions as the maximum
-            subsetsThis = list(itertools.combinations(ringNums,nt)) #all subsets of length nt from the rings. E.g. if 3 rings and nt=2 targets
-            numSubsetsThis = len( subsetsThis );   print('numSubsetsThis=',numSubsetsThis, ' subsetsThis = ',subsetsThis)
-            repsNeeded = leastCommonMultipleSubsets / numSubsetsThis #that's the number of repetitions needed to make up for number of subsets of rings
-            for r in range( int(repsNeeded) ): #Balance different nt conditions. For nt with largest number of subsets, need no repetitions
-              for s in subsetsThis: #to equate ring usage, balance by going through all subsets. E.g. 3 rings with 2 targets is 1,2; 1,3; 2,3
-                  whichIsTargetEachRing = np.ones(numRings)*-999 #initialize to -999, meaning not a target in that ring.
-                  for ring in s:
-                      whichIsTargetEachRing[ring] = np.random.randint(0,numObjs-1,size=1)
-                  print('numTargets=',nt,' whichIsTargetEachRing=',whichIsTargetEachRing,' and that is one of ',numSubsetsThis,' possibilities and we are doing ',repsNeeded,'repetitions')
-                  for whichToQuery in range( leastCommonMultipleTargetNums ):  #for each subset, have to query one. This is dealed out to  the current subset by using modulus. It's assumed that this will result in equal total number of queried rings
-                      whichSubsetEntry = whichToQuery % nt  #e.g. if nt=2 and whichToQuery can be 0,1,or2 then modulus result is 0,1,0. This implies that whichToQuery won't be totally counterbalanced with which subset, which is bad because
-                                      #might give more resources to one that's queried more often. Therefore for whichToQuery need to use least common multiple.
-                      ringToQuery = s[whichSubsetEntry];  #print('ringToQuery=',ringToQuery,'subset=',s)
-                      for basicShape in ['circle']: #'diamond'
-                        for initialDirRing0 in [-1,1]:
-                                stimList.append( {'basicShape':basicShape, 'numObjectsInRing':numObjs,'speed':speed,'initialDirRing0':initialDirRing0,
-                                        'numTargets':nt,'whichIsTargetEachRing':whichIsTargetEachRing,'ringToQuery':ringToQuery} )
-        else: # not queryEachRingEquallyOften, because that requires too many trials for a quick session. Instead
-            #will randomly at time of trial choose which rings have targets and which one querying.
-            whichIsTargetEachRing = np.ones(numRings)*-999 #initialize to -999, meaning not a target in that ring. '1' will indicate which is the target
-            ringToQuery = 999 #this is the signal to choose the ring randomly
-            for basicShape in ['circle']: #'diamond'
-                for initialDirRing0 in [-1,1]:
-                    stimList.append( {'basicShape':basicShape, 'numObjectsInRing':numObjs,'speed':speed,'initialDirRing0':initialDirRing0,
-                                'numTargets':nt,'whichIsTargetEachRing':whichIsTargetEachRing,'ringToQuery':ringToQuery} )            
-
-trials = data.TrialHandler(stimList,trialsPerCondition) #constant stimuli method
+trials = data.TrialHandler(stimList,trialsPerCondition, method ='sequential') #method ‘sequential’ presents the conditions in the order they appear in the list
 print('len(stimList), which is the list of conditions, is =',len(stimList))
 #print('stimList = ',stimList)
+
+unique_numTargets = list(set(practice_numTargets)); unique_numObjects = list(set(practice_numObjsInRing))
+
+combinations = list(itertools.product(unique_numTargets, unique_numObjects))
+# Create the DataFrame with all combinations, to help plot data at end
+mainCondsDf = pd.DataFrame(combinations, columns=['numTargets', 'numObjects'])
+mainCondsInfo = mainCondsDf.to_dict('list') #change into a dictionary, in list format
+mainCondsDf = pd.DataFrame( mainCondsInfo )
+
 timeAndDateStr = time.strftime("%d%b%Y_%H-%M", time.localtime()) 
 logging.info(  str('starting exp with name: "'+'TemporalFrequencyLimit'+'" at '+timeAndDateStr)   )
 msg = 'numtrials='+ str(trials.nTotal)+', trialDurMin= '+str(trialDurMin)+ ' trackVariableIntervMax= '+ str(trackVariableIntervMax) + 'refreshRate=' +str(refreshRate)     
@@ -971,7 +872,7 @@ def collectResponses(thisTrial,speed,n,responses,responsesAutopilot, respPromptS
                                 respondedEachToken[optionSet][ncheck] = 1 #register this one has been clicked
                                 responses[optionSet].append(c) #this redundant list also of course encodes the order
                                 respcount += 1  
-                                print('added  ',ncheck,'th response to clicked list')
+                                #print('added  ',ncheck,'th response to clicked list')
                 #print 'response=', response, '  respcount=',respcount, ' lastClickState=',lastClickState, '  after affected by click'
            #end if mouse clicked
            
@@ -1001,7 +902,7 @@ def collectResponses(thisTrial,speed,n,responses,responsesAutopilot, respPromptS
     
 print('Starting experiment of',trials.nTotal,'trials, starting with trial 0.')
 #print header for data file
-print('trialnum\tsubject\tsession\tbasicShape\tnumObjects\tspeed\tinitialDirRing0', end='\t', file=dataFile)
+print('trialnum\tsubject\tbasicShape\tnumObjects\tspeed\tinitialDirRing0', end='\t', file=dataFile)
 print('orderCorrect\ttrialDurTotal\tnumTargets', end= '\t', file=dataFile) 
 for i in range(numRings):
     print('whichIsTargetEachRing',i,  sep='', end='\t', file=dataFile)
@@ -1022,7 +923,7 @@ trialDurTotal=0;
 ts = list();
 
 if eyetracking:
-    EDF_fname_local=('EyeTrack_'+subject+'_' + str(session) + '_' + timeAndDateStr+'.EDF')
+    EDF_fname_local=('EyeTrack_'+subject+'_'+timeAndDateStr+'.EDF')
     my_tracker = EyelinkHolcombeLabHelpers.EyeLinkTrack_Holcombe(myWin,trialClock,subject,1, 'HV5',(255,255,255),(0,0,0),False,(widthPix,heightPix))
 
 randomStartAngleEachRing = True
@@ -1031,34 +932,71 @@ oppositeInitialDirFirstTwoRings = True
 
 while trialNum < trials.nTotal and expStop==False:
     helpersAOH.accelerateComputer(1,process_priority, disable_gc) #I don't know if this does anything
-    if quickMeasurement:
-        maxSpeed = 1.0; numObjects = 10; numTargets = 3
-        # create a dialog box from dictionary 
-        infoFirst = { 'maxSpeed':maxSpeed, 'numObjects':numObjects, 'numTargets':numTargets  }
-        manualParams = psychopy.gui.DlgFromDict(dictionary=infoFirst, title='Quick speed limit measurement', 
-            order=['maxSpeed','numObjects', 'numTargets'], 
-            tip={'Maximum speed for speed ramp': 'How many objects','How many targets': 'no more than 3'}
-            )
-        maxSpeed = infoFirst['maxSpeed']
-        numObjects = infoFirst['numObjects']
-        numTargets = infoFirst['numTargets']
-    if not OK.OK:
-        print('User cancelled from dialog box'); core.quit()
+    if not autopilot:
+        if quickMeasurement:
+            maxSpeed = 1.0; numObjects = 10; numTargets = 3
+            # create a dialog box from dictionary 
+            infoFirst = { 'maxSpeed':maxSpeed, 'numObjects':numObjects, 'numTargets':numTargets  }
+            manualParams = psychopy.gui.DlgFromDict(dictionary=infoFirst, title='Quick speed limit measurement', 
+                order=['maxSpeed','numObjects', 'numTargets'], 
+                tip={'Maximum speed for speed ramp': 'How many objects','How many targets': 'no more than 3'}
+                )
+            maxSpeed = infoFirst['maxSpeed']
+            numObjects = infoFirst['numObjects']
+            numTargets = infoFirst['numTargets']
+            if not manualParams.OK:
+                print('User cancelled from dialog box'); core.quit()
+        else: #Show default params for this trial in dlg box, allow user to optionally change them
+            if fullscr: #have to close window to show dialog box
+                myWin.close()
+            # create a dialog box incrementally
+            dlgLabelsOrdered = list() #new dialog box
+            myDlg = psychopy.gui.Dlg(title="Practice trial #" + str(trialNum), labelButtonCancel='Quit after next trial')
+            if trialNum >0:
+                if correctForFeedback:
+                    myDlg.addText("Previous trial CORRECT", color='Green')
+                    msgColor =  "#006600" #"DimGreen"
+                else:
+                    myDlg.addText("Previous trial INCORRECT", color='Red')
+                    msgColor =   "#660000" # "DimRed"
+                msg =("speed was " + str( round(prevTrial['speed'],1) ) + 
+                     ", targets was " + str( prevTrial['numTargets'] ) +
+                     ", objects was " + str( prevTrial['numObjectsInRing'] )   )
+                myDlg.addText(msg, color=msgColor)
+
+            myDlg.addText("                                This trial                  ", color='Black')
+            myDlg.addField('targets:', thisTrial['numTargets'], tip='')
+            dlgLabelsOrdered.append('numTargets')
+            myDlg.addField('objects per ring:', thisTrial['numObjectsInRing'], tip='')
+            dlgLabelsOrdered.append('numObjects')
+            myDlg.addField('speed:', thisTrial['speed'], tip='')
+            dlgLabelsOrdered.append('speed')
+            myDlg.show()
+            if myDlg.OK: #unpack information from dialogue box
+                thisInfo = myDlg.data #this will be a list of data returned from each field added in order
+                thisTrial['numTargets']=  thisInfo[dlgLabelsOrdered.index('numTargets')]
+                thisTrial['numObjectsInRing']=  thisInfo[dlgLabelsOrdered.index('numObjects')]
+                thisTrial['speed']=  thisInfo[dlgLabelsOrdered.index('speed')]
+            else:
+                print('User cancelled from dialog box'); expStop = True
+            if fullscr:
+                myWin = openMyStimWindow(mon,widthPixRequested,heightPixRequested,bgColor,allowGUI,units,fullscr,scrn,waitBlank,autoLogging)
+                #Have to create new mouse object otherwise mouse coordinates won't work
+                myMouse = psychopy.event.Mouse(visible ='true',win=myWin)
+
+    #To determine whichRingsHaveTargets, sample from 0,1,...,numRings by permuting that list
+    rings = list(range(numRings) )
+    random.shuffle(rings)
+    whichRingsHaveTargets = rings[ 0:thisTrial['numTargets'] ]
+    #print("should be -999 at this point: thisTrial['whichIsTargetEachRing'] = ", thisTrial['whichIsTargetEachRing'])
+    #Randomly assign a target object for each ring that is meant to have a target
+    for r in whichRingsHaveTargets:
+        thisTrial['whichIsTargetEachRing'][r] = np.random.randint(0,thisTrial['numObjectsInRing'])
+    #Randomly pick ring to query. 
+    random.shuffle(whichRingsHaveTargets)
+    thisTrial['ringToQuery'] = whichRingsHaveTargets[0]
+    #print("thisTrial['numTargets']=",thisTrial['numTargets'], " thisTrial['whichIsTargetEachRing'] = ", thisTrial['whichIsTargetEachRing'], " thisTrial['ringToQuery']",thisTrial['ringToQuery'])
     
-    if not queryEachRingEquallyOften: #then need to randomly set ringToQuery and whichIsTargetEachRing
-        #To determine whichRingsHaveTargets, sample from 0,1,...,numRings by permuting that list
-        rings = list(range(numRings) )
-        random.shuffle(rings)
-        whichRingsHaveTargets = rings[ 0:thisTrial['numTargets'] ]
-        #print("should be -999 at this point: thisTrial['whichIsTargetEachRing'] = ", thisTrial['whichIsTargetEachRing'])
-        #Randomly assign a target object for each ring that is meant to have a target
-        for r in whichRingsHaveTargets:
-            thisTrial['whichIsTargetEachRing'][r] = np.random.randint(0,thisTrial['numObjectsInRing'])
-        #Randomly pick ring to query. 
-        random.shuffle(whichRingsHaveTargets)
-        thisTrial['ringToQuery'] = whichRingsHaveTargets[0]
-        #print("thisTrial['numTargets']=",thisTrial['numTargets'], " thisTrial['whichIsTargetEachRing'] = ", thisTrial['whichIsTargetEachRing'], " thisTrial['ringToQuery']",thisTrial['ringToQuery'])
-        
     colorRings=list();preDrawStimToGreasePipeline = list()
     isReversed= list([1]) * numRings #always takes values of -1 or 1
     reversalNumEachRing = list([0]) * numRings
@@ -1088,7 +1026,7 @@ while trialNum < trials.nTotal and expStop==False:
     blobsToPreCue= thisTrial['whichIsTargetEachRing'] # [0,1,2] #debug 
     core.wait(.1)
     myMouse.setVisible(False)  #Doesn't seem to work any longer
-    myMouse.setPos(newPos=(0,-15*3)) #Try to move mouse pointer offscreen. Supposedly it's in the window's units (deg) but that doesn't seem true, at least on Retina    
+    myMouse.setPos(newPos=(0,-15*3)) #Try to move mouse pointer offscreen. Supposedly it's in the window's units (deg) but that doesn't seem true, at least on Retina
     if eyetracking: 
         my_tracker.startEyeTracking(trialNum,calibTrial=True,widthPix=widthPix,heightPix=heightPix) # tell eyetracker to start recording
             #and calibrate. It tries to draw on the screen to do the calibration.
@@ -1109,39 +1047,21 @@ while trialNum < trials.nTotal and expStop==False:
         gratingObjAngle = 20; #the angle an individual object subtends, of the circle
         increaseRadiusFactorToEquateWithBlobs = 2.1 #Have no idea why, because units seem to be deg for both. Expect it to only be a bit smaller due to mask
         radiiGratings = radii*increaseRadiusFactorToEquateWithBlobs
-        ringRadial,cueRing,currentlyCuedBlob = \
-                constructRingAsGratingSimplified(radiiGratings,thisTrial['numObjectsInRing'],gratingObjAngle,colors_all,
-                                                 stimColorIdxsOrder,gratingTexPix,blobsToPreCue)
+        ringRadial,cueRing,currentlyCuedBlob = constructRingAsGratingSimplified(
+                                radiiGratings,thisTrial['numObjectsInRing'],gratingObjAngle,colors_all,
+                                stimColorIdxsOrder,gratingTexPix,blobsToPreCue)
         preDrawStimToGreasePipeline.extend([ringRadial[0],ringRadial[1],ringRadial[2]])
     core.wait(.1)
 
-    if not doStaircase and not quickMeasurement:
+    if not quickMeasurement:
         currentSpeed = thisTrial['speed'] #In normal experiment, no speed ramp
+        speedThisTrial = currentSpeed
     elif quickMeasurement: #in quick measurement mode, which uses a speed ramp
         speedThisTrial = maxSpeed
         currentSpeed = 0.01
         speedRampStep = 0.01
         print('ramp currentSpeed =',round(currentSpeed,2))
-    elif doStaircase: #speed will be set by staircase corresponding to this condition, or occasional ultra-slow speed as specified by speeds,
-          #to estimate lapseRate
-        if thisTrial['speed'] == 'staircase':
-            #Work out which staircase this is, by finding out which row of mainCondsDf this condition is
-            rownum = mainCondsDf[ (mainCondsDf['numTargets'] == thisTrial['numTargets']) &
-                                  (mainCondsDf['numObjects'] == thisTrial['numObjectsInRing'] )       ].index
-            condnum = rownum[0] #Have to take[0] because it was a pandas Index object, I guess to allow for possibility of multiple indices
-            staircaseThis = staircases[condnum]
-            speedThisInternal = staircaseThis.next()
-            speedThisTrial = staircaseAndNoiseHelpers.outOfStaircase(speedThisInternal, staircaseThis, descendingPsychometricCurve) 
-            #print('speedThisInternal from staircase=',round(speedThisInternal,2),'speedThisTrial=',round(speedThisTrial,2))
-        else: #manual occasional speed, probably ultra-slow to estimate lapseRate
-            #print('Non-staircase slow speed!, speedThisTrial=',thisTrial['speed'], ' will pick a random one')
-            if len(thisTrial['speed']) >1: #randomly pick from speeds specified, not deterministic to avoid having too many trials 
-                # while also trying to have overwhelming majority be staircase
-                speedThisTrial = random.choice(thisTrial['speed'])
-            else:
-                speedThisTrial = thisTrial['speed']
-        currentSpeed = speedThisTrial #no speed ramp
-           
+         
     t0=trialClock.getTime(); #t=trialClock.getTime()-t0         
     #the loop for this trial's stimulus!
     for n in range(trialDurFrames): 
@@ -1152,8 +1072,7 @@ while trialNum < trials.nTotal and expStop==False:
             perimeter = radii[numRing]*4.0
             circum = 2*pi*radii[numRing]
             finalspeed = speedThisTrial * perimeter/circum #Have to go this much faster to get all the way around in same amount of time as for circle
-        #print('currentSpeed=',currentSpeed) 
-
+        #print('currentSpeed=',currentSpeed)
         (angleIni,currAngle,isReversed,reversalNumEachRing) = \
             oneFrameOfStim(thisTrial,currentSpeed,n,stimClock,useClock,offsetXYeachRing,initialDirectionEachRing,currAngle,blobsToPreCue,isReversed,reversalNumEachRing,cueFrames) #da big function
 
@@ -1196,7 +1115,7 @@ while trialNum < trials.nTotal and expStop==False:
        if longFramesStr != None:
                 msg= 'trialnum=' + str(trialNum) + ' ' + longFramesStr
                 print(msg, file=logF)
-                print(msg)
+                #print(msg) #Dont print because gets in between practice trial result printout
                 if not demo:
                     flankingAlso=list()
                     for idx in idxsInterframeLong: #also print timing of one before and one after long frame
@@ -1259,8 +1178,8 @@ while trialNum < trials.nTotal and expStop==False:
 
     if passThisTrial:   orderCorrect = -1    #indicate for data analysis that observer opted out of this trial, because think they moved their eyes
 
-    #header print('trialnum\tsubject\tsession\tbasicShape\tnumObjects\tspeed\tinitialDirRing0\tangleIni
-    print(trialNum,subject,session,thisTrial['basicShape'],thisTrial['numObjectsInRing'],
+    #header print('trialnum\tsubject\tbasicShape\tnumObjects\tspeed\tinitialDirRing0\tangleIni
+    print(trialNum,subject,thisTrial['basicShape'],thisTrial['numObjectsInRing'],
             speedThisTrial, #could be different than thisTrial['speed'] because staircase
             thisTrial['initialDirRing0'],sep='\t', end='\t', file=dataFile) #override newline end
     print(orderCorrect,'\t',trialDurTotal,'\t',thisTrial['numTargets'],'\t', end=' ', file=dataFile) 
@@ -1275,19 +1194,6 @@ while trialNum < trials.nTotal and expStop==False:
             print('-999\t', end='', file=dataFile)
     print(numCasesInterframeLong, file=dataFile)
 
-    if autopilot and doStaircase and simulateObserver:
-        chanceRate = 1.0 / thisTrial['numObjectsInRing']
-        rownum = mainCondsDf[ (mainCondsDf['numTargets'] == thisTrial['numTargets']) &
-                                  (mainCondsDf['numObjects'] == thisTrial['numObjectsInRing'] )       ].index
-        condnum = rownum[0] #Have to take[0] because it was a pandas Index object, I guess to allow for possibility of multiple indices
-        staircaseThis = staircases[condnum] #needed to look this up because on some trials, staircase is possibly not used (slow speed to estimate lapserate)
-        threshold = staircaseThis.extraInfo['midpointThreshPrevLit']
-        lapseRate = .05
-        #print('simulating response with speedThisTrial=',round(speedThisTrial,2),'chanceRate=',chanceRate,'lapseRate=',lapseRate,'threshold=',threshold)
-        correct_sim = staircaseAndNoiseHelpers.simulate_response(speedThisTrial,chanceRate,lapseRate,threshold,descendingPsychometricCurve)
-        orderCorrect = correct_sim*3 #3 is fully correct
-        #print('speedThisTrial=',speedThisTrial,'threshold=',round(threshold,2),'correct_sim=',correct_sim,'orderCorrect=',orderCorrect)
-        
     numTrialsOrderCorrect += (orderCorrect >0)  #so count -1 as 0
     numAllCorrectlyIdentified += (numColorsCorrectlyIdentified==3)
     dataFile.flush(); logging.flush(); 
@@ -1303,34 +1209,27 @@ while trialNum < trials.nTotal and expStop==False:
             if useSound:
                 lowSound = sound.Sound('E',octave=3, secs=.8, volume=0.9)
                 lowSound.play()
-    trials.addData('speedThisTrial',speedThisTrial)  #when doStaircase is true, this will often be different than thisTrial['speed]
+    trials.addData('speedThisTrial',speedThisTrial)
     trials.addData('orderCorrect',orderCorrect)
     trials.addData('correctForFeedback',correctForFeedback)
-    if doStaircase and (thisTrial['speed']=='staircase'):
-        staircaseThis.addResponse(correctForFeedback) #add correct/incorrect to the staircase so it can calculate the next speed
 
-    if trials.nTotal <= 10:
-        breakTrialNums = [] #Only have breaks if more than 10 trials
-    else: 
-        breakTrialNums = np.round( pctCompletedBreaks/100. * trials.nTotal )
-        breakTrialNums = breakTrialNums[breakTrialNums >= 3] #No point having a break before trial 3.
-        #print('breakTrialNums=',breakTrialNums)
+    #Print feedback to experimenter
+    msg1 = "trial #" + str(trialNum)
+    if correctForFeedback:
+        msg1 += " INcorrect"
+    else: msg1 += " CORRECT"
+    print(msg1,end=" ")
+    msg2 = "targets=" + str(thisTrial['numTargets']) + " objectsInRing="+ str(thisTrial['numObjectsInRing']) + " speed=" + str(speedThisTrial)
+    print(msg2)
+
     trialNum+=1
     waitForKeyPressBetweenTrials = False
     if trialNum< trials.nTotal:
         pctDone =  (1.0*trialNum) / (1.0*trials.nTotal)*100
         NextRemindPctDoneText.setText( str(round(pctDone)) + '% complete' )
         NextRemindCountText.setText( str(trialNum) + ' of ' + str(trials.nTotal) )
-        if np.isin(trialNum, breakTrialNums): 
-            breakTrial = True
-        else: breakTrial = False
-        if breakTrial:
-            for i in range(5):
-                myWin.flip(clearBuffer=True)
-                NextRemindPctDoneText.draw()
-                NextRemindCountText.draw()
         waitingForKeypress = False
-        if waitForKeyPressBetweenTrials or breakTrial:
+        if waitForKeyPressBetweenTrials:
             waitingForKeypress=True
             NextText.setText('Press "SPACE" to continue')
             NextText.draw()
@@ -1351,6 +1250,7 @@ while trialNum < trials.nTotal and expStop==False:
                     expStop = True
                     waitingForKeypress=False
         myWin.clearBuffer()
+        prevTrial = thisTrial #Need to put previous trial values in practice trials dialog box. Have changed so can't use trialHandler prev trial access
         thisTrial = trials.next()
         
     core.wait(.1); time.sleep(.1)
@@ -1359,7 +1259,6 @@ if expStop == True:
     logging.info('User aborted experiment by keypress with trialNum=' + str(trialNum))
     print('User aborted experiment by keypress with trialNum=', trialNum)
 
-timeAndDateStr = time.strftime("%d%b%Y_%H-%M", time.localtime()) 
 msg = 'Finishing now, at ' + timeAndDateStr
 logging.info(msg); print(msg)
 #print('%correct order = ', round( numTrialsOrderCorrect*1.0/trialNum*100., 2)  , '% of ',trialNum,' trials', end=' ')
@@ -1386,178 +1285,101 @@ else:
 logging.flush();
 myWin.close()
 
-if doStaircase: #report staircase results
-    meanReversalsEachStaircase = np.zeros( len(staircases) )
-    # Create a new column and initialize with NaN or some default value
-    mainCondsDf['meanReversal'] = np.nan
+plotResults = False; summarizeResults = False
+if plotResults or summarizeResults:
+    #Plot percent correct by condition and speed for all trials
+    trialHandlerDatafilename = datafileName + 'trialHandler.tsv'
+    df = trials.saveAsWideText(trialHandlerDatafilename,delim='\t')  #Only calling this to get the dataframe df
+    #If session was incomplete, then trials that didn't get to have value "--" in columns set dynamically, like speedThisTrial
+    # Create a boolean mask for where 'speedThisTrial' is '--'
+    #Sometimes saveAsWideText uses double dashes flanked by spaces but sometimes not it seems, to indicate a blank value because the trial wasn't run.
+    df['speedThisTrial'] = df['speedThisTrial'].str.strip() #remove leading and trailing spaces
+    #For some reason the previous line converts all the non-numbers to NaN
+    print("prior to conversion to numeric df['speedThisTrial']=", df['speedThisTrial'])
+    dashes_mask = df['speedThisTrial'].isna()    
+    #dashes_mask = (df['speedThisTrial'] == '--') # | (df['speedThisTrial'] == ' -- ') | (df['speedThisTrial'] == ' --') 
+    print('dashes_mask=',dashes_mask) #Why doesnt it work to detect dashes
+    lastRow = df.iloc[-1]
+    lastRow = lastRow['speedThisTrial'] #.values[0] #values[0] is to prevent returning the row number
+    print('last row speedThisTrial="', lastRow, '"')
+    all_false = (~dashes_mask).all()
+    if all_false:
+        numLegitTrials = len(df)
+        print('Session appears to have completed all (',len(df),'trials), because no double-dashes ("--") appear in the file')
+        #print('\ndtype=',df['speedThisTrial'].dtypes) #'object' means it probably includes strings, which probably happened because didn't complete all trials
+        #But if I run autopilot with 10 trials even though it finishes ,I sometimes get object type, whereas with 1 autopilot trial I don't.
+        #And when I open the file afterward with analyseTrialHandlerOutput.py, it works fine and has type float64
+        #Need to convert from string to number
+    else:
+        # Find the first True in the mask, which is the first trial that didn't complete
+        first_row_with_dashes_num = dashes_mask.idxmax()
+        numLegitTrials = first_row_with_dashes_num
+        print('Num trials in dataframe (num rows)=',len(df), '. Num trials that experiment got through=', numLegitTrials)
+        #Throw away all the non-legitimate trials
+        df = df[:numLegitTrials]
+        print('Completed portion of session=',df)
 
-    for staircase in staircases: #Calculate staircase results
-        print('condition of this staircase = ', staircase.extraInfo)
-        #actualThreshold = mainCondsDf[ ] #query for this condition. filtered_value = df.query('numTargets == 2 and numObjects == 4')['midpointThreshPrevLit'].item()
-        actualThreshold = staircase.extraInfo['midpointThreshPrevLit']
-        print('Staircase should converge on the', str(100*staircaseConvergePct), '% threshold, whose actual value for this condition is', actualThreshold)
-        #Average all the reversals after the first few.
-        numReversals = len(staircase.reversalIntensities)
-        numRevsToUse = max( 1, numReversals-2 ) #To avoid asking for less than 1 reversal
-        finalReversals = staircaseAndNoiseHelpers.outOfStaircase(staircase.reversalIntensities[-numRevsToUse:],staircase,descendingPsychometricCurve)   
-        meanOfFinalReversals = np.average( finalReversals )
-        print('Mean of final', numRevsToUse,'reversals = %.2f' % meanOfFinalReversals)
-        stairI = staircases.index(staircase)
-        meanReversalsEachStaircase[ stairI ] = meanOfFinalReversals
-        # Set the stairI row's 'meanReversal' value
-        mainCondsDf.at[stairI, 'meanReversal'] = meanOfFinalReversals  # Indexing is 0-based in Python, so the 4th row is at index 3
-    
-    print('About to plot staircases')
-    plt.rcParams["figure.figsize"] = (16, 7) #Note this will determine the size of all subsequently created plots.
-    plt.subplot(121) #1 row, 1 column, which panel
-    title = 'circle = mean of final reversals'
-    if autopilot and simulateObserver:
-        title += '\ntriangle = true threshold'
-    plt.title(title)
-    plt.xlabel("staircase trial")
-    plt.ylabel("speed (rps)")
+    # Convert dataframe values from saveAsWideText to numeric. Shouldn't need this if session completes but because of psychopy bug (see above), do.
+    df['speedThisTrial'] = pd.to_numeric(df['speedThisTrial'])
+    df['numTargets'] = pd.to_numeric(df['numTargets'])
+    df['numObjectsInRing'] = pd.to_numeric(df['numObjectsInRing'])
+    df['correctForFeedback'] = pd.to_numeric(df['correctForFeedback'])
+    dfEssential = df[['speedThisTrial','numTargets','numObjectsInRing','correctForFeedback']]
+    print('dfEssential=',dfEssential)
+    #Finished clean-up of dataframe that results from incomplete session
 
-    colors = 'grby'
-    for staircase in staircases:
-        stairI = staircases.index(staircase)
-        colorThis = colors[stairI]
-        #print('About to get intensities this staircase')
-        intensities = staircaseAndNoiseHelpers.outOfStaircase(staircase.intensities,staircase,descendingPsychometricCurve)
-        if len(intensities)>0:
-            plt.plot(intensities, colorThis+'-')
-        #Calculate correct answer, to help visualize if staircase is converging on the right place
-        actualThresh = staircase.extraInfo['midpointThreshPrevLit']
-        if len(staircase.reversalIntensities)>0: #plot mean of last reversals
-            #print('About to plot mean this staircase')
-            lastTrial = len(staircase.intensities)
-            plt.plot( lastTrial, meanReversalsEachStaircase[ stairI ], colorThis+'o' )
-            #plot correct answer
-            plt.plot( lastTrial+1, actualThresh, colors[stairI]+'<' )
-    # save a vector-graphics format for future
-    figDir = 'analysisPython'
-    outputFile = os.path.join(figDir, 'lastStaircases.pdf') #Don't know why it saves as empty
-    plt.savefig(outputFile)
-
-#Plot percent correct by condition and speed for all trials, and then try to fit logistic regression.
-trialHandlerDatafilename = datafileName + 'trialHandler.tsv'
-df = trials.saveAsWideText(trialHandlerDatafilename,delim='\t')  #Only calling this to get the dataframe df
-#If session was incomplete, then trials that didn't get to have value "--" in columns set dynamically, like speedThisTrial
-# Create a boolean mask for where 'speedThisTrial' is '--'
-dashes_mask = (df['speedThisTrial'] == '--')
-all_false = (~dashes_mask).all()
-if all_false:
-    numLegitTrials = len(df)
-    print('Session appears to have completed all (',len(df),'trials), because no double-dashes ("--") appear in the file')
-    print('\ndtype=',df['speedThisTrial'].dtypes) #'object' means it probably includes strings, which probably happened because didn't complete all trials
-    #But if I run autopilot with 10 trials even though it finishes ,I sometimes get object type, whereas with 1 autopilot trial I don't.
-    #And when I open the file afterward with analyseTrialHandlerOutput.py, it works fine and has type float64
-    #Need to convert from string to number
-else:
-    # Find the first True in the mask, which is the first trial that didn't complete
-    first_row_with_dashes_num = dashes_mask.idxmax()
-    numLegitTrials = first_row_with_dashes_num
-    print('Num trials in dataframe (num rows)=',len(df), '. Num trials that experiment got through=', numLegitTrials)
-    #Throw away all the non-legitimate trials
-    df = df[:numLegitTrials]
-    #print('Completed portion of session=',df)
-    if numLegitTrials < 2:
+if plotResults:
+    if numLegitTrials < 3:
         print('Forget it, I cannot analyze a one-trial experiment')
         quit()
-# Convert to numeric. Shouldn't need this if session completes but because of psychopy bug (see above), do.
-df['speedThisTrial'] = pd.to_numeric(df['speedThisTrial'])
-df['numTargets'] = pd.to_numeric(df['numTargets'])
-df['numObjectsInRing'] = pd.to_numeric(df['numObjectsInRing'])
-df['correctForFeedback'] = pd.to_numeric(df['correctForFeedback'])
-#Finished clean-up of dataframe that results from incomplete session
-
-# set up plot
-if doStaircase:
-    plt.subplot(122) #Because already plotted staircases above
-else:
+    # set up plot
     plt.subplot(111)
-plt.ylabel("Proportion correct")
-plt.xlabel('speed (rps)')
-threshVal = 0.794
-speedEachTrial = df['speedThisTrial']
+    plt.ylabel("Proportion correct")
+    plt.xlabel('speed (rps)')
+    speedEachTrial = df['speedThisTrial']
 
-print('trialNum=',trialNum)
-#maxX = speedEachTrial.nlargest(1).iloc[0]
-#print('maxX with nlargest=',maxX)
-maxX = speedEachTrial.max()
-plt.plot([0, maxX], [threshVal, threshVal], 'k--')  # horizontal dashed line
-paramsEachCond = list()
+    paramsEachCond = list()
 
-#Fit logistic regressions
-for condi, cond in mainCondsDf.iterrows():
-    #actualThreshold = mainCondsDf[ ] #query for this condition. filtered_value = df.query('numTargets == 2 and numObjects == 4')['midpointThreshPrevLit'].item()
-    # Create a mask to reference this specific condition in my df
-    maskForThisCond = (df['numTargets'] == cond['numTargets']) & (df['numObjectsInRing'] == cond['numObjects'])
-    condLabelForPlot= str( round(cond['numTargets']) ) + 'targets,' + str( round(cond['numObjects']) ) + 'objs'
-    all_false = (~maskForThisCond).all()
-    if all_false:
-        print('No trials available for condition ',cond, 'so stopping plotting.')
-        break
+    for condi, cond in mainCondsDf.iterrows():
+        # Create a mask to reference this specific condition in my df
+        maskForThisCond = (df['numTargets'] == cond['numTargets']) & (df['numObjectsInRing'] == cond['numObjects'])
+        condLabelForPlot= str( round(cond['numTargets']) ) + 'targets,' + str( round(cond['numObjects']) ) + 'objs'
+        #print('condLabelForPlot=',condLabelForPlot)
+        all_false = (~maskForThisCond).all()
+        if all_false:
+            print('No trials available for condition ',cond, 'so stopping plotting.')
+            break
 
-    dataThisCond =  df[ maskForThisCond  ]
+        dataThisCond =  df[ maskForThisCond  ]
 
-    #Aggregate data into percent correct for plotting actual data
-    grouped_df = dataThisCond.groupby(['speedThisTrial']).agg(
-        pctCorrect=('correctForFeedback', 'mean'),
-        n=('correctForFeedback', 'count')
-    )
-    aggregatedDf = grouped_df.reset_index()
+        #Aggregate data into percent correct for plotting actual data
+        grouped_df = dataThisCond.groupby(['speedThisTrial']).agg(
+            pctCorrect=('correctForFeedback', 'mean'),
+            n=('correctForFeedback', 'count')
+        )
+        aggregatedDf = grouped_df.reset_index()
 
-    # plot points
-    pointSizes = np.array(aggregatedDf['n']) * 5  # 5 pixels per trial at each point
-    points = plt.scatter(aggregatedDf['speedThisTrial'], aggregatedDf['pctCorrect'], s=pointSizes,
-        c= colors[condi], label = condLabelForPlot,
-        zorder=10,  # make sure the points plot on top of the line
-        )    
-
-    #Get variables for logistic regression fit
-    x = dataThisCond[['speedThisTrial' ]] #data[['numObjectsInRing','numTargets','speedThisTrial' ]]
-    y = dataThisCond['correctForFeedback']
-    y = y.values #because otherwise y is a Series for some reason
-    #print('y=',y, 'type(y)=',type(y))
-
-    parametersGuess = [1,-2]
-    chanceRate = 1/ cond['numObjects']
-    #fit data with logistic regression
-    fitSucceeded = False
-    if len(x) > 4: #don't even try unless have a bunch of trials for this condition
-        with warnings.catch_warnings(): #https://stackoverflow.com/a/36489085/302378
-            warnings.filterwarnings('error')
-            try:
-                parameters = logisticR.fit(x, y, chanceRate, parametersGuess)
-                fitSucceeded = True
-            except Warning as e:
-                print('error when doing logistic fit:', e)
-                fitSucceeded = False
-                
-    #predict psychometric curve from logistic regression
-    if fitSucceeded:
-        paramsEachCond.append(parameters)
-        mypredicted = logisticR.predict(x,chanceRate,parameters)
-        #print('logistic regression-predicted values=', mypredicted)
-        # Create a new column 'predicted' and assign the values from mypredicted
-        # to the rows matching the condition
-        df.loc[maskForThisCond, 'logisticPredicted'] = mypredicted
-
-        xForCurve = np.arange(0,1.6,.02)
-        xForCurve = pd.DataFrame(xForCurve).to_numpy() #otherwise plot gives error on Windows
-        predicted = logisticR.predict(xForCurve,chanceRate,parameters)
-        predicted = (pd.DataFrame(predicted)).to_numpy() #otherwise plot gives error on Windows
-        plt.plot( xForCurve, predicted, colors[condi]+'-' )
-
-plt.legend()
-#print('paramsEachCond=',paramsEachCond)
-title = 'Data and logistic regression fit'
-#if autopilot and simulateObserver:
-#    title += 'triangle = true threshold'
-plt.title(title)
-outputFile = datafileName + '.pdf' #os.path.join(fileName, 'last.pdf')
-plt.savefig(outputFile)
-plt.show()
+        # plot points
+        colors = 'kgrbym'
+        pointSizes = np.array(aggregatedDf['n']) * 10  # 5 pixels per trial at each point
+        #print('condi=',condi)
+        #print('colors[condi]=',colors[condi])
+        #print('label=',condLabelForPlot)
+        #print("aggregatedDf['speedThisTrial']",aggregatedDf['speedThisTrial'], "aggregatedDf['pctCorrect']=",aggregatedDf['pctCorrect'])
+        points = plt.scatter(aggregatedDf['speedThisTrial'], aggregatedDf['pctCorrect'], s=pointSizes,
+            c= colors[condi], label = condLabelForPlot,
+            zorder=10,  # make sure the points plot on top of the line
+            )    
+        #end condition loop
+    plt.legend()
+    #print('paramsEachCond=',paramsEachCond)
+    title = 'Data'
+    #if autopilot and simulateObserver:
+    #    title += 'triangle = true threshold'
+    plt.title(title)
+    outputFile = datafileName + '.pdf' #os.path.join(fileName, 'last.pdf')
+    plt.savefig(outputFile)
+    plt.show()
 
 if quitFinder and ('Darwin' in platform.system()): #If turned Finder (MacOS) off, now turn Finder back on.
         applescript="\'tell application \"Finder\" to launch\'" #turn Finder back on
