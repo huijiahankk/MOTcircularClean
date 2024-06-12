@@ -1,14 +1,19 @@
 #expecting current working directory to be top level of this git-indexed project, and this file to be in top level - dataPreprocess/
+#Gets behavioral data and combines with eyetracking result and anonymises 
+library(dplyr)
+library(stringr)
 #Eyetracking
 #Looks for eyetracking file, expects it in wide format (one row for each trial)     
 #Expects eyetracking file name to be paste0(withoutSuffix,"EyetrackingReport.txt")
 #Expects in the eyetracking file that there should be a column called Exclusion
-setwd("/Users/alexh/Documents/attention_tempresltn/multiple object tracking/newTraj/newTraj_repo")
-source('dataPreprocess/eyetracking/summariseEyelinkData.R')
-expFoldersPrefix= "dataRaw/"
-expFolders <- c("offCenter","circleOrSquare_twoTargets")
+
+#Load function that can figure out whether participant moved their eyes too much on each trial
+#source('dataPreprocess/eyetracking/summariseEyelinkReport.R')
+
+expFoldersPrefix= file.path("..","dataRaw/")
+expFolder <- "youngOld"
 expFoldersPostfix = "" #"/rawdata"
-destinationName = "offCenterAndShape"
+destinationName = "youngOld"
 destinatnDir<-"dataAnonymized/" #where the anonymized data will be exported to
 anonymiseData <- TRUE
 
@@ -24,11 +29,172 @@ exclusionPixels = exclusionDeg * pixelsPerDegree
 centralZoneWidthPix = exclusionPixels*2
 centralZoneHeightPix = exclusionPixels*2 #assumes the monitor is correct aspect ratio so that pixels are square
 
-for (expi in 1:length(expFolders)) {
-  thisExpFolder = paste0(expFoldersPrefix,expFolders[expi], expFoldersPostfix)
-  print(paste("From exp",thisExpFolder))
-  foldersThisExp <- list.dirs(path=thisExpFolder,recursive=FALSE) #each folder should be a subject
-  print("Loading data from folders:"); print(foldersThisExp)
+thisExpFolder = paste0(expFoldersPrefix,expFolder, expFoldersPostfix)
+print(paste0("Finding files in '",thisExpFolder,"'"))
+#Create list of subjects from file names, hopefully can get away with not having one folder per participant
+datafiles <- dir(path=thisExpFolder,pattern='.tsv')  #find all data files in this directory
+
+#remove the "trialHandler.tsv" files from the list. That is basically vestigial from when I was debugging
+datafiles <- datafiles[    !grepl("trialHandler.tsv$", datafiles)   ]
+#fileSizes <- file.size( file.path(thisExpFolder,datafiles) )
+
+datafiles <- data.frame(fname=datafiles)
+#datafiles$size <- fileSizes
+datafiles$comment <- "None" #Create a comment field to preserve notes about weirdness of how the run went
+
+#Remove files that have PRACTICE in their names, or PRAC in case someone didn't write the whole thing
+#Data about practice sessions is manual in the Google Sheet
+datafiles <- datafiles %>% filter( !str_detect(fname,"PRAC") )
+
+#Determine number of trials in each file, than can consider files that are very short
+nRowsOfTsv <- function(fname) {
+  file_path <- file.path(thisExpFolder,fname)  
+  mydf<- readr::read_tsv(file_path, show_col_types=FALSE)
+  nrows<- nrow(mydf)
+  return (nrows)
+}
+datafiles <- datafiles %>% rowwise() %>% mutate( nrows = nRowsOfTsv(fname) )
+
+#REMOVE/HANDLE DYSFUNCTIONAL RUNS
+#S26 has two files with zero rows, Loretta confirmed they should be thrown out rather than being lost data. 
+datafiles<- rows_delete(datafiles, tibble(fname=c("S26_1_01May2024_11-17.tsv","S26_1_01May2024_11-19.tsv")), by="fname")
+#Also for S26 more trials based on the first session were done at the end because only 1 trialsPerCondition were mistakenly run
+#so, S26_1_01May2024_11-21.tsv  and the other S26s are all good
+
+#S45 has 3 and 0 trials for two files. Other files are good and all 3 sessions are there
+#S45 "fatigued during and after second MOT trial, especially during the third MOT trial" - Sarah
+datafiles<- rows_delete(datafiles, tibble(fname=c("S45_1_27May2024_11-45.tsv","S45_1_27May2024_11-43.tsv")), by="fname")
+
+#K341 has two files with 0 rows
+#datafiles %>% filter(str_starts(fname,"K34"))
+#Said her eyes felt dry towards the end of the trials, and that it was hard to focus.
+#"First session 60Hz, new monitor (second and third trials run at the correct Hz)
+#Both were the same monitor, but we had just changed it to the new one. The first session I realised the settings hadn’t saved because the middle dot flashed occasionally, I checked and it was only 60rps, I redid the settings for the next trials"
+#Delete 0-row files of K347
+datafiles<- rows_delete( datafiles, tibble(fname=c("K341_1_15May2024_09-29.tsv","K341_1_15May2024_09-30.tsv")), by="fname") 
+
+#Delete 0-row file of M323 that was run again to replace it (false start)
+datafiles<- rows_delete( datafiles, tibble(fname=c("M323_3_10May2024_14-22.tsv")), by="fname") 
+#Delete 0-row file of S392 that was run again to replace it (false start)
+datafiles<- rows_delete( datafiles, tibble(fname=c("S392_2_17May2024_11-42.tsv")), by="fname") 
+
+#Add comment to anomalous run
+datafiles<- datafiles %>% 
+  mutate(comment = ifelse(str_starts(fname,"M32"),
+       "skipped practice trial, because practice.py was not able to open at this time. Did visual acuity and intelligence firsts before doing any trials. 
+", comment) )
+
+#Add comment to anomalous run
+datafiles<- datafiles %>% 
+  mutate(comment = ifelse(fname=="K341_1_15May2024_09-31.tsv", 
+                              "Mistakenly run at 60Hz", 
+                              comment) )
+
+#Calculate proportion of trials with lots of timingBlips
+calcLotsTimingBlips <- function(fname) {
+  file_path <- file.path(thisExpFolder,fname)  
+  mydf<- readr::read_tsv(file_path, show_col_types=FALSE)
+  propLotsTimingBlips <- sum(mydf$timingBlips>5) / nrow(mydf)
+  return (propLotsTimingBlips)
+}
+datafiles <- datafiles %>% rowwise() %>% 
+            mutate( nrows = nRowsOfTsv(fname), 
+                    propLotsTimingBlips= calcLotsTimingBlips(fname) )
+
+#But most of them are at very beginning of trial so should have separate column to report only later timingBlips
+sum(mydf$timingBlips>5) / nrow(mydf)
+library(ggplot2)
+ggplot(mydf,aes(x=timingBlips)) + geom_histogram()
+
+
+#Calculate number of timing blips per file
+
+#There might be one participant without enough columns in the header, maybe the one Yuenchen ran that we can't find the data for
+
+datafiles %>% filter(str_starts(fname,"S45"))
+
+
+#Remove files with very few rows
+datafiles<- datafiles %>% arrange(nrows)
+
+
+            
+#Parse out the subject ID and session number
+datafiles$IDsession<- substr(datafiles$datafiles,1,4)
+#Validate that they all start with a letter followed by two numbers
+grepForUppercaseLetterFollowedByTwoDigits <- "^[A-Z]\\d{2}$"
+library(stringr)
+ID <- substr(datafiles$datafiles,1,3)
+
+#For those that have an underscore after the first 3 characters, delete the underscore
+underscoresInsteadOfSession <- datafiles %>% filter( str_ends(IDsession,"_") )
+#For all of them, just need to delete the underscore
+datafiles<- datafiles %>% mutate(IDsession = 
+                       ifelse(str_ends(IDsession, "_"), #if ends with underscore
+                              gsub("_", "", datafiles), #replace with filename with underscore deleted
+                              IDsession) )
+#Then take first 4 characters again of all to get IDsession
+datafiles$IDsession<- substr(datafiles$datafiles,1,4)
+
+#Deal with those with underscore instead of session number
+underscoreInsteadOfSession<- datafiles %>% filter(substr(datafiles,4,4)=="_")
+#All of them have session number right after underscore, except S26 and S45
+anomalies <- textConnection("
+S45_1_27May2024_11-43.tsv
+S45_1_27May2024_11-45.tsv
+S451_1_27May2024_11-10.tsv
+
+S26_1_01May2024_11-19.tsv #Can be deleted, <1Kb
+S26_1_01May2024_11-21.tsv #Can be deleted, <1Kb
+S26_1_01May2024_12-34.tsv #This is session 1 being redone at the end
+S26_2_01May2024_11-43.tsv
+S26_3_01May2024_12-13.tsv")
+close(anomalies)
+
+datafiles %>% mutate(IDsession = 
+                      ifelse(str_starts(datafiles, "j33_3_13May2024"), "J333", 
+                        IDsession) )
+
+datafiles %>%
+  mutate(IDsession = if(str_starts(datafiles, "j33_3_13May2024"))
+
+
+datafiles %>%
+  filter(str_starts(datafiles, "j33_3_13May2024"))
+
+
+datafiles$IDvalid <- str_detect(ID,grepForUppercaseLetterFollowedByTwoDigits)
+if (any(datafiles$IDvalid==FALSE)) {
+  cat("Problem! These files have the wrong format as the subject ID is not an upper-case letter followed by two digits:")
+  cat( datafiles %>% dplyr::filter(IDvalid==FALSE) )
+  #j33_3 I can see it's a typo and should be uppercase J
+}
+shouldBeUppercaseLetter <- substr(ID,1,1)
+
+
+result <- str_detect(my_list, "^[A-Z]\\d{2}$")
+print(result)
+
+result <- str_detect(my_list, "^[A-Za-z]+$")
+print(result)
+
+lapply(dataFiles,substr(1,4))
+
+for (f in 1:length(datafiles)) {
+  thisFname = datafiles[f]
+  IDandSession<- substr(thisFname,1,4)
+ID<- substr(IDandSession,1,3)
+EDF$fixations$ID <- ID; EDF$blinks$ID<- ID
+session <- substr(IDandSession,4,4)
+if (grepl("^[a-z]$", session)) #session is lower-case letter
+  session<- match( tolower(session), letters) #returns 1 for 'a', 2 for 'b', etc.
+
+EDF$fixations$session<- session
+EDF$blinks$session<- session
+  
+  
+  #foldersThisExp <- list.dirs(path=thisExpFolder,recursive=FALSE) #each folder should be a subject
+  #print("Loading data from folders:"); print(foldersThisExp)
   for (i in 1:length(foldersThisExp)) {
     thisSubjectDir <- foldersThisExp[i]
     files <- dir(path=thisSubjectDir,pattern='.txt')  #find all data files in this directory

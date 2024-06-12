@@ -7,22 +7,33 @@ Call functions in `EyelinkEyetrackerForPsychopySUPA3.py` to open communication w
 
 - See https://www.sr-research.com/support/thread-8713.html for explanation of location of Eyelink commands.
 
-### Avoid going through EDF decoding
+### Can you pull EDF file at end of experiment via python? Sometimes
 
-Long term, instead of using separate machine, communicate directly with eyetracker via pylink, which is part of Psychopy. Actually we are already using modified pylink code to start and stop the eyetracker.
-http://www.psychopy.org/api/hardware/pylink.html
+We had that, commands provided by [pylink](http://www.psychopy.org/api/hardware/pylink.html), working in 2023 in [TessHons](https://github.com/alexholcombe/TessHons), but then the student said it wasn't working so she went with getting the EDF file manually off the host PC.  It seems to often not work when it is a long experiment (a lot of data).
+
+### Can one pull the eyetracker data at the end of each trial? NO
+
+I asked this in SR Forum and they said no.
+
+### Can one get real-time data from the eyetracker? YES
 
 A simple example of getting individual data from the eyetracker and a gaze-contingent experiment is [here](https://github.com/ryancotterell/WilsonLab/blob/master/WilsonLab/pylink/eyeTracker.py)
-but preferably you'd use ioHub built in Psychopy eye_tracker/run.py which is accessed via Demos->Select Tracker
 
-We had that working in 2023 in [TessHons](https://github.com/alexholcombe/TessHons), but then the student said it wasn't working so she went with getting the EDF file manually off the host PC.
+ioHub generic Psychopy eyetracker commands are not recommened but built into Psychopy eye_tracker/run.py which is accessed via Demos->Select Tracker
 
-## Preprocessing of the Eyelink (EDF) file
 
-Eyelink now recommends [Pastukhov's R package](https://cran.r-project.org/package=eyelinkReader) for reading EDF files and also has a [longer list](https://www.sr-research.com/support/thread-7769.html). https://github.com/dahtah/eyelinker 
-I got that working now for TessHons and trying to get it working for MOT
+## Preprocessing of the Eyelink (EDF) file with eyelinkReader for R
 
-# OLD pre-eyelinkReader WORKFLOW
+Eyelink recommends [Pastukhov's eyelinkReader R package](https://cran.r-project.org/package=eyelinkReader) for reading EDF files.
+
+Our [installation notes](eyelinkReader_installation.md). 
+
+Our [usage notes](eyelinkReader_usage.md)
+
+There are other, older packages in this [longer list](https://www.sr-research.com/support/thread-7769.html), including https://github.com/dahtah/eyelinker. 
+
+
+# OLD pre-eyelinkReader WORKFLOW of generating Fixation Report
 
 Get the EDF file off the eyetracking machine (reboot eyetracking machine, select Windows), it's located in Eyelink:elcl:data and has the name of the participant.
 

@@ -58,7 +58,7 @@ subject='temp'#'test'
 autoLogging = False
 quickMeasurement = False #If true, use method of gradually speeding up and participant says when it is too fast to track
 demo = False
-autopilot= True; simulateObserver=True; showOnlyOneFrameOfStimuli = False
+autopilot= False; simulateObserver=True; showOnlyOneFrameOfStimuli = False
 if autopilot:  subject='auto'
 feedback=True
 exportImages= False #quits after one trial / output image
@@ -134,12 +134,10 @@ def getReversalTimes():
     return reversalTimesEachRing
     
 cueDur = cueRampUpDur+cueRampDownDur+trackingExtraTime  #giving the person time to attend to the cue (secs)
-trialDurFrames=int(trialDurMin*refreshRate)+int( trackingExtraTime*refreshRate )
 rampUpFrames = refreshRate*cueRampUpDur;   rampDownFrames = refreshRate*cueRampDownDur;
 cueFrames = int( refreshRate*cueDur )
-rampDownStart = trialDurFrames-rampDownFrames
 ballStdDev = 1.8 * 3 
-mouseChoiceArea = ballStdDev*0.8 # origin =1.3
+#mouseChoiceArea = ballStdDev * 0.2 #debugAH #*0.8  # origin =1.3  #Now use a function for this,
 units='deg' #'cm'
 timeTillReversalMin = 0.5 #0.5; 
 timeTillReversalMax = 2.0# 1.3 #2.9
@@ -200,12 +198,12 @@ else: #checkRefreshEtc
 
 myWin.close() #have to close window to show dialog box
 dlgLabelsOrdered = list() #new dialog box
-session=0
+session='a'
 myDlg = psychopy.gui.Dlg(title="object tracking experiment", pos=(200,400))
 if not autopilot:
     myDlg.addField('Subject name or ID:', subject, tip='')
     dlgLabelsOrdered.append('subject')
-    myDlg.addField('session number:',session, tip='1,2,3,')
+    myDlg.addField('session:',session, tip='a,b,c,')
     dlgLabelsOrdered.append('session')
 myDlg.addField('Trials per condition (default=' + str(trialsPerCondition) + '):', trialsPerCondition, tip=str(trialsPerCondition))
 dlgLabelsOrdered.append('trialsPerCondition')
@@ -226,10 +224,8 @@ if myDlg.OK: #unpack information from dialogue box
        name=thisInfo[dlgLabelsOrdered.index('subject')]
        if len(name) > 0: #if entered something
          subject = name #change subject default name to what user entered
-       sessionEntered =thisInfo[dlgLabelsOrdered.index('session')] #it comes from dlg as an integer rather than a string, which is good
-       if not isinstance(session, int):
-         print('Error! session must be integer'); core.quit()
-       session = sessionEntered       
+       sessionEntered =thisInfo[dlgLabelsOrdered.index('session')]
+       session = str(sessionEntered) #cast as str in case person entered a number
    trialsPerCondition = int( thisInfo[ dlgLabelsOrdered.index('trialsPerCondition') ] ) #convert string to integer
 else: 
    print('User cancelled from dialog box.')
@@ -311,7 +307,7 @@ if labelBlobs:
         blobText = visual.TextStim(myWin,text=label,colorSpace='rgb',color = (-1,-.2,-1),autoLog=False)
         blobLabels.append(blobText)
 
-optionChosenCircle = visual.Circle(myWin, radius=mouseChoiceArea, edges=32, colorSpace='rgb',fillColor = (1,0,1),autoLog=autoLogging) #to outline chosen options
+optionChosenCircle = visual.Circle(myWin, edges=32, colorSpace='rgb',fillColor = (1,0,1),autoLog=autoLogging) #to outline chosen options
 #Optionally show zones around objects that will count as a click for that object
 clickableRegion = visual.Circle(myWin, edges=32, colorSpace='rgb',fillColor=(-1,-.7,-1),autoLog=autoLogging) #to show clickable zones
 #Optionally show location of most recent click
@@ -347,14 +343,14 @@ speedText = visual.TextStim(myWin,pos=(-0.5, 0.5),colorSpace='rgb',color = (1,1,
 if useSound: 
     ringQuerySoundFileNames = [ 'innerring.wav', 'middlering.wav', 'outerring.wav' ]
     soundDir = 'sounds'
-    lowSound = sound.Sound('E',octave=3, stereo = False, sampleRate = 44100, secs=.8, volume=0.9, autoLog=autoLogging)
+    lowSound = sound.Sound('E',octave=4, stereo = False, sampleRate = 44100, secs=.8, volume=1.0, autoLog=autoLogging)
     respPromptSounds = [-99] * len(ringQuerySoundFileNames)
     for i in range(len(ringQuerySoundFileNames)):
         soundFileName = ringQuerySoundFileNames[i]
         soundFileNameAndPath = os.path.join(soundDir, ringQuerySoundFileNames[ i ])
         respPromptSounds[i] = sound.Sound(soundFileNameAndPath, secs=.2, autoLog=autoLogging)
     corrSoundPathAndFile= os.path.join(soundDir, 'Ding44100Mono.wav')
-    corrSound = sound.Sound(corrSoundPathAndFile, autoLog=autoLogging)
+    corrSound = sound.Sound(corrSoundPathAndFile, volume=0.3, autoLog=autoLogging)
 
 stimList = []
 doStaircase = True
@@ -395,11 +391,13 @@ if doStaircase: #create the staircases
         descendingPsychometricCurve = True
         #the average threshold speed across conditions found by previous literature for young people
         avgAcrossCondsFromPrevLit = mainCondsDf['midpointThreshPrevLit'].mean()
-        if session <= 1:  #give all the staircases the same starting value 
+        #Assume that first session is 'a', second session is 'b', etc.
+        sessionNum = ord(session) - ord('a') + 1
+        if sessionNum <= 1:  #give all the staircases the same starting value 
             startVal = 0.6 * avgAcrossCondsFromPrevLit #Don't go higher because this was the average for the young people only
-        elif session == 2:
+        elif sessionNum == 2:
             startVal = avgAcrossCondsFromPrevLit
-        elif session >= 3:
+        elif sessionNum >= 3:
             startVal = 0.75 * avgAcrossCondsFromPrevLit
 
         startValInternal = staircaseAndNoiseHelpers.toStaircase(startVal, descendingPsychometricCurve)
@@ -758,6 +756,7 @@ def angleChangeThisFrame(speed,initialDirectionEachRing, numRing, thisFrameN, la
     angleMoveRad = initialDirectionEachRing[numRing] * speed*2*pi*(thisFrameN-lastFrameN) / refreshRate
     return angleMoveRad
 
+
 def alignAngleWithBlobs(angleOrigRad):
     centerInMiddleOfSegment = 0 #360./numObjects/2.0  #if don't add this factor, won't center segment on angle and so won't match up with blobs of response screen
     angleDeg = angleOrigRad/pi*180
@@ -860,8 +859,49 @@ def oneFrameOfStim(thisTrial,speed,currFrame,clock,useClock,offsetXYeachRing,ini
 # #######End of function that displays the stimuli #####################################
 ########################################################################################
 
-showclickableRegions = True
-showClickedRegion = True
+showClickableRegions = False #Every time you click, show every disc's clickable region 
+showClickedRegion = True #Problem with code is it shows the largest ring's region always, even if the smaller ring is clicked
+showClickedRegionFinal = True #Show the last click, that's actually on the cued ring
+mouseClickAreaFractionOfSpaceAvailable = 0.9 #0.9 means 90% of the space available to the object is clickable
+def calcMouseChoiceRadiusForRing(ring):
+    #For ring, need to calculate the smallest distance to another object, 
+    # and set mouseChoiceRadius for that ring to smaller than that
+    #Determine the max number of objects that ever occur in a ring, because that determines how big the mouse click radius can be
+    # together with how far apart the rings are.
+    maxNumObjects = max(numObjsInRing)
+
+    #Calculate for all rings even though just want to know one
+    mouseChoiceRadiusEachRing = np.zeros(numRings)
+    minAngleBetweenObjectsOnRing = 2*pi / maxNumObjects #angle between objects on a ring
+
+    #ring0
+    ring0distToNextRing = radii[1] - radii[0] #distance between centers of rings 0 and 1
+    #Find distance between objects using the formula for a chord of a circle, 2r*sin(theta/2)
+    distBetweenObjectsInRing0 = 2*radii[0]*sin(minAngleBetweenObjectsOnRing/2)
+    mouseChoiceRadius = min(ring0distToNextRing/2, distBetweenObjectsInRing0/2)
+    mouseChoiceRadiusEachRing[0] = mouseChoiceRadius
+
+    #ring1
+    if numRings > 1:
+        if numRings > 2:
+            ring2distToRing1 = radii[2] - radii[1] #distance between centers of rings 2 and 1
+            ring1closestRingDist = min(ring0distToNextRing,ring2distToRing1)
+        else:
+            ring1closestRingDist = ring0distToNextRing
+        distBetweenObjectsInRing1 = 2*radii[1]*sin(minAngleBetweenObjectsOnRing/2) #formula for chord of a circle
+        mouseChoiceRadius = min(ring1closestRingDist/2, distBetweenObjectsInRing1/2)
+        mouseChoiceRadiusEachRing[1] = mouseChoiceRadius
+
+    #ring2
+    if numRings > 2: #Calculate closest distance from ring2 to the other two rings
+        ring2distToRing1 = radii[2] - radii[1] #distance between centers of rings 2 and 1
+        distBetweenObjectsInRing2 = 2*radii[2]*sin(minAngleBetweenObjectsOnRing/2) #formula for chord of a circle
+        mouseChoiceRadius = min(ring2distToRing1,distBetweenObjectsInRing2/2)
+        mouseChoiceRadiusEachRing[2] = mouseChoiceRadius
+    
+    #print('Closest distance to another object, for each ring: ',mouseChoiceRadiusEachRing)
+    return mouseClickAreaFractionOfSpaceAvailable * mouseChoiceRadiusEachRing[ring]
+
 def collectResponses(thisTrial,speed,n,responses,responsesAutopilot, respPromptSoundFileNum, offsetXYeachRing,respRadius,currAngle,expStop):
     optionSets=numRings
     #Draw/play response cues
@@ -872,13 +912,14 @@ def collectResponses(thisTrial,speed,n,responses,responsesAutopilot, respPromptS
         timesRespPromptSoundPlayed +=1
     #respText.draw()
 
-    respondedEachToken = np.zeros([numRings,numObjects])  #potentially two sets of responses, one for each ring
+    respondedEachToken = np.zeros([numRings,numObjects])  
     optionIdexs=list();baseSeq=list();numOptionsEachSet=list();numRespsNeeded=list()
-    numRespsNeeded = np.zeros(numRings) 
+    numRespsNeeded = np.zeros(numRings) #potentially one response for each ring
     for ring in range(numRings):
         optionIdexs.append([])
         noArray=list()
-        for k in range(numObjects):noArray.append(colors_all[0])
+        for k in range(numObjects):
+            noArray.append(colors_all[0])
         baseSeq.append(np.array(noArray))
         for i in range(numObjects):
             optionIdexs[ring].append(baseSeq[ring][i % len(baseSeq[ring])] )
@@ -902,7 +943,7 @@ def collectResponses(thisTrial,speed,n,responses,responsesAutopilot, respPromptS
                 x = x+ offsetXYeachRing[optionSet][0]
                 y = y+ offsetXYeachRing[optionSet][1]            
                 if not drawingAsGrating and not debugDrawBothAsGratingAndAsBlobs:
-                    blob.setColor(  colors_all[0], log=autoLogging )  #draw blob
+                    blob.setColor(  colors_all[0], log=autoLogging )
                     blob.setPos([x,y])
                     blob.draw()
 
@@ -917,7 +958,7 @@ def collectResponses(thisTrial,speed,n,responses,responsesAutopilot, respPromptS
             ringRadial[optionSet].draw()
         #end loop through rings
 
-        #Draw visual response cue, usually ring to indicate which ring to query
+        #Draw visual response cue, usually ring to indicate which ring is queried
         if visuallyPostCue:
             circlePostCue.setPos( offsetXYeachRing[ thisTrial['ringToQuery'] ] )
             circlePostCue.setRadius( radii[ thisTrial['ringToQuery'] ] )
@@ -935,26 +976,29 @@ def collectResponses(thisTrial,speed,n,responses,responsesAutopilot, respPromptS
                 mouseFactor = 0.5
             mouseX = mouseX * mouseFactor 
             mouseY = mouseY * mouseFactor 
+            if showClickedRegion:
+                #Determine choiceRadius for the ring the person needs to respond to
+                mouseChoiceRadius = calcMouseChoiceRadiusForRing( thisTrial['ringToQuery'] )
+                clickedRegion.setPos([mouseX,mouseY])
+                clickedRegion.setRadius(mouseChoiceRadius)
+                clickedRegion.draw()
             for optionSet in range(optionSets):
-              for ncheck in range( numOptionsEachSet[optionSet] ): 
+                mouseChoiceRadius = calcMouseChoiceRadiusForRing(optionSet) 
+                #print('mouseChoiceRadius=',round(mouseChoiceRadius,1), 'for optionSet=',optionSet)
+                for ncheck in range( numOptionsEachSet[optionSet] ): 
                     angle =  (angleIniEachRing[optionSet]+currAngle[optionSet]) + ncheck*1.0/numOptionsEachSet[optionSet] *2.*pi #radians
                     x,y = xyThisFrameThisAngle(thisTrial['basicShape'],radii,optionSet,angle,n,speed)
                     x = x+ offsetXYeachRing[optionSet][0]
                     y = y+ offsetXYeachRing[optionSet][1]
                     #check whether mouse click was close to any of the colors
+                    if showClickableRegions: #every disc's region revealed every time you click
+                        clickableRegion.setPos([x,y]) 
+                        clickableRegion.setRadius(mouseChoiceRadius) 
+                        clickableRegion.draw()
+                    #print('mouseXY=',round(mouseX,2),',',round(mouseY,2),'xy=',round(x,2),',',round(y,2), ' distance=',distance, ' mouseChoiceRadius=',mouseChoiceRadius)
                     #Colors were drawn in order they're in in optionsIdxs
                     distance = sqrt(pow((x-mouseX),2)+pow((y-mouseY),2))
-                    mouseToler = mouseChoiceArea + optionSet*mouseChoiceArea/6.#deg visual angle?  origin=2
-                    if showClickedRegion:
-                        clickedRegion.setPos([mouseX,mouseY])
-                        clickedRegion.setRadius(mouseToler/4.) #Dividing by 4 simply for visual aesthetic reasons
-                        clickedRegion.draw()
-                    if showclickableRegions: #revealed every time you click
-                        clickableRegion.setPos([x,y]) 
-                        clickableRegion.setRadius(mouseToler) 
-                        clickableRegion.draw()
-                        #print('mouseXY=',round(mouseX,2),',',round(mouseY,2),'xy=',round(x,2),',',round(y,2), ' distance=',distance, ' mouseToler=',mouseToler)
-                    if distance<mouseToler:
+                    if distance < mouseChoiceRadius:
                         c = opts[optionSet][ncheck] #idx of color that this option num corresponds to
                         if respondedEachToken[optionSet][ncheck]:  #clicked one that already clicked on
                             if lastClickState ==0: #only count this event if is a distinct click from the one that selected the blob!
@@ -962,7 +1006,7 @@ def collectResponses(thisTrial,speed,n,responses,responsesAutopilot, respPromptS
                                 responses[optionSet].remove(c) #this redundant list also of course encodes the order
                                 respcount -= 1
                                 #print('removed number ',ncheck, ' from clicked list')
-                        else:         #clicked on new one, need to add to response    
+                        else: #clicked on new one, need to add to response    
                             numRespsAlready = len(  np.where(respondedEachToken[optionSet])[0]  )
                             #print('numRespsAlready=',numRespsAlready,' numRespsNeeded= ',numRespsNeeded,'  responses=',responses)   
                             if numRespsAlready >= numRespsNeeded[optionSet]:
@@ -972,6 +1016,10 @@ def collectResponses(thisTrial,speed,n,responses,responsesAutopilot, respPromptS
                                 responses[optionSet].append(c) #this redundant list also of course encodes the order
                                 respcount += 1  
                                 print('added  ',ncheck,'th response to clicked list')
+                            if showClickedRegionFinal: #Selected something from the correct ring, now show its region
+                                clickableRegion.setPos([x,y]) 
+                                clickableRegion.setRadius(mouseChoiceRadius) 
+                                clickableRegion.draw()                                
                 #print 'response=', response, '  respcount=',respcount, ' lastClickState=',lastClickState, '  after affected by click'
            #end if mouse clicked
            
@@ -1002,6 +1050,7 @@ def collectResponses(thisTrial,speed,n,responses,responsesAutopilot, respPromptS
 print('Starting experiment of',trials.nTotal,'trials, starting with trial 0.')
 #print header for data file
 print('trialnum\tsubject\tsession\tbasicShape\tnumObjects\tspeed\tinitialDirRing0', end='\t', file=dataFile)
+print('fixatnPeriodFrames', end='\t',file=dataFile) #So know when important part of eyetracking begins
 print('orderCorrect\ttrialDurTotal\tnumTargets', end= '\t', file=dataFile) 
 for i in range(numRings):
     print('whichIsTargetEachRing',i,  sep='', end='\t', file=dataFile)
@@ -1011,7 +1060,7 @@ for i in range(numRings):   dataFile.write('respAdj'+str(i)+'\t')
 for r in range(numRings):
     for j in range(maxPossibleReversals()):
         dataFile.write('rev'+str(r)+'_'+str(j)+'\t')  #reversal times for each ring
-print('timingBlips', file=dataFile)
+print('timingBlips\tnumLongFramesAfterFixation\tnumLongFramesAfterCue', file=dataFile)
 #end of header
 
 trialClock = core.Clock()
@@ -1023,7 +1072,14 @@ ts = list();
 
 if eyetracking:
     EDF_fname_local=('EyeTrack_'+subject+'_' + str(session) + '_' + timeAndDateStr+'.EDF')
-    my_tracker = EyelinkHolcombeLabHelpers.EyeLinkTrack_Holcombe(myWin,trialClock,subject,1, 'HV5',(255,255,255),(0,0,0),False,(widthPix,heightPix))
+    nameForRemoteEDF4charsMax = subject + str(session)
+    if len(nameForRemoteEDF4charsMax) > 4:
+        print('ERROR: stem of EDF eyetracker machine filename should not exceed 4 characters, because need four more for ".EDF", but yours is currently:',
+                nameForRemoteEDF4charsMax, ' so I am sorry but I will now QUIT!')
+        core.quit()
+
+    my_tracker = EyelinkHolcombeLabHelpers.EyeLinkTrack_Holcombe(myWin,trialClock,
+                                                                 nameForRemoteEDF4charsMax,1, 'HV5',(255,255,255),(0,0,0),False,(widthPix,heightPix))
 
 randomStartAngleEachRing = True
 randomInitialDirExceptRing0 = True
@@ -1048,14 +1104,14 @@ while trialNum < trials.nTotal and expStop==False:
     if not queryEachRingEquallyOften: #then need to randomly set ringToQuery and whichIsTargetEachRing
         #To determine whichRingsHaveTargets, sample from 0,1,...,numRings by permuting that list
         rings = list(range(numRings) )
-        random.shuffle(rings)
+        random.shuffle(rings) 
         whichRingsHaveTargets = rings[ 0:thisTrial['numTargets'] ]
         #print("should be -999 at this point: thisTrial['whichIsTargetEachRing'] = ", thisTrial['whichIsTargetEachRing'])
         #Randomly assign a target object for each ring that is meant to have a target
         for r in whichRingsHaveTargets:
             thisTrial['whichIsTargetEachRing'][r] = np.random.randint(0,thisTrial['numObjectsInRing'])
         #Randomly pick ring to query. 
-        random.shuffle(whichRingsHaveTargets)
+        random.shuffle(whichRingsHaveTargets) 
         thisTrial['ringToQuery'] = whichRingsHaveTargets[0]
         #print("thisTrial['numTargets']=",thisTrial['numTargets'], " thisTrial['whichIsTargetEachRing'] = ", thisTrial['whichIsTargetEachRing'], " thisTrial['ringToQuery']",thisTrial['ringToQuery'])
         
@@ -1077,6 +1133,7 @@ while trialNum < trials.nTotal and expStop==False:
     trackVariableIntervDur=np.random.uniform(0,trackVariableIntervMax) #random interval tacked onto tracking to make total duration variable so cant predict final position
     trialDurTotal = maxTrialDur() - trackVariableIntervDur
     trialDurFrames= int( trialDurTotal*refreshRate )
+    rampDownStart = trialDurFrames-rampDownFrames
     #print('trialDurTotal=',np.around(trialDurTotal,2),' trialDurFrames=',np.around(trialDurFrames,2), 'refreshRate=',np.around(refreshRate) ) 
     xyTargets = np.zeros( [thisTrial['numTargets'], 2] ) #need this for eventual case where targets can change what ring they are in
     numDistracters = numRings*thisTrial['numObjectsInRing'] - thisTrial['numTargets']
@@ -1091,10 +1148,12 @@ while trialNum < trials.nTotal and expStop==False:
     myMouse.setPos(newPos=(0,-15*3)) #Try to move mouse pointer offscreen. Supposedly it's in the window's units (deg) but that doesn't seem true, at least on Retina    
     if eyetracking: 
         my_tracker.startEyeTracking(trialNum,calibTrial=True,widthPix=widthPix,heightPix=heightPix) # tell eyetracker to start recording
-            #and calibrate. It tries to draw on the screen to do the calibration.
+            #and calibrate and drift-correct. It tries to draw on the screen to do the calibration.
         pylink.closeGraphics()  #Don't allow eyelink to still be able to draw because as of Jan2024, we can't get it working to have both Psychopy and Eyelink routines to draw to the same graphics environment
-        
-    fixatnPeriodFrames = int(   (np.random.rand(1)/2.+0.8)   *refreshRate)  #random interval between x and x+800ms
+        my_tracker.sendMessage('trialDurTotal='+str(trialDurTotal))
+    fixatnMinDur = 0.8
+    fixatnVariableDur = 0.5
+    fixatnPeriodFrames = int(   (fixatnMinDur + np.random.rand(1)*fixatnVariableDur)   *refreshRate)  #random interval between 800 and 1300ms
     for i in range(fixatnPeriodFrames):
         if i%2:
             fixation.draw()
@@ -1103,6 +1162,8 @@ while trialNum < trials.nTotal and expStop==False:
     trialClock.reset()
     for L in range(len(ts)):
         ts.remove(ts[0]) #clear ts array, in case that helps avoid memory leak
+    if eyetracking:
+        my_tracker.sendMessage('Fixation pre-stimulus period of ' + str(fixatnPeriodFrames*refreshRate)+ 'now ending for trialnum=' + str(trialNum) ) 
     stimClock.reset()
 
     if drawingAsGrating or debugDrawBothAsGratingAndAsBlobs: #construct the gratings
@@ -1205,8 +1266,14 @@ while trialNum < trials.nTotal and expStop==False:
                         flankingAlso.append(idx)
                         if idx+1<len(interframeIntervs):  flankingAlso.append(idx+1)
                         else: flankingAlso.append(np.NaN)
-                    #print >>logF, 'flankers also='+str( np.around( interframeIntervs[flankingAlso], 1) )
-            #end timing check
+                    #print >>logF, 'flankers also='+str( np.around( interframeIntervs[flankingAlso], 1) ) 
+    #Informally, I noticed that it's only at the beginning of a trial that I see frequent fixation flicker (timing blips), so
+    #separately report num timingBlips after fixation and after target cueing, because it dont' really matter earlier
+    numLongFramesAfterFixation = len(  np.where( idxsInterframeLong > fixatnPeriodFrames )[0] )
+    print('numLongFramesAfterFixation=',numLongFramesAfterFixation)
+    numLongFramesAfterCue = len(    np.where( idxsInterframeLong > fixatnPeriodFrames + cueFrames )[0]   )
+    print('numLongFramesAfterCue=',numLongFramesAfterCue) 
+    #end timing check
     myMouse.setVisible(True)
     
     passThisTrial=False
@@ -1223,8 +1290,6 @@ while trialNum < trials.nTotal and expStop==False:
     if useSound:
         respPromptSoundPathAndFile= os.path.join(soundDir, ringQuerySoundFileNames[ respPromptSoundFileNum ])
         respPromptSound = sound.Sound(respPromptSoundPathAndFile, secs=.2)
-        corrSoundPathAndFile= os.path.join(soundDir, 'Ding44100Mono.wav')
-        corrSound = sound.Sound(corrSoundPathAndFile)
 
     postCueNumBlobsAway=-999 #doesn't apply to click tracking and non-tracking task
 
@@ -1263,6 +1328,7 @@ while trialNum < trials.nTotal and expStop==False:
     print(trialNum,subject,session,thisTrial['basicShape'],thisTrial['numObjectsInRing'],
             speedThisTrial, #could be different than thisTrial['speed'] because staircase
             thisTrial['initialDirRing0'],sep='\t', end='\t', file=dataFile) #override newline end
+    print(fixatnPeriodFrames, end='\t', file=dataFile) #So know when important part of eyetracking begins
     print(orderCorrect,'\t',trialDurTotal,'\t',thisTrial['numTargets'],'\t', end=' ', file=dataFile) 
     for i in range(numRings):  print( thisTrial['whichIsTargetEachRing'][i], end='\t', file=dataFile  )
     print( thisTrial['ringToQuery'],end='\t',file=dataFile )
@@ -1273,7 +1339,9 @@ while trialNum < trials.nTotal and expStop==False:
             print(round(reversalTimesEachRing[k][i],4),'\t', end='', file=dataFile)
         for j in range(i+1,maxPossibleReversals()):
             print('-999\t', end='', file=dataFile)
-    print(numCasesInterframeLong, file=dataFile)
+    print(numCasesInterframeLong, file=dataFile, end='\t')
+    print(numLongFramesAfterFixation, file=dataFile, end='\t')
+    print(numLongFramesAfterCue, file=dataFile, end='\n')
 
     if autopilot and doStaircase and simulateObserver:
         chanceRate = 1.0 / thisTrial['numObjectsInRing']
@@ -1301,7 +1369,6 @@ while trialNum < trials.nTotal and expStop==False:
             corrSound.play()
         else: #incorrect
             if useSound:
-                lowSound = sound.Sound('E',octave=3, secs=.8, volume=0.9)
                 lowSound.play()
     trials.addData('speedThisTrial',speedThisTrial)  #when doStaircase is true, this will often be different than thisTrial['speed]
     trials.addData('orderCorrect',orderCorrect)
@@ -1439,8 +1506,8 @@ if doStaircase: #report staircase results
     plt.savefig(outputFile)
 
 #Plot percent correct by condition and speed for all trials, and then try to fit logistic regression.
-trialHandlerDatafilename = datafileName + 'trialHandler.tsv'
-df = trials.saveAsWideText(trialHandlerDatafilename,delim='\t')  #Only calling this to get the dataframe df
+trialHandlerDatafilename = 'tempYouCanDeleteThisFile.tsv'
+df = trials.saveAsWideText(trialHandlerDatafilename,delim='\t')  #Only calling this to get the dataframe df, can't see how to stop it from saving
 #If session was incomplete, then trials that didn't get to have value "--" in columns set dynamically, like speedThisTrial
 # Create a boolean mask for where 'speedThisTrial' is '--'
 dashes_mask = (df['speedThisTrial'] == '--')
